@@ -1,0 +1,411 @@
+{
+  "matiere": "Matériaux (UEF MATI)",
+  "type": "CM",
+  "sujet": "Diffraction des rayons X et loi de Bragg (GIM1, Cours 1 partie 4)",
+  "fiche_synthese": "# Diffraction des rayons X (DRX) — GIM1 · UEF MATI · Cours 1, partie 4\n\n> Ce document couvre la partie DRX du support (diapos 1–13). Les ajouts hors support sont marqués **Complément**.\n\n## Plan\n1. Contexte historique (4-a)\n2. Nature des RX et longueurs d'onde\n3. Loi de Bragg : condition et démonstration (4-b)\n4. Intensité diffractée et règles d'extinction (CS, CC, CFC)\n5. Distance interréticulaire : cas général puis cas cubique\n6. Procédure d'analyse d'un diffractogramme (réseau cubique) et exemple traité\n7. Appareillage (4-c)\n8. Applications (4-d)\n9. Compléments et pièges classiques\n\n---\n\n## 1. Contexte historique (4-a)\n- **1895** : découverte des RX par **Wilhelm Röntgen** (Nobel 1901). Première radiographie X : la main de sa femme.\n- Premières applications : étude des cristaux pour mettre en évidence les atomes constitutifs des molécules.\n- **1912** : **Max von Laue** détermine, grâce à un réseau cristallin (sel), la longueur d'onde des RX (Nobel 1914). Le sens « inverse » devient possible : à $\\lambda$ connue, on remonte à\n  - l'organisation de la matière (structure cristalline) ;\n  - des informations physiques sur les cristaux (taille et orientation).\n- **Complément** : la loi de diffraction est formulée en 1913 par W.H. et W.L. Bragg (père et fils, Nobel 1915).\n\n## 2. Nature des rayons X\n- Rayonnement **électromagnétique** de longueur d'onde $0{,}01 \\le \\lambda \\le 10$ nm. En radiocristallographie : $\\lambda \\approx 0{,}1$ nm, ordre de grandeur des distances interatomiques dans les cristaux métalliques (condition nécessaire pour diffracter, cf. §3).\n- Tableau 1 du support (P. Parnière, Techniques de l'ingénieur M100) : longueurs d'onde (en Å ; 1 Å = 0,1 nm) des raies caractéristiques des anticathodes utilisées en métallographie.\n\n| Élément | Z | $\\lambda_{K\\alpha2}$ | $\\lambda_{K\\alpha1}$ | $\\lambda_{K\\beta}$ |\n|---|---|---|---|---|\n| Chrome | 24 | 2,28891 | 2,28503 | 2,0806 |\n| Fer | 26 | 1,93601 | 1,93207 | 1,7530 |\n| Cuivre | 29 | 1,54123 | 1,53739 | 1,3893 |\n| Molybdène | 42 | 0,71280 | 0,70783 | 0,6310 |\n| Argent | 47 | 0,56267 | 0,55828 | 0,4960 |\n| Tungstène | 74 | 0,21345 | 0,20862 | 0,1842 |\n\n- Usages : **médecine** (les RX traversent la chair, sont arrêtés par les os : radios, scanners) ; **astronomie** (objets célestes émettant des RX, étudiés par télescopes) ; **industrie** (analyse de la structure des matériaux et des cristaux).\n- **Complément** : les RX sont produits dans un tube (électrons accélérés frappant une anticathode) : spectre continu + raies caractéristiques K$\\alpha_1$, K$\\alpha_2$ (doublet très proche), K$\\beta$ (éliminée par filtre). Les valeurs modernes sont un peu plus élevées que celles du tableau (ex. Cu K$\\alpha_1$ ≈ 1,5406 Å) : dans un calcul, utiliser la valeur donnée par l'énoncé (0,1540 nm dans l'exemple du cours). Cu est l'anticathode standard ; pour les aciers/fers, Cu induit de la fluorescence (fond élevé) → Co ou Cr préférables ; Mo/Ag (petite $\\lambda$) donnent accès à beaucoup de raies.\n\n## 3. Loi de Bragg (4-b)\n**Principe.** Un faisceau de RX de longueur d'onde $\\lambda$ dirigé sur un matériau est en partie réémis sous forme de RX de **même $\\lambda$** (diffusion élastique). L'intensité réémise n'est observable que si les rayonnements diffusés par les atomes sont **en phase** : c'est la **loi de Bragg**. Pour un matériau et un faisceau donnés, il n'y a diffraction que pour des **angles d'incidence bien déterminés**, liés aux distances $d$ entre plans réflecteurs.\n\n**Démonstration (schéma diapo 5).** Deux plans cristallographiques parallèles distants de $d$ ; deux rayons incidents parallèles (vert réfléchi en B sur le plan supérieur, rouge réfléchi en E sur le plan inférieur), $\\theta$ = angle entre rayon et plan. G et H sont les projections orthogonales de B sur les trajets incident et diffracté du rayon rouge. Le rayon rouge fait un trajet supplémentaire G→E puis E→H :\n$$GE = d\\sin\\theta$$\n$$EH = d\\sin\\theta$$\n$$\\delta = GE + EH = 2d\\sin\\theta$$\nInterférence constructive si la différence de chemin vaut un nombre entier de longueurs d'onde :\n$$n\\lambda = 2d\\sin\\theta$$\n- $n$ entier (ordre de la réflexion) ; $\\theta$ = angle **entre le faisceau et le plan** (pas avec la normale) ; le faisceau diffracté est dévié de $2\\theta$ par rapport à la direction incidente (c'est $2\\theta$ qu'on lit sur le diffractogramme).\n- Hypothèses : cristal (plans parallèles équidistants), faisceau monochromatique et quasi parallèle, diffusion élastique et cohérente (même $\\lambda$).\n- **Complément** : comme $\\sin\\theta \\le 1$, il faut $\\lambda \\le 2d/n$ : si $d < \\lambda/2$ aucune diffraction. Une réflexion d'ordre $n$ sur (hkl) équivaut à une réflexion d'ordre 1 sur (nh nk nl) : $d_{nh\\,nk\\,nl} = d_{hkl}/n$ ; on travaille donc en pratique avec $n=1$ en autorisant tous les indices (hkl) (ex. 200 = ordre 2 de 100).\n- Si $2d\\sin\\theta \\ne n\\lambda$ : ondes déphasées, interférences destructives, pas de pic.\n\n## 4. Intensité diffractée et règles d'extinction\nPour une intensité incidente donnée, l'intensité diffractée dépend principalement de :\n- l'angle de Bragg et de la longueur d'onde ;\n- la répartition des atomes dans la maille élémentaire ;\n- le volume irradié ;\n- l'état structural du réseau (défauts).\n\nPour une symétrie donnée, **toutes les familles {hkl} ne diffractent pas** (h, k, l = indices de Miller). Avec $N = h^2+k^2+l^2$ :\n\n| Réseau | Condition de réflexion | Familles observées | Valeurs de $N$ |\n|---|---|---|---|\n| Cubique simple (CS) | tous les plans diffractent | {100}, {110}, {111}, {200}, {210}, {211}… | 1, 2, 3, 4, 5, 6, 8 |\n| Cubique centré (CC) | $h+k+l$ **paire** | {110}, {200}, {211}, {220}, {310}, {222}… | 2, 4, 6, 8, 10, 12, 14 |\n| Cubique à faces centrées (CFC) | $h, k, l$ **tous de même parité** | {111}, {200}, {220}, {311}, {222}, {400}… | 3, 4, 8, 11, 12, 16, 19 |\n\nIllustrations du support : CC → (110), (200), (211) ; CFC → (111), (200), (220). Tableau de synthèse du support (diapo 10) : 100 : ni CC ni CFC ; 110 : CC seul ; 111 : CFC seul ; 200 : CC et CFC ; 210 : aucun ; 211 : CC seul ; 220 : CC et CFC.\n\n**Complément — origine des extinctions (facteur de structure).** Pour une maille conventionnelle avec un seul type d'atome (facteur de diffusion $f$), l'amplitude diffractée est\n$$F_{hkl} = \\sum_j f \\, e^{2i\\pi (h x_j + k y_j + l z_j)}$$\net $I \\propto |F_{hkl}|^2$. Atomes en (0,0,0) et (½,½,½) pour CC :\n$$F_{CC} = f\\left[1 + (-1)^{h+k+l}\\right]$$\nSoit $2f$ si $h+k+l$ est pair, 0 sinon. Atomes en (0,0,0), (½,½,0), (½,0,½), (0,½,½) pour CFC :\n$$F_{CFC} = f\\left[1 + (-1)^{h+k} + (-1)^{h+l} + (-1)^{k+l}\\right]$$\nSoit $4f$ si h,k,l de même parité (0 compte comme pair), 0 sinon. Valable pour un métal pur ; un alliage ordonné ou un composé fait réapparaître des raies (raies de surstructure). Autres facteurs sur l'intensité : multiplicité des plans, facteur de Lorentz-polarisation, agitation thermique (Debye-Waller).\n\n## 5. Distance interréticulaire $d_{hkl}$\n**Cas général (réseau quelconque).** Relation entre la distance entre deux plans d'une même famille, les indices de Miller (h,k,l) et les paramètres (a, b, c, $\\alpha$, $\\beta$, $\\gamma$) :\n$$d_{hkl} = \\sqrt{\\dfrac{1 - \\cos^2\\alpha - \\cos^2\\beta - \\cos^2\\gamma + 2\\cos\\alpha\\cos\\beta\\cos\\gamma}{\\dfrac{h^2}{a^2}\\sin^2\\alpha + \\dfrac{k^2}{b^2}\\sin^2\\beta + \\dfrac{l^2}{c^2}\\sin^2\\gamma - \\dfrac{2kl}{bc}(\\cos\\alpha - \\cos\\beta\\cos\\gamma) - \\dfrac{2lh}{ca}(\\cos\\beta - \\cos\\gamma\\cos\\alpha) - \\dfrac{2hk}{ab}(\\cos\\gamma - \\cos\\alpha\\cos\\beta)}}$$\n**Cas cubique** ($a=b=c$, $\\alpha=\\beta=\\gamma=90^\\circ$) : numérateur = 1, dénominateur = $(h^2+k^2+l^2)/a^2$, d'où\n$$d_{hkl} = \\dfrac{a}{\\sqrt{h^2+k^2+l^2}}$$\nExemple du support, famille {100} : $d = a/\\sqrt{1^2+0^2+0^2} = a$ (plans (010) et (0-10) distants de $a$).\n\n**Complément — cas particuliers utiles.** Tous angles à 90° (quadratique, orthorhombique) :\n$$\\frac{1}{d_{hkl}^2} = \\frac{h^2}{a^2} + \\frac{k^2}{b^2} + \\frac{l^2}{c^2}$$\nHexagonal :\n$$\\frac{1}{d_{hkl}^2} = \\frac{4}{3}\\,\\frac{h^2+hk+k^2}{a^2} + \\frac{l^2}{c^2}$$\n**Bragg + cubique combinés** : en éliminant $d$,\n$$\\sin^2\\theta = \\frac{\\lambda^2}{4a^2}\\,(h^2+k^2+l^2)$$\ndonc $\\sin^2\\theta$ est proportionnel à $N$ : les rapports $\\sin^2\\theta_i/\\sin^2\\theta_1$ (ou $N_i/N_1$) identifient le réseau.\n\n## 6. Procédure d'analyse par DRX (réseau cubique) — 4 étapes\n1. **Expérimentation** : tube à RX → échantillon (angle $\\theta$) → détecteur (angle $2\\theta$ par rapport au faisceau incident).\n2. **Diffractogramme** : intensité (coups) en fonction de $2\\theta$ ; recueil, traitement, exploitation des positions des pics.\n3. **Calcul des $d$** par la loi de Bragg (n = 1), puis détermination de la structure :\n$$d_i = \\frac{\\lambda}{2\\sin\\theta_i}$$\nLes rapports $d_1/d_i$ ne dépendent que de la structure :\n$$\\frac{d_1}{d_i} = \\sqrt{\\frac{N_i}{N_1}}$$\n\n| | CS | CC | CFC |\n|---|---|---|---|\n| $d_1/d_2$ | 1,41 | 1,41 | 1,15 |\n| $d_1/d_3$ | 1,73 | 1,73 | 1,63 |\n| $d_1/d_4$ | 2 | 2 | 1,91 |\n| $d_1/d_5$ | 2,23 | 2,23 | 2 |\n| $d_1/d_6$ | 2,45 | 2,45 | 2,31 |\n| $d_1/d_7$ | 2,82 | 2,64 | 2,51 |\n\n   - $d_1/d_2 = 1{,}15$ → **CFC** ; $d_1/d_2 = 1{,}41$ → CS **ou** CC (ambigu) → lever l'ambiguïté avec $d_1/d_7$ : 2,82 (CS) vs 2,64 (CC).\n   - Le premier pic correspond à la plus petite valeur de $N$ autorisée : {100} (CS), {110} (CC), {111} (CFC).\n4. **Paramètre de maille et identification du matériau** ($a$ est propre à chaque matériau) :\n$$a = d_{hkl}\\sqrt{h^2+k^2+l^2}$$\n   - Premier pic : CS $a = d_1$ ; CC $a = d_1\\sqrt{2}$ ; CFC $a = d_1\\sqrt{3}$.\n\n**Exemple traité (diapos 10–11)** : $\\lambda_{RX} = 0{,}1540$ nm ; pics à $2\\theta$ = 32°, 37°, 53°, 63°, 66°. Matériaux candidats : Cuivre $a$ = 0,361 nm ; Or $a$ = 0,407 nm ; Plomb $a$ = 0,483 nm.\n- Étape 1 : $\\theta_1 = 16^\\circ$ puis $\\theta_2 = 18{,}5^\\circ$.\n$$d_1 = \\frac{\\lambda}{2\\sin\\theta_1} = 0{,}279\\ \\text{nm}$$\n$$d_2 = \\frac{\\lambda}{2\\sin\\theta_2} = 0{,}242\\ \\text{nm}$$\n- Étape 2 : $d_1/d_2 = 1{,}152$ → structure **CFC**.\n- Étape 3 : premier pic CFC = plan (111) :\n$$a = d_1\\sqrt{1^2+1^2+1^2} = 0{,}483\\ \\text{nm}$$\n→ matériau = **Plomb** (valeur du support).\n- Vérification (indexation des 5 pics CFC) : 111, 200, 220, 311, 222. Rapports $d_1/d_i$ mesurés ≈ 1,15 ; 1,62 ; 1,90 ; 1,98 (théorie 1,155 ; 1,63 ; 1,91 ; 2), et $a$ calculé sur chaque pic ≈ 0,484 ; 0,485 ; 0,488 ; 0,489 ; 0,490 nm (légère dérive due à la lecture graphique des angles ; les pics à grand $\\theta$ donnent $a$ le plus précis car $\\Delta d/d = -\\cot\\theta\\,\\Delta\\theta$). La valeur tabulée usuelle du Pb est ≈ 0,495 nm.\n\n## 7. Appareillage (4-c)\n- Trois éléments : **source RX** (tube), **goniomètre** (porte-échantillon et bras, mesure des angles), **détecteur**. Géométrie $\\theta$–$2\\theta$ : quand l'échantillon tourne de $\\theta$, le détecteur tourne de $2\\theta$.\n- Exemples du support : diffractomètre de laboratoire **D8 Advance Eco (Bruker)** ; **Xstress (Stresstech)** : tête portable pour **analyses sur site** (ex. tuyauterie), typiquement mesure de contraintes résiduelles.\n- **Complément** : radioprotection nécessaire (blindage, enceinte plombée).\n\n## 8. Applications (4-d)\n- **Identification de phases** : comparaison du spectre à une base de données (fiches type ICDD/PDF) pour identifier les composés.\n- **Analyse quantitative** : proportions des phases cristallines dans un mélange complexe.\n- **Contraintes et texture** : tensions internes (déformation du réseau → décalage des pics) et orientation des grains.\n- Domaines : **métallurgie/science des matériaux** (alliages, conséquences des procédés de transformation) ; **pharmacie** (pureté et forme cristalline des principes actifs) ; **géologie et mines** (minerais, roches).\n- **Complément** : taille moyenne des cristallites par élargissement des pics (formule de Scherrer, valable pour des cristallites nanométriques à submicroniques)\n$$L = \\frac{K\\lambda}{\\beta\\cos\\theta}$$\navec $K \\approx 0{,}9$ et $\\beta$ la largeur à mi-hauteur en radians (corrigée de l'élargissement instrumental). Contrainte : décalage de $2\\theta$ → variation de $d$ → déformation $\\varepsilon = \\Delta d/d$ (méthode des $\\sin^2\\psi$).\n\n## 9. Pièges classiques\n- La loi utilise **$\\theta$**, le diffractogramme donne **$2\\theta$** : diviser par 2 avant de calculer $\\sin\\theta$.\n- $\\theta$ est l'angle avec le **plan** (rasant), pas avec la normale.\n- CC : $h+k+l$ **pair** ; CFC : **h, k, l de même parité** (ne pas confondre) ; 0 est pair.\n- $d_1/d_2 = 1{,}41$ ne distingue pas CS et CC.\n- Le premier pic n'est pas toujours (100) : (110) en CC, (111) en CFC → $a = d_1\\sqrt{N_1}$ avec le bon $N_1$.\n- $\\{hkl\\}$ = famille, $(hkl)$ = plan ; ne pas oublier que 200 est autorisé en CC et CFC.\n- $d$ dépend de la famille de plans ; $a$ est unique pour le matériau (sert à l'identifier).\n- Cette formule cubique n'est **pas** valable si $a \\ne b \\ne c$ ou angles $\\ne 90^\\circ$ : revenir à la formule générale.\n",
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "Quel est l'ordre de grandeur de la longueur d'onde des rayons X utilisés en radiocristallographie ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "≈ 0,1 nm"
+        },
+        {
+          "id": "b",
+          "text": "≈ 10 nm"
+        },
+        {
+          "id": "c",
+          "text": "≈ 1 µm"
+        },
+        {
+          "id": "d",
+          "text": "≈ 0,001 nm"
+        }
+      ],
+      "correct": "a",
+      "explanation": "λ ≈ 0,1 nm (0,01 à 10 nm pour tous les RX), du même ordre que les distances interatomiques dans les cristaux métalliques : c'est ce qui permet la diffraction (condition λ ≤ 2d)."
+    },
+    {
+      "id": "q2",
+      "question": "Dans la démonstration de la loi de Bragg, quelle est la différence de chemin entre deux rayons réfléchis par deux plans successifs distants de d ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "d sin θ"
+        },
+        {
+          "id": "b",
+          "text": "2d sin θ"
+        },
+        {
+          "id": "c",
+          "text": "2d cos θ"
+        },
+        {
+          "id": "d",
+          "text": "d / sin θ"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Le rayon du plan inférieur parcourt en plus GE + EH = d sin θ + d sin θ = 2d sin θ. Interférence constructive si 2d sin θ = nλ."
+    },
+    {
+      "id": "q3",
+      "question": "Sur un diffractogramme, un pic est situé à 2θ = 32°. Quelle valeur de θ faut-il utiliser dans la loi de Bragg ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "32°"
+        },
+        {
+          "id": "b",
+          "text": "16°"
+        },
+        {
+          "id": "c",
+          "text": "64°"
+        },
+        {
+          "id": "d",
+          "text": "8°"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Le diffractomètre repère l'angle 2θ (entre faisceau incident prolongé et faisceau diffracté). Dans nλ = 2d sin θ, on utilise θ = 16°. Piège classique."
+    },
+    {
+      "id": "q4",
+      "question": "Dans un réseau cubique centré, laquelle de ces familles de plans NE donne PAS de raie de diffraction ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "{110}"
+        },
+        {
+          "id": "b",
+          "text": "{200}"
+        },
+        {
+          "id": "c",
+          "text": "{211}"
+        },
+        {
+          "id": "d",
+          "text": "{100}"
+        }
+      ],
+      "correct": "d",
+      "explanation": "CC : réflexion si h + k + l est pair. {100} : 1 + 0 + 0 = 1 (impair) → éteint. {110} : 2 ; {200} : 2 ; {211} : 4 → permis (facteur de structure F = f[1 + (−1)^(h+k+l)])."
+    },
+    {
+      "id": "q5",
+      "question": "Quelle famille de plans diffracte dans un réseau cubique à faces centrées ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "{110}"
+        },
+        {
+          "id": "b",
+          "text": "{100}"
+        },
+        {
+          "id": "c",
+          "text": "{111}"
+        },
+        {
+          "id": "d",
+          "text": "{210}"
+        }
+      ],
+      "correct": "c",
+      "explanation": "CFC : h, k, l tous de même parité. {111} (impairs) et {200}, {220} (pairs) oui. {110}, {100}, {210} : parités mélangées → éteints."
+    },
+    {
+      "id": "q6",
+      "question": "On mesure d₁/d₂ = 1,15 sur un diffractogramme de matériau cubique. Quelle est la structure ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Cubique simple"
+        },
+        {
+          "id": "b",
+          "text": "Cubique centré"
+        },
+        {
+          "id": "c",
+          "text": "Cubique à faces centrées"
+        },
+        {
+          "id": "d",
+          "text": "On ne peut pas conclure"
+        }
+      ],
+      "correct": "c",
+      "explanation": "d₁/d₂ = √(N₂/N₁) : CFC → √(4/3) = 1,155. CS et CC donnent 1,41. Exemple du cours : 0,279/0,242 = 1,152 → CFC."
+    },
+    {
+      "id": "q7",
+      "question": "On trouve d₁/d₂ = 1,41. Que peut-on conclure, et comment lever l'ambiguïté ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "CFC ; aucune vérification nécessaire"
+        },
+        {
+          "id": "b",
+          "text": "CS ou CC ; on regarde d₁/d₇ (2,82 pour CS, 2,64 pour CC)"
+        },
+        {
+          "id": "c",
+          "text": "CC uniquement ; on regarde d₁/d₃"
+        },
+        {
+          "id": "d",
+          "text": "CS uniquement ; on regarde la valeur de λ"
+        }
+      ],
+      "correct": "b",
+      "explanation": "1,41 = √2 apparaît en CS (N = 1, 2) et en CC (N = 2, 4). Les rapports sont identiques jusqu'à d₁/d₆ ; la première différence est d₁/d₇ (√8 = 2,82 en CS, √7 = 2,64 en CC)."
+    },
+    {
+      "id": "q8",
+      "question": "Maille cubique de paramètre a = 0,300 nm. Quelle est la distance entre plans de la famille {110} ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "0,300 nm"
+        },
+        {
+          "id": "b",
+          "text": "0,212 nm"
+        },
+        {
+          "id": "c",
+          "text": "0,173 nm"
+        },
+        {
+          "id": "d",
+          "text": "0,150 nm"
+        }
+      ],
+      "correct": "b",
+      "explanation": "d = a/√(h² + k² + l²) = 0,300/√2 = 0,212 nm. (0,173 correspond à {111}, 0,150 à {200}.)"
+    },
+    {
+      "id": "q9",
+      "question": "Un matériau CFC donne un premier pic correspondant à d₁ = 0,200 nm. Quel est son paramètre de maille ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "0,200 nm"
+        },
+        {
+          "id": "b",
+          "text": "0,283 nm"
+        },
+        {
+          "id": "c",
+          "text": "0,346 nm"
+        },
+        {
+          "id": "d",
+          "text": "0,400 nm"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Le premier pic CFC est (111) : a = d₁ √(1² + 1² + 1²) = 0,200 × √3 = 0,346 nm. Piège : ne pas prendre a = d₁ (valable seulement si le premier pic est (100), en CS)."
+    },
+    {
+      "id": "q10",
+      "question": "Parmi ces facteurs, lequel n'influence PAS l'intensité diffractée ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "La répartition des atomes dans la maille"
+        },
+        {
+          "id": "b",
+          "text": "Le volume irradié"
+        },
+        {
+          "id": "c",
+          "text": "La couleur visible de l'échantillon"
+        },
+        {
+          "id": "d",
+          "text": "L'état structural du réseau (défauts)"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Le support cite : angle de Bragg et longueur d'onde, répartition des atomes dans la maille, volume irradié, état structural (défauts). La couleur visible n'intervient pas."
+    },
+    {
+      "id": "q11",
+      "question": "Avec λ = 0,154 nm, pour quelle distance interréticulaire la diffraction est-elle impossible (n = 1) ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "d = 0,20 nm"
+        },
+        {
+          "id": "b",
+          "text": "d = 0,15 nm"
+        },
+        {
+          "id": "c",
+          "text": "d = 0,10 nm"
+        },
+        {
+          "id": "d",
+          "text": "d = 0,05 nm"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Il faut sin θ = λ/(2d) ≤ 1, soit d ≥ λ/2 = 0,077 nm. Pour d = 0,05 nm : λ/(2d) = 1,54 > 1, donc aucun angle ne convient. Pour d = 0,10 nm : sin θ = 0,77 (θ ≈ 50°) est possible."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "recto": "Domaine de longueur d'onde des rayons X ? Valeur utile en radiocristallographie ?",
+      "verso": "$0{,}01 \\le \\lambda \\le 10$ nm ; en radiocristallographie $\\lambda \\approx 0{,}1$ nm (ordre de grandeur des distances interatomiques dans les cristaux métalliques)."
+    },
+    {
+      "id": "f2",
+      "recto": "Loi de Bragg (énoncé, signification des termes)",
+      "verso": "$n\\lambda = 2d\\sin\\theta$ : $n$ entier (ordre), $\\lambda$ longueur d'onde, $d$ distance interréticulaire, $\\theta$ angle entre faisceau et plan (le pic est repéré en $2\\theta$)."
+    },
+    {
+      "id": "f3",
+      "recto": "Différence de chemin entre deux plans successifs (démonstration de Bragg)",
+      "verso": "$GE + EH = d\\sin\\theta + d\\sin\\theta = 2d\\sin\\theta$ ; interférence constructive si elle vaut $n\\lambda$."
+    },
+    {
+      "id": "f4",
+      "recto": "Condition pour qu'une diffraction soit observable",
+      "verso": "Les rayonnements diffusés par les atomes doivent être en phase (loi de Bragg) ; il faut aussi $\\lambda \\le 2d$ pour que $\\sin\\theta \\le 1$."
+    },
+    {
+      "id": "f5",
+      "recto": "Distance interréticulaire en réseau cubique",
+      "verso": "$d_{hkl} = \\dfrac{a}{\\sqrt{h^2+k^2+l^2}}$ (valable si $a=b=c$, $\\alpha=\\beta=\\gamma=90^\\circ$). Ex. : $d_{100} = a$."
+    },
+    {
+      "id": "f6",
+      "recto": "Distance interréticulaire dans un réseau quelconque : allure de la formule",
+      "verso": "$d_{hkl}=\\sqrt{\\dfrac{1-\\cos^2\\alpha-\\cos^2\\beta-\\cos^2\\gamma+2\\cos\\alpha\\cos\\beta\\cos\\gamma}{\\dfrac{h^2}{a^2}\\sin^2\\alpha+\\dfrac{k^2}{b^2}\\sin^2\\beta+\\dfrac{l^2}{c^2}\\sin^2\\gamma-\\dfrac{2kl}{bc}(\\cos\\alpha-\\cos\\beta\\cos\\gamma)-\\dfrac{2lh}{ca}(\\cos\\beta-\\cos\\gamma\\cos\\alpha)-\\dfrac{2hk}{ab}(\\cos\\gamma-\\cos\\alpha\\cos\\beta)}}$ ; se simplifie en cubique."
+    },
+    {
+      "id": "f7",
+      "recto": "Règle de réflexion : cubique simple",
+      "verso": "Tous les plans diffractent : {100}, {110}, {111}, {200}, {210}, {211}… ($N$ = 1, 2, 3, 4, 5, 6, 8…)."
+    },
+    {
+      "id": "f8",
+      "recto": "Règle de réflexion : cubique centré",
+      "verso": "Réflexion si $h+k+l$ est paire : {110}, {200}, {211}, {220}, {310}, {222}… ($N$ = 2, 4, 6, 8, 10, 12…)."
+    },
+    {
+      "id": "f9",
+      "recto": "Règle de réflexion : cubique à faces centrées",
+      "verso": "Réflexion si $h$, $k$, $l$ tous de même parité : {111}, {200}, {220}, {311}, {222}, {400}… ($N$ = 3, 4, 8, 11, 12, 16…)."
+    },
+    {
+      "id": "f10",
+      "recto": "Origine des extinctions",
+      "verso": "Facteur de structure : $F_{CC} = f[1+(-1)^{h+k+l}]$ ; $F_{CFC} = f[1+(-1)^{h+k}+(-1)^{h+l}+(-1)^{k+l}]$ ; $I \\propto |F|^2$."
+    },
+    {
+      "id": "f11",
+      "recto": "Rapports $d_1/d_2$ pour CS, CC, CFC",
+      "verso": "CS : 1,41 ; CC : 1,41 ; CFC : 1,15. En général $d_1/d_i = \\sqrt{N_i/N_1}$."
+    },
+    {
+      "id": "f12",
+      "recto": "Comment distinguer CS et CC quand $d_1/d_2 = 1{,}41$ ?",
+      "verso": "Avec $d_1/d_7$ : 2,82 (CS) contre 2,64 (CC). (Les rapports sont identiques de $d_1/d_2$ à $d_1/d_6$.)"
+    },
+    {
+      "id": "f13",
+      "recto": "Rapports CFC à connaître : $d_1/d_3$, $d_1/d_4$, $d_1/d_5$, $d_1/d_6$, $d_1/d_7$",
+      "verso": "1,63 ; 1,91 ; 2 ; 2,31 ; 2,51."
+    },
+    {
+      "id": "f14",
+      "recto": "Paramètre de maille à partir du premier pic",
+      "verso": "$a = d_1\\sqrt{N_1}$ : CS $a = d_1$ ; CC $a = d_1\\sqrt{2}$ (110) ; CFC $a = d_1\\sqrt{3}$ (111)."
+    },
+    {
+      "id": "f15",
+      "recto": "Les 4 étapes de l'analyse DRX (cubique)",
+      "verso": "1) Expérimentation (tube, échantillon, détecteur) ; 2) diffractogramme intensité vs $2\\theta$ ; 3) calcul des $d$ (Bragg) et structure via $d_1/d_i$ ; 4) calcul de $a$ et identification du matériau ($a$ unique)."
+    },
+    {
+      "id": "f16",
+      "recto": "De quoi dépend l'intensité diffractée ?",
+      "verso": "Angle de Bragg et $\\lambda$ ; répartition des atomes dans la maille ; volume irradié ; état structural du réseau (défauts)."
+    },
+    {
+      "id": "f17",
+      "recto": "Longueurs d'onde $K\\alpha_1$ (en Å) des anticathodes du cours",
+      "verso": "Cr 2,28503 ; Fe 1,93207 ; Cu 1,53739 ; Mo 0,70783 ; Ag 0,55828 ; W 0,20862 (valeurs du tableau du support ; Cu moderne ≈ 1,5406)."
+    },
+    {
+      "id": "f18",
+      "recto": "Dates et personnages clés",
+      "verso": "1895 Röntgen (Nobel 1901), découverte des RX ; 1912 von Laue (Nobel 1914), diffraction par un cristal et détermination de $\\lambda$ ; 1913 Bragg (père et fils, Nobel 1915)."
+    },
+    {
+      "id": "f19",
+      "recto": "Éléments d'un diffractomètre et exemples du cours",
+      "verso": "Source RX, goniomètre, détecteur (géométrie $\\theta$-$2\\theta$). Exemples : D8 Advance Eco (Bruker) ; Xstress (Stresstech) pour analyses sur site."
+    },
+    {
+      "id": "f20",
+      "recto": "Applications de la DRX",
+      "verso": "Identification de phases (base de données) ; analyse quantitative des phases ; contraintes et texture. Domaines : métallurgie, pharmacie (pureté, forme cristalline), géologie et mines."
+    },
+    {
+      "id": "f21",
+      "recto": "Formule de Scherrer (complément)",
+      "verso": "$L = \\dfrac{K\\lambda}{\\beta\\cos\\theta}$, $K \\approx 0{,}9$, $\\beta$ = largeur à mi-hauteur (rad) : taille moyenne des cristallites."
+    },
+    {
+      "id": "f22",
+      "recto": "Relation $\\sin^2\\theta$ et $N$ en cubique",
+      "verso": "$\\sin^2\\theta = \\dfrac{\\lambda^2}{4a^2}(h^2+k^2+l^2)$ : $\\sin^2\\theta$ proportionnel à $N$."
+    }
+  ],
+  "exercices": [
+    {
+      "titre": "Fer α : extinctions et positions des raies (application directe)",
+      "difficulte": 1,
+      "enonce": "Le fer α est cubique centré, de paramètre $a = 0{,}2866$ nm. On l'analyse avec une anticathode de cuivre, $\\lambda = 0{,}1540$ nm.\n\n1. Parmi {100}, {110}, {111}, {200}, {210}, {211}, lesquelles donnent une raie ?\n2. Calculer $d$ puis $2\\theta$ pour les deux premières raies (ordre $n=1$).",
+      "corrige": "**1. Extinctions (CC : $h+k+l$ pair).**\n- {100} : 1 → impair, éteinte ; {110} : 2 → OK ; {111} : 3 → éteinte ; {200} : 2 → OK ; {210} : 3 → éteinte ; {211} : 4 → OK.\n- Raies : {110}, {200}, {211}.\n\n**2. Deux premières raies.** {110} :\n$$d_{110} = \\frac{a}{\\sqrt{1^2+1^2+0^2}} = \\frac{0{,}2866}{\\sqrt{2}} = 0{,}2027\\ \\text{nm}$$\n$$\\sin\\theta = \\frac{\\lambda}{2d} = \\frac{0{,}1540}{2\\times 0{,}2027} = 0{,}380$$\n$$\\theta = 22{,}3^\\circ \\Rightarrow 2\\theta = 44{,}7^\\circ$$\n{200} :\n$$d_{200} = \\frac{a}{2} = 0{,}1433\\ \\text{nm}$$\n$$\\sin\\theta = \\frac{0{,}1540}{2\\times 0{,}1433} = 0{,}537$$\n$$\\theta = 32{,}5^\\circ \\Rightarrow 2\\theta = 65{,}0^\\circ$$\nRaies à $2\\theta \\approx 44{,}7^\\circ$ puis $65{,}0^\\circ$. Piège évité : on n'oublie pas de doubler $\\theta$ pour lire $2\\theta$."
+    },
+    {
+      "titre": "Identification d'un métal à partir d'un diffractogramme",
+      "difficulte": 2,
+      "enonce": "Un échantillon métallique cubique est analysé avec $\\lambda = 0{,}1540$ nm. Les quatre premiers pics sont à $2\\theta$ = 43,3° ; 50,4° ; 74,1° ; 89,9°.\n\n1. Calculer les distances $d_i$ puis les rapports $d_1/d_i$.\n2. En déduire la structure (CS, CC ou CFC) en justifiant.\n3. Indexer les pics, calculer $a$ et identifier le matériau parmi : cuivre ($a = 0{,}361$ nm), aluminium ($a = 0{,}405$ nm), plomb ($a = 0{,}495$ nm).",
+      "corrige": "**1. Calcul des $d_i$ ($n=1$).** $\\theta_i = 21{,}65^\\circ ; 25{,}2^\\circ ; 37{,}05^\\circ ; 44{,}95^\\circ$ donc $\\sin\\theta_i = 0{,}3689 ; 0{,}4258 ; 0{,}6025 ; 0{,}7065$.\n$$d_i = \\frac{\\lambda}{2\\sin\\theta_i}$$\n$$d_1 = 0{,}2087\\ \\text{nm} \\quad d_2 = 0{,}1808\\ \\text{nm} \\quad d_3 = 0{,}1278\\ \\text{nm} \\quad d_4 = 0{,}1090\\ \\text{nm}$$\nRapports : $d_1/d_2 = 1{,}154$ ; $d_1/d_3 = 1{,}633$ ; $d_1/d_4 = 1{,}915$.\n\n**2. Structure.** Ces valeurs correspondent à la colonne CFC (1,15 ; 1,63 ; 1,91) et pas à CS/CC (1,41 ; 1,73 ; 2). Structure **CFC**. Contrôle : $\\sin^2\\theta$ dans le rapport 3 : 4 : 8 : 11 ($N$ = 3, 4, 8, 11).\n\n**3. Indexation et $a$.** Pics : (111), (200), (220), (311).\n$$a = d_{hkl}\\sqrt{h^2+k^2+l^2}$$\n$$a_{111} = 0{,}2087\\sqrt{3} = 0{,}3615\\ \\text{nm}$$\n$$a_{200} = 0{,}1808\\sqrt{4} = 0{,}3617\\ \\text{nm}$$\n$$a_{220} = 0{,}1278\\sqrt{8} = 0{,}3615\\ \\text{nm}$$\n$$a_{311} = 0{,}1090\\sqrt{11} = 0{,}3615\\ \\text{nm}$$\nCohérence sur les quatre pics : $a \\approx 0{,}3615$ nm → **cuivre**."
+    },
+    {
+      "titre": "Facteur de structure et nombre de raies observables",
+      "difficulte": 3,
+      "enonce": "1. Pour une maille CC (atomes en (0,0,0) et (½,½,½)) puis CFC (atomes en (0,0,0), (½,½,0), (½,0,½), (0,½,½)), montrer que le facteur de structure $F_{hkl}$ conduit aux règles d'extinction du cours.\n2. Fer α (CC, $a = 0{,}2866$ nm), $\\lambda = 0{,}1540$ nm. Quelle valeur maximale de $N = h^2+k^2+l^2$ est accessible ? Lister les raies observables et leurs angles $2\\theta$.",
+      "corrige": "**1. Facteur de structure** ($f$ identique pour tous les atomes) :\n$$F_{hkl} = f\\sum_j e^{2i\\pi(hx_j + ky_j + lz_j)}$$\nCC :\n$$F_{CC} = f\\left[1 + e^{i\\pi(h+k+l)}\\right] = f\\left[1 + (-1)^{h+k+l}\\right]$$\n$F = 2f$ si $h+k+l$ pair ; $F = 0$ sinon → règle du cours.\nCFC :\n$$F_{CFC} = f\\left[1 + (-1)^{h+k} + (-1)^{h+l} + (-1)^{k+l}\\right]$$\nSi h, k, l de même parité, les 3 sommes $h+k$, $h+l$, $k+l$ sont paires : $F = 4f$. Si les parités sont mixtes (deux d'une parité, une de l'autre) : un terme vaut $+1$ et deux valent $-1$ : $F = f(1+1-1-1) = 0$. Règle du cours retrouvée. L'intensité est proportionnelle à $|F|^2$.\n\n**2. Nombre de raies.** Il faut $\\sin\\theta \\le 1$ (donc $2\\theta \\le 180^\\circ$) :\n$$\\sin\\theta = \\frac{\\lambda\\sqrt{N}}{2a} \\le 1 \\Rightarrow \\sqrt{N} \\le \\frac{2a}{\\lambda} = 3{,}72 \\Rightarrow N \\le 13{,}9$$\nEn CC, $N$ pair : 2, 4, 6, 8, 10, 12 (14 est exclu : $\\sin\\theta = 1{,}005 > 1$).\n\n| N | {hkl} | $\\sin\\theta$ | $2\\theta$ |\n|---|---|---|---|\n| 2 | {110} | 0,380 | 44,7° |\n| 4 | {200} | 0,537 | 65,0° |\n| 6 | {211} | 0,658 | 82,3° |\n| 8 | {220} | 0,760 | 98,9° |\n| 10 | {310} | 0,850 | 116,3° |\n| 12 | {222} | 0,931 | 137,1° |\n\n**6 raies** au total. Les raies de grand $2\\theta$ sont les plus utiles pour affiner $a$ (précision : $\\Delta d/d = -\\cot\\theta\\,\\Delta\\theta$)."
+    },
+    {
+      "titre": "Maille non cubique : formule générale de $d_{hkl}$ (niveau partiel/concours)",
+      "difficulte": 4,
+      "enonce": "Un composé a une maille quadratique : $a = b = 0{,}400$ nm, $c = 0{,}500$ nm, $\\alpha=\\beta=\\gamma=90^\\circ$. $\\lambda = 0{,}1540$ nm.\n\n1. À partir de la formule générale du cours, montrer que $\\dfrac{1}{d_{hkl}^2} = \\dfrac{h^2+k^2}{a^2}+\\dfrac{l^2}{c^2}$.\n2. Calculer $d_{100}$, $d_{001}$, $d_{110}$, $d_{101}$, $d_{111}$.\n3. Donner $2\\theta$ pour (001) et (111). Que donnerait la formule cubique appliquée à tort avec $a = 0{,}400$ nm pour (001) ?",
+      "corrige": "**1. Réduction de la formule.** Avec $\\alpha=\\beta=\\gamma=90^\\circ$ : $\\cos = 0$, $\\sin = 1$.\n- Numérateur : $1 - 0 - 0 - 0 + 0 = 1$.\n- Dénominateur : $\\dfrac{h^2}{a^2} + \\dfrac{k^2}{b^2} + \\dfrac{l^2}{c^2}$ (tous les termes croisés contiennent un cosinus nul).\n$$d_{hkl} = \\left[\\frac{h^2}{a^2}+\\frac{k^2}{b^2}+\\frac{l^2}{c^2}\\right]^{-1/2}$$\nAvec $b = a$ on obtient la relation demandée. Elle redonne le cas cubique si $c = a$.\n\n**2. Calculs** ($a^2 = 0{,}16$ nm², $c^2 = 0{,}25$ nm²) :\n$$d_{100} = a = 0{,}400\\ \\text{nm}$$\n$$d_{001} = c = 0{,}500\\ \\text{nm}$$\n$$d_{110} = \\frac{a}{\\sqrt{2}} = 0{,}283\\ \\text{nm}$$\n$$\\frac{1}{d_{101}^2} = \\frac{1}{0{,}16} + \\frac{1}{0{,}25} = 10{,}25\\ \\text{nm}^{-2} \\Rightarrow d_{101} = 0{,}312\\ \\text{nm}$$\n$$\\frac{1}{d_{111}^2} = \\frac{2}{0{,}16} + \\frac{1}{0{,}25} = 16{,}5\\ \\text{nm}^{-2} \\Rightarrow d_{111} = 0{,}246\\ \\text{nm}$$\n\n**3. Angles.**\n$$\\sin\\theta_{001} = \\frac{0{,}154}{2\\times 0{,}500} = 0{,}154 \\Rightarrow \\theta = 8{,}86^\\circ \\Rightarrow 2\\theta = 17{,}7^\\circ$$\n$$\\sin\\theta_{111} = \\frac{0{,}154}{2\\times 0{,}246} = 0{,}313 \\Rightarrow \\theta = 18{,}2^\\circ \\Rightarrow 2\\theta = 36{,}5^\\circ$$\nErreur classique : la formule cubique avec $a = 0{,}400$ donnerait $d_{001} = 0{,}400$ nm, soit $2\\theta = 22{,}2^\\circ$ au lieu de $17{,}7^\\circ$ : décalage de plus de 4°. Le rapport $d_1/d_2$ ne suit plus les colonnes CS/CC/CFC dès que la maille n'est pas cubique."
+    }
+  ],
+  "suivi": "Aucun quiz ni exercice réalisé pour l'instant : aucun point faible enregistré. Points à surveiller en priorité : (1) θ vs 2θ dans la loi de Bragg ; (2) règles CC (h+k+l pair) vs CFC (h,k,l même parité) ; (3) ambiguïté CS/CC pour d1/d2 = 1,41 (lever avec d1/d7) ; (4) a = d1·√N1 avec le bon premier pic ; (5) formule cubique non valable hors cubique."
+}

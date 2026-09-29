@@ -1,0 +1,326 @@
+{
+  "matiere": "Mécanique des milieux continus",
+  "type": "CM",
+  "sujet": "Tenseurs de déformation",
+  "fiche_synthese": "## Plan du cours\n1. Position du problème : transformation et champ de déplacement\n2. Tenseur gradient de la transformation F\n3. Variation du produit scalaire → tenseurs C et E (déformation finie)\n4. Interprétation physique : allongements et distorsions angulaires\n5. Hypothèse des Petites Perturbations (HPP) → tenseur ε linéarisé\n6. Propriétés de ε : symétrie, diagonalisation, déformations principales\n7. Variation de volume (exacte puis linéarisée)\n8. Décomposition mouvement rigide + déformation pure\n\n## Définitions et formules clés\n\n**Déplacement et transformation**\n\n$$\\vec U(t) = \\vec x(t) - \\vec X \\qquad \\vec x(t)=\\vec\\Phi(\\vec X,t) \\qquad \\vec X = \\vec\\psi(\\vec x(t))$$\n\n**Tenseur gradient de la transformation**\n\n$$F = \\frac{\\partial \\vec x}{\\partial \\vec X} = \\operatorname{grad}\\vec x, \\quad F_{ij}=\\frac{\\partial x_i}{\\partial X_j}=x_{i,j}, \\quad d\\vec x = F\\cdot d\\vec X$$\n\nLien avec le déplacement : $F = \\operatorname{grad}\\vec U + I$\n\n⚠️ F n'est pas un tenseur de déformation pur : il contient aussi la rotation rigide locale.\n\n**Tenseur de Cauchy-Green droit**\n\n$$C = F^\\top F, \\qquad d\\vec x\\cdot d\\vec x' = d\\vec X^\\top C\\, d\\vec X'$$\n\n**Tenseur de Green-Lagrange** (valable en déformations finies, non linéaire)\n\n$$E=\\tfrac12(C-I)=\\tfrac12\\Big[(\\operatorname{grad}\\vec U)^\\top+\\operatorname{grad}\\vec U+(\\operatorname{grad}\\vec U)^\\top\\!\\cdot\\operatorname{grad}\\vec U\\Big]$$\n\n**Allongement relatif dans une direction $\\vec N$**\n\n$$\\varepsilon(M,\\vec N)=\\sqrt{\\vec N^\\top C\\vec N}-1 \\quad\\text{ex. } \\vec N=\\vec e_1:\\ \\varepsilon(M,\\vec e_1)=\\sqrt{C_{11}}-1=\\sqrt{1+2E_{11}}-1$$\n\n**Distorsion angulaire (glissement) entre $\\vec N$ et $\\vec N'$**\n\n$$\\gamma=\\arcsin\\!\\left(\\frac{\\vec N^\\top C\\vec N'}{\\sqrt{\\vec N^\\top C\\vec N}\\sqrt{\\vec N'^\\top C\\vec N'}}\\right)$$\n\n**Hypothèses HPP** : (1) déplacements petits devant la taille caractéristique du domaine ; (2) composantes de $\\operatorname{grad}\\vec U$ petites devant 1. → on néglige les termes du 2ᵉ ordre dans C et E.\n\n**Tenseur des déformations linéarisé (partie symétrique de grad U)**\n\n$$\\varepsilon=\\tfrac12\\big(\\operatorname{grad}\\vec U+(\\operatorname{grad}\\vec U)^\\top\\big)$$\n\n**Tenseur de rotation infinitésimale (partie antisymétrique)**\n\n$$\\Omega=\\tfrac12\\big(\\operatorname{grad}\\vec U-(\\operatorname{grad}\\vec U)^\\top\\big), \\qquad \\operatorname{grad}\\vec U=\\varepsilon+\\Omega, \\qquad E\\xrightarrow[\\operatorname{grad}\\vec U\\to 0]{}\\varepsilon$$\n\n**Interprétation des composantes (HPP)**\n- Allongement selon $\\vec e_i$ : $\\varepsilon(M,\\vec e_i)\\approx \\varepsilon_{ii}$ ($\\varepsilon_{ii}>0$ traction, $<0$ compression)\n- Distorsion : $\\gamma_{ij}\\approx 2\\varepsilon_{ij}$ **(le facteur 2 est le piège classique !)**\n\n**Déformations principales** : ε est symétrique ⟹ diagonalisable dans une base orthonormée propre $(\\vec e_I,\\vec e_{II},\\vec e_{III})$ :\n\n$$\\varepsilon = \\operatorname{diag}(\\varepsilon_I,\\varepsilon_{II},\\varepsilon_{III})$$\n\n**Variation de volume**\n- Exacte : $\\dfrac{\\Delta V}{V}=\\det F - 1 = \\sqrt{\\det C}-1$\n- HPP (linéarisée) : $\\dfrac{\\Delta V}{V}\\approx \\operatorname{tr}\\varepsilon=\\varepsilon_I+\\varepsilon_{II}+\\varepsilon_{III}$ (1ᵉʳ invariant)\n\n**Décomposition du mouvement local (HPP)**\n\n$$d\\vec x - d\\vec X = \\operatorname{grad}\\vec U\\cdot d\\vec X = \\varepsilon\\cdot d\\vec X + \\Omega\\cdot d\\vec X$$\n\nΩ antisymétrique ⟹ $\\exists\\, \\vec\\omega,\\ \\forall \\vec X,\\ \\Omega\\vec X=\\vec\\omega\\times\\vec X$ (rotation rigide infinitésimale). Le mouvement local se décompose donc en **translation + rotation rigide + déformation pure**.\n\n## Pièges classiques\n- **Confondre F et un tenseur de déformation** : F mélange rotation et déformation ; seuls E (fini) ou ε (HPP) décrivent la déformation \"pure\".\n- **Facteur 2 entre γᵢⱼ et εᵢⱼ** : εᵢⱼ n'est que la moitié de la distorsion angulaire totale.\n- **HPP ≠ \"petits déplacements\" seulement** : il faut aussi que grad U (donc les rotations locales) soit petit. Un solide qui tourne beaucoup en bloc, même sans se déformer, viole HPP.\n- **ΔV/V = tr ε n'est qu'une approximation** (linéarisation de $\\sqrt{\\det(2\\varepsilon+I)}-1$) ; la formule exacte reste $\\det F - 1$.\n- **ε(M,N) dépend de la direction N choisie** : ce n'est pas un scalaire unique tant que N n'est pas fixé — à ne pas confondre avec les déformations principales (valeurs propres, indépendantes du repère).\n",
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "D'après la relation donnée en cours, le déplacement U(t) est défini par :",
+      "options": [
+        {
+          "id": "a",
+          "text": "U(t) = x(t) + X"
+        },
+        {
+          "id": "b",
+          "text": "U(t) = x(t) − X"
+        },
+        {
+          "id": "c",
+          "text": "U(t) = X − x(t)"
+        },
+        {
+          "id": "d",
+          "text": "U(t) = dx/dX"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Le déplacement est le vecteur allant de la position de référence X à la position actuelle x(t) : U(t) = x(t) − X."
+    },
+    {
+      "id": "q2",
+      "question": "Le tenseur gradient F est défini par F = ∂x/∂X. Quelle relation le lie au déplacement U ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "F = grad U"
+        },
+        {
+          "id": "b",
+          "text": "F = grad U + I"
+        },
+        {
+          "id": "c",
+          "text": "F = grad U − I"
+        },
+        {
+          "id": "d",
+          "text": "F = ∂U/∂x"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Comme x = U + X, on a F = ∂U/∂X + ∂X/∂X = grad U + I."
+    },
+    {
+      "id": "q3",
+      "question": "Quel tenseur est défini par C = FᵀF et vérifie dx·dx' = dXᵀ C dX' ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Le tenseur de Green-Lagrange E"
+        },
+        {
+          "id": "b",
+          "text": "Le tenseur de Cauchy-Green droit C"
+        },
+        {
+          "id": "c",
+          "text": "Le tenseur linéarisé ε"
+        },
+        {
+          "id": "d",
+          "text": "Le tenseur de rotation Ω"
+        }
+      ],
+      "correct": "b",
+      "explanation": "C'est la définition même du tenseur de Cauchy-Green droit, introduit pour exprimer la variation du produit scalaire entre deux vecteurs matériels transformés."
+    },
+    {
+      "id": "q4",
+      "question": "Le tenseur de Green-Lagrange E est défini par :",
+      "options": [
+        {
+          "id": "a",
+          "text": "E = C − I"
+        },
+        {
+          "id": "b",
+          "text": "E = ½(C − I)"
+        },
+        {
+          "id": "c",
+          "text": "E = (grad U)ᵀ grad U"
+        },
+        {
+          "id": "d",
+          "text": "E = ½(F + Fᵀ) − I"
+        }
+      ],
+      "correct": "b",
+      "explanation": "E = ½(C−I), ce qui donne aussi E = ½[(grad U)ᵀ + grad U + (grad U)ᵀ·grad U] — valable en transformation finie (terme non linéaire inclus)."
+    },
+    {
+      "id": "q5",
+      "question": "Sous quelle condition E devient-il approximativement égal à ε ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Quand F = I"
+        },
+        {
+          "id": "b",
+          "text": "Quand grad U → 0 (hypothèse HPP)"
+        },
+        {
+          "id": "c",
+          "text": "Quand det F = 1"
+        },
+        {
+          "id": "d",
+          "text": "Quand le matériau est incompressible"
+        }
+      ],
+      "correct": "b",
+      "explanation": "C'est exactement l'hypothèse des petites perturbations : quand grad U tend vers 0, le terme non linéaire (grad U)ᵀ·grad U devient négligeable et E ≈ ε."
+    },
+    {
+      "id": "q6",
+      "question": "Le tenseur des déformations linéarisé ε (HPP) est :",
+      "options": [
+        {
+          "id": "a",
+          "text": "ε = ½(grad U + (grad U)ᵀ)"
+        },
+        {
+          "id": "b",
+          "text": "ε = ½(grad U − (grad U)ᵀ)"
+        },
+        {
+          "id": "c",
+          "text": "ε = grad U"
+        },
+        {
+          "id": "d",
+          "text": "ε = FᵀF"
+        }
+      ],
+      "correct": "a",
+      "explanation": "ε est la partie symétrique de grad U. La partie antisymétrique, ½(grad U − (grad U)ᵀ), est le tenseur de rotation Ω."
+    },
+    {
+      "id": "q7",
+      "question": "Pour F = diag(λ1, λ2, λ3), quelle est l'expression EXACTE de la variation de volume ΔV/V ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "tr ε"
+        },
+        {
+          "id": "b",
+          "text": "λ1 + λ2 + λ3 − 3"
+        },
+        {
+          "id": "c",
+          "text": "det F − 1 = λ1λ2λ3 − 1"
+        },
+        {
+          "id": "d",
+          "text": "λ1λ2λ3"
+        }
+      ],
+      "correct": "c",
+      "explanation": "La formule ΔV/V = det F − 1 est exacte, valable pour toute transformation (pas seulement diagonale) ; tr ε n'en est que l'approximation linéarisée (HPP)."
+    },
+    {
+      "id": "q8",
+      "question": "Sous l'hypothèse des petites perturbations, la variation de volume devient approximativement :",
+      "options": [
+        {
+          "id": "a",
+          "text": "det F − 1"
+        },
+        {
+          "id": "b",
+          "text": "tr ε = εI + εII + εIII"
+        },
+        {
+          "id": "c",
+          "text": "2 tr ε"
+        },
+        {
+          "id": "d",
+          "text": "det ε"
+        }
+      ],
+      "correct": "b",
+      "explanation": "En linéarisant √(det(2ε+I)) − 1, on obtient tr ε, le premier invariant du tenseur des déformations."
+    },
+    {
+      "id": "q9",
+      "question": "En HPP, quelle est la relation entre la distorsion angulaire γij et la composante εij du tenseur des déformations ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "γij = εij"
+        },
+        {
+          "id": "b",
+          "text": "γij ≈ 2εij"
+        },
+        {
+          "id": "c",
+          "text": "γij ≈ εij / 2"
+        },
+        {
+          "id": "d",
+          "text": "γij = εii − εjj"
+        }
+      ],
+      "correct": "b",
+      "explanation": "C'est un piège classique : εij (composante du tenseur) n'est que la MOITIÉ de la distorsion angulaire totale γij."
+    },
+    {
+      "id": "q10",
+      "question": "Quelle affirmation sur le tenseur de rotation Ω (HPP) est correcte ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Ω est symétrique et représente un étirement pur"
+        },
+        {
+          "id": "b",
+          "text": "Ω est antisymétrique ; il existe un vecteur ω tel que Ω·X = ω × X, décrivant une rotation rigide locale"
+        },
+        {
+          "id": "c",
+          "text": "Ω = ε dans tous les cas"
+        },
+        {
+          "id": "d",
+          "text": "Ω n'existe que pour les matériaux incompressibles"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Ω, partie antisymétrique de grad U, s'identifie à une rotation rigide infinitésimale via le vecteur rotation ω tel que ΩX = ω×X."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "recto": "Définition du tenseur gradient F",
+      "verso": "F = ∂x/∂X = grad U + I. Relie dX et dx par dx = F·dX. Contient à la fois rotation rigide et déformation."
+    },
+    {
+      "id": "f2",
+      "recto": "Définition du tenseur de Cauchy-Green droit C",
+      "verso": "C = FᵀF. Permet d'exprimer dx·dx' = dXᵀ C dX' (variation du produit scalaire lors de la transformation)."
+    },
+    {
+      "id": "f3",
+      "recto": "Définition du tenseur de Green-Lagrange E (déformation finie)",
+      "verso": "E = ½(C − I). Contient un terme non linéaire (grad U)ᵀ·grad U ; valable même pour de grandes déformations."
+    },
+    {
+      "id": "f4",
+      "recto": "Les 2 hypothèses de la théorie HPP",
+      "verso": "1) Déplacements petits devant la taille caractéristique. 2) Composantes de grad U petites devant 1. Il faut les DEUX conditions."
+    },
+    {
+      "id": "f5",
+      "recto": "Définition du tenseur des déformations linéarisé ε",
+      "verso": "ε = ½(grad U + (grad U)ᵀ) — partie symétrique de grad U. Valide seulement sous HPP ; E → ε quand grad U → 0."
+    },
+    {
+      "id": "f6",
+      "recto": "Définition du tenseur de rotation Ω",
+      "verso": "Ω = ½(grad U − (grad U)ᵀ) — partie antisymétrique. grad U = ε + Ω. Ω antisymétrique ⇒ ∃ω, ΩX = ω×X (rotation rigide infinitésimale)."
+    },
+    {
+      "id": "f7",
+      "recto": "Allongement relatif selon e_i en HPP",
+      "verso": "ε(M,e_i) ≈ ε_ii. ε_ii > 0 : traction ; ε_ii < 0 : compression."
+    },
+    {
+      "id": "f8",
+      "recto": "Relation entre distorsion angulaire γij et εij (PIÈGE)",
+      "verso": "γij ≈ 2εij. εij n'est que la MOITIÉ de la distorsion angulaire totale entre deux directions."
+    },
+    {
+      "id": "f9",
+      "recto": "Variation de volume EXACTE",
+      "verso": "ΔV/V = det F − 1. Valable pour toute transformation, finie ou non ; équivalent à √(det C) − 1."
+    },
+    {
+      "id": "f10",
+      "recto": "Variation de volume LINÉARISÉE (HPP)",
+      "verso": "ΔV/V ≈ tr ε = εI + εII + εIII. C'est le 1er invariant du tenseur des déformations."
+    },
+    {
+      "id": "f11",
+      "recto": "Propriété mathématique de ε permettant de définir les déformations principales",
+      "verso": "ε est symétrique donc diagonalisable dans une base orthonormée propre : ε = diag(εI, εII, εIII)."
+    }
+  ],
+  "exercices": [
+    {
+      "titre": "Exercice 1 — Application directe : décomposition ε + Ω",
+      "difficulte": 1,
+      "enonce": "On considère, en HPP, le champ de déplacement dans la base $(\\vec e_1,\\vec e_2,\\vec e_3)$ :\n\n$$U_1=a\\,X_2,\\qquad U_2=b\\,X_1,\\qquad U_3=0 \\quad (a,b \\text{ constantes, petites})$$\n\n1. Calculer $\\operatorname{grad}U$, puis $\\varepsilon$ et $\\Omega$.\n2. Calculer $\\operatorname{tr}\\varepsilon$ et commenter physiquement.\n3. Discuter les cas particuliers $a=b$ et $a=-b$.",
+      "corrige": "$$\\operatorname{grad}U=\\begin{pmatrix}0&a&0\\\\ b&0&0\\\\ 0&0&0\\end{pmatrix}$$\n\n$$\\varepsilon=\\begin{pmatrix}0&\\frac{a+b}{2}&0\\\\ \\frac{a+b}{2}&0&0\\\\ 0&0&0\\end{pmatrix},\\qquad \\Omega=\\begin{pmatrix}0&\\frac{a-b}{2}&0\\\\ \\frac{b-a}{2}&0&0\\\\ 0&0&0\\end{pmatrix}$$\n\n$\\operatorname{tr}\\varepsilon=0 \\Rightarrow \\Delta V/V\\approx 0$ : les termes diagonaux sont nuls, il n'y a aucun allongement, seulement de la distorsion — cohérent avec un champ purement en cisaillement.\n\n- Si $a=b$ : $\\Omega=0$ → cisaillement pur, pas de rotation rigide.\n- Si $a=-b$ : $\\varepsilon=0$ → rotation rigide pure (autour de $\\vec e_3$), aucune déformation — piège classique : un grand grad U purement antisymétrique donne un mouvement sans déformation, mais viole HPP si $a$ n'est pas petit."
+    },
+    {
+      "titre": "Exercice 2 — Déformations principales",
+      "difficulte": 2,
+      "enonce": "En un point M, le tenseur des déformations HPP s'écrit (dans une base où $\\varepsilon_{i3}=0$) :\n\n$$\\varepsilon=\\begin{pmatrix}2\\times10^{-3}&1\\times10^{-3}&0\\\\ 1\\times10^{-3}&-1\\times10^{-3}&0\\\\ 0&0&0\\end{pmatrix}$$\n\nDéterminer les déformations principales et la variation de volume relative $\\Delta V/V$.",
+      "corrige": "$\\vec e_3$ est déjà direction propre (valeur propre $\\varepsilon_{III}=0$). Reste à diagonaliser le bloc $2\\times2$ :\n\n$$\\begin{pmatrix}2&1\\\\1&-1\\end{pmatrix}\\times 10^{-3}$$\n\nTrace $=1\\times10^{-3}$, déterminant $=(2)(-1)-1^2=-3$ (×$10^{-6}$).\n\n$$\\varepsilon_{I,II}=\\frac{\\operatorname{tr}}{2}\\pm\\sqrt{\\left(\\frac{\\operatorname{tr}}{2}\\right)^2-\\det}=0{,}5\\times10^{-3}\\pm1{,}803\\times10^{-3}$$\n\n$$\\varepsilon_I\\approx 2{,}30\\times10^{-3},\\quad \\varepsilon_{II}\\approx -1{,}30\\times10^{-3},\\quad \\varepsilon_{III}=0$$\n\nVérification : $\\varepsilon_I+\\varepsilon_{II}+\\varepsilon_{III}=1\\times10^{-3}=\\operatorname{tr}\\varepsilon$ ✓\n\n$$\\frac{\\Delta V}{V}\\approx\\operatorname{tr}\\varepsilon = 1\\times10^{-3} = 0{,}1\\%$$"
+    },
+    {
+      "titre": "Exercice 3 — Type concours : exact vs HPP",
+      "difficulte": 3,
+      "enonce": "On donne le tenseur gradient de la transformation (petite mais finie déformation) :\n\n$$F=\\begin{pmatrix}1{,}02&0{,}01&0\\\\0&1&0\\\\0&0&1\\end{pmatrix}$$\n\n1. Calculer $C=F^\\top F$, puis l'allongement exact $\\varepsilon(M,\\vec e_1)$ et la distorsion exacte $\\gamma_{12}$.\n2. Calculer $\\operatorname{grad}U$, $\\varepsilon$, $\\Omega$ (approche HPP), en déduire $\\varepsilon_{11}$ et $\\gamma_{12}\\approx 2\\varepsilon_{12}$.\n3. Comparer les résultats exacts et HPP, et conclure sur la validité de l'approximation.",
+      "corrige": "**1) Calcul exact.**\n\n$$C=F^\\top F=\\begin{pmatrix}1{,}0404&0{,}0102&0\\\\ 0{,}0102&1{,}0001&0\\\\ 0&0&1\\end{pmatrix}$$\n\n- $\\varepsilon(M,\\vec e_1)=\\sqrt{C_{11}}-1=\\sqrt{1{,}0404}-1=1{,}02-1=0{,}0200$ (soit 2 %)\n- $\\gamma_{12}=\\arcsin\\!\\left(\\dfrac{C_{12}}{\\sqrt{C_{11}C_{22}}}\\right)=\\arcsin(0{,}0100)\\approx 0{,}0100\\ \\text{rad}$ (≈ 0,573°)\n\n**2) Calcul HPP.**\n\n$$\\operatorname{grad}U=F-I=\\begin{pmatrix}0{,}02&0{,}01&0\\\\0&0&0\\\\0&0&0\\end{pmatrix}$$\n\n$$\\varepsilon=\\begin{pmatrix}0{,}02&0{,}005&0\\\\0{,}005&0&0\\\\0&0&0\\end{pmatrix} \\Rightarrow \\varepsilon_{11}=0{,}0200,\\qquad \\gamma_{12}\\approx2\\varepsilon_{12}=0{,}0100\\ \\text{rad}$$\n\n**3) Comparaison.** Les deux approches donnent ici des résultats identiques à 4 chiffres significatifs près (écart relatif < 0,01 %) : cohérent car grad U reste petit devant 1. L'HPP est donc très bien justifiée dans ce cas. L'écart entre E et ε grandirait uniquement si les composantes de grad U devenaient non négligeables devant 1, ou si de grandes rotations locales apparaissaient — point souvent testé aux concours pour piéger l'usage abusif de l'HPP."
+    }
+  ],
+  "suivi": "Points à surveiller sur ce chapitre : le facteur 2 entre γ_ij et ε_ij (distorsion vs composante du tenseur), et la distinction entre ΔV/V = det F − 1 (exact) et ΔV/V ≈ tr ε (approximation HPP)."
+}

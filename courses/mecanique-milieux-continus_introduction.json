@@ -1,0 +1,316 @@
+{
+  "matiere": "Mécanique des Milieux Continus",
+  "type": "CM",
+  "sujet": "Introduction — approche lagrangienne vs eulérienne",
+  "fiche_synthese": "# Mécanique des Milieux Continus (MMC) — Introduction\n\n## 1. Contexte du cours (UE MDS-I)\n- UE « Mécanique des Solides - Intermédiaire » (MDS-I). Enseignant MMC : D. Depriester.\n- Volumes horaires : MMC 10h CM + 10h ED ; RdM 8h CM + 10h ED ; EF (éléments finis) 4h CM + 20h projet ; TP 16h.\n- Évaluation : test rapide MMC (coeff 5), test rapide RdM (coeff 5), examen en ligne MMC/RdM (coeff 30), projet EF (coeff 30), 4 TP méca (coeff 30).\n- Programme des 7 chapitres de MMC : (1) Introduction, approche lagrangienne vs eulérienne ; (2) Représentation tensorielle des déformations ; (3) Hypothèse des Petites Perturbations (HPP) ; (4) Vecteur contrainte, tenseur des contraintes ; (5) Élasticité, thermo-élasticité ; (6) Critère d'élasticité ; (7) Équation de compatibilité.\n\n## 2. Qu'est-ce qu'un milieu continu ?\n**Définition** : milieu dans lequel les propriétés physiques évoluent de façon continue dans l'espace.\n**Modèle** : à une échelle suffisamment grande, tout milieu peut être considéré comme continu — même s'il est discontinu à petite échelle (grains, cristaux, atomes).\n\nIllustration multi-échelle donnée en cours :\n- Béton : macroscopique (structure entière) → mésoscopique (granulats + armatures) → microscopique (grains du matériau).\n- Métaux : macroscopique (pièce, ex. dent d'engrenage usée) → microscopique (grains / joints de grains) → nanoscopique (maille cristalline).\n\n### Volume Élémentaire Représentatif (VER)\n**Définition** : volume minimal de matière dans lequel les propriétés physiques d'un matériau peuvent être considérées comme continues.\n**Exemple (métaux)** : 1 VER ≈ 30 grains.\n**Piège classique** : le VER n'est pas « infiniment petit » au sens mathématique ; il doit être assez grand devant la microstructure (grains) pour lisser les hétérogénéités, tout en restant petit devant la pièce étudiée.\n\n## 3. Champ d'application de la MMC\n**Ce que la MMC PEUT étudier :**\n- la déformation d'une pièce soumise à des efforts ;\n- la charge maximale que peut supporter une pièce avant de plastifier ;\n- la statique des fluides ;\n- les écoulements laminaires.\n\n**Ce que la MMC NE PEUT PAS étudier (limites du modèle continu) :**\n- la fissuration d'une pièce (discontinuité de matière) ;\n- le contact entre deux pièces distinctes ;\n- les écoulements turbulents ;\n- l'interaction entre un fluide et une structure solide.\n\n**Piège classique** : la MMC « pure » traite un milieu unique et continu. Dès qu'il y a discontinuité (fissure), contact, turbulence ou couplage multi-physique, il faut des modèles complémentaires (mécanique de la rupture, mécanique du contact, CFD turbulente, interaction fluide-structure).\n\n## 4. Référentiel d'observation : approche lagrangienne vs eulérienne\n\n### 4.1 Description lagrangienne\n**Principe** : on suit chaque point matériel au cours du temps, repéré par sa position dans la configuration initiale (à $t=0$).\n$$\\vec{u}(X_1,X_2,X_3,t) = \\big(\\psi_1(X_1,X_2,X_3,t),\\ \\psi_2(X_1,X_2,X_3,t),\\ \\psi_3(X_1,X_2,X_3,t)\\big)$$\n- $(X_1,X_2,X_3)$ : coordonnées du point dans la configuration de référence, fixes pour un point matériel donné (elles servent d'étiquette identifiant la particule suivie).\n- On s'intéresse à l'histoire (déplacement, trajectoire) de chaque point du milieu.\n- ⇒ Approche naturelle de la **mécanique du solide**.\n- Exemple donné en cours : le compteur de vitesse d'une voiture indique la vitesse de notre propre véhicule (on suit toujours le même « point »).\n\n### 4.2 Description eulérienne\n**Principe** : on observe ce qui se passe en un point fixe de l'espace, sans se soucier de la particule matérielle qui s'y trouve à l'instant considéré.\n$$\\vec{u}(x_1,x_2,x_3,t) = \\big(\\phi_1(x_1,x_2,x_3,t),\\ \\phi_2(x_1,x_2,x_3,t),\\ \\phi_3(x_1,x_2,x_3,t)\\big)$$\n- $(x_1,x_2,x_3)$ : coordonnées spatiales actuelles (à l'instant $t$), fixes dans l'espace — ce n'est pas la même particule matérielle qui y est repérée d'un instant à l'autre.\n- On étudie une grandeur (ex. vitesse) en un point donné à une date donnée, peu importe l'histoire de la particule qui s'y trouve.\n- ⇒ Approche naturelle de la **mécanique des fluides**.\n- Exemple donné en cours : un radar automatique relève la vitesse du véhicule qui passe devant lui à l'instant $t$ — un véhicule différent à chaque passage.\n- **Piège classique** : ne pas confondre $X_i$ (lagrangien, attaché à la matière) et $x_i$ (eulérien, attaché à l'espace) — la convention majuscule/minuscule est utilisée tout au long du cours.\n\n## 5. Calcul de l'accélération : dérivée particulaire\nObjectif : exprimer l'accélération $\\vec{\\gamma}$ à partir du champ de vitesse $\\vec{V}$, selon la description choisie.\n\n### 5.1 En description lagrangienne\n$\\vec{V} = \\vec{V}(X_1,X_2,X_3,t)$, avec $X_1,X_2,X_3$ fixes pour un point matériel donné (constantes, pas des fonctions du temps).\nDifférentielle totale :\n$$\\mathrm{d}\\vec{V} = \\frac{\\partial \\vec{V}}{\\partial X_1}\\mathrm{d}X_1 + \\frac{\\partial \\vec{V}}{\\partial X_2}\\mathrm{d}X_2 + \\frac{\\partial \\vec{V}}{\\partial X_3}\\mathrm{d}X_3 + \\frac{\\partial \\vec{V}}{\\partial t}\\mathrm{d}t$$\nComme $X_1,X_2,X_3$ sont fixes le long de la trajectoire du point suivi, $\\mathrm{d}X_1=\\mathrm{d}X_2=\\mathrm{d}X_3=0$ : les trois premiers termes s'annulent. D'où :\n$$\\vec{\\gamma} = \\frac{\\mathrm{d}\\vec{V}}{\\mathrm{d}t} = \\frac{\\partial \\vec{V}}{\\partial t}$$\n→ En lagrangien, l'accélération est simplement la dérivée partielle par rapport au temps (pas de terme supplémentaire).\n\n### 5.2 En description eulérienne\n$\\vec{V} = \\vec{V}(x_1(t),x_2(t),x_3(t),t)$ : ici $x_1,x_2,x_3$ sont les coordonnées du point matériel suivi, qui évoluent avec $t$ puisqu'on décrit le champ en un point de l'espace traversé par la particule.\nDifférentielle totale (règle de dérivation composée) :\n$$\\mathrm{d}\\vec{V} = \\frac{\\partial \\vec{V}}{\\partial x_1}\\mathrm{d}x_1 + \\frac{\\partial \\vec{V}}{\\partial x_2}\\mathrm{d}x_2 + \\frac{\\partial \\vec{V}}{\\partial x_3}\\mathrm{d}x_3 + \\frac{\\partial \\vec{V}}{\\partial t}\\mathrm{d}t$$\nEn divisant par $\\mathrm{d}t$ et en reconnaissant $\\mathrm{d}x_i/\\mathrm{d}t = V_i$ :\n$$\\vec{\\gamma} = \\frac{\\mathrm{d}\\vec{V}}{\\mathrm{d}t} = \\frac{\\partial \\vec{V}}{\\partial x_1}V_1 + \\frac{\\partial \\vec{V}}{\\partial x_2}V_2 + \\frac{\\partial \\vec{V}}{\\partial x_3}V_3 + \\frac{\\partial \\vec{V}}{\\partial t}$$\nForme tensorielle compacte :\n$$\\vec{\\gamma} = \\overline{\\overline{\\mathrm{grad}}}\\,\\vec{V}\\cdot \\vec{V} + \\frac{\\partial \\vec{V}}{\\partial t}$$\navec le tenseur gradient de vitesse :\n$$\\overline{\\overline{\\mathrm{grad}}}\\,\\vec{V} = \\begin{pmatrix}\\partial V_1/\\partial x_1 & \\partial V_1/\\partial x_2 & \\partial V_1/\\partial x_3\\\\ \\partial V_2/\\partial x_1 & \\partial V_2/\\partial x_2 & \\partial V_2/\\partial x_3\\\\ \\partial V_3/\\partial x_1 & \\partial V_3/\\partial x_2 & \\partial V_3/\\partial x_3\\end{pmatrix}$$\n- $\\partial \\vec{V}/\\partial t$ : **accélération locale** (variation temporelle en un point fixe de l'espace).\n- $\\overline{\\overline{\\mathrm{grad}}}\\,\\vec{V}\\cdot \\vec{V}$ : **accélération convective** (terme advectif) — non nul même en régime stationnaire ($\\partial \\vec{V}/\\partial t = 0$), dès que le champ de vitesse varie dans l'espace le long de la trajectoire.\n- **Piège classique** : en eulérien stationnaire, la vitesse en chaque point fixe ne change pas dans le temps, mais l'accélération d'une particule en mouvement peut être non nulle à cause du terme convectif (elle « voit » des vitesses différentes en se déplaçant).\n\n## 6. Synthèse — lien entre les deux approches\n| | Lagrangien | Eulérien |\n|---|---|---|\n| Variable de position | $X_i$ (config. initiale, attachée à la matière) | $x_i$ (position spatiale actuelle, fixe dans l'espace) |\n| Ce qu'on suit | Un point matériel donné, dans le temps | Un point fixe de l'espace |\n| Accélération | $\\partial \\vec{V}/\\partial t$ | $\\overline{\\overline{\\mathrm{grad}}}\\,\\vec{V}\\cdot\\vec{V} + \\partial \\vec{V}/\\partial t$ |\n| Domaine naturel | Mécanique du solide | Mécanique des fluides |\n\n**Conclusion** : les deux descriptions sont deux façons équivalentes de décrire le même mouvement ; le choix dépend du type de milieu étudié (solide → lagrangien, fluide → eulérien). La suite du cours de MMC (chapitres 2 à 7) utilisera surtout l'approche lagrangienne (HPP) pour l'étude des solides.",
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "Quelle est la définition d'un milieu continu selon le cours ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Un milieu sans aucune microstructure interne (pas de grains, pas d'atomes)"
+        },
+        {
+          "id": "b",
+          "text": "Un milieu dans lequel les propriétés physiques évoluent de façon continue dans l'espace"
+        },
+        {
+          "id": "c",
+          "text": "Un milieu qui ne peut jamais se rompre"
+        },
+        {
+          "id": "d",
+          "text": "Un milieu homogène et isotrope uniquement"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Le cours définit le milieu continu comme un milieu dont les propriétés physiques évoluent de façon continue dans l'espace ; le modèle continu est une approximation valable à une échelle suffisamment grande devant la microstructure réelle (grains, atomes)."
+    },
+    {
+      "id": "q2",
+      "question": "Que représente le Volume Élémentaire Représentatif (VER) ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Le plus grand volume qu'on peut mailler en éléments finis"
+        },
+        {
+          "id": "b",
+          "text": "Le volume minimal de matière dans lequel les propriétés physiques peuvent être considérées comme continues"
+        },
+        {
+          "id": "c",
+          "text": "Le volume d'un seul grain du matériau"
+        },
+        {
+          "id": "d",
+          "text": "Le volume total de la pièce étudiée"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Le VER est le volume minimal de matière permettant de lisser les hétérogénéités microscopiques (grains, etc.) et de considérer les propriétés comme continues à cette échelle."
+    },
+    {
+      "id": "q3",
+      "question": "Dans le cas des métaux, à quoi correspond approximativement 1 VER ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "1 atome"
+        },
+        {
+          "id": "b",
+          "text": "≈ 30 grains"
+        },
+        {
+          "id": "c",
+          "text": "1 seul grain"
+        },
+        {
+          "id": "d",
+          "text": "La totalité de la pièce"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Le cours donne l'ordre de grandeur : pour les métaux, 1 VER ≈ 30 grains, ce qui est suffisant pour lisser les hétérogénéités microstructurales tout en restant petit devant la pièce."
+    },
+    {
+      "id": "q4",
+      "question": "Laquelle de ces situations la MMC (telle que vue dans ce cours) PEUT-elle étudier ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "La fissuration d'une pièce"
+        },
+        {
+          "id": "b",
+          "text": "La charge maximale qu'une pièce peut supporter avant de plastifier"
+        },
+        {
+          "id": "c",
+          "text": "Le contact entre deux pièces distinctes"
+        },
+        {
+          "id": "d",
+          "text": "Les écoulements turbulents"
+        }
+      ],
+      "correct": "b",
+      "explanation": "La MMC permet d'étudier la déformation d'une pièce, la charge maximale avant plastification, la statique des fluides et les écoulements laminaires. Fissuration, contact, turbulence et interaction fluide-structure sortent du cadre de ce cours."
+    },
+    {
+      "id": "q5",
+      "question": "Laquelle de ces situations est explicitement exclue du champ d'application de la MMC présenté en cours ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "La statique des fluides"
+        },
+        {
+          "id": "b",
+          "text": "Les écoulements laminaires"
+        },
+        {
+          "id": "c",
+          "text": "L'interaction entre un fluide et une structure solide"
+        },
+        {
+          "id": "d",
+          "text": "La déformation d'une pièce soumise à des efforts"
+        }
+      ],
+      "correct": "c",
+      "explanation": "L'interaction fluide-structure, comme la fissuration, le contact entre pièces et les écoulements turbulents, ne peut pas être étudiée avec la MMC telle que présentée dans ce cours introductif."
+    },
+    {
+      "id": "q6",
+      "question": "En description lagrangienne, par rapport à quoi repère-t-on la position d'un point matériel ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Sa position dans la configuration initiale (à t=0), notée X_i"
+        },
+        {
+          "id": "b",
+          "text": "Sa position spatiale actuelle, notée x_i"
+        },
+        {
+          "id": "c",
+          "text": "Un point fixe arbitraire de l'espace"
+        },
+        {
+          "id": "d",
+          "text": "Le centre de gravité du milieu"
+        }
+      ],
+      "correct": "a",
+      "explanation": "En lagrangien, on suit un point matériel identifié par ses coordonnées X_i dans la configuration de référence (initiale), qui restent fixes pour ce point tout au long du mouvement."
+    },
+    {
+      "id": "q7",
+      "question": "En description eulérienne, quelle est la nature de la variable de position x_i ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Elle identifie toujours la même particule matérielle"
+        },
+        {
+          "id": "b",
+          "text": "Elle correspond à un point fixe de l'espace, traversé par des particules différentes au cours du temps"
+        },
+        {
+          "id": "c",
+          "text": "Elle est identique à X_i, juste avec une autre notation"
+        },
+        {
+          "id": "d",
+          "text": "Elle ne dépend pas du temps t"
+        }
+      ],
+      "correct": "b",
+      "explanation": "En eulérien, x_i désigne un point fixe de l'espace : ce n'est pas la même particule matérielle qui s'y trouve d'un instant à l'autre, contrairement au lagrangien où X_i suit toujours le même point matériel."
+    },
+    {
+      "id": "q8",
+      "question": "Le radar automatique qui relève la vitesse de chaque véhicule passant devant lui illustre quelle description ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Description lagrangienne, car on suit un véhicule précis"
+        },
+        {
+          "id": "b",
+          "text": "Description eulérienne, car on observe un point fixe de l'espace traversé par des véhicules différents"
+        },
+        {
+          "id": "c",
+          "text": "Ni l'une ni l'autre, ce n'est pas un exemple de champ continu"
+        },
+        {
+          "id": "d",
+          "text": "Les deux descriptions à la fois, indifféremment"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Le radar est fixé à une position spatiale donnée ; il enregistre la vitesse du véhicule qui s'y trouve à l'instant t, quel que soit ce véhicule : c'est l'exemple donné en cours pour illustrer la description eulérienne (à opposer au compteur de vitesse embarqué, exemple lagrangien)."
+    },
+    {
+      "id": "q9",
+      "question": "En description lagrangienne, à quoi est égale l'accélération γ⃗ d'un point matériel ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "grad(V⃗)·V⃗ + ∂V⃗/∂t"
+        },
+        {
+          "id": "b",
+          "text": "∂V⃗/∂t uniquement"
+        },
+        {
+          "id": "c",
+          "text": "grad(V⃗)·V⃗ uniquement"
+        },
+        {
+          "id": "d",
+          "text": "∂V⃗/∂X1 + ∂V⃗/∂X2 + ∂V⃗/∂X3"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Comme X1, X2, X3 sont fixes pour le point matériel suivi (dX_i = 0), la différentielle totale de V⃗ se réduit à sa dérivée partielle par rapport au temps : γ⃗ = ∂V⃗/∂t. Il n'y a pas de terme convectif en lagrangien."
+    },
+    {
+      "id": "q10",
+      "question": "Dans l'expression eulérienne γ⃗ = grad(V⃗)·V⃗ + ∂V⃗/∂t, que représente le terme grad(V⃗)·V⃗ et quand peut-il être non nul ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "C'est l'accélération locale ; il est toujours nul en régime stationnaire"
+        },
+        {
+          "id": "b",
+          "text": "C'est l'accélération convective ; il peut être non nul même en régime stationnaire si le champ de vitesse varie dans l'espace"
+        },
+        {
+          "id": "c",
+          "text": "C'est un terme purement mathématique sans interprétation physique"
+        },
+        {
+          "id": "d",
+          "text": "Il est toujours nul, quel que soit le champ de vitesse"
+        }
+      ],
+      "correct": "b",
+      "explanation": "grad(V⃗)·V⃗ est le terme convectif (ou advectif) : il traduit le fait qu'une particule en mouvement traverse des zones où la vitesse est différente. Il peut être non nul même si ∂V⃗/∂t = 0 (régime stationnaire), dès que le champ de vitesse dépend de la position — piège classique de ce chapitre."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "recto": "Définition d'un milieu continu",
+      "verso": "Milieu dans lequel les propriétés physiques évoluent de façon continue dans l'espace. À une échelle suffisamment grande, tout milieu peut être considéré comme continu."
+    },
+    {
+      "id": "f2",
+      "recto": "Définition du VER (Volume Élémentaire Représentatif)",
+      "verso": "Volume minimal de matière dans lequel les propriétés physiques d'un matériau peuvent être considérées comme continues. Exemple métaux : 1 VER ≈ 30 grains."
+    },
+    {
+      "id": "f3",
+      "recto": "Description lagrangienne — formule",
+      "verso": "u⃗(X1,X2,X3,t) exprimé en fonction des coordonnées X_i dans la configuration initiale (t=0). On suit un point matériel donné au cours du temps."
+    },
+    {
+      "id": "f4",
+      "recto": "Description eulérienne — formule",
+      "verso": "u⃗(x1,x2,x3,t) exprimé en fonction des coordonnées spatiales actuelles x_i (point fixe de l'espace, à l'instant t)."
+    },
+    {
+      "id": "f5",
+      "recto": "Accélération en description lagrangienne",
+      "verso": "γ⃗ = ∂V⃗/∂t (car X1,X2,X3 sont fixes pour le point matériel suivi : dX_i = 0)."
+    },
+    {
+      "id": "f6",
+      "recto": "Accélération en description eulérienne (dérivée particulaire)",
+      "verso": "γ⃗ = grad(V⃗)·V⃗ + ∂V⃗/∂t, somme du terme convectif grad(V⃗)·V⃗ et du terme local ∂V⃗/∂t."
+    },
+    {
+      "id": "f7",
+      "recto": "Terme convectif vs terme local (accélération eulérienne)",
+      "verso": "∂V⃗/∂t = accélération locale (variation en un point fixe). grad(V⃗)·V⃗ = accélération convective, non nulle même en régime stationnaire si le champ varie dans l'espace."
+    },
+    {
+      "id": "f8",
+      "recto": "Tenseur gradient de vitesse grad(V⃗)",
+      "verso": "Matrice 3x3 dont l'élément (i,j) vaut ∂Vi/∂xj : grad(V⃗)_ij = ∂Vi/∂xj."
+    },
+    {
+      "id": "f9",
+      "recto": "Lagrangien vs eulérien — domaines naturels",
+      "verso": "Description lagrangienne → mécanique du solide (on suit la matière). Description eulérienne → mécanique des fluides (on observe un point fixe de l'espace)."
+    }
+  ],
+  "exercices": [
+    {
+      "titre": "Identifier lagrangien vs eulérien",
+      "difficulte": 1,
+      "enonce": "Pour chacune des situations suivantes, précisez si la description est lagrangienne ou eulérienne, en justifiant en une phrase :\na) Une balise GPS attachée à un bateau enregistre sa position au cours du temps.\nb) Une station météo fixe mesure la température de l'air qui passe au-dessus d'elle, heure par heure.\nc) On suit la déformation d'un point précis d'une poutre en flexion au cours du chargement.\nd) Un capteur de débit fixé à un endroit précis d'une canalisation mesure le débit du fluide qui y circule.",
+      "corrige": "a) **Lagrangien** : la balise suit un objet matériel précis (le bateau) au cours du temps, exactement comme l'exemple du compteur de vitesse embarqué vu en cours.\nb) **Eulérien** : la station est fixe dans l'espace ; ce sont des particules d'air différentes qui la traversent à chaque instant, comme l'exemple du radar automatique.\nc) **Lagrangien** : on identifie et on suit un point matériel donné de la structure (même logique que le suivi de trajectoire d'un point d'un solide).\nd) **Eulérien** : le capteur occupe une position fixe de l'espace ; c'est le fluide qui défile devant lui, pas l'inverse."
+    },
+    {
+      "titre": "Accélération d'un champ de vitesse stationnaire (écoulement en expansion)",
+      "difficulte": 2,
+      "enonce": "On considère un écoulement stationnaire (indépendant du temps) dont le champ de vitesse eulérien est donné par :\n$$V_1(x_1) = a\\,x_1,\\qquad V_2 = 0,\\qquad V_3 = 0$$\noù $a$ est une constante positive (modèle simplifié d'une buse divergente).\n1. Justifier que le terme d'accélération locale est nul.\n2. Calculer le tenseur gradient de vitesse $\\overline{\\overline{\\mathrm{grad}}}\\,\\vec{V}$.\n3. En déduire l'accélération $\\vec{\\gamma}$ d'une particule fluide située en $x_1$, et commenter le résultat.",
+      "corrige": "1. Le champ $\\vec{V}$ ne dépend pas explicitement de $t$ (écoulement stationnaire), donc $\\partial \\vec{V}/\\partial t = \\vec{0}$.\n\n2. Seule composante non nulle : $\\partial V_1/\\partial x_1 = a$. Toutes les autres dérivées sont nulles (V2=V3=0 et V1 ne dépend que de x1). D'où :\n$$\\overline{\\overline{\\mathrm{grad}}}\\,\\vec{V} = \\begin{pmatrix}a & 0 & 0\\\\ 0 & 0 & 0\\\\ 0 & 0 & 0\\end{pmatrix}$$\n\n3. $\\vec{\\gamma} = \\overline{\\overline{\\mathrm{grad}}}\\,\\vec{V}\\cdot \\vec{V} + \\partial \\vec{V}/\\partial t$. La première composante : $\\gamma_1 = a\\,V_1 + 0\\cdot V_2 + 0\\cdot V_3 = a\\,(a x_1) = a^2 x_1$. Les autres composantes sont nulles.\n$$\\vec{\\gamma} = (a^2 x_1,\\ 0,\\ 0)$$\n**Commentaire** : bien que l'écoulement soit stationnaire (∂V⃗/∂t = 0), l'accélération d'une particule fluide n'est pas nulle : elle est entièrement due au terme convectif, car la particule traverse des zones où la vitesse augmente (buse divergente). C'est l'illustration directe du piège vu en cours."
+    },
+    {
+      "titre": "Accélération complète d'un champ de cisaillement oscillant",
+      "difficulte": 3,
+      "enonce": "On étudie un écoulement de cisaillement instationnaire, dont le champ de vitesse eulérien est :\n$$V_1(x_1,x_2,t) = k\\,x_2\\,\\cos(\\omega t),\\qquad V_2 = 0,\\qquad V_3 = 0$$\noù $k$ et $\\omega$ sont des constantes positives.\n1. Calculer le terme d'accélération locale $\\partial \\vec{V}/\\partial t$.\n2. Calculer le tenseur gradient de vitesse $\\overline{\\overline{\\mathrm{grad}}}\\,\\vec{V}$.\n3. Calculer le terme convectif $\\overline{\\overline{\\mathrm{grad}}}\\,\\vec{V}\\cdot \\vec{V}$, puis l'accélération totale $\\vec{\\gamma}$.\n4. Commenter : pourquoi le terme convectif s'annule-t-il ici malgré un gradient de vitesse non nul ?",
+      "corrige": "1. $\\partial \\vec{V}/\\partial t = (-k\\,x_2\\,\\omega\\,\\sin(\\omega t),\\ 0,\\ 0)$.\n\n2. Dérivées non nulles : $\\partial V_1/\\partial x_2 = k\\cos(\\omega t)$ ; toutes les autres sont nulles ($V_1$ ne dépend pas de $x_1$ ni $x_3$, et $V_2=V_3=0$).\n$$\\overline{\\overline{\\mathrm{grad}}}\\,\\vec{V} = \\begin{pmatrix}0 & k\\cos(\\omega t) & 0\\\\ 0 & 0 & 0\\\\ 0 & 0 & 0\\end{pmatrix}$$\n\n3. Composante 1 du terme convectif : $\\big(\\overline{\\overline{\\mathrm{grad}}}\\,\\vec{V}\\cdot \\vec{V}\\big)_1 = \\dfrac{\\partial V_1}{\\partial x_1}V_1 + \\dfrac{\\partial V_1}{\\partial x_2}V_2 + \\dfrac{\\partial V_1}{\\partial x_3}V_3 = 0\\cdot V_1 + k\\cos(\\omega t)\\cdot 0 + 0 = 0$ (car $V_2=0$). Les autres composantes sont nulles également. Donc le terme convectif est nul, et :\n$$\\vec{\\gamma} = \\partial \\vec{V}/\\partial t = \\big(-k\\,x_2\\,\\omega\\,\\sin(\\omega t),\\ 0,\\ 0\\big)$$\n\n4. Le terme convectif s'écrit $(\\overline{\\overline{\\mathrm{grad}}}\\,\\vec{V})\\cdot \\vec{V}$ : il combine le gradient de vitesse avec la vitesse elle-même. Ici, la seule dérivée non nulle du champ est par rapport à $x_2$ (direction perpendiculaire à l'écoulement), mais $V_2 = 0$ : la particule ne se déplace pas dans la direction où la vitesse varie spatialement, donc elle ne « voit » pas de variation de vitesse le long de sa propre trajectoire à un instant donné. Seule la variation temporelle du champ (terme local) contribue à son accélération."
+    }
+  ],
+  "suivi": "Aucun quiz ni exercice n'a encore été réalisé par Lucas sur ce chapitre (Introduction MMC : lagrangien/eulérien, dérivée particulaire) — section à mettre à jour après ses réponses."
+}

@@ -1,0 +1,121 @@
+@import "tailwindcss";
+@import "katex/dist/katex.min.css";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  html {
+    color-scheme: light;
+  }
+  html.dark {
+    color-scheme: dark;
+  }
+  body {
+    @apply bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100;
+  }
+}
+
+.markdown-body h1 {
+  @apply mb-5 mt-8 text-2xl font-bold tracking-tight first:mt-0;
+}
+.markdown-body h2 {
+  @apply mb-3 mt-8 border-b border-slate-200 pb-1.5 text-xl font-bold tracking-tight first:mt-0 dark:border-slate-800;
+}
+.markdown-body h3 {
+  @apply mb-2 mt-5 text-lg font-semibold;
+}
+.markdown-body p {
+  @apply mb-3 leading-relaxed;
+}
+.markdown-body ul {
+  @apply mb-3 list-disc space-y-1.5 pl-6 leading-relaxed;
+}
+.markdown-body ol {
+  @apply mb-3 list-decimal space-y-1.5 pl-6 leading-relaxed;
+}
+.markdown-body li > p {
+  @apply mb-0;
+}
+.markdown-body li::marker {
+  @apply text-slate-400 dark:text-slate-500;
+}
+.markdown-body code {
+  @apply rounded bg-slate-200 px-1.5 py-0.5 font-mono text-sm dark:bg-slate-800;
+}
+.markdown-body pre {
+  @apply mb-3 overflow-x-auto rounded-lg bg-slate-900 p-4 text-sm text-slate-100;
+}
+.markdown-body pre code {
+  @apply bg-transparent p-0;
+}
+.markdown-body blockquote {
+  @apply mb-3 border-l-4 border-slate-300 pl-4 italic text-slate-600 dark:border-slate-700 dark:text-slate-400;
+}
+.markdown-body a {
+  @apply text-indigo-600 underline hover:text-indigo-500 dark:text-indigo-400;
+}
+.markdown-body table {
+  @apply mb-3 w-full border-collapse text-sm;
+}
+.markdown-body th,
+.markdown-body td {
+  @apply border border-slate-300 px-3 py-1.5 dark:border-slate-700;
+}
+.markdown-body strong {
+  @apply font-semibold;
+}
+.markdown-body .katex-display {
+  @apply my-4 overflow-x-auto overflow-y-hidden py-1;
+}
+.markdown-body .katex-display > .katex {
+  @apply text-[1.05em];
+}
+
+::highlight(search-results) {
+  background-color: rgb(253 224 71 / 0.55);
+  color: inherit;
+}
+::highlight(search-current) {
+  background-color: rgb(249 115 22);
+  color: white;
+}
+.dark ::highlight(search-results) {
+  background-color: rgb(202 138 4 / 0.45);
+}
+
+::highlight(stabilo-yellow) {
+  background-color: rgb(250 204 21 / 0.45);
+}
+::highlight(stabilo-green) {
+  background-color: rgb(132 204 22 / 0.4);
+}
+::highlight(stabilo-pink) {
+  background-color: rgb(244 114 182 / 0.4);
+}
+::highlight(stabilo-blue) {
+  background-color: rgb(56 189 248 / 0.4);
+}
+
+/* Formulas are highlighted as one block: glyph-level highlights would leave fraction bars and roots bare. */
+.katex[data-stabilo] {
+  border-radius: 0.2em;
+  background-color: var(--stabilo);
+  box-shadow: 0 0 0 0.15em var(--stabilo);
+}
+.katex-display > .katex[data-stabilo] {
+  width: fit-content;
+  margin-inline: auto;
+  box-shadow: 0 0 0 0.35em var(--stabilo);
+}
+.katex[data-stabilo='yellow'] {
+  --stabilo: rgb(250 204 21 / 0.45);
+}
+.katex[data-stabilo='green'] {
+  --stabilo: rgb(132 204 22 / 0.4);
+}
+.katex[data-stabilo='pink'] {
+  --stabilo: rgb(244 114 182 / 0.4);
+}
+.katex[data-stabilo='blue'] {
+  --stabilo: rgb(56 189 248 / 0.4);
+}

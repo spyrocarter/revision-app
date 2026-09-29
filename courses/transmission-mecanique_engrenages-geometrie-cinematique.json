@@ -1,0 +1,490 @@
+{
+  "matiere": "Transmission mécanique (COPI, GIM 1A)",
+  "type": "CM",
+  "sujet": "Engrenages : géométrie et cinématique (cylindriques droits, développante de cercle, déport, rapport de conduite, glissement spécifique)",
+  "fiche_synthese": "# Engrenages : géométrie & cinématique — GIM 1A COPI (F. Malburet, 2026-2027)\n\n> Support de 84 diapos. Les diapos 59-63 et 83 sont absentes du PDF fourni : leur contenu probable (exercices, contrôle) est reconstitué dans les compléments. Test 1 de CDT (engrenages + liaisons complètes) : **06/11/2026**. Les points marqués *(complément)* viennent de sources externes ou de la théorie standard, pas des diapos.\n\n## 0. Cadre du cours\n\n**Ce que l'ingénieur doit maîtriser (diapo 4)**\n- Géométrie des dentures : développante de cercle, module et angle de pression de taille ($m_0$, $\\alpha_0$), déport, angle d'hélice / de cône, nombre de dents.\n- Fonctionnement : rapport de transmission, homocinétie, module et angle de fonctionnement, module apparent.\n- Bon comportement : continuité (rapport de conduite), absence de jeu excessif, usure maîtrisée (glissement spécifique), tenue en rupture (Lewis) et en pression (Hertz).\n\n**Prérequis Bac+2 (diapo 3)** : $p$ pas, $Z$ nombre de dents, $d_p$ primitif, $d_a$ tête, $d_f$ pied, $a$ entraxe, $m$ module.\n\n$$d_p = m\\,Z$$\n\n$$p = \\frac{\\pi d_p}{Z} = \\pi m$$\n\n$$a = m\\,\\frac{Z_1+Z_2}{2}\\ \\text{(extérieur)}\\qquad a = m\\,\\frac{Z_2-Z_1}{2}\\ \\text{(intérieur)}$$\n\n- Développante, pignon (roue extérieure) : $d_a = d_p + 2m$ ; $d_f = d_p - 2{,}5m$.\n- Couronne (denture intérieure) : $d_a = d_p - 2m$ ; $d_f = d_p + 2{,}5m$.\n- Contact extérieur : $k = \\omega_s/\\omega_e = -Z_1/Z_2$ (signe − : sens inversés).\n- Classification : intérieur/extérieur × cylindrique/conique/gauche × denture droite/hélicoïdale.\n\n**Fil rouge : réducteur à palan (diapos 5, 28, 79-82)** : variateur à friction (courroie) + engrenage cylindrique droit (1,2). Sortie coaxiale à l'entrée ; l'entraxe $a$ est imposé par le variateur. Objectif : optimiser l'engrenage en respectant (i) fonctionnement sans jeu, (ii) rapport de conduite conforme à la norme, (iii) équilibre de l'usure. Roues taillées avec un outil crémaillère normalisé.\n\n## A.1 Définitions\n\n- **Engrenage** : ensemble de deux solides $S_1$, $S_2$ tels que la rotation de l'un entraîne l'autre **par obstacle** (en rotation, ou en translation si crémaillère). Le plus petit est le **pignon**, l'autre la **roue** (ou **crémaillère**, roue de rayon infini).\n- **Rapport de transmission** $k=\\omega_{sortie}/\\omega_{entrée}=\\|\\vec\\omega_s\\|/\\|\\vec\\omega_e\\|$. On précise « réduction » ou « multiplication » de sorte que le rapport soit **> 1** : réduction de 2 ⇒ $\\omega_s=\\omega_e/2$ ; multiplication de 2 ⇒ $\\omega_s=2\\omega_e$. Attention : deux conventions coexistent (k signé $=-Z_1/Z_2$ ; rapport de réduction $>1$ en norme).\n- Rapport géométrique de réduction (diapo 38) : $k=r_2/r_1$.\n\n## A.2 Profils des dentures\n\n**Contraintes recherchées (diapo 10)** : homocinétie ($k$ = cte sur un tour) ; pertes énergétiques, usure et dégradations minimales ; fabrication économique à qualité maîtrisée ; peu d'effets induits (bruit, vibrations, efforts radiaux/axiaux).\n\n**Profils conjugués (diapos 11-12)**\n- Homocinétie ⇔ il existe un point $I$ tel que $\\vec V_{I,S_2/S_1}=\\vec 0$ : une « base » (cercle virtuel de $S_1$) roule sans glisser sur une « roulante » (cercle virtuel de $S_2$).\n- En un point de contact $M$ : $\\vec V_{M,S_2/S_1}=\\vec V_{I,S_2/S_1}+\\overrightarrow{MI}\\wedge(\\vec\\Omega_{2/0}-\\vec\\Omega_{1/0})$, avec $\\vec V_{I,S_2/S_1}=\\vec 0$.\n- Solides indéformables ⇒ $\\vec V_{M,S_2/S_1}$ est **perpendiculaire à la normale au contact** ; le produit vectoriel le rend aussi **perpendiculaire à $\\overrightarrow{MI}$**. Donc la **normale commune en M passe par I** (loi fondamentale de l'engrènement).\n- Cinématiquement il existe une **infinité** de profils conjugués ; le choix est industriel.\n\n**Formes classiques (diapos 13-17)** — exigences industrielles : répétabilité, coût, tolérances, interchangeabilité, normalisation (machines-outils historiques : trajectoires de combinaisons rotation/translation). « L'histoire explique le choix initial, l'industrie explique la persistance. »\n\n| Courbe | Génération | Usage cité |\n|---|---|---|\n| Cycloïde | cercle qui roule sans glisser sur une droite | 1re forme de dent (Désargues, 1630) ; horlogerie (frottement prépondérant, arc-boutement → précision d'axes et tolérances) |\n| Épicycloïde | cercle qui roule sans glisser sur un cercle extérieur | horlogerie |\n| Hypocycloïde | cercle qui roule sans glisser sur un cercle intérieur | compresseur à lobes |\n| **Développante de cercle** (anti-clothoïde) | droite qui roule sans glisser sur un cercle (le cercle de base) | référence industrielle (normalisée, interchangeable, maîtrisée) |\n\n**Autres profils (diapos 18-21)**\n- Non homocinétiques (elliptiques, formes diverses) : niches (machines textiles, entraînements synchronisés, pompes/doseurs) ; remplacent un système came + galet.\n- Théorie → réalité (diapo 19) : déformation des dents sous charge, interférence, écarts de fabrication ⇒ impact sur la qualité du contact et sur $k$ : **erreur de transmission** $\\Delta k/k$. Question : anticiper par la fabrication ?\n- Novikov : formes particulières, transmissions très chargées (aéronautique, militaire, spatial ; ex. hélicoptère Mil). « Excellents sur le papier, exigeants dans la réalité. »\n- Profils « optimisés » (bruit, vibrations) : quasi toujours une développante modifiée → **corrections de tête et de pied** (ajustements industriels).\n- Fabrication additive : démonstrateurs, R&D, prototypes, pièces non critiques. Freins : absence de normes, contrôle géométrique difficile, fatigue mal caractérisée, coût. « Possible technologiquement, immature industriellement. »\n\n**Développante de cercle (diapos 22-24)**\n- Définie par $r_b$ (rayon de base, $OH$) et l'angle $\\alpha$ (intervalle) : suffisant pour définir la denture.\n- Propriétés : toutes les développantes d'un même cercle sont des courbes « parallèles » ; deux développantes se déduisent l'une de l'autre par **rotation autour du centre**.\n- Construction de la fonction involute : $HM=HA$ (le segment tangent est égal à l'arc déroulé). Or $HM=r_b\\tan\\alpha$ et $HA=r_b(\\alpha+\\theta)$, d'où :\n\n$$\\theta=\\tan\\alpha-\\alpha=\\operatorname{inv}(\\alpha)\\quad(\\alpha\\ \\text{en radians !})$$\n\n- Développement : $\\operatorname{inv}\\alpha=\\alpha^3/3+2\\alpha^5/15+17\\alpha^7/315+\\dots$ ; petit angle $\\operatorname{inv}\\alpha\\approx\\alpha^3/3$, soit $\\alpha\\approx\\sqrt[3]{3\\operatorname{inv}\\alpha}$.\n- Tables : $\\operatorname{inv}(22°8')=0{,}0204362$ ; inverse $\\operatorname{inv}^{-1}(0{,}0174738)=21°3'=21{,}05°$ (lecture ligne = minutes, colonne = degrés ; $1'=1/60°$).\n\n**Mise en place de deux roues (diapos 25-27)**\n- Les roues sont positionnées par l'entraxe $a$ **du carter**. **Ligne d'action** $L$ = tangente commune aux deux cercles de base ($H_1H_2$, passe par $I$). **Angle de pression** $\\alpha$ = angle entre $L$ et la tangente commune aux primitifs. $a$ = entraxe de fonctionnement.\n- Torseur d'action équivalent en $I$. **Sans frottement, la direction (ligne d'action) et la norme de l'effort restent constantes** pendant l'engrènement.\n\n## A.3 Surfaces axoïdes et familles d'engrenages (diapos 30-36)\n\n| Cas | Axes | Surface axoïde | Engrenages |\n|---|---|---|---|\n| 1 | parallèles | cylindres | cylindriques droits ou hélicoïdaux, contact extérieur ou intérieur |\n| 2 | concourants | cônes | coniques droits, hélicoïdaux, spiro-coniques (90° ou autres) ; ex. renvoi d'angle sur hélicoptère |\n| 3 | ni concourants ni parallèles | hyperboloïdes | engrenages gauches, hypoïdes (Klingelnberg, désaxement $\\Delta$), roue et vis sans fin, spiroïde |\n| 4 | (90°) | — | **face gear** : pignon cylindrique droit + roue « face » (BTP hélicoptère, NOTAR) |\n\nInclinaison des dentures des coniques : droit, hélicoïdal, spiral. Maquette d'hyperboloïde = transmission par adhérence.\n\n## B.1 Cylindriques droits : terminologie et propriétés\n\n**Définitions de base (diapo 38)** : $r_{bi}$ rayon de base ; $r_i$ rayon primitif **de fonctionnement** ; $a$ entraxe.\n\n$$k=\\frac{r_2}{r_1}\\qquad a=r_1+r_2\\qquad r_{b1}=r_1\\cos\\alpha$$\n\n**Entraxe et angle de pression (diapo 39)** : deux développantes restent conjuguées **quel que soit l'entraxe**. Si $a$ change, $\\alpha$, $r_1$, $r_2$ changent, tels que :\n\n$$r_{b1}+r_{b2}=a\\cos\\alpha\\qquad r_1+r_2=a$$\n\nSi $a$ augmente à $r_b$ fixes, $\\cos\\alpha=(r_{b1}+r_{b2})/a$ diminue donc $\\alpha$ augmente. Les rayons de base ne dépendent que de la fabrication ($m_0,\\alpha_0,Z$).\n\n**Conditions d'engrènement (diapo 40)** : (i) la « distance » entre deux profils doit être la même sur les deux roues ; (ii) le nombre de profils sur un périmètre doit être entier.\n\n$$p_b=2\\pi\\frac{r_{b1}}{Z_1}=2\\pi\\frac{r_{b2}}{Z_2}\\quad\\text{(pas de base)}$$\n\n$$p=2\\pi\\frac{r_1}{Z_1}=2\\pi\\frac{r_2}{Z_2}\\quad\\text{(pas primitif de fonctionnement)}$$\n\n**Module de fonctionnement (diapo 41)** : $m=p/\\pi$ (en mm). Le module est associé à **un engrenage**, pas à une roue isolée.\n\n$$r_1=\\frac{mZ_1}{2}\\qquad r_2=\\frac{mZ_2}{2}\\qquad a=m\\frac{Z_1+Z_2}{2}$$\n\nLogique (diapo 42) : $a$ (carter) ⇒ $\\alpha$ et $m$ de fonctionnement, avec $m=2a/(Z_1+Z_2)$.\n\n**Caractéristiques de taille (diapos 43-47)** : une roue seule (en vue de sa fabrication) est caractérisée par le **module de taille $m_0$** et l'**angle de pression de taille $\\alpha_0$** (valeurs normalisées, imposées par l'outil).\n- Outil crémaillère (géométrie normalisée) : pas $\\pi m_0$, largeur de dent = largeur de creux = $\\pi m_0/2$, angle de flanc $\\alpha_0$ ; dépassement de l'arête de tête $1{,}25m_0$ sous la ligne de référence (crée le creux).\n- $\\alpha_0=20°$ usuel (exceptionnellement 15°, 17°30, 22°50, 25°).\n- Modules normalisés, série 1 (prioritaire) : 0,6 ; 0,8 ; 1 ; 1,25 ; 1,5 ; 2 ; 2,5 ; 3 ; 4 ; 5 ; 6 ; 8 ; 10 ; 12 ; 16 ; 20 ; 25 ; 32 ; 40. Série 2 : 0,55 ; 0,7 ; 0,9 ; 1,125 (le support indique 1,25) ; 1,375 ; 1,75 ; 2,25 ; 2,75 ; 3,5 ; 4,5 ; 5,5 ; 7 ; 9 ; 11 ; 14 ; 18 ; 22 ; 28 ; 36 ; 45.\n- Domaines : micromécanique ($m\\approx0{,}6$-1), mécanique générale / automobile ($m\\approx2$-4), industrie lourde ($m\\approx8$-16).\n- Comparaison (diapo 49, pignon 20 dents, 1500 tr/min, même matériau et critère) : $m=0{,}5$ ⇒ $P_{max}=0{,}20$ kW ; $m=3$ ⇒ 40 kW ; $m=10$ ⇒ 1500 kW. *(complément)* $P\\propto m^3$ à $Z$, vitesse et critère fixés.\n\n**Déport (diapos 50-51)**\n- $\\delta$ : décalage de la **ligne de taille** par rapport à la **ligne de référence** (positif vers l'extérieur de la matière taillée, de l'axe de la roue vers l'extérieur).\n\n$$x=\\frac{\\delta}{m_0}\\quad\\text{(sans unité)}$$\n\n- $x>0$ : dent plus épaisse en pied, plus haute ; $x<0$ : dent plus fine. La forme de la dent change (ex. $x=-0{,}5;0;+0{,}5$).\n\n**Spécification d'une roue (diapo 52)** BE → atelier/achat : $m_0$, $\\alpha_0$, $Z$, $x$, $\\beta$ (angle d'hélice), largeur $b$, diamètre de tête $d_b$. Outil + réglage machine ⇒ roue, puis contrôle géométrique.\n\n**Condition de fonctionnement sans jeu (diapo 53)** : ni trop loin (jeu), ni trop près (pièces déformées). Les épaisseurs au primitif de fonctionnement vérifient $s_1+s_2=\\pi m$.\n\n$$\\operatorname{inv}(\\alpha)=\\operatorname{inv}(\\alpha_0)+2\\,\\frac{x_1+x_2}{Z_1+Z_2}\\tan(\\alpha_0)$$\n\n- Problème **direct** : $\\alpha=f(\\alpha_0,Z_1,Z_2,x_1+x_2)$. Problème **indirect** : $x_1+x_2=f^{-1}(\\alpha,\\alpha_0,Z_1,Z_2)$. Seule la **somme** $x_1+x_2$ intervient.\n- *(complément : démonstration)* épaisseur angulaire sur le primitif : $s_i=r_i\\left[s_{0i}/r_{0i}+2(\\operatorname{inv}\\alpha_0-\\operatorname{inv}\\alpha)\\right]$ avec $s_{0i}=(\\pi/2+2x_i\\tan\\alpha_0)m_0$ et $r_{0i}=m_0Z_i/2$ ; on somme et on pose $s_1+s_2=\\pi m$.\n\n**Conservation du pas de base (diapos 55-56)**\n- Fabrication : $r_b=r_0\\cos\\alpha_0$ ; fonctionnement : $r_b=r\\cos\\alpha$. Comme $p_b=2\\pi r_b/Z$ est le même :\n\n$$m_0\\cos(\\alpha_0)=m\\cos(\\alpha)$$\n\n$$a_0\\cos(\\alpha_0)=a\\cos(\\alpha)$$\n\n- $a=m(Z_1+Z_2)/2$ : entraxe de fonctionnement (**celui du carter**). $a_0=m_0(Z_1+Z_2)/2$ : entraxe de taille (simple définition, sans utilité directe).\n\n**Vocabulaire (diapo 57)**\n- $x_1=x_2=0$ : engrenage **non corrigé** : $\\alpha=\\alpha_0$, $m=m_0$, $a=a_0$.\n- $x_1+x_2=0$ et $x_1\\neq0$ : **corrigé sans variation d'entraxe** : $\\alpha=\\alpha_0$, $m=m_0$, $a=a_0$.\n- $x_1+x_2\\neq0$ : **corrigé avec variation d'entraxe** : $\\alpha\\neq\\alpha_0$, $m\\neq m_0$, $a\\neq a_0$.\n\n**Deux problèmes types (diapo 58)**\n- Direct : $Z_1=30$, $x_1=0{,}5$, $Z_2=40$, $x_2=0{,}5$, $m_0=2$, $\\alpha_0=20°$ ⇒ $\\alpha$, $m$, $a$ (résultat : $\\alpha\\approx23{,}68°$, $m\\approx2{,}052$, $a\\approx71{,}83$ mm).\n- Inverse : $Z_1=20$, $Z_2=30$, $m_0=2$, $\\alpha_0=20°$, $a=51{,}5$ mm ⇒ $x_1+x_2$ (résultat $\\approx0{,}83$).\n\n**Contrôle d'une roue (diapos 81-82)**\n\n$$h_{f0}=(1{,}25-x)\\,m_0\\quad\\text{(creux de taille)}\\qquad h_{a0}=(1+x)\\,m_0\\quad\\text{(saillie de taille)}$$\n\n$$s_0=\\left[\\frac{\\pi}{2}+2x\\tan\\alpha_0\\right]m_0\\quad\\text{(dent au primitif de taille)}\\qquad e_0=\\left[\\frac{\\pi}{2}-2x\\tan\\alpha_0\\right]m_0\\quad\\text{(creux)}$$\n\n- Primitif de taille $d_0=m_0Z$. Vérification : $s_0+e_0=\\pi m_0$. Contrôles : machine à mesurer 3D, cote sur piges, cote sur $k$ dents.\n- **Jeu en fond de dent** (clearance) $\\ne$ jeu entre flancs (backlash). *(complément)* $c=a-r_{a2}-r_{f1}=(a-a_0)+h_{f1}-h_{a2}$ (même valeur avec les rôles inversés). Cahier des charges de l'exercice palan : $c>20\\%\\,m_0$.\n\n**Interférence de taillage (diapo 84)** : condition de non-interférence en pied de dent avec l'outil crémaillère normalisé :\n\n$$Z\\ \\ge\\ \\frac{2(1-x)}{\\sin^2\\alpha_0}$$\n\n- $x=0$, $\\alpha_0=20°$ : $Z\\ge17{,}1$, soit 18 dents (usage courant : « moins de 17 dents ⇒ interférence »). $x=0{,}5$ : $Z\\ge8{,}55$, soit 9 dents. Déport minimal : $x_{min}=1-Z\\sin^2\\alpha_0/2$ (≈ $(17-Z)/17$).\n\n## B.2 Caractéristiques cinématiques\n\n**Efforts de denture / profil temporel (diapo 65)** : action de denture en escalier (2 dents, puis 1 seule, puis 2). Il faut **minimiser le temps où une dent est seule** ⇒ modifier la géométrie.\n\n**Rapport de conduite $\\varepsilon_\\alpha$ (diapos 66-69)**\n\n$$\\varepsilon_\\alpha=\\frac{AB}{p_b}=\\varepsilon_\\alpha(\\alpha_0,m_0,Z_1,Z_2,x_1,x_2)\\qquad p_b=p\\cos\\alpha=\\pi m\\cos\\alpha$$\n\n- $AB$ : longueur d'engrènement (de conduite), segment de la ligne d'action parcouru par le contact.\n- **Continuité** : $\\varepsilon_\\alpha>1$ (nécessaire). Intéressant à maximiser. **Recommandation manufacturiers : $\\varepsilon_\\alpha>1{,}3$** (engrenage cylindrique droit) : il existe une phase avec au moins deux dents en prise.\n- Cas **non corrigé** (calcul $AI/p_b+IB/p_b$) :\n\n$$\\frac{AI}{p_b}=\\frac{1}{\\pi\\cos\\alpha_0}\\left[\\sqrt{\\frac{Z_1^2}{4}\\sin^2\\alpha_0+Z_1+1}-\\frac{Z_1}{2}\\sin\\alpha_0\\right]$$\n\n$$\\frac{IB}{p_b}=\\frac{1}{\\pi\\cos\\alpha_0}\\left[\\sqrt{\\frac{Z_2^2}{4}\\sin^2\\alpha_0+Z_2+1}-\\frac{Z_2}{2}\\sin\\alpha_0\\right]$$\n\n  Origine : $AI=\\sqrt{r_{a1}^2-r_{b1}^2}-r_1\\sin\\alpha_0$ ; $IB=\\sqrt{r_{a2}^2-r_{b2}^2}-r_2\\sin\\alpha_0$ ; $p_b=\\pi m_0\\cos\\alpha_0$. Ici $\\varepsilon_\\alpha$ ne dépend que de $Z_1,Z_2,\\alpha_0$.\n- Cas **général (corrigé ou non)** :\n\n$$\\varepsilon_\\alpha=y_1\\,U(N_1,\\alpha)+y_2\\,U(N_2,\\alpha)$$\n\n$$y_i=\\frac{(h_{a0})_i}{m}=\\frac{r_{0i}+(1+x_i)m_0-r_i}{m}\\qquad N_i=\\frac{Z_i}{y_i}\\qquad U(N,\\alpha)=\\frac{1}{\\pi\\cos\\alpha}\\left[\\sqrt{\\frac{N^2}{4}\\sin^2\\alpha+N+1}-\\frac{N}{2}\\sin\\alpha\\right]$$\n\n  Non corrigé : $y_i=1$, $N_i=Z_i$, $\\alpha=\\alpha_0$. $U$ se lit sur l'abaque (engrenages extérieurs, courbes $\\alpha=12°30'$ à $30°$, $N$ de 10 à 1000, sur SAVOIR). Le rapport de conduite dépend de $Z$, $\\alpha_0$ **et des déports**.\n- *(complément)* Nommage : $AI$ et $IB$ sont les distances de $I$ aux deux extrémités du segment de conduite ; la distance liée au cercle de tête de la roue $i$ vaut $\\sqrt{r_{ai}^2-r_{bi}^2}-r_i\\sin\\alpha$.\n\n**Dégradations d'une denture (diapo 71)** : le long du profil, de pied de dent à bout de dent : grippage (pied et tête, zones de fort glissement), pitting (près du primitif, pression de Hertz), déformation et avarie ; répartition des efforts : $F/2$ + $F/2$ (2 dents) puis $F$ (1 dent) selon le rapport de conduite.\n\n**Glissement spécifique (diapos 72-75)**\n- Roues de friction : entraînement avec glissement, $\\vec V_{M,1/2}\\neq\\vec 0$ ($ds_1\\neq ds_2$). Transposition à l'engrenage : le glissement relatif des flancs est nul en $I$ seulement.\n\n$$gs_i=\\frac{ds_i-ds_j}{ds_i}$$\n\n- Allure pendant l'engrènement : $gs=0$ en $I$ ; $|gs_1|$ vaut $+1$ au point $H_2$ (tangence du cercle de base 2) et $|gs_2|$ vaut $+1$ en $H_1$ ; les valeurs extrêmes $(gs_1)_{max}$ et $(gs_2)_{max}$ sont atteintes aux extrémités $A$, $B$ du segment de conduite.\n- *(complément, engrenage extérieur)* vitesse de glissement $|V_g|=|IM|(\\omega_1+\\omega_2)$ ; avec $x$ = position algébrique de $M$ depuis $I$ vers $T_2$ : $gs_1=\\dfrac{(\\omega_1+\\omega_2)\\,x}{\\omega_1\\,(T_1I+x)}$ et $gs_2=-\\dfrac{(\\omega_1+\\omega_2)\\,x}{\\omega_2\\,(T_2I-x)}$ (signes selon convention).\n\n**Critère d'usure — équilibrage (diapo 76)** : équilibrer le produit $(P\\cdot V)_i$ :\n\n$$\\left|(gs_1)_{max}\\right|=\\left|(gs_2)_{max}\\right|$$\n\nPar abaques ou numériquement (logiciels). Exemple (diapo 77) : $m_0=10$, $\\alpha_0=20°$, $Z_1=20$, $Z_2=31$, $x_1+x_2=0$ ⇒ équilibre pour $x_1=+0{,}180$, $x_2=-0{,}180$. Pour $x=0$, le petit pignon glisse plus (voir exercice 4).\n\n**Exercice palan, partie 2 (diapo 80)** : $x_1=0{,}250$, $x_2=-0{,}444$ (équilibre des glissements). Q4 : jeu en fond de dent $>20\\%\\,m_0$ (schéma simplifié ; saillie et creux de chaque roue). Q5 : interférence de taillage roue 1 ?\n\n**Bilan calcul d'engrenage (diapo 78)** : dimensionnement aux efforts (pression et rupture) ; rapport cinématique ; fonctionnement sans jeu ; équilibre du glissement spécifique ; rapport de conduite. Paramètres : outil ($m_0$, $\\alpha_0$) ; réglage machine ($Z_1$, $Z_2$, $x_1$, $x_2$, $\\beta$) ; matériau.\n\n## Compléments (sources externes)\n- Référence normative : la crémaillère de référence ISO 53 sert de base aux profils d'engrenages cylindriques ; hypothèse usuelle $\\alpha_0=20°$, $h_a=m$, $h_f=1{,}25m$.\n- Deux types d'interférence distincts : **de taillage** (sommet de dent de l'outil qui entaille le pied de la roue, section de pied réduite) et **de fonctionnement** (interpénétration de matière, blocage). Interférence de fonctionnement évitée par : le cercle de tête d'une roue doit couper la ligne d'action **avant** le point de tangence de l'autre roue, soit $r_{a1}\\le\\sqrt{r_{b1}^2+(a\\sin\\alpha)^2}$ et de même pour la roue 2.\n- Raccourcissement de tête (ISO) : $h_a=(1+x-k)m$ avec $k=(x_1+x_2)-(a-a_0)/m_0$ pour conserver le jeu de fond $0{,}25\\,m_0$ quand $x_1+x_2\\neq0$. Les diapos ignorent ce raccourcissement ($h_{a0}=(1+x)m_0$).\n- Épaisseur de tête minimale (dent pointue) : limite haute du déport, typiquement $s_a\\ge0{,}2$-$0{,}4\\,m$ (valeur usuelle).\n- Lewis (rupture en pied de dent, dent = poutre encastrée) et Hertz (pression de contact, pitting) : critères de dimensionnement aux efforts, hors périmètre de ce cours.\n\n## Pièges classiques\n1. $\\operatorname{inv}\\alpha=\\tan\\alpha-\\alpha$ avec $\\alpha$ **en radians** ; lecture de table en minutes.\n2. $m\\neq m_0$ et $\\alpha\\neq\\alpha_0$ dès que $x_1+x_2\\neq0$ ; $a$ du carter = $a$ de fonctionnement $\\neq a_0$.\n3. Seule la **somme** $x_1+x_2$ règle le sans-jeu ; la répartition règle l'usure (gs) et la tenue.\n4. $r_b$ ne dépend que de $m_0,\\alpha_0,Z$ : **invariant** quand $a$ change.\n5. Le module de fonctionnement est propre à l'**engrenage** ; $m_0$ est propre à l'outil.\n6. $k$ signé ($-Z_1/Z_2$) vs rapport de réduction ($>1$) : toujours préciser.\n7. $\\varepsilon_\\alpha>1$ nécessaire, $>1{,}3$ recommandé. $\\varepsilon_\\alpha$ dépend aussi des déports.\n8. $gs=0$ en $I$ seulement ; maxima aux extrémités $A$, $B$.\n9. $Z\\ge2(1-x)/\\sin^2\\alpha_0$ : 17,1 (pas 17) pour $x=0$, $20°$.\n10. Jeu en fond de dent (clearance) $\\neq$ jeu entre flancs (backlash).\n",
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "Quelle propriété cinématique garantit l'homocinétie (k constant) d'un engrenage ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Le glissement est nul en tout point de contact"
+        },
+        {
+          "id": "b",
+          "text": "La normale commune au contact coupe toujours la ligne des centres au même point I"
+        },
+        {
+          "id": "c",
+          "text": "Les profils sont des arcs de cercle"
+        },
+        {
+          "id": "d",
+          "text": "Les deux roues ont le même nombre de dents"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Avec $\\vec V_{I,2/1}=\\vec 0$ et des solides indéformables, $\\vec V_{M,2/1}$ est perpendiculaire à la normale au contact et à $\\overrightarrow{MI}$, donc la normale passe par I. Il y a du glissement en tout point sauf I (réponse a fausse). Il existe une infinité de profils conjugués (pas seulement des cercles)."
+    },
+    {
+      "id": "q2",
+      "question": "Deux arbres ni parallèles ni concourants : quelle surface axoïde et quelle famille d'engrenages ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Cylindres : engrenages cylindriques"
+        },
+        {
+          "id": "b",
+          "text": "Cônes : engrenages coniques"
+        },
+        {
+          "id": "c",
+          "text": "Hyperboloïdes : engrenages gauches, hypoïdes, roue et vis sans fin"
+        },
+        {
+          "id": "d",
+          "text": "Plans : crémaillères"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Axes parallèles → cylindres ; concourants → cônes ; ni l'un ni l'autre → hyperboloïdes (hypoïdes Klingelnberg avec désaxement, gauches, vis sans fin, spiroïdes)."
+    },
+    {
+      "id": "q3",
+      "question": "Quelle est la fonction involute et quelle unité pour l'angle ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "$\\operatorname{inv}\\alpha=\\alpha-\\tan\\alpha$, en degrés"
+        },
+        {
+          "id": "b",
+          "text": "$\\operatorname{inv}\\alpha=\\tan\\alpha-\\alpha$, en radians"
+        },
+        {
+          "id": "c",
+          "text": "$\\operatorname{inv}\\alpha=\\tan\\alpha+\\alpha$, en radians"
+        },
+        {
+          "id": "d",
+          "text": "$\\operatorname{inv}\\alpha=\\sin\\alpha-\\alpha$, en degrés"
+        }
+      ],
+      "correct": "b",
+      "explanation": "HM = HA avec HM = $r_b\\tan\\alpha$ et HA = $r_b(\\alpha+\\theta)$ donne $\\theta=\\tan\\alpha-\\alpha$. Ce n'est correct qu'avec α en radians (piège classique)."
+    },
+    {
+      "id": "q4",
+      "question": "Deux roues à développante sont montées sur un carter dont on augmente l'entraxe a. Que devient l'engrenage ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Les rayons de base augmentent, α est inchangé"
+        },
+        {
+          "id": "b",
+          "text": "Les rayons de base restent identiques, α augmente et les primitifs de fonctionnement changent"
+        },
+        {
+          "id": "c",
+          "text": "Les profils ne sont plus conjugués"
+        },
+        {
+          "id": "d",
+          "text": "Les rayons de base diminuent, α diminue"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Les profils en développante restent conjugués quel que soit l'entraxe. $r_b$ est fixé par la taille ; $\\cos\\alpha=(r_{b1}+r_{b2})/a$ diminue donc α augmente ; $r_1$ et $r_2$ changent avec $r_1+r_2=a$."
+    },
+    {
+      "id": "q5",
+      "question": "Que traduit la relation $m_0\\cos\\alpha_0=m\\cos\\alpha$ ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "La condition de fonctionnement sans jeu"
+        },
+        {
+          "id": "b",
+          "text": "La conservation du pas de base entre taillage et fonctionnement"
+        },
+        {
+          "id": "c",
+          "text": "La condition de non-interférence"
+        },
+        {
+          "id": "d",
+          "text": "L'équilibrage du glissement spécifique"
+        }
+      ],
+      "correct": "b",
+      "explanation": "$p_b=\\pi m_0\\cos\\alpha_0$ (fabrication) $=\\pi m\\cos\\alpha$ (fonctionnement). Le sans-jeu est $\\operatorname{inv}\\alpha=\\operatorname{inv}\\alpha_0+2\\frac{x_1+x_2}{Z_1+Z_2}\\tan\\alpha_0$."
+    },
+    {
+      "id": "q6",
+      "question": "Engrenage avec $x_1=+0{,}3$ et $x_2=-0{,}3$. Que peut-on affirmer ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Non corrigé : α = α0"
+        },
+        {
+          "id": "b",
+          "text": "Corrigé sans variation d'entraxe : α = α0, m = m0, a = a0"
+        },
+        {
+          "id": "c",
+          "text": "Corrigé avec variation d'entraxe : α > α0"
+        },
+        {
+          "id": "d",
+          "text": "Il y a nécessairement du jeu"
+        }
+      ],
+      "correct": "b",
+      "explanation": "La somme $x_1+x_2=0$ donne $\\operatorname{inv}\\alpha=\\operatorname{inv}\\alpha_0$, donc α = α0, m = m0, a = a0, malgré des déports non nuls. Le déport sert alors à équilibrer usure et tenue, pas à modifier l'entraxe."
+    },
+    {
+      "id": "q7",
+      "question": "Z1 = 20, Z2 = 30, m0 = 2 mm, α0 = 20°. L'entraxe imposé est 51,5 mm. Quelle somme de déports x1 + x2 ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "0,00"
+        },
+        {
+          "id": "b",
+          "text": "0,75"
+        },
+        {
+          "id": "c",
+          "text": "0,83"
+        },
+        {
+          "id": "d",
+          "text": "1,65"
+        }
+      ],
+      "correct": "c",
+      "explanation": "$a_0=50$ mm ; $\\cos\\alpha=a_0\\cos\\alpha_0/a=0{,}9123$ soit α ≈ 24,17° ; $\\operatorname{inv}\\alpha\\approx0{,}02694$ ; $x_1+x_2=\\frac{(0{,}02694-0{,}01490)\\times50}{2\\tan20°}\\approx0{,}83$. Piège : $\\Delta a/m_0=0{,}75$ est faux car la relation passe par inv."
+    },
+    {
+      "id": "q8",
+      "question": "Roue taillée avec l'outil crémaillère normalisé (α0 = 20°, x = 0). Quel nombre minimal de dents pour éviter l'interférence de taillage ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "12"
+        },
+        {
+          "id": "b",
+          "text": "14"
+        },
+        {
+          "id": "c",
+          "text": "18"
+        },
+        {
+          "id": "d",
+          "text": "25"
+        }
+      ],
+      "correct": "c",
+      "explanation": "$Z\\ge2(1-x)/\\sin^2\\alpha_0=2/0{,}11698=17{,}1$, donc 18. Avec $x=0{,}5$ : $Z\\ge8{,}55$, soit 9. Un déport positif permet de tailler moins de dents sans interférence."
+    },
+    {
+      "id": "q9",
+      "question": "Un engrenage droit a un rapport de conduite εα = 1,6. Que signifie cette valeur ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "1,6 dent seule en prise en permanence"
+        },
+        {
+          "id": "b",
+          "text": "Environ 60 % du temps 2 paires de dents en prise et 40 % du temps une seule"
+        },
+        {
+          "id": "c",
+          "text": "1,6 fois plus de puissance transmise qu'avec εα = 1"
+        },
+        {
+          "id": "d",
+          "text": "Il y a interférence car εα > 1,3"
+        }
+      ],
+      "correct": "b",
+      "explanation": "εα = AB/pb : nombre moyen de paires en prise. 1,6 = 40 % × 1 + 60 % × 2. La continuité impose εα > 1 ; les manufacturiers recommandent > 1,3, donc 1,6 est correct."
+    },
+    {
+      "id": "q10",
+      "question": "Quel est le critère d'équilibrage de l'usure (glissement spécifique) ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "$x_1=x_2$"
+        },
+        {
+          "id": "b",
+          "text": "$\\varepsilon_\\alpha=1{,}3$"
+        },
+        {
+          "id": "c",
+          "text": "$|(gs_1)_{max}|=|(gs_2)_{max}|$"
+        },
+        {
+          "id": "d",
+          "text": "$gs=0$ sur tout le segment de conduite"
+        }
+      ],
+      "correct": "c",
+      "explanation": "On équilibre le produit P·V des deux roues en égalisant les glissements spécifiques maximaux, atteints aux extrémités A et B du segment de conduite. gs est nul uniquement en I."
+    },
+    {
+      "id": "q11",
+      "question": "Quel est l'effet d'un déport positif (x > 0) sur la roue taillée ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Dent plus fine et moins haute, plus d'interférence"
+        },
+        {
+          "id": "b",
+          "text": "Dent plus épaisse en pied et plus haute, moins de risque d'interférence de taillage"
+        },
+        {
+          "id": "c",
+          "text": "Aucun effet sur la forme, seulement sur l'entraxe"
+        },
+        {
+          "id": "d",
+          "text": "Le module de taille augmente"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Le déport $\\delta=x\\,m_0$ décale la ligne de taille vers l'extérieur : $h_{a0}=(1+x)m_0$ augmente, le creux $h_{f0}=(1{,}25-x)m_0$ diminue, la dent est plus épaisse en pied, ce qui abaisse le $Z_{min}$ d'interférence."
+    },
+    {
+      "id": "q12",
+      "question": "Roue de module de taille 4 mm avec x = 0,25. Quelles sont la saillie et le creux de taille ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "ha0 = 4,0 mm ; hf0 = 5,0 mm"
+        },
+        {
+          "id": "b",
+          "text": "ha0 = 5,0 mm ; hf0 = 4,0 mm"
+        },
+        {
+          "id": "c",
+          "text": "ha0 = 5,0 mm ; hf0 = 6,0 mm"
+        },
+        {
+          "id": "d",
+          "text": "ha0 = 3,0 mm ; hf0 = 5,0 mm"
+        }
+      ],
+      "correct": "b",
+      "explanation": "$h_{a0}=(1+x)m_0=1{,}25\\times4=5{,}0$ mm ; $h_{f0}=(1{,}25-x)m_0=1{,}0\\times4=4{,}0$ mm. Le déport agrandit la saillie et réduit le creux."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "recto": "Engrenage ?",
+      "verso": "Ensemble de deux solides S1, S2 tels que la rotation de l'un entraîne l'autre **par obstacle** (rotation, ou translation si crémaillère). Petit = pignon, grand = roue."
+    },
+    {
+      "id": "f2",
+      "recto": "Rapport de transmission k ?",
+      "verso": "$k=\\omega_{sortie}/\\omega_{entrée}$ ; on le donne $>1$ en précisant réduction ou multiplication. Contact extérieur signé : $k=-Z_1/Z_2$ ; géométrique $k=r_2/r_1$."
+    },
+    {
+      "id": "f3",
+      "recto": "Homocinétie ?",
+      "verso": "$k$ constant pendant un tour : il existe $I$ avec $\u000bec V_{I,S_2/S_1}=\\vec 0$ (roulement sans glissement des primitifs)."
+    },
+    {
+      "id": "f4",
+      "recto": "Loi de l'engrènement ?",
+      "verso": "Solides indéformables : $\\vec V_{M,2/1}\\perp$ normale et $\\perp\\overrightarrow{MI}$, donc la normale commune en $M$ passe par $I$."
+    },
+    {
+      "id": "f5",
+      "recto": "Profils classiques ?",
+      "verso": "Cycloïde (cercle sur droite, Désargues 1630, horlogerie), épicycloïde (cercle sur cercle extérieur), hypocycloïde (cercle sur cercle intérieur, compresseur), **développante** (droite qui roule sur un cercle) = référence industrielle."
+    },
+    {
+      "id": "f6",
+      "recto": "Propriétés de la développante ?",
+      "verso": "Développantes d'un même cercle = courbes parallèles ; deux développantes se déduisent par rotation autour du centre."
+    },
+    {
+      "id": "f7",
+      "recto": "Fonction involute ?",
+      "verso": "$\\operatorname{inv}\\alpha=\\tan\\alpha-\\alpha$ (**rad**), issue de $HM=HA$, $HM=r_b\\tan\\alpha$, $HA=r_b(\\alpha+\\theta)$ ; $\\operatorname{inv}\\alpha\\approx\\alpha^3/3$ pour $\\alpha$ petit."
+    },
+    {
+      "id": "f8",
+      "recto": "Rayon de base, entraxe, angle de pression ?",
+      "verso": "$r_b=r\\cos\\alpha$ ; $r_{b1}+r_{b2}=a\\cos\\alpha$ ; $r_1+r_2=a$. Si $a$ change : $\\alpha$, $r_1$, $r_2$ changent, $r_b$ non."
+    },
+    {
+      "id": "f9",
+      "recto": "Ligne d'action ?",
+      "verso": "Tangente commune aux cercles de base ($H_1H_2$), passe par $I$ ; angle de pression $\\alpha$ avec la tangente commune aux primitifs. Sans frottement, effort de direction et norme constantes."
+    },
+    {
+      "id": "f10",
+      "recto": "Pas de base et pas primitif ?",
+      "verso": "$p_b=2\\pi r_{b1}/Z_1=2\\pi r_{b2}/Z_2=p\\cos\\alpha$ ; $p=2\\pi r_i/Z_i=\\pi m$."
+    },
+    {
+      "id": "f11",
+      "recto": "Module de fonctionnement ?",
+      "verso": "$m=p/\\pi=2a/(Z_1+Z_2)$ ; $r_i=mZ_i/2$ ; $a=m(Z_1+Z_2)/2$ (extérieur). Associé à un engrenage, pas à une roue seule."
+    },
+    {
+      "id": "f12",
+      "recto": "Formules prérequis (pignon, couronne) ?",
+      "verso": "$d_p=mZ$ ; $d_a=d_p+2m$, $d_f=d_p-2{,}5m$ (pignon) ; $d_a=d_p-2m$, $d_f=d_p+2{,}5m$ (couronne) ; intérieur : $a=m(Z_2-Z_1)/2$."
+    },
+    {
+      "id": "f13",
+      "recto": "Caractéristiques de taille ?",
+      "verso": "$m_0$ (mm, série normalisée) et $\\alpha_0$ (20° usuel ; 15°, 17°30, 22°50, 25°). Outil crémaillère : pas $\\pi m_0$, dent $=$ creux $=\\pi m_0/2$."
+    },
+    {
+      "id": "f14",
+      "recto": "Modules normalisés (domaines) ?",
+      "verso": "Micromécanique 0,6-1 ; mécanique générale/auto 2-4 ; industrie lourde 8-16. Série 1 prioritaire, série 2 secondaire."
+    },
+    {
+      "id": "f15",
+      "recto": "Puissance vs module ?",
+      "verso": "Pignon 20 dents, 1500 tr/min : $m=0{,}5\\to0{,}2$ kW ; $3\\to40$ kW ; $10\\to1500$ kW ($P\\propto m^3$, complément)."
+    },
+    {
+      "id": "f16",
+      "recto": "Déport et coefficient de déport ?",
+      "verso": "$\\delta$ = décalage ligne de taille / ligne de référence ; $x=\\delta/m_0$ (sans unité). $x>0$ : dent plus épaisse en pied."
+    },
+    {
+      "id": "f17",
+      "recto": "Saillie et creux de taille ?",
+      "verso": "$h_{a0}=(1+x)m_0$ ; $h_{f0}=(1{,}25-x)m_0$."
+    },
+    {
+      "id": "f18",
+      "recto": "Largeurs curvilignes au primitif de taille ?",
+      "verso": "$s_0=[\\pi/2+2x\\tan\\alpha_0]m_0$ (dent) ; $e_0=[\\pi/2-2x\\tan\\alpha_0]m_0$ (creux) ; $s_0+e_0=\\pi m_0$."
+    },
+    {
+      "id": "f19",
+      "recto": "Condition de fonctionnement sans jeu ?",
+      "verso": "$s_1+s_2=\\pi m$ ⇔ $\\operatorname{inv}\\alpha=\\operatorname{inv}\\alpha_0+2\\frac{x_1+x_2}{Z_1+Z_2}\\tan\\alpha_0$. Seule la somme $x_1+x_2$ compte."
+    },
+    {
+      "id": "f20",
+      "recto": "Conservation du pas de base ?",
+      "verso": "$m_0\\cos\\alpha_0=m\\cos\\alpha$ ; $a_0\\cos\\alpha_0=a\\cos\\alpha$ ; $a_0=m_0(Z_1+Z_2)/2$ (taille), $a$ = entraxe du carter."
+    },
+    {
+      "id": "f21",
+      "recto": "Vocabulaire corrigé / non corrigé ?",
+      "verso": "$x_1=x_2=0$ non corrigé ; $x_1+x_2=0$, $x_1\\neq0$ corrigé sans variation d'entraxe ($\\alpha=\\alpha_0$, $m=m_0$, $a=a_0$) ; $x_1+x_2\\neq0$ corrigé avec variation d'entraxe ($\\alpha\\neq\\alpha_0$, $m\\neq m_0$, $a\\neq a_0$)."
+    },
+    {
+      "id": "f22",
+      "recto": "Interférence de taillage ?",
+      "verso": "$Z\\ge2(1-x)/\\sin^2\\alpha_0$ ; $x=0$, 20° : $Z\\ge17{,}1$ ; $x=0{,}5$ : $Z\\ge8{,}55$."
+    },
+    {
+      "id": "f23",
+      "recto": "Jeu en fond de dent ?",
+      "verso": "$c=a-r_{a2}-r_{f1}=(a-a_0)+h_{f1}-h_{a2}$ ; exigence de l'exercice palan : $c>0{,}2\\,m_0$ (complément)."
+    },
+    {
+      "id": "f24",
+      "recto": "Rapport de conduite ?",
+      "verso": "$\\varepsilon_\\alpha=AB/p_b$ ; $>1$ nécessaire ; $>1{,}3$ recommandé (au moins 2 dents en prise sur une phase)."
+    },
+    {
+      "id": "f25",
+      "recto": "$\\varepsilon_\\alpha$ non corrigé ?",
+      "verso": "$\\frac{AI}{p_b}=\\frac{1}{\\pi\\cos\\alpha_0}\\left[\\sqrt{\\frac{Z_1^2}{4}\\sin^2\\alpha_0+Z_1+1}-\\frac{Z_1}{2}\\sin\\alpha_0\\right]$ ; idem $IB/p_b$ avec $Z_2$ ; somme."
+    },
+    {
+      "id": "f26",
+      "recto": "$\\varepsilon_\\alpha$ général ?",
+      "verso": "$\\varepsilon_\\alpha=y_1U(N_1,\\alpha)+y_2U(N_2,\\alpha)$ ; $y_i=(r_{0i}+(1+x_i)m_0-r_i)/m$ ; $N_i=Z_i/y_i$ ; $U(N,\\alpha)=\\frac{1}{\\pi\\cos\\alpha}\\left[\\sqrt{\\frac{N^2}{4}\\sin^2\\alpha+N+1}-\\frac{N}{2}\\sin\\alpha\\right]$."
+    },
+    {
+      "id": "f27",
+      "recto": "Glissement spécifique ?",
+      "verso": "$gs_i=(ds_i-ds_j)/ds_i$ ; nul en $I$ ; extrema aux extrémités $A$, $B$ de la conduite ; $|gs|\\to1$ en $H_2$ ($gs_1$) et $H_1$ ($gs_2$)."
+    },
+    {
+      "id": "f28",
+      "recto": "Équilibrage de l'usure ?",
+      "verso": "$|(gs_1)_{max}|=|(gs_2)_{max}|$ (équilibre du produit $P\\cdot V$) ; ex. $Z_1=20$, $Z_2=31$, $m_0=10$ : $x_1=+0{,}18$, $x_2=-0{,}18$."
+    },
+    {
+      "id": "f29",
+      "recto": "Dégradations d'une denture ?",
+      "verso": "Grippage (pied/tête, fort glissement), pitting (primitif, pression de Hertz), déformation/avarie ; efforts $F/2+F/2$ puis $F$ selon $\\varepsilon_\\alpha$."
+    },
+    {
+      "id": "f30",
+      "recto": "Axoïdes (4 cas) ?",
+      "verso": "Axes parallèles : cylindres ; concourants : cônes ; quelconques : hyperboloïdes (gauche, hypoïde, vis sans fin) ; face gear (pignon cylindrique + roue face)."
+    },
+    {
+      "id": "f31",
+      "recto": "Profils non classiques ?",
+      "verso": "Non homocinétiques (elliptiques, remplacent came+galet) ; Novikov (fortes charges) ; optimisés (développante + corrections tête/pied) ; fabrication additive (immature)."
+    },
+    {
+      "id": "f32",
+      "recto": "Spécification d'une roue à tailler ?",
+      "verso": "$m_0$, $\\alpha_0$, $Z$, $x$, $\\beta$, largeur $b$, diamètre de tête $d_b$ ; outil + réglage machine ; contrôle (3D, cote sur piges, sur $k$ dents)."
+    },
+    {
+      "id": "f33",
+      "recto": "Bilan du calcul d'engrenage ?",
+      "verso": "Efforts (pression, rupture) ; rapport cinématique ; sans jeu ; équilibre du gs ; rapport de conduite. Paramètres : outil ($m_0,\\alpha_0$), réglage ($Z,x,\\beta$), matériau."
+    }
+  ],
+  "exercices": [
+    {
+      "titre": "Ex 1 : problème direct (application directe)",
+      "difficulte": 1,
+      "enonce": "Engrenage cylindrique droit : $Z_1=30$, $x_1=0{,}5$, $Z_2=40$, $x_2=0{,}5$, $m_0=2$ mm, $\\alpha_0=20°$. Déterminer l'angle de pression de fonctionnement $\\alpha$, le module de fonctionnement $m$ et l'entraxe $a$. Vérifier avec les rayons de base.",
+      "corrige": "**1. Entraxe de taille** : $a_0=m_0(Z_1+Z_2)/2=2\\times70/2=70$ mm.\n\n**2. Sans jeu** : $\\operatorname{inv}\\alpha_0=\\tan20°-20\\pi/180=0{,}36397-0{,}34907=0{,}014904$.\n\n$$\\operatorname{inv}\\alpha=0{,}014904+2\\times\\frac{1{,}0}{70}\\times0{,}36397=0{,}025303$$\n\n**3. Table involute** : $\\operatorname{inv}23°=0{,}023049$ ; $\\operatorname{inv}24°=0{,}026350$. Interpolation : $\\alpha\\approx23°+0{,}683\\times1°\\approx23{,}68°$ ($\\approx23°41'$).\n\n**4. Module** : $m=m_0\\cos\\alpha_0/\\cos\\alpha=2\\times0{,}93969/0{,}91577\\approx2{,}052$ mm.\n\n**5. Entraxe** : $a=m(Z_1+Z_2)/2=2{,}052\\times35\\approx71{,}83$ mm. Contrôle : $a_0\\cos\\alpha_0/\\cos\\alpha=70\\times1{,}0261=71{,}83$ mm.\n\n**6. Vérification** : $r_1=30{,}78$, $r_2=41{,}04$ (somme $71{,}83$) ; $r_{b1}=m_0Z_1\\cos\\alpha_0/2=28{,}19$, $r_{b2}=37{,}59$ ; $r_{b1}+r_{b2}=65{,}78=a\\cos\\alpha$. ✓\n\n**Conclusion** : $x_1+x_2=1\\neq0$ : engrenage corrigé avec variation d'entraxe ($\\alpha>\\alpha_0$, $m>m_0$, $a>a_0$ de 1,83 mm).\n\n*Complément* : sans raccourcissement de tête, jeu de fond $c=(a-a_0)+0{,}25m_0-(x_1+x_2)m_0=1{,}83+0{,}5-2\\approx0{,}33$ mm, inférieur à $0{,}25m_0$ : d'où le raccourcissement de tête $k\\,m_0\\approx0{,}17$ mm de chaque roue."
+    },
+    {
+      "titre": "Ex 2 : problème inverse (entraxe imposé)",
+      "difficulte": 2,
+      "enonce": "$Z_1=20$, $Z_2=30$, $m_0=2$ mm, $\\alpha_0=20°$. Le carter impose $a=51{,}5$ mm. (a) Calculer $\\alpha$. (b) Calculer la somme de déports $x_1+x_2$ pour un fonctionnement sans jeu. (c) Ce résultat est-il compatible avec l'absence d'interférence de taillage sur la roue 1 pour $x_1=0{,}4$ ? (d) Donner le raccourcissement de tête $k$.",
+      "corrige": "**(a)** $a_0=2\\times50/2=50$ mm. Conservation du pas de base :\n\n$$\\cos\\alpha=\\frac{a_0\\cos\\alpha_0}{a}=\\frac{50\\times0{,}93969}{51{,}5}=0{,}91232\\Rightarrow\\alpha\\approx24{,}17°$$\n\n**(b)** $\\tan24{,}17°=0{,}44882$ ; $\\alpha=0{,}42188$ rad ; $\\operatorname{inv}\\alpha=0{,}44882-0{,}42188=0{,}026943$.\n\n$$x_1+x_2=\\frac{(\\operatorname{inv}\\alpha-\\operatorname{inv}\\alpha_0)(Z_1+Z_2)}{2\\tan\\alpha_0}=\\frac{(0{,}026943-0{,}014904)\\times50}{2\\times0{,}36397}\\approx0{,}827$$\n\n(Table : $\\operatorname{inv}24°=0{,}02635$, cohérent.)\n\n**(c)** Il faut $Z_1\\ge2(1-x_1)/\\sin^2\\alpha_0=2\\times0{,}6/0{,}116978=10{,}26$ : OK avec $Z_1=20$. Ici $x_1=0{,}4$, $x_2\\approx0{,}43$ ; roue 2 : $Z_2=30\\ge2(1-0{,}43)/0{,}1170=9{,}7$ OK. Pas d'interférence de taillage (même $x_1=0$ conviendrait : $Z_1=20\\ge17{,}1$).\n\n**(d)** $k=(x_1+x_2)-(a-a_0)/m_0=0{,}827-0{,}75=0{,}077$, soit $\\approx0{,}15$ mm de raccourcissement de tête (complément).\n\n**Piège** : $\\Delta a/m_0=0{,}75\\neq x_1+x_2$, la relation passe par la fonction involute."
+    },
+    {
+      "titre": "Ex 3 : jeu en fond de dent, interférence et contrôle (type exercice palan)",
+      "difficulte": 3,
+      "enonce": "Engrenage à outil crémaillère normalisé : $m_0=4$ mm, $\\alpha_0=20°$, $Z_1=15$, $Z_2=35$, $x_1=0{,}250$, $x_2=-0{,}444$ (équilibre des glissements spécifiques, comme dans l'exercice palan). (a) Vérifier l'absence d'interférence de taillage pour les deux roues. (b) Calculer $\\alpha$ et $a$ en fonctionnement sans jeu. (c) Calculer saillie et creux de taille de chaque roue, puis le jeu en fond de dent. Vérifie-t-il $c>20\\,\\%\\,m_0$ ? Faire un schéma simplifié. (d) Calculer $s_0$ et $e_0$ de la roue 1 pour le contrôle.",
+      "corrige": "**(a)** $Z\\ge2(1-x)/\\sin^2\\alpha_0$ avec $\\sin^2\\alpha_0=0{,}116978$. Roue 1 : $2\\times0{,}75/0{,}116978=12{,}82\\le15$ : pas d'interférence. Roue 2 : $2\\times1{,}444/0{,}116978=24{,}69\\le35$ : OK (un déport négatif relève le $Z_{min}$).\n\n**(b)** $x_1+x_2=-0{,}194$ ; $a_0=4\\times50/2=100$ mm.\n\n$$\\operatorname{inv}\\alpha=0{,}014904+2\\times\\frac{-0{,}194}{50}\\times0{,}36397=0{,}012080$$\n\nTable : $\\operatorname{inv}18°=0{,}010760$, $\\operatorname{inv}19°=0{,}012715$, donc $\\alpha\\approx18{,}68°$ ($\\cos\\alpha=0{,}94732$). $a=a_0\\cos\\alpha_0/\\cos\\alpha=100\\times0{,}93969/0{,}94732\\approx99{,}20$ mm (donc $a<a_0$).\n\n**(c)** Roue 1 : $h_{a0}=1{,}25\\times4=5{,}000$ ; $h_{f0}=(1{,}25-0{,}25)\\times4=4{,}000$. Roue 2 : $h_{a0}=(1-0{,}444)\\times4=2{,}224$ ; $h_{f0}=(1{,}25+0{,}444)\\times4=6{,}776$.\n\nSchéma : axes distants de $a$, cercle de tête de la roue 2 et cercle de pied de la roue 1 sur la ligne des centres. Jeu de fond $c=a-r_{a2}-r_{f1}=(a-a_0)+h_{f1}-h_{a2}$ :\n\n$$c=(99{,}20-100)+4{,}000-2{,}224=0{,}97\\ \\text{mm}$$\n\nVérification par l'autre côté : $(a-a_0)+h_{f2}-h_{a1}=-0{,}80+6{,}776-5{,}000=0{,}97$ mm ✓. Critère : $0{,}2\\,m_0=0{,}8$ mm ; $0{,}97>0{,}8$ : **vérifié** ($\\approx24\\,\\%\\,m_0$).\n\n**(d)** $s_0=(\\pi/2+2\\times0{,}25\\times0{,}36397)\\times4=(1{,}5708+0{,}1820)\\times4=7{,}011$ mm ; $e_0=(1{,}5708-0{,}1820)\\times4=5{,}555$ mm. Contrôle : $s_0+e_0=12{,}566=\\pi m_0$ ✓."
+    },
+    {
+      "titre": "Ex 4 : rapport de conduite et glissement spécifique (niveau partiel/concours)",
+      "difficulte": 4,
+      "enonce": "$Z_1=20$, $Z_2=31$, $m_0=10$ mm, $\\alpha_0=20°$. (a) Calculer $\\varepsilon_\\alpha$ pour l'engrenage non corrigé et conclure. (b) Même calcul pour $x_1=+0{,}18$, $x_2=-0{,}18$. (c) Expliquer qualitativement puis chiffrer (en $m=1$) pourquoi le pignon reçoit un déport positif dans l'équilibrage des glissements spécifiques.",
+      "corrige": "**(a)** $\\pi\\cos\\alpha_0=2{,}9521$, $\\sin\\alpha_0=0{,}34202$.\n\nRoue 1 ($Z=20$) : $\\sqrt{100\\times0{,}116978+21}=\\sqrt{32{,}698}=5{,}7182$ ; $10\\sin\\alpha_0=3{,}4202$ ; $AI/p_b=(5{,}7182-3{,}4202)/2{,}9521=0{,}7784$.\n\nRoue 2 ($Z=31$) : $\\sqrt{240{,}25\\times0{,}116978+32}=\\sqrt{60{,}104}=7{,}7527$ ; $15{,}5\\sin\\alpha_0=5{,}3013$ ; $IB/p_b=2{,}4514/2{,}9521=0{,}8304$.\n\n$\\varepsilon_\\alpha\\approx1{,}609>1{,}3$ : conduite conforme (l'engrenage est en 2 dents environ 61 % du temps).\n\n**(b)** $x_1+x_2=0$ donc $\\alpha=\\alpha_0$, $m=m_0$, $r_i=r_{0i}$ : $y_i=1+x_i$ : $y_1=1{,}18$, $y_2=0{,}82$ ; $N_1=20/1{,}18=16{,}95$, $N_2=31/0{,}82=37{,}80$.\n\n$U(N_1)=\\frac{1}{2{,}9521}\\left[\\sqrt{287{,}3\\times0{,}029245+17{,}95}-8{,}475\\times0{,}34202\\right]=\\frac{5{,}1332-2{,}8985}{2{,}9521}=0{,}7570$.\n\n$U(N_2)=\\frac{\\sqrt{1429{,}2\\times0{,}029245+38{,}80}-18{,}90\\times0{,}34202}{2{,}9521}=\\frac{8{,}9779-6{,}4652}{2{,}9521}=0{,}8511$.\n\n$$\\varepsilon_\\alpha=1{,}18\\times0{,}7570+0{,}82\\times0{,}8511=0{,}893+0{,}698=1{,}59$$\n\nVérification directe : $r_{a1}=100+11{,}8=111{,}8$ ; $r_{b1}=93{,}969$ ; $AI=\\sqrt{111{,}8^2-93{,}969^2}-34{,}202=26{,}37$ ; $p_b=29{,}52$ ; $AI/p_b=0{,}893$ ✓. Le déport (somme nulle) modifie peu $\\varepsilon_\\alpha$ : $1{,}61\\to1{,}59$, toujours $>1{,}3$.\n\n**(c)** Pour $x=0$ ($m=1$) : $T_1I=r_1\\sin\\alpha=3{,}4202$, $T_2I=5{,}3013$, $d_1=IA'=2{,}298$ (tête roue 1), $d_2=2{,}451$ (tête roue 2). Extrémités : côté $T_1$, $|gs_1|=(1+Z_1/Z_2)\\frac{d_2}{T_1I-d_2}=1{,}645\\times\\frac{2{,}451}{0{,}969}\\approx4{,}16$ ; côté $T_2$, $|gs_2|=(1+Z_2/Z_1)\\frac{d_1}{T_2I-d_1}=2{,}55\\times\\frac{2{,}298}{3{,}003}\\approx1{,}95$. Le pignon (moins de dents, $T_1I$ plus petit) glisse plus : $|gs_1|_{max}>|gs_2|_{max}$. Un déport $x_1>0$, $x_2<0$ modifie les cercles de tête (hauteurs $y_i$) et rapproche les deux maxima, jusqu'à l'égalité $|(gs_1)_{max}|=|(gs_2)_{max}|$ obtenue pour $x_1=+0{,}18$ (valeur du cours). *(Calcul de l'équilibre exact non refait ici : valeur issue de la diapo 77.)*"
+    }
+  ],
+  "suivi": "Aucune difficulté enregistrée pour l'instant (quiz et exercices non encore traités). Points sensibles à surveiller : (1) inv en radians et lecture de table ; (2) seule la somme x1+x2 règle le sans-jeu ; (3) m≠m0, α≠α0, a≠a0 dès que la somme est non nulle ; (4) rb invariant quand a change ; (5) conservation du pas de base ; (6) interférence Z≥2(1-x)/sin²α0 (17,1) ; (7) εα>1 nécessaire, >1,3 recommandé, dépend des déports ; (8) gs nul en I, maxima en A et B, équilibrage |gs1|max=|gs2|max ; (9) jeu en fond de dent = (a-a0)+hf1-ha2 ; (10) signe de k et convention de rapport >1. Note : diapos 59-63 et 83 absentes du PDF."
+}
