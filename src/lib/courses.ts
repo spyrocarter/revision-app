@@ -23,8 +23,14 @@ export interface MatiereGroup {
   courses: CourseWithId[]
 }
 
+// "Matériaux (UEF MATI – GIM1)" and "Materiaux" both group under "Matériaux":
+// parenthesised details (UE code, class, year) vary from one course file to another.
+function matiereLabel(matiere: string): string {
+  return matiere.replace(/\([^)]*\)/g, ' ').replace(/\s+/g, ' ').trim() || matiere.trim()
+}
+
 function normalizeMatiere(matiere: string): string {
-  return matiere.trim().toLowerCase()
+  return matiereLabel(matiere).normalize('NFD').replace(/\p{M}/gu, '').toLowerCase()
 }
 
 const groupsByKey = new Map<string, MatiereGroup>()
@@ -34,10 +40,14 @@ for (const course of courses) {
   if (group) {
     group.courses.push(course)
   } else {
-    groupsByKey.set(key, { matiere: course.matiere.trim(), courses: [course] })
+    groupsByKey.set(key, { matiere: matiereLabel(course.matiere), courses: [course] })
   }
 }
 
+for (const group of groupsByKey.values()) {
+  group.courses.sort((a, b) => a.sujet.localeCompare(b.sujet, 'fr', { numeric: true }))
+}
+
 export const matiereGroups: MatiereGroup[] = Array.from(groupsByKey.values()).sort((a, b) =>
-  a.matiere.localeCompare(b.matiere),
+  a.matiere.localeCompare(b.matiere, 'fr'),
 )
