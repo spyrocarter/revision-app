@@ -1,0 +1,392 @@
+{
+  "matiere": "Mécanique des milieux continus",
+  "type": "CM",
+  "sujet": "Lois de comportement",
+  "fiche_synthese": "# Mécanique des milieux continus — Lois de comportement (CM)\n\n## Plan\n1. Introduction : essai et courbe de traction\n2. Élasticité linéaire (loi générale, linéarité, symétries, notation de Voigt, cas isotrope)\n3. Critères d'élasticité (propriétés, Tresca, von Mises, domaines, inégalités)\n4. Dilatation thermique\n5. Principe de superposition\n6. Conclusion\n\n## 1. Introduction\n\n### 1.1 Essai de traction\nÉprouvette de longueur utile $L_0$ et section initiale $S_0$, tirée par un effort $F$ ; $L$ et $S$ sont la longueur et la section courantes.\n\nDéformation longitudinale (sans dimension) :\n\n$$\\varepsilon=\\frac{L-L_0}{L_0}=\\frac{\\Delta L}{L_0}$$\n\nContrainte conventionnelle (section initiale) :\n\n$$\\sigma=\\frac{F}{S_0}$$\n\nContrainte réelle (section courante) :\n\n$$\\sigma=\\frac{F}{S}$$\n\n- Piège : en traction $S$ diminue, donc $\\sigma_{réelle}>\\sigma_{conv}$.\n- Complément : à volume constant (plasticité), déformation homogène avant striction : $\\sigma_{réelle}=\\sigma_{conv}(1+\\varepsilon)$ ; déformation rationnelle $\\ln(L/L_0)$.\n\n### 1.2 Courbe de traction $\\sigma(\\varepsilon)$\n- **Élastique linéaire** : $\\sigma=E\\varepsilon$ ($E$ = module d'Young, en Pa). Réversible : la décharge repasse par la droite de charge.\n- **Élasto-plastique** : droite élastique jusqu'à la limite d'élasticité $\\sigma_y$, puis courbe élasto-plastique (complément : écrouissage = $\\sigma$ continue de croître). La décharge est une droite **parallèle à la droite élastique** (pente $E$) et laisse une déformation résiduelle $\\varepsilon^{plas}$ :\n\n$$\\sigma=E\\varepsilon^{ela}$$\n\n$$\\varepsilon=\\varepsilon^{ela}+\\varepsilon^{pla}$$\n\n- **Visco-élastique** : la contrainte dépend aussi de la vitesse de déformation ; charge et décharge suivent des chemins différents (boucle d'hystérésis), pas de déformation permanente :\n\n$$\\sigma=f(\\varepsilon,\\dot\\varepsilon)$$\n\n(Complément : fluage = $\\varepsilon$ qui croît à $\\sigma$ constante ; relaxation = $\\sigma$ qui décroît à $\\varepsilon$ constante.)\n\n## 2. Élasticité linéaire\n\n### 2.1 Cas triaxial\nLoi de comportement générale : chaque composante de contrainte dépend des 9 composantes de déformation :\n\n$$\\bar{\\bar\\sigma}=f(\\bar{\\bar\\varepsilon})$$\n\n$$\\sigma_{ij}=f_{ij}(\\varepsilon_{11},\\varepsilon_{12},\\varepsilon_{13},\\dots,\\varepsilon_{33})$$\n\n### 2.2 Linéarité → loi de Hooke généralisée\nSi les $f_{ij}$ sont linéaires :\n\n$$f_{ij}(\\bar{\\bar\\varepsilon})=C_{ij11}\\varepsilon_{11}+C_{ij12}\\varepsilon_{12}+\\dots+C_{ij33}\\varepsilon_{33}=\\sum_{k=1}^{3}\\sum_{\\ell=1}^{3}C_{ijk\\ell}\\varepsilon_{k\\ell}$$\n\nLoi de Hooke généralisée (convention d'Einstein : somme sur indices répétés) :\n\n$$\\sigma_{ij}=C_{ijk\\ell}\\varepsilon_{k\\ell}$$\n\nVersion tensorielle ($\\mathbb C$ = tenseur d'ordre 4 des constantes élastiques) :\n\n$$\\bar{\\bar\\sigma}=\\mathbb{C}:\\bar{\\bar\\varepsilon}$$\n\nHypothèses : HPP, comportement élastique (réversible, indépendant de la vitesse), linéaire, état de référence sans contrainte.\n\n### 2.3 Propriétés du tenseur des constantes élastiques\n- Tenseur d'ordre 4 : $3\\times3\\times3\\times3=81$ composantes.\n- **Petites symétries** (viennent de $\\bar{\\bar\\sigma}$ et $\\bar{\\bar\\varepsilon}$ symétriques) : $C_{ijk\\ell}=C_{jik\\ell}=C_{ij\\ell k}$ → 36 composantes.\n- **Grande symétrie** (existence d'une énergie de déformation $w=\\tfrac12\\sigma:\\varepsilon$) : $C_{ijk\\ell}=C_{k\\ell ij}$ → **21 composantes indépendantes**.\n- Complément : triclinique 21, monoclinique 13, orthotrope 9, isotrope transverse 5, cubique 3, isotrope 2.\n\n### 2.4 Notation de Voigt\nVecteurs 6×1 (ordre 11, 22, 33, 23, 13, 12) :\n\n$$\\hat\\sigma=(\\sigma_{11},\\sigma_{22},\\sigma_{33},\\sigma_{23},\\sigma_{13},\\sigma_{12})^T$$\n\n$$\\hat\\varepsilon=(\\varepsilon_{11},\\varepsilon_{22},\\varepsilon_{33},2\\varepsilon_{23},2\\varepsilon_{13},2\\varepsilon_{12})^T$$\n\nConstruction (facteur 2) : $\\sigma_{11}=C_{1111}\\varepsilon_{11}+C_{1122}\\varepsilon_{22}+C_{1133}\\varepsilon_{33}+(C_{1123}\\varepsilon_{23}+C_{1132}\\varepsilon_{32})+(C_{1113}\\varepsilon_{13}+C_{1131}\\varepsilon_{31})+(C_{1112}\\varepsilon_{12}+C_{1121}\\varepsilon_{21})$. Par symétries ($\\varepsilon_{32}=\\varepsilon_{23}$, $C_{1132}=C_{1123}$…) chaque parenthèse vaut $2C_{11mn}\\varepsilon_{mn}$. D'où :\n\n$$\\sigma_{ij}=C_{ij11}\\varepsilon_{11}+C_{ij22}\\varepsilon_{22}+C_{ij33}\\varepsilon_{33}+2C_{ij23}\\varepsilon_{23}+2C_{ij13}\\varepsilon_{13}+2C_{ij12}\\varepsilon_{12}$$\n\n$$\\hat\\sigma=\\hat C\\hat\\varepsilon\\qquad\\hat\\sigma_m=\\sum_{n=1}^{6}\\hat C_{mn}\\hat\\varepsilon_n$$\n\n$\\hat C$ est une matrice 6×6 **symétrique** (21 termes) : $\\hat C_{11}=C_{1111}$, $\\hat C_{14}=C_{1123}$, $\\hat C_{44}=C_{2323}$, $\\hat C_{66}=C_{1212}$…\nPièges : le facteur 2 est sur $\\varepsilon$ (cisaillement d'ingénieur $\\gamma=2\\varepsilon$), pas sur $\\sigma$ ; ordre 23, 13, 12.\n\n### 2.5 Cas isotrope (2 constantes)\nMatrice de Voigt :\n\n$$\\hat C=\\begin{pmatrix}\\lambda+2\\mu&\\lambda&\\lambda&0&0&0\\\\\\lambda&\\lambda+2\\mu&\\lambda&0&0&0\\\\\\lambda&\\lambda&\\lambda+2\\mu&0&0&0\\\\0&0&0&\\mu&0&0\\\\0&0&0&0&\\mu&0\\\\0&0&0&0&0&\\mu\\end{pmatrix}$$\n\n$\\lambda$ = premier coefficient de Lamé, $\\mu$ = second coefficient de Lamé (= module de cisaillement $G$) :\n\n$$\\lambda=\\frac{E\\nu}{(1+\\nu)(1-2\\nu)}$$\n\n$$\\mu=\\frac{E}{2(1+\\nu)}$$\n\nNotation tensorielle :\n\n$$\\bar{\\bar\\sigma}=\\lambda\\,\\mathrm{tr}(\\bar{\\bar\\varepsilon})\\bar{\\bar I}+2\\mu\\bar{\\bar\\varepsilon}$$\n\nFormulation inverse :\n\n$$\\bar{\\bar\\varepsilon}=\\frac{1+\\nu}{E}\\bar{\\bar\\sigma}-\\frac{\\nu}{E}\\mathrm{tr}(\\bar{\\bar\\sigma})\\bar{\\bar I}$$\n\nObtention de l'inverse : trace de la loi directe $\\mathrm{tr}\\,\\sigma=(3\\lambda+2\\mu)\\mathrm{tr}\\,\\varepsilon$, d'où $\\varepsilon=\\frac{\\sigma}{2\\mu}-\\frac{\\lambda\\,\\mathrm{tr}\\sigma}{2\\mu(3\\lambda+2\\mu)}I$, avec $\\frac1{2\\mu}=\\frac{1+\\nu}{E}$ et $\\frac{\\lambda}{2\\mu(3\\lambda+2\\mu)}=\\frac{\\nu}{E}$.\n\nCas uniaxial ($\\sigma$ selon 3) : $\\varepsilon_{33}=\\sigma/E$ et $\\varepsilon_{11}=\\varepsilon_{22}=-\\nu\\sigma/E$. Cisaillement : $\\sigma_{12}=2\\mu\\varepsilon_{12}=\\mu\\gamma_{12}$.\n\n| Matériau | $E$ | $\\nu$ |\n|---|---|---|\n| Acier | 210 GPa | 0,27 à 0,31 |\n| Aluminium | 70 GPa | 0,35 |\n| Caoutchouc | < 0,1 GPa | 0,5 (incompressible) |\n\nCaoutchouc (schéma : réseau de chaînes de polymère, avec ou sans ponts de réticulation) : $\\nu=0{,}5\\Rightarrow\\mathrm{tr}\\,\\varepsilon=\\frac{1-2\\nu}{E}\\mathrm{tr}\\,\\sigma=0$ (volume conservé), $\\lambda\\to\\infty$. Complément : $K=\\frac{E}{3(1-2\\nu)}$ ; énergie définie positive ⇒ $-1<\\nu<0{,}5$.\n\n## 3. Critères d'élasticité\n\n### 3.1 Propriétés mathématiques du critère\nObjectif : savoir si le matériau reste dans le domaine élastique. Données : $\\bar{\\bar\\sigma}$ (6 composantes indépendantes) et $\\sigma_y$ (scalaire). Difficulté : comment comparer un tenseur à un scalaire ?\n\nExemple du cours : le même état de contrainte s'écrit $\\begin{pmatrix}100&60&70\\\\60&50&60\\\\70&60&90\\end{pmatrix}$ dans $(\\vec x,\\vec y,\\vec z)$ et $\\mathrm{diag}(5,25,210)$ dans la base principale $(\\vec e_I,\\vec e_{II},\\vec e_{III})$ (trace 240 dans les deux cas). Les composantes dépendent de la base ⇒ on utilise un **invariant** : critère indépendant de la base. (Remarque : les valeurs de la diapo sont illustratives, $\\sigma:\\sigma$ vaut 44800 d'un côté et 44750 de l'autre ; on travaille avec les valeurs principales.)\n\nOrigine physique (métaux) : mouvement des dislocations (glissement de plans atomiques) sous cisaillement. Hypothèse : la déformation plastique est induite par cisaillement. Corollaire : pression hydrostatique ⇏ déformation plastique.\n\nCas uniaxial, $\\bar{\\bar\\sigma}=\\mathrm{diag}(0,0,\\sigma)$ : $|\\sigma|<\\sigma_y\\Leftrightarrow$ domaine élastique.\n\nCas triaxial : on cherche $f$ telle que :\n- $f(\\bar{\\bar\\sigma})<\\sigma_y\\Leftrightarrow$ domaine élastique ;\n- $f$ utilise les invariants de $\\bar{\\bar\\sigma}$ ;\n- $\\forall p,\\ f(-p\\bar{\\bar I})=0$.\n\n### 3.2 Critère de Tresca\n$$\\sigma_{Tr}=\\max(|\\sigma_I-\\sigma_{II}|,|\\sigma_I-\\sigma_{III}|,|\\sigma_{II}-\\sigma_{III}|)=\\max(\\sigma_I,\\sigma_{II},\\sigma_{III})-\\min(\\sigma_I,\\sigma_{II},\\sigma_{III})$$\n\n$$\\sigma_{Tr}<\\sigma_y\\Leftrightarrow\\text{domaine élastique}$$\n\nInterprétation : $\\sigma_{Tr}=2\\tau_{max}$ (cission maximale, cercle de Mohr). Uniaxial : $\\sigma_{Tr}=|\\sigma|$. Cisaillement pur $\\tau$ : $\\sigma_{Tr}=2\\tau$, donc $\\tau_y=\\sigma_y/2$.\n\n### 3.3 Critère de von Mises\n$$\\sigma_{vM}=\\sqrt{\\frac{(\\sigma_I-\\sigma_{II})^2+(\\sigma_I-\\sigma_{III})^2+(\\sigma_{II}-\\sigma_{III})^2}{2}}=\\sqrt{\\tfrac32\\bar{\\bar\\sigma}^d:\\bar{\\bar\\sigma}^d}$$\n\nDéviateur et pression :\n\n$$\\bar{\\bar\\sigma}^d=\\bar{\\bar\\sigma}-\\tfrac13\\mathrm{tr}(\\bar{\\bar\\sigma})\\bar{\\bar I}=\\bar{\\bar\\sigma}+p\\bar{\\bar I}\\qquad p=-\\tfrac13\\mathrm{tr}\\,\\bar{\\bar\\sigma}$$\n\n$$\\bar{\\bar\\sigma}^d:\\bar{\\bar\\sigma}^d=\\mathrm{tr}(\\bar{\\bar\\sigma}^d\\cdot\\bar{\\bar\\sigma}^d)$$\n\n$$\\sigma_{vM}<\\sigma_y\\Leftrightarrow\\text{domaine élastique}$$\n\nÉquivalence des deux formes (base principale, $m=\\frac{\\sigma_I+\\sigma_{II}+\\sigma_{III}}3$) : $\\sum(\\sigma_i-m)^2=\\frac13\\sum_{i<j}(\\sigma_i-\\sigma_j)^2$. Von Mises ne dépend que du déviateur (invariant $J_2=\\frac12\\sigma^d:\\sigma^d$, $\\sigma_{vM}=\\sqrt{3J_2}$) ⇒ $f(-p\\bar{\\bar I})=0$ vérifié. Uniaxial : $\\sigma_{vM}=|\\sigma|$. Cisaillement pur : $\\sigma_{vM}=\\sqrt3\\,\\tau$, donc $\\tau_y=\\sigma_y/\\sqrt3$.\n\n### 3.4 Domaines d'élasticité\nCas biaxial $\\bar{\\bar\\sigma}=\\mathrm{diag}(\\sigma_1,\\sigma_2,0)$ :\n\n$$\\sigma_{Tr}=\\max(|\\sigma_1-\\sigma_2|,|\\sigma_1|,|\\sigma_2|)$$\n\nTresca à la limite ($\\sigma_{Tr}=\\sigma_y$), hexagone irrégulier :\n- $\\sigma_1>\\sigma_2>0\\Rightarrow\\sigma_y=\\sigma_1$ ; $\\sigma_2>\\sigma_1>0\\Rightarrow\\sigma_y=\\sigma_2$ ;\n- $\\sigma_1<\\sigma_2<0\\Rightarrow\\sigma_y=-\\sigma_1$ ; $\\sigma_2<\\sigma_1<0\\Rightarrow\\sigma_y=-\\sigma_2$ ;\n- $\\sigma_1>0,\\sigma_2<0\\Rightarrow\\sigma_y=\\sigma_1-\\sigma_2$ ; $\\sigma_1<0,\\sigma_2>0\\Rightarrow\\sigma_y=\\sigma_2-\\sigma_1$.\n\nSommets : $(\\sigma_y,0)$, $(\\sigma_y,\\sigma_y)$, $(0,\\sigma_y)$, $(-\\sigma_y,0)$, $(-\\sigma_y,-\\sigma_y)$, $(0,-\\sigma_y)$.\n\nVon Mises à la limite : ellipse circonscrite à l'hexagone.\n\n$$\\frac{(\\sigma_1-\\sigma_2)^2}{2}+\\frac{\\sigma_1^2}{2}+\\frac{\\sigma_2^2}{2}=\\sigma_y^2\\Leftrightarrow\\sigma_1^2-\\sigma_1\\sigma_2+\\sigma_2^2=\\sigma_y^2$$\n\nLes deux critères coïncident en traction/compression uniaxiale et en équibiaxial ; l'écart est maximal en cisaillement pur ($\\sigma_1=-\\sigma_2$) : Tresca $\\sigma_1=\\sigma_y/2$, Mises $\\sigma_1=\\sigma_y/\\sqrt3\\approx0{,}577\\sigma_y$. Tresca est donc plus conservatif.\n\nInégalités entre contraintes équivalentes :\n\n$$\\sigma_{vM}\\le\\sigma_{Tr}\\le\\frac{2}{\\sqrt3}\\sigma_{vM}$$\n\nEspace des contraintes principales $(\\sigma_I,\\sigma_{II},\\sigma_{III})$ : surface de von Mises = cylindre de section circulaire, surface de Tresca = prisme hexagonal inscrit, tous deux d'axe l'axe hydrostatique $\\sigma_I=\\sigma_{II}=\\sigma_{III}$ (translation le long de cet axe sans effet = pression sans plasticité). Plan déviatorique $\\pi$ : $\\sigma_I+\\sigma_{II}+\\sigma_{III}=0$ ; rayon du cylindre de Mises $\\sqrt{2/3}\\,\\sigma_y$.\n\n## 4. Dilatation thermique\nCas général ($\\alpha_{ij}$ en K$^{-1}$, tenseur symétrique) :\n\n$$\\bar{\\bar\\varepsilon}^{th}=\\bar{\\bar\\alpha}\\Delta T\\qquad\\varepsilon^{th}_{ij}=\\alpha_{ij}\\Delta T$$\n\nCas isotrope (carré de côté $a$ passant de $T$ à $T+\\Delta T$) : $\\Delta a=a\\alpha\\Delta T$ ; $\\bar{\\bar\\alpha}=\\alpha\\bar{\\bar I}$ :\n\n$$\\bar{\\bar\\varepsilon}^{th}=\\alpha\\Delta T\\,\\bar{\\bar I}=\\mathrm{diag}(\\alpha\\Delta T,\\alpha\\Delta T,\\alpha\\Delta T)$$\n\nPas de cisaillement thermique ; dilatation volumique $\\mathrm{tr}\\,\\varepsilon^{th}=3\\alpha\\Delta T$. Hypothèses : $\\alpha$ constant, $\\Delta T$ modéré (HPP). Piège : la dilatation libre ne crée aucune contrainte ; une contrainte thermique n'apparaît que si la dilatation est empêchée.\n\n## 5. Principe de superposition\nHPP $\\Leftrightarrow$ additivité des déformations :\n\n$$\\bar{\\bar\\varepsilon}=\\bar{\\bar\\varepsilon}^{ela}+\\bar{\\bar\\varepsilon}^{pla}+\\bar{\\bar\\varepsilon}^{the}+\\bar{\\bar\\varepsilon}^{tra}+\\dots$$\n\n(« tra » : autre source de déformation, non détaillée dans le support.) Complément : seule la partie élastique est liée à $\\sigma$ : $\\bar{\\bar\\sigma}=\\mathbb C:(\\bar{\\bar\\varepsilon}-\\bar{\\bar\\varepsilon}^{pla}-\\bar{\\bar\\varepsilon}^{th}-\\dots)$.\n\n## 6. Conclusion (synthèse du cours)\n- Élasticité linéaire isotrope : $\\bar{\\bar\\sigma}=\\lambda\\,\\mathrm{tr}(\\bar{\\bar\\varepsilon})\\bar{\\bar I}+2\\mu\\bar{\\bar\\varepsilon}\\Leftrightarrow\\bar{\\bar\\varepsilon}=\\frac{1+\\nu}{E}\\bar{\\bar\\sigma}-\\frac{\\nu}{E}\\mathrm{tr}(\\bar{\\bar\\sigma})\\bar{\\bar I}$.\n- Critères : domaine élastique $\\Leftrightarrow\\sigma_{eq}<\\sigma_y$ avec $\\sigma_{eq}=\\sigma_{Tr}$ (max − min des contraintes principales) ou $\\sigma_{vM}$.\n- Thermodilatation isotrope : $\\bar{\\bar\\varepsilon}^{the}=\\alpha\\bar{\\bar I}\\Delta T$ ; superposition des déformations.\n\n## Pièges classiques\n- Confondre $\\sigma=F/S_0$ et $F/S$.\n- Oublier le facteur 2 sur les cisaillements de $\\hat\\varepsilon$ (Voigt).\n- Utiliser les composantes dans une base quelconque dans un critère : il faut les valeurs principales ou le déviateur.\n- Croire que $\\sigma_{33}=0$ implique $\\varepsilon_{33}=0$ (en contraintes planes, $\\varepsilon_{33}=-\\frac{\\nu}{E}(\\sigma_{11}+\\sigma_{22})$).\n- Croire qu'une pression hydrostatique plastifie un métal.\n- Prendre $\\nu=0{,}5$ dans $\\lambda$ (division par zéro : matériau incompressible).\n- Confondre dilatation libre (pas de contrainte) et dilatation bloquée (contrainte).\n",
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "En traction, la section $S$ diminue. Que dire de $\\sigma=F/S$ (réelle) par rapport à $\\sigma=F/S_0$ (conventionnelle) ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Elles sont toujours égales"
+        },
+        {
+          "id": "b",
+          "text": "La contrainte réelle est supérieure car $S<S_0$"
+        },
+        {
+          "id": "c",
+          "text": "La contrainte réelle est inférieure car $S<S_0$"
+        },
+        {
+          "id": "d",
+          "text": "La contrainte réelle vaut $F/L$"
+        }
+      ],
+      "correct": "b",
+      "explanation": "$S<S_0\\Rightarrow F/S>F/S_0$. À volume constant : $\\sigma_{réel}=\\sigma_{conv}(1+\\varepsilon)$."
+    },
+    {
+      "id": "q2",
+      "question": "Un matériau élasto-plastique est chargé au-delà de $\\sigma_y$ puis déchargé. Quel est le chemin de décharge ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Il repasse par la courbe de charge jusqu'à l'origine"
+        },
+        {
+          "id": "b",
+          "text": "Une droite horizontale"
+        },
+        {
+          "id": "c",
+          "text": "Une droite parallèle à la droite élastique, qui laisse $\\varepsilon^{plas}$"
+        },
+        {
+          "id": "d",
+          "text": "Une boucle fermée sans déformation résiduelle"
+        }
+      ],
+      "correct": "c",
+      "explanation": "La décharge est élastique (pente $E$) : on garde la déformation plastique. $\\sigma=E\\varepsilon^{ela}$, $\\varepsilon=\\varepsilon^{ela}+\\varepsilon^{pla}$. Le cas d) est le visco-élastique."
+    },
+    {
+      "id": "q3",
+      "question": "Quelle loi caractérise un comportement visco-élastique ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "$\\sigma=f(\\varepsilon,\\dot\\varepsilon)$ : charge et décharge suivent des chemins différents"
+        },
+        {
+          "id": "b",
+          "text": "$\\sigma=E\\varepsilon$"
+        },
+        {
+          "id": "c",
+          "text": "$\\sigma=E\\varepsilon^{ela}$ avec $\\varepsilon=\\varepsilon^{ela}+\\varepsilon^{pla}$"
+        },
+        {
+          "id": "d",
+          "text": "$\\sigma=F/S_0$"
+        }
+      ],
+      "correct": "a",
+      "explanation": "La contrainte dépend de la vitesse de déformation, d'où l'hystérésis. b) est l'élastique linéaire, c) l'élasto-plastique."
+    },
+    {
+      "id": "q4",
+      "question": "Comment passe-t-on de 81 à 21 composantes indépendantes pour $C_{ijk\\ell}$ ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Par la seule symétrie de $\\bar{\\bar\\sigma}$"
+        },
+        {
+          "id": "b",
+          "text": "Les petites symétries donnent 21, la grande donne 6"
+        },
+        {
+          "id": "c",
+          "text": "Par l'isotropie, qui donne directement 21"
+        },
+        {
+          "id": "d",
+          "text": "Petites symétries ($\\sigma$ et $\\varepsilon$ symétriques) : 81→36 ; grande symétrie $C_{ijk\\ell}=C_{k\\ell ij}$ : 36→21"
+        }
+      ],
+      "correct": "d",
+      "explanation": "La grande symétrie vient de l'existence d'une énergie de déformation. L'isotropie réduit ensuite à 2 constantes ($\\lambda,\\mu$)."
+    },
+    {
+      "id": "q5",
+      "question": "Dans la notation de Voigt, pourquoi $\\hat\\varepsilon$ contient-il $2\\varepsilon_{23}$, $2\\varepsilon_{13}$, $2\\varepsilon_{12}$ ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Convention arbitraire sans conséquence sur $\\hat C$"
+        },
+        {
+          "id": "b",
+          "text": "Car $C_{ij23}\\varepsilon_{23}+C_{ij32}\\varepsilon_{32}=2C_{ij23}\\varepsilon_{23}$ : les termes croisés se regroupent"
+        },
+        {
+          "id": "c",
+          "text": "Car $\\sigma_{23}$ vaut le double de $\\varepsilon_{23}$"
+        },
+        {
+          "id": "d",
+          "text": "Pour que $\\hat C$ soit antisymétrique"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Le facteur 2 est sur $\\varepsilon$ (pas sur $\\sigma$) et $\\hat C$ reste symétrique (21 termes). Il correspond à $\\gamma=2\\varepsilon$."
+    },
+    {
+      "id": "q6",
+      "question": "Que se passe-t-il pour $\\nu=0{,}5$ (caoutchouc) ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Le module $E$ devient nul"
+        },
+        {
+          "id": "b",
+          "text": "Le module de cisaillement $\\mu$ devient nul"
+        },
+        {
+          "id": "c",
+          "text": "$\\mathrm{tr}\\,\\varepsilon=\\frac{1-2\\nu}{E}\\mathrm{tr}\\,\\sigma=0$ : matériau incompressible, $\\lambda\\to\\infty$"
+        },
+        {
+          "id": "d",
+          "text": "La contrainte est toujours nulle"
+        }
+      ],
+      "correct": "c",
+      "explanation": "$\\lambda=\\frac{E\\nu}{(1+\\nu)(1-2\\nu)}$ diverge quand $\\nu\\to0{,}5$ ; on utilise alors la formulation inverse. $\\mu=E/3$ reste fini."
+    },
+    {
+      "id": "q7",
+      "question": "Acier ($E=210$ GPa, $\\nu=0{,}3$) en traction uniaxiale avec $\\varepsilon_{11}=10^{-3}$. Que vaut $\\varepsilon_{22}$ ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "$-3\\times10^{-4}$"
+        },
+        {
+          "id": "b",
+          "text": "$+3\\times10^{-4}$"
+        },
+        {
+          "id": "c",
+          "text": "$0$"
+        },
+        {
+          "id": "d",
+          "text": "$-10^{-3}$"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Formulation inverse avec $\\sigma_{22}=\\sigma_{33}=0$ : $\\varepsilon_{22}=-\\nu\\sigma/E=-\\nu\\varepsilon_{11}$. (Contraction latérale, contrairement à b).)"
+    },
+    {
+      "id": "q8",
+      "question": "Pourquoi une pression hydrostatique ne plastifie-t-elle pas un métal selon Tresca/von Mises ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Parce que $p>\\sigma_y$ est impossible"
+        },
+        {
+          "id": "b",
+          "text": "Parce que Tresca la voit mais pas von Mises"
+        },
+        {
+          "id": "c",
+          "text": "Parce que $\\nu<0{,}5$"
+        },
+        {
+          "id": "d",
+          "text": "La plasticité est induite par cisaillement (dislocations) : les critères vérifient $f(-p\\bar{\\bar I})=0$ (invariants, déviateur)"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Pour $\\sigma_I=\\sigma_{II}=\\sigma_{III}$, $\\sigma_{Tr}=\\sigma_{vM}=0$. Les surfaces de charge sont des cylindres/prismes d'axe hydrostatique."
+    },
+    {
+      "id": "q9",
+      "question": "Pour les contraintes principales $(5,25,210)$ MPa, quelle affirmation est correcte ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "$\\sigma_{Tr}=235$ MPa"
+        },
+        {
+          "id": "b",
+          "text": "$\\sigma_{Tr}=205$ MPa et $\\sigma_{vM}\\approx195{,}8$ MPa ; $\\sigma_{vM}\\le\\sigma_{Tr}\\le\\frac{2}{\\sqrt3}\\sigma_{vM}$ est vérifié"
+        },
+        {
+          "id": "c",
+          "text": "$\\sigma_{vM}=205$ MPa et $\\sigma_{Tr}\\approx195{,}8$ MPa"
+        },
+        {
+          "id": "d",
+          "text": "$\\sigma_{Tr}=\\sigma_{vM}=210$ MPa"
+        }
+      ],
+      "correct": "b",
+      "explanation": "$\\sigma_{Tr}=210-5=205$ ; $\\sigma_{vM}=\\sqrt{(400+42025+34225)/2}=\\sqrt{38325}\\approx195{,}8$ ; rapport $1{,}047\\le1{,}155$. Le rapport maximal $2/\\sqrt3$ est atteint en cisaillement pur."
+    },
+    {
+      "id": "q10",
+      "question": "Barre d'acier parfaitement bloquée axialement (côtés libres), chauffée de $\\Delta T>0$. Quelle contrainte axiale ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "$+E\\alpha\\Delta T$ (traction)"
+        },
+        {
+          "id": "b",
+          "text": "$0$ : la barre se dilate librement"
+        },
+        {
+          "id": "c",
+          "text": "$-E\\alpha\\Delta T$ (compression)"
+        },
+        {
+          "id": "d",
+          "text": "$-E\\alpha\\Delta T/(1-2\\nu)$"
+        }
+      ],
+      "correct": "c",
+      "explanation": "$\\varepsilon=0=\\sigma/E+\\alpha\\Delta T\\Rightarrow\\sigma=-E\\alpha\\Delta T$. d) correspond à un cube bloqué dans les 3 directions (état hydrostatique)."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "recto": "Déformation longitudinale",
+      "verso": "$\\varepsilon=\\frac{L-L_0}{L_0}=\\frac{\\Delta L}{L_0}$"
+    },
+    {
+      "id": "f2",
+      "recto": "Contrainte conventionnelle / réelle",
+      "verso": "$\\sigma=\\frac{F}{S_0}$ / $\\sigma=\\frac{F}{S}$"
+    },
+    {
+      "id": "f3",
+      "recto": "Élastique linéaire",
+      "verso": "$\\sigma=E\\varepsilon$ (réversible, décharge sur la même droite)"
+    },
+    {
+      "id": "f4",
+      "recto": "Élasto-plastique",
+      "verso": "$\\sigma=E\\varepsilon^{ela}$, $\\varepsilon=\\varepsilon^{ela}+\\varepsilon^{pla}$ ; décharge parallèle à la droite élastique"
+    },
+    {
+      "id": "f5",
+      "recto": "Visco-élastique",
+      "verso": "$\\sigma=f(\\varepsilon,\\dot\\varepsilon)$ ; hystérésis charge/décharge"
+    },
+    {
+      "id": "f6",
+      "recto": "Loi de Hooke généralisée",
+      "verso": "$\\sigma_{ij}=C_{ijk\\ell}\\varepsilon_{k\\ell}$, soit $\\bar{\\bar\\sigma}=\\mathbb C:\\bar{\\bar\\varepsilon}$ (HPP, élastique linéaire)"
+    },
+    {
+      "id": "f7",
+      "recto": "Symétries de $C_{ijk\\ell}$ et nombre de constantes",
+      "verso": "Petites : $C_{ijk\\ell}=C_{jik\\ell}=C_{ij\\ell k}$ (81→36). Grande : $C_{ijk\\ell}=C_{k\\ell ij}$ (→21). Isotrope : 2"
+    },
+    {
+      "id": "f8",
+      "recto": "Vecteur de Voigt des contraintes",
+      "verso": "$\\hat\\sigma=(\\sigma_{11},\\sigma_{22},\\sigma_{33},\\sigma_{23},\\sigma_{13},\\sigma_{12})^T$"
+    },
+    {
+      "id": "f9",
+      "recto": "Vecteur de Voigt des déformations",
+      "verso": "$\\hat\\varepsilon=(\\varepsilon_{11},\\varepsilon_{22},\\varepsilon_{33},2\\varepsilon_{23},2\\varepsilon_{13},2\\varepsilon_{12})^T$"
+    },
+    {
+      "id": "f10",
+      "recto": "Loi en notation de Voigt",
+      "verso": "$\\hat\\sigma=\\hat C\\hat\\varepsilon$, $\\hat\\sigma_m=\\sum_{n=1}^6\\hat C_{mn}\\hat\\varepsilon_n$ ($\\hat C$ 6×6 symétrique, 21 termes)"
+    },
+    {
+      "id": "f11",
+      "recto": "Ĉ isotrope",
+      "verso": "$\\hat C_{11}=\\hat C_{22}=\\hat C_{33}=\\lambda+2\\mu$ ; $\\hat C_{12}=\\hat C_{13}=\\hat C_{23}=\\lambda$ ; $\\hat C_{44}=\\hat C_{55}=\\hat C_{66}=\\mu$ ; le reste 0"
+    },
+    {
+      "id": "f12",
+      "recto": "Coefficients de Lamé",
+      "verso": "$\\lambda=\\frac{E\\nu}{(1+\\nu)(1-2\\nu)}$ ; $\\mu=\\frac{E}{2(1+\\nu)}$ ($\\mu=G$)"
+    },
+    {
+      "id": "f13",
+      "recto": "Hooke isotrope (tensoriel)",
+      "verso": "$\\bar{\\bar\\sigma}=\\lambda\\,\\mathrm{tr}(\\bar{\\bar\\varepsilon})\\bar{\\bar I}+2\\mu\\bar{\\bar\\varepsilon}$"
+    },
+    {
+      "id": "f14",
+      "recto": "Hooke isotrope inverse",
+      "verso": "$\\bar{\\bar\\varepsilon}=\\frac{1+\\nu}{E}\\bar{\\bar\\sigma}-\\frac{\\nu}{E}\\mathrm{tr}(\\bar{\\bar\\sigma})\\bar{\\bar I}$"
+    },
+    {
+      "id": "f15",
+      "recto": "Ordres de grandeur $E$, $\nu$",
+      "verso": "Acier 210 GPa, $\\nu\\in[0{,}27;0{,}31]$ ; aluminium 70 GPa, 0,35 ; caoutchouc $<0{,}1$ GPa, 0,5 (incompressible)"
+    },
+    {
+      "id": "f16",
+      "recto": "Conditions sur un critère $f$",
+      "verso": "$f(\\bar{\\bar\\sigma})<\\sigma_y\\Leftrightarrow$ élastique ; $f$ fonction des invariants ; $\\forall p$, $f(-p\\bar{\\bar I})=0$"
+    },
+    {
+      "id": "f17",
+      "recto": "Contrainte équivalente de Tresca",
+      "verso": "$\\sigma_{Tr}=\\max(\\sigma_I,\\sigma_{II},\\sigma_{III})-\\min(\\sigma_I,\\sigma_{II},\\sigma_{III})$ ; élastique si $\\sigma_{Tr}<\\sigma_y$"
+    },
+    {
+      "id": "f18",
+      "recto": "Contrainte équivalente de von Mises",
+      "verso": "$\\sigma_{vM}=\\sqrt{\\frac{(\\sigma_I-\\sigma_{II})^2+(\\sigma_I-\\sigma_{III})^2+(\\sigma_{II}-\\sigma_{III})^2}{2}}=\\sqrt{\\frac32\\bar{\\bar\\sigma}^d:\\bar{\\bar\\sigma}^d}$"
+    },
+    {
+      "id": "f19",
+      "recto": "Déviateur des contraintes",
+      "verso": "$\\bar{\\bar\\sigma}^d=\\bar{\\bar\\sigma}-\\frac13\\mathrm{tr}(\\bar{\\bar\\sigma})\\bar{\\bar I}=\\bar{\\bar\\sigma}+p\\bar{\\bar I}$ ; $\\bar{\\bar\\sigma}^d:\\bar{\\bar\\sigma}^d=\\mathrm{tr}(\\bar{\\bar\\sigma}^d\\cdot\\bar{\\bar\\sigma}^d)$"
+    },
+    {
+      "id": "f20",
+      "recto": "Inégalité Tresca / von Mises",
+      "verso": "$\\sigma_{vM}\\le\\sigma_{Tr}\\le\\frac{2}{\\sqrt3}\\sigma_{vM}$ (max en cisaillement pur)"
+    },
+    {
+      "id": "f21",
+      "recto": "Ellipse de von Mises (biaxial)",
+      "verso": "$\\sigma_1^2-\\sigma_1\\sigma_2+\\sigma_2^2=\\sigma_y^2$"
+    },
+    {
+      "id": "f22",
+      "recto": "Dilatation thermique",
+      "verso": "$\\bar{\\bar\\varepsilon}^{th}=\\bar{\\bar\\alpha}\\Delta T$, $\\varepsilon^{th}_{ij}=\\alpha_{ij}\\Delta T$ ($\\alpha_{ij}$ en K$^{-1}$) ; isotrope : $\\alpha\\Delta T\\,\\bar{\\bar I}$"
+    },
+    {
+      "id": "f23",
+      "recto": "Principe de superposition",
+      "verso": "HPP : $\\bar{\\bar\\varepsilon}=\\bar{\\bar\\varepsilon}^{ela}+\\bar{\\bar\\varepsilon}^{pla}+\\bar{\\bar\\varepsilon}^{the}+\\bar{\\bar\\varepsilon}^{tra}+\\dots$"
+    }
+  ],
+  "exercices": [
+    {
+      "titre": "Loi de Hooke isotrope : de $\\bar{\\bar\\varepsilon}$ à $\\bar{\\bar\\sigma}$ (tensoriel et Voigt)",
+      "difficulte": 1,
+      "enonce": "Acier : $E=210\\,000$ MPa, $\\nu=0{,}3$. Le tenseur des déformations est $\\varepsilon_{11}=10^{-3}$, $\\varepsilon_{22}=\\varepsilon_{33}=-0{,}3\\times10^{-3}$, $\\varepsilon_{12}=0{,}4\\times10^{-3}$, autres composantes nulles.\n\n1. Calculer $\\lambda$ et $\\mu$.\n2. Calculer $\\bar{\\bar\\sigma}$ avec la loi tensorielle.\n3. Retrouver $\\sigma_{11}$ et $\\sigma_{12}$ en notation de Voigt.",
+      "corrige": "**1.** \n\n$$\\lambda=\\frac{210000\\times0{,}3}{1{,}3\\times0{,}4}\\approx121\\,154\\ \\text{MPa}\\qquad\\mu=\\frac{210000}{2{,}6}\\approx80\\,769\\ \\text{MPa}$$\n\n**2.** $\\mathrm{tr}\\,\\varepsilon=(1-0{,}3-0{,}3)\\times10^{-3}=0{,}4\\times10^{-3}$, donc $\\lambda\\,\\mathrm{tr}\\,\\varepsilon\\approx48{,}46$ MPa.\n\n$$\\sigma_{11}=48{,}46+2\\times80769\\times10^{-3}=48{,}46+161{,}54=210{,}0\\ \\text{MPa}$$\n\n$$\\sigma_{22}=48{,}46+2\\times80769\\times(-0{,}3\\times10^{-3})=0\\qquad\\sigma_{33}=0$$\n\n$$\\sigma_{12}=2\\mu\\varepsilon_{12}=161538\\times0{,}4\\times10^{-3}\\approx64{,}6\\ \\text{MPa}$$\n\nOn retrouve un état de traction uniaxiale de 210 MPa (contraction latérale $-\\nu\\varepsilon_{11}$) plus un cisaillement.\n\n**3.** $\\hat\\varepsilon=(10^{-3},-0{,}3\\times10^{-3},-0{,}3\\times10^{-3},0,0,0{,}8\\times10^{-3})^T$ (facteur 2 sur le cisaillement !).\n\n$$\\sigma_{11}=(\\lambda+2\\mu)\\varepsilon_{11}+\\lambda\\varepsilon_{22}+\\lambda\\varepsilon_{33}=282{,}69-36{,}35-36{,}35=210{,}0\\ \\text{MPa}$$\n\n$$\\sigma_{12}=\\hat C_{66}\\hat\\varepsilon_6=\\mu\\times0{,}8\\times10^{-3}\\approx64{,}6\\ \\text{MPa}$$"
+    },
+    {
+      "titre": "Loi inverse, contraintes planes et module de cisaillement",
+      "difficulte": 2,
+      "enonce": "Même acier. Un état de contraintes planes est $\\bar{\\bar\\sigma}=\\mathrm{diag}(100,50,0)$ MPa.\n\n1. Calculer $\\varepsilon_{11}$, $\\varepsilon_{22}$, $\\varepsilon_{33}$ avec la formulation inverse.\n2. Vérifier $\\mathrm{tr}\\,\\varepsilon$ par une formule directe. Conclure sur $\\varepsilon_{33}$.\n3. On ajoute une contrainte de cisaillement $\\sigma_{12}=60$ MPa. Calculer $\\varepsilon_{12}$ et la distorsion $\\gamma_{12}=2\\varepsilon_{12}$, et la relier à $\\mu$.",
+      "corrige": "**1.** $\\mathrm{tr}\\,\\sigma=150$ MPa.\n\n$$\\varepsilon_{11}=\\frac{1{,}3\\times100-0{,}3\\times150}{210000}=\\frac{85}{210000}\\approx4{,}05\\times10^{-4}$$\n\n$$\\varepsilon_{22}=\\frac{1{,}3\\times50-45}{210000}=\\frac{20}{210000}\\approx9{,}5\\times10^{-5}$$\n\n$$\\varepsilon_{33}=\\frac{0-45}{210000}\\approx-2{,}14\\times10^{-4}$$\n\n**2.** $\\mathrm{tr}\\,\\varepsilon=\\frac{1-2\\nu}{E}\\mathrm{tr}\\,\\sigma=\\frac{0{,}4\\times150}{210000}\\approx2{,}86\\times10^{-4}$. Somme : $4{,}05+0{,}95-2{,}14=2{,}86\\times10^{-4}$ ✓.\n\nConclusion : $\\sigma_{33}=0$ n'implique pas $\\varepsilon_{33}=0$ : $\\varepsilon_{33}=-\\frac{\\nu}{E}(\\sigma_{11}+\\sigma_{22})$ (effet Poisson).\n\n**3.**\n\n$$\\varepsilon_{12}=\\frac{1+\\nu}{E}\\sigma_{12}=\\frac{1{,}3\\times60}{210000}\\approx3{,}71\\times10^{-4}\\qquad\\gamma_{12}=2\\varepsilon_{12}\\approx7{,}43\\times10^{-4}$$\n\nVérification : $\\gamma_{12}=\\sigma_{12}/\\mu=60/80769\\approx7{,}43\\times10^{-4}$ ✓."
+    },
+    {
+      "titre": "Critères de Tresca et von Mises : comparaison",
+      "difficulte": 3,
+      "enonce": "Un acier a pour limite d'élasticité $\\sigma_y=200$ MPa.\n\n1. En un point, les contraintes principales sont $(5,25,210)$ MPa (état du cours). Calculer $\\sigma_{Tr}$ et $\\sigma_{vM}$. Que prédit chaque critère ?\n2. Vérifier l'inégalité $\\sigma_{vM}\\le\\sigma_{Tr}\\le\\frac{2}{\\sqrt3}\\sigma_{vM}$.\n3. Cisaillement pur $\\tau=100$ MPa : mêmes questions. Quelle est la limite $\\tau_y$ pour chaque critère ?\n4. État hydrostatique $\\bar{\\bar\\sigma}=-300\\,\\bar{\\bar I}$ MPa : conclusion ?",
+      "corrige": "**1.**\n\n$$\\sigma_{Tr}=210-5=205\\ \\text{MPa}>\\sigma_y$$\n\n$$\\sigma_{vM}=\\sqrt{\\frac{(5-25)^2+(5-210)^2+(25-210)^2}{2}}=\\sqrt{\\frac{400+42025+34225}{2}}=\\sqrt{38325}\\approx195{,}8\\ \\text{MPa}<\\sigma_y$$\n\nTresca prédit la plastification, von Mises reste élastique : Tresca est plus conservatif.\n\n**2.** Rapport $\\sigma_{Tr}/\\sigma_{vM}\\approx1{,}047$, compris entre 1 et $2/\\sqrt3\\approx1{,}155$ ✓.\n\n**3.** Contraintes principales $(100,0,-100)$ : $\\sigma_{Tr}=200$ MPa (limite atteinte) ; $\\sigma_{vM}=\\sqrt3\\times100\\approx173{,}2$ MPa (élastique). Rapport $=2/\\sqrt3$ (maximum). Limites : $\\tau_y^{Tr}=\\sigma_y/2=100$ MPa ; $\\tau_y^{vM}=\\sigma_y/\\sqrt3\\approx115{,}5$ MPa.\n\n**4.** Contraintes principales égales : $\\sigma_{Tr}=\\sigma_{vM}=0<\\sigma_y$ : élastique quelle que soit la pression, car la plasticité est induite par cisaillement ($f(-p\\bar{\\bar I})=0$). Remarque : les composantes de la diapo ne sont pas exactement cohérentes avec les valeurs principales (44800 contre 44750 pour $\\sigma:\\sigma$), on travaille donc avec les valeurs principales."
+    },
+    {
+      "titre": "Contraintes thermiques en dilatation empêchée (niveau partiel)",
+      "difficulte": 4,
+      "enonce": "Acier : $E=210$ GPa, $\\nu=0{,}3$, $\\alpha=12\\times10^{-6}$ K$^{-1}$, $\\sigma_y=235$ MPa. Échauffement $\\Delta T=+80$ K. On suppose HPP, $E$, $\\alpha$ constants, appuis parfaitement rigides, matériau initialement sans contrainte. Utiliser $\\bar{\\bar\\varepsilon}=\\bar{\\bar\\varepsilon}^{ela}+\\bar{\\bar\\varepsilon}^{th}$.\n\n1. Dilatation libre : $\\varepsilon^{th}$ et allongement d'une barre de 100 mm.\n2. Barre bloquée axialement (côtés libres) : $\\sigma$, critère de von Mises, $\\Delta T$ à la limite.\n3. Plaque bloquée dans les directions 1 et 2, libre dans l'épaisseur (3) : $\\sigma_{11}=\\sigma_{22}=\\sigma$, $\\sigma_{33}=0$. Calculer $\\sigma$, conclure, $\\Delta T$ à la limite.\n4. Cube bloqué dans les 3 directions : $\\bar{\\bar\\sigma}$, conclure.",
+      "corrige": "**1.** $\\varepsilon^{th}=\\alpha\\Delta T=12\\times10^{-6}\\times80=9{,}6\\times10^{-4}$ ; $\\Delta L=100\\times9{,}6\\times10^{-4}=0{,}096$ mm. Aucune contrainte (dilatation libre).\n\n**2.** $\\varepsilon_{11}=0=\\sigma/E+\\alpha\\Delta T$ :\n\n$$\\sigma=-E\\alpha\\Delta T=-210000\\times12\\times10^{-6}\\times80=-201{,}6\\ \\text{MPa}$$\n\nUniaxial : $\\sigma_{vM}=|\\sigma|=201{,}6<235$ MPa : élastique. Limite : $\\Delta T_y=\\frac{\\sigma_y}{E\\alpha}=\\frac{235}{2{,}52}\\approx93{,}3$ K.\n\n**3.** Loi inverse + thermique : $\\varepsilon_{11}=\\frac{1+\\nu}{E}\\sigma-\\frac{\\nu}{E}2\\sigma+\\alpha\\Delta T=\\frac{1-\\nu}{E}\\sigma+\\alpha\\Delta T=0$, d'où :\n\n$$\\sigma=-\\frac{E\\alpha\\Delta T}{1-\\nu}=-\\frac{2{,}52\\times80}{0{,}7}\\approx-288\\ \\text{MPa}$$\n\nÉtat équibiaxial $(\\sigma,\\sigma,0)$ : $\\sigma_{vM}=\\sigma_{Tr}=|\\sigma|=288>235$ MPa : plastification (les deux critères). Limite : $\\Delta T_y=\\frac{\\sigma_y(1-\\nu)}{E\\alpha}=\\frac{235\\times0{,}7}{2{,}52}\\approx65{,}3$ K.\n\n**4.** $\\bar{\\bar\\sigma}=s\\bar{\\bar I}$ : $\\varepsilon=\\frac{1+\\nu}{E}s-\\frac{3\\nu}{E}s+\\alpha\\Delta T=\\frac{1-2\\nu}{E}s+\\alpha\\Delta T=0$.\n\n$$s=-\\frac{E\\alpha\\Delta T}{1-2\\nu}=-\\frac{2{,}52\\times80}{0{,}4}=-504\\ \\text{MPa}$$\n\nÉtat hydrostatique : $\\sigma_{vM}=\\sigma_{Tr}=0$ : jamais de plastification malgré 504 MPa en compression (plasticité induite par cisaillement). Plus on bloque de directions, plus la contrainte thermique augmente ($201{,}6<288<504$), mais la sollicitation plastifiante diminue en 4."
+    }
+  ],
+  "suivi": "Aucun quiz ni exercice réalisé pour l'instant. Points de vigilance à tester en priorité : (1) facteur 2 sur les cisaillements de $\\hat\\varepsilon$ (Voigt) ; (2) contrainte réelle vs conventionnelle ; (3) Tresca vs von Mises (valeurs, inégalité, cisaillement pur) ; (4) hydrostatique et plasticité ; (5) $\\varepsilon_{33}\\neq0$ en contraintes planes ; (6) signe et conditions de blocage en thermoélasticité. À compléter selon les erreurs commises."
+}
