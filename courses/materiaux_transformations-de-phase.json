@@ -1,0 +1,406 @@
+{
+  "matiere": "Matériaux (UEF MATI)",
+  "type": "CM",
+  "sujet": "Cours 3 — Thermodynamique des transformations de phase, diffusion, germination, croissance",
+  "fiche_synthese": "# Cours 3 — Thermodynamique des transformations de phase (Matériaux UEF MATI, Arts et Métiers)\n\n## Plan\n1. Stabilité, instabilité, métastabilité\n2. Cinétique de transformation (exemple diamant → graphite)\n3. Transformations diffusives : gaz/liquides, solides, mécanismes, lois de Fick, loi d'Arrhenius\n4. Germination : cristallisation à partir d'un liquide (courbe de refroidissement, surfusion, germination homogène puis hétérogène)\n5. Croissance : dendrites\n6. Conclusion : thermodynamique vs cinétique\n\n## 1. Stabilité, instabilité, métastabilité\nL'état d'un matériau est décrit par plusieurs variables : constitution, nature et densité des défauts, température…\n- **Stable** : l'énergie a atteint un **minimum** ; sans action extérieure, plus d'évolution spontanée (bille au fond d'une cuvette).\n- **Métastable** : **minimum relatif local**. Une perturbation ramène le système à l'état métastable, sauf si l'apport d'énergie dépasse un seuil, l'**énergie d'activation $E_a$** ; il évolue alors vers une énergie plus basse.\n- **Instable** : tout autre cas ; évolution spontanée vers une énergie plus basse (bille au sommet d'une bosse).\n- Précision (compléments) : le support parle d'« énergie interne ». À $T$ et $p$ imposées, le critère rigoureux est le minimum de l'**enthalpie libre** $G=H-TS$ (cohérent avec la partie germination) ; à $S$ et $V$ fixés, c'est le minimum de $U$.\n\n## 2. Cinétique de transformation\nPour qu'un système instable évolue **rapidement** vers l'équilibre, deux conditions doivent être remplies **simultanément** :\n- **énergie motrice importante** : énergie de l'état de départ (1) très éloignée de celle de l'état d'équilibre (2) ;\n- **mécanisme de transformation efficace** : déplacement efficace des atomes (« roulettes du chariot ») permettant de modifier composition et/ou structure.\n\nSi l'une manque : transformation **très lente, voire nulle**.\n\n**Exemple traité en cours : diamant → graphite.** Diamant = forme métastable du carbone, graphite = forme stable.\n- À 20 °C, pression atmosphérique : millions (milliards ?) d'années.\n- À 2000 °C, pression atmosphérique : quelques minutes (la mobilité atomique est activée thermiquement ; en pratique sous atmosphère inerte, sinon le diamant brûle).\n\nPiège : « thermodynamiquement favorable » ≠ « observable à l'échelle de temps humaine ».\n\n## 3. Transformations diffusives\n### 3.1 Gaz et liquides\nLa diffusion déplace les particules des zones de forte concentration vers les zones de faible concentration jusqu'à l'homogénéité (exemples du support : fumée de cigare dans l'air, encre dans l'eau, colorant dans un bécher : concentration élevée → déplacement → réparti uniformément à l'équilibre ; mélange de deux gaz initialement séparés). Les vitesses de migration sont pratiquement visibles à l'échelle macroscopique.\n\n### 3.2 Solides : généralités\n- La diffusion à l'état solide = **sauts d'atomes dans les défauts du cristal** (lacunes, interstices) sous l'effet de l'agitation thermique.\n- Sur un métal à température ambiante, la diffusion est rarement observable. Le transport à grande distance ne prend de l'importance qu'à haute température, entre $0{,}5\\,T_f$ et $T_f$ ($T_f$ : température de fusion).\n- Fick (1855) : bases théoriques ; flux d'atomes dans une direction donnée du cristal, au même titre qu'un flux de chaleur ; définition du **coefficient de diffusion** et de **deux lois de Fick**. Mesures réelles de $D$ : années 1950 (radioéléments artificiels, microanalyse électronique).\n- Seuils (temps et température suffisants) : $T>0{,}4$ à $0{,}5\\,T_{fusion}$ pour l'**autodiffusion** (éléments purs) ; $T>0{,}5$ à $0{,}7\\,T_{fusion}$ pour l'**hétérodiffusion** (plusieurs types d'atomes).\n- Illustration du support : atomes A et B initialement séparés par une interface, qui s'interpénètrent jusqu'à obtenir une solution homogène.\n\n### 3.3 Mécanismes de diffusion (schéma du support)\n1. **Lacunaire** : un atome saute dans une lacune voisine.\n2. **Interstitiel** : soluté de petite taille (C, H, O, N, B) saute entre sites interstitiels.\n3. **Superficielle** : vitesse « forte ».\n4. **Dans un joint de grain** : vitesse « forte ».\n\nCompléments : $D_{surface}>D_{joint}>D_{volume}$ (courts-circuits de diffusion, énergies d'activation plus faibles) ; en volume, $\\Delta H_D$ (lacunaire) = enthalpie de formation de la lacune + enthalpie de migration ; la diffusion interstitielle est bien plus rapide que la substitutionnelle (C dans Fe $\\gg$ Fe dans Fe).\n\n### 3.4 1ère loi de Fick (régime permanent)\n$$J(x)=-D\\,\\frac{\\partial C(x)}{\\partial x}$$\n- $J$ : quantité de matière traversant perpendiculairement une surface par unité de temps (mol·m⁻²·s⁻¹) ; $C$ : concentration atomique au point d'abscisse $x$ (mol·m⁻³) ; $D$ : coefficient de diffusion atomique (m²·s⁻¹).\n- Dans une phase présentant un gradient de concentration, la mobilité des atomes entraîne un flux de matière qui tend à **égaliser les concentrations** (signe − : flux vers les concentrations décroissantes).\n- Analogues : loi de Fourier (chaleur), loi d'Ohm (courant).\n- Hypothèses : 1D, régime permanent (le profil $C(x)$ ne dépend pas du temps), $D$ indépendant de la concentration. Profil linéaire : $$J=D\\,\\frac{\\Delta C}{e}$$\n\n### 3.5 2ème loi de Fick (régime transitoire)\n$$\\frac{\\partial C}{\\partial t}=D\\,\\frac{\\partial^2 C}{\\partial x^2}$$\n- Construction (compléments) : conservation de la matière $$\\frac{\\partial C}{\\partial t}=-\\frac{\\partial J}{\\partial x}$$ puis injection de la 1ère loi avec $D$ constant.\n- Interprétation du support : la vitesse de changement de composition est proportionnelle au **taux de variation du gradient** (courbure) et non au gradient lui-même ; la durée d'homogénéisation d'une solution solide initialement hétérogène est **toujours très élevée**.\n- Équation intégrable selon les conditions initiales et aux limites. Cas classique (compléments), milieu semi-infini, $C(0,t)=C_s$, $C(x,0)=C_0$ : $$\\frac{C(x,t)-C_0}{C_s-C_0}=1-\\operatorname{erf}\\left(\\frac{x}{2\\sqrt{Dt}}\\right)$$\n- Longueur caractéristique de diffusion : $x\\sim\\sqrt{Dt}$ (temps ×4 pour profondeur ×2).\n- Graphique du support : à $t=0$ concentration $C_0$ partout sauf $C_s$ en surface ; pour $t_2>t_1>0$ le profil s'aplatit progressivement vers $C_0$.\n- Piège : là où $\\partial^2C/\\partial x^2=0$ (profil linéaire, point d'inflexion) on a $\\partial C/\\partial t=0$ malgré un flux non nul.\n\n### 3.6 Loi d'Arrhenius sur D\n$$D=D_0\\,e^{-\\Delta H_D/(RT)}$$\n- $D_0$ (m²·s⁻¹) : constante liée à la fréquence de saut des atomes ; $\\Delta H_D$ (J·mol⁻¹) : enthalpie molaire d'activation de la diffusion concernée ; $R=8{,}314$ J·mol⁻¹·K⁻¹ ; $T$ en kelvin.\n- Variables influençant $D$ : température, composition, structure cristalline, impuretés.\n- Linéarisation : $$\\ln D=\\ln D_0-\\frac{\\Delta H_D}{R}\\cdot\\frac{1}{T}$$ (droite de pente $-\\Delta H_D/R$ en $1/T$). Entre deux températures : $$\\ln\\frac{D_2}{D_1}=\\frac{\\Delta H_D}{R}\\left(\\frac{1}{T_1}-\\frac{1}{T_2}\\right)$$\n- Si l'énergie est donnée en eV/atome, remplacer $R$ par $k_B=8{,}617\\times10^{-5}$ eV·K⁻¹.\n\n## 4. Germination : cristallisation à partir d'un liquide\n- Toute transformation de phase entraîne une **diminution de l'enthalpie libre** du système.\n- La transformation s'amorce à partir de **germes** de la nouvelle phase ; la **surfusion** est nécessaire pour amorcer le processus.\n\n**Courbe de refroidissement** (corps pur, $T(t)$, $T_m$ = température de fusion) :\n1. Refroidissement du liquide : l'énergie libérée ne compense pas l'énergie de création de l'interface solide-liquide ; le liquide continue à refroidir sans se solidifier.\n2. **Surfusion** ($T<T_m$) : gain d'énergie suffisant pour compenser la création d'interface ; les germes se créent rapidement ; la **chaleur latente** fait remonter la température.\n3. Croissance des germes : **plateau** à $T_m$, réaction **isotherme** ; puis refroidissement du solide.\n\n(La vidéo de la diapo 13, illisible dans le PDF, illustre vraisemblablement une bouteille d'eau en surfusion qui gèle brusquement.)\n\n### 4.1 Germination homogène\nBilan énergétique pour un **germe sphérique** de rayon $r$ : énergie libérée (formation d'un volume de phase plus stable) + investissement (création d'une surface solide dans le liquide).\n$$\\Delta G=\\Delta G_{volume}+\\Delta G_{surface}=\\frac{4}{3}\\pi r^3\\,\\Delta g_V+4\\pi r^2\\,\\gamma_{LS}$$\n- $\\Delta g_V<0$ : énergie de formation de la nouvelle phase par unité de volume ; $\\gamma_{LS}>0$ : énergie superficielle de l'interface.\n- Étapes : dérivation $$\\frac{d\\Delta G}{dr}=4\\pi r^2\\,\\Delta g_V+8\\pi r\\,\\gamma_{LS}$$ puis annulation : $$\\left(\\frac{d\\Delta G}{dr}\\right)_{r_c}=0\\iff r_c=-\\frac{2\\gamma_{LS}}{\\Delta g_V}=\\frac{2\\gamma_{LS}T_F}{L\\,(T-T_F)}$$ avec $\\Delta g_V=L\\,(T-T_F)/T_F$ (L : chaleur latente de fusion volumique, $T<T_F$ donc $\\Delta g_V<0$ et $r_c>0$). En notant $\\Delta T=T_F-T$ la surfusion, $r_c\\propto 1/\\Delta T$.\n- Sens physique : $r<r_c$ = embryon instable (ΔG croît avec r, il se redissout) ; $r>r_c$ = germe stable qui croît (ΔG décroît). $r_c$ est le **maximum** de $\\Delta G$.\n- Barrière de germination (compléments) : $$\\Delta G^*=\\frac{16\\pi\\gamma_{LS}^3}{3\\,\\Delta g_V^2}=\\frac{16\\pi\\gamma_{LS}^3T_F^2}{3L^2\\Delta T^2}=\\frac{1}{3}\\,4\\pi r_c^2\\gamma_{LS}$$\n- Ordre de grandeur du support : $r_c=1$ nm ≈ regroupement d'environ 100 atomes, correspondrait à une surfusion de **180 °C**. Or en pratique quelques degrés suffisent → **la germination homogène est improbable**. (Compléments : Turnbull, $\\Delta T_{max}\\approx0{,}2\\,T_F$ pour les métaux purs très propres.)\n- Hypothèses : germe sphérique, $\\gamma_{LS}$ isotrope, $\\Delta g_V$ uniforme et $L$ supposée indépendante de $T$.\n\n### 4.2 Germination hétérogène\n- Se produit sur un **support solide** qui joue le rôle de **catalyseur** de la germination.\n- L'expression de $r_c$ est la même mais les **volumes** diffèrent. La fluctuation statistique donne la même probabilité que $N$ atomes se regroupent dans le liquide ou sur une paroi, mais ce regroupement correspond à un rayon plus grand en **calotte sphérique** qu'en sphère (le volume de la calotte est plus petit pour un même rayon de courbure $r_c$).\n- Parois possibles : récipient (lingotière), solide immergé (impuretés), surface libre. Si la phase mère est solide : joint de grains, dislocation, surface d'autres phases déjà présentes.\n- Compléments : équilibre de Young $\\gamma_{ML}=\\gamma_{MS}+\\gamma_{SL}\\cos\\theta$ (M : moule/substrat) ; $$\\Delta G^*_{het}=f(\\theta)\\,\\Delta G^*_{hom}$$ avec $$f(\\theta)=\\frac{(2+\\cos\\theta)(1-\\cos\\theta)^2}{4}$$ ($0<f<1$ ; $f\\to0$ si bon mouillage, $f=1$ pour $\\theta=180^\\circ$). Applications : inoculation / affinage de grain.\n\n## 5. Croissance\n- Les germes solides, lorsqu'ils sont solidifiés sous forme de grains, ne sont pas sphériques mais présentent des **directions de croissance liées au système cristallin** : grains arborescents appelés **dendrites**.\n- Figure du support : germe sphérique (isocontours) → croix à 4 branches selon les axes A-A et B-B → branches **primaires**, **secondaires**, **tertiaires**.\n- Séquence temporelle : germes ponctuels → dendrites en croissance → dendrites qui se rejoignent → **joints de grains**, matériau polycristallin.\n- Exemple : dendrites de Mg$_2$Si dans un alliage de Mg (J.E. Masse, Arts et Métiers).\n- Compléments : dans les cubiques les dendrites croissent selon $\\langle100\\rangle$ ; plus il y a de germes (surfusion plus forte, inoculants), plus les grains sont fins (relation de Hall-Petch).\n\n## 6. Conclusion : thermodynamique vs cinétique\n| Thermodynamique | Cinétique |\n|---|---|\n| équilibre global | équilibre local |\n| après temps ∞ | temps variable |\n| composition constante | composition variable |\n| pas d'interfaces | effets d'interfaces |\n| → **diagramme de phase** | → **microstructure** |\n\nExemple du support : diagramme Ag–Cu à $p=1$ bar : $T_f$(Ag) = 961 °C, $T_f$(Cu) = 1084 °C, eutectique à 780 °C pour $X_{Cu}\\approx0{,}4$, limites de solubilité $\\alpha$ : 0,14 et $\\beta$ : 0,95, domaines liquide, $\\alpha$, $\\beta$, $\\alpha+\\beta$. La micrographie de grains colorés illustre la microstructure.\n\n## Pièges classiques\n- Stable ≠ métastable ; un système métastable ne bouge pas tant que l'apport d'énergie reste < $E_a$.\n- Il faut **à la fois** énergie motrice et mécanisme efficace.\n- $T$ en kelvin dans Arrhenius ; $D$ croît exponentiellement avec $T$.\n- 1ère loi = régime permanent ; 2ème loi = régime transitoire (proportionnelle à la courbure).\n- Surfusion nécessaire : sans elle pas de germination ; le plateau est isotherme à $T_m$ (corps pur).\n- $r_c$ diminue quand la surfusion augmente ; $r<r_c$ se redissout.\n- Hétérogène : même $r_c$, barrière $\\Delta G^*$ plus faible grâce à la calotte.\n- Diagramme de phase (équilibre) ≠ microstructure (cinétique).\n",
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "Un système est dit métastable lorsque :",
+      "options": [
+        {
+          "id": "a",
+          "text": "son énergie a atteint le minimum absolu"
+        },
+        {
+          "id": "b",
+          "text": "son énergie est à un minimum relatif local ; il revient à cet état après une petite perturbation, sauf si l'apport dépasse $E_a$"
+        },
+        {
+          "id": "c",
+          "text": "il évolue spontanément vers un niveau d'énergie plus bas"
+        },
+        {
+          "id": "d",
+          "text": "son énergie est maximale"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Métastable = minimum relatif local (creux entouré de bosses). Si l'apport d'énergie reste inférieur à l'énergie d'activation $E_a$, il revient ; au-delà il évolue vers un état plus stable. (a) = stable, (c) = instable."
+    },
+    {
+      "id": "q2",
+      "question": "À 20 °C le diamant (forme métastable) ne se transforme pas en graphite (forme stable) à l'échelle humaine, alors qu'à 2000 °C cela prend quelques minutes. Pourquoi ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "le graphite n'est pas plus stable que le diamant"
+        },
+        {
+          "id": "b",
+          "text": "le mécanisme de déplacement des atomes est trop inefficace à 20 °C (mobilité atomique activée thermiquement) malgré l'énergie motrice"
+        },
+        {
+          "id": "c",
+          "text": "il n'y a aucune énergie motrice à 20 °C"
+        },
+        {
+          "id": "d",
+          "text": "la pression atmosphérique interdit la transformation thermodynamiquement"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Il faut simultanément énergie motrice ET mécanisme efficace. L'énergie motrice existe à 20 °C, mais la mobilité des atomes est quasi nulle ; à 2000 °C elle est fortement augmentée. Piège : confondre thermodynamique (possible) et cinétique (rapide)."
+    },
+    {
+      "id": "q3",
+      "question": "Parmi ces affirmations sur la diffusion dans les solides, laquelle est FAUSSE ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "le mécanisme lacunaire correspond au saut d'un atome vers une lacune voisine"
+        },
+        {
+          "id": "b",
+          "text": "le mécanisme interstitiel concerne des solutés de petite taille (C, H, O, N, B)"
+        },
+        {
+          "id": "c",
+          "text": "la diffusion en surface et dans les joints de grains est plus rapide qu'en volume"
+        },
+        {
+          "id": "d",
+          "text": "le mécanisme interstitiel concerne surtout les gros atomes substitutionnels"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Le mécanisme interstitiel concerne les petits solutés (C, H, O, N, B). Les gros atomes diffusent plutôt par lacunes. Surface et joints de grains sont des chemins à « forte » vitesse."
+    },
+    {
+      "id": "q4",
+      "question": "Dans la 1ère loi de Fick $J=-D\\,\\partial C/\\partial x$, le signe moins signifie que :",
+      "options": [
+        {
+          "id": "a",
+          "text": "D est négatif"
+        },
+        {
+          "id": "b",
+          "text": "le flux d'atomes est dirigé vers les zones de concentration décroissante, ce qui tend à égaliser les concentrations"
+        },
+        {
+          "id": "c",
+          "text": "le flux diminue avec le temps"
+        },
+        {
+          "id": "d",
+          "text": "la diffusion s'arrête à l'équilibre thermique"
+        }
+      ],
+      "correct": "b",
+      "explanation": "$J$ (mol·m⁻²·s⁻¹) est opposé au gradient de $C$ ; $D$ (m²·s⁻¹) est positif. La loi est valable en régime permanent (analogue Fourier/Ohm)."
+    },
+    {
+      "id": "q5",
+      "question": "En un point d'inflexion d'un profil $C(x)$ où le gradient est non nul, que vaut $\\partial C/\\partial t$ (D constant) ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "maximal"
+        },
+        {
+          "id": "b",
+          "text": "nul, car $\\partial^2C/\\partial x^2=0$"
+        },
+        {
+          "id": "c",
+          "text": "négatif"
+        },
+        {
+          "id": "d",
+          "text": "indéterminé"
+        }
+      ],
+      "correct": "b",
+      "explanation": "La 2ème loi $\\partial C/\\partial t=D\\,\\partial^2C/\\partial x^2$ fait intervenir la courbure, pas le gradient : un flux non nul mais uniforme n'accumule pas de matière. D'où des durées d'homogénéisation très longues."
+    },
+    {
+      "id": "q6",
+      "question": "On trace $\\ln D$ en fonction de $1/T$ ($T$ en K) pour une diffusion thermiquement activée. On obtient une droite de pente :",
+      "options": [
+        {
+          "id": "a",
+          "text": "$+\\Delta H_D/R$"
+        },
+        {
+          "id": "b",
+          "text": "$-\\Delta H_D/R$"
+        },
+        {
+          "id": "c",
+          "text": "$D_0$"
+        },
+        {
+          "id": "d",
+          "text": "$-\\Delta H_D\\cdot R$"
+        }
+      ],
+      "correct": "b",
+      "explanation": "$\\ln D=\\ln D_0-\\frac{\\Delta H_D}{R}\\frac1T$ : pente $-\\Delta H_D/R$, ordonnée à l'origine $\\ln D_0$. Piège : température en kelvin."
+    },
+    {
+      "id": "q7",
+      "question": "Pour l'autodiffusion dans un élément pur, la diffusion à longue distance devient significative pour :",
+      "options": [
+        {
+          "id": "a",
+          "text": "$T>0{,}1\\,T_f$"
+        },
+        {
+          "id": "b",
+          "text": "$T>0{,}4$ à $0{,}5\\,T_f$"
+        },
+        {
+          "id": "c",
+          "text": "$T>0{,}5$ à $0{,}7\\,T_f$ seulement"
+        },
+        {
+          "id": "d",
+          "text": "uniquement au-dessus de $T_f$"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Autodiffusion : $T>0{,}4$–$0{,}5\\,T_f$ ; hétérodiffusion (plusieurs types d'atomes) : $T>0{,}5$–$0{,}7\\,T_f$. Le transport à grande distance prend de l'importance entre $0{,}5\\,T_f$ et $T_f$."
+    },
+    {
+      "id": "q8",
+      "question": "Sur la courbe de refroidissement d'un corps pur, la remontée de température qui suit la surfusion est due à :",
+      "options": [
+        {
+          "id": "a",
+          "text": "un chauffage extérieur"
+        },
+        {
+          "id": "b",
+          "text": "la chaleur latente libérée par la création rapide de germes solides"
+        },
+        {
+          "id": "c",
+          "text": "l'augmentation de l'énergie superficielle"
+        },
+        {
+          "id": "d",
+          "text": "la fin de l'agitation thermique"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Après la surfusion, les germes se créent rapidement et la chaleur latente de solidification fait remonter $T$ jusqu'au plateau isotherme à $T_m$ (croissance des germes), puis refroidit le solide."
+    },
+    {
+      "id": "q9",
+      "question": "En germination homogène, quand la surfusion $\\Delta T$ augmente, le rayon critique $r_c$ :",
+      "options": [
+        {
+          "id": "a",
+          "text": "augmente"
+        },
+        {
+          "id": "b",
+          "text": "diminue (il varie comme $1/\\Delta T$)"
+        },
+        {
+          "id": "c",
+          "text": "reste constant"
+        },
+        {
+          "id": "d",
+          "text": "tend vers l'infini"
+        }
+      ],
+      "correct": "b",
+      "explanation": "$r_c=\\frac{2\\gamma_{LS}T_F}{L(T_F-T)}$ : plus la surfusion est grande, plus $r_c$ est petit, donc plus la germination est facile. Rappel : $r<r_c$ le germe se redissout ; $r>r_c$ il croît. $r_c=1$ nm ↔ environ 180 °C de surfusion, d'où une germination homogène improbable."
+    },
+    {
+      "id": "q10",
+      "question": "Par rapport à la germination homogène, la germination hétérogène :",
+      "options": [
+        {
+          "id": "a",
+          "text": "change l'expression de $r_c$"
+        },
+        {
+          "id": "b",
+          "text": "conserve $r_c$ mais le volume du germe (calotte) est plus petit, ce qui abaisse la barrière $\\Delta G^*$"
+        },
+        {
+          "id": "c",
+          "text": "exige une surfusion plus grande"
+        },
+        {
+          "id": "d",
+          "text": "n'existe que dans les solides"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Même $r_c$, mais la calotte sphérique contient moins d'atomes qu'une sphère de même rayon : $\\Delta G^*_{het}=f(\\theta)\\,\\Delta G^*_{hom}$ avec $0<f<1$. Supports : lingotière, impuretés, joints de grains, dislocations."
+    },
+    {
+      "id": "q11",
+      "question": "Quelle affirmation est correcte ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "le diagramme de phase décrit la microstructure obtenue en cours de refroidissement"
+        },
+        {
+          "id": "b",
+          "text": "le diagramme de phase décrit l'équilibre global (temps infini, pas d'interfaces) ; la microstructure (grains, dendrites) résulte de la cinétique"
+        },
+        {
+          "id": "c",
+          "text": "les dendrites sont des grains sphériques"
+        },
+        {
+          "id": "d",
+          "text": "la thermodynamique inclut les effets d'interfaces"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Thermodynamique : équilibre global, temps ∞, composition constante, pas d'interfaces → diagramme de phase. Cinétique : équilibre local, temps et composition variables, effets d'interfaces → microstructure. Les dendrites sont arborescentes (branches primaires, secondaires, tertiaires)."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "recto": "Système stable (définition)",
+      "verso": "Énergie à son minimum ; sans action extérieure il n'évolue plus spontanément. Critère rigoureux à $T,p$ fixés : $G$ minimale."
+    },
+    {
+      "id": "f2",
+      "recto": "Système métastable",
+      "verso": "Minimum relatif local ; retour à l'état métastable sauf si l'apport d'énergie dépasse l'énergie d'activation $E_a$."
+    },
+    {
+      "id": "f3",
+      "recto": "Système instable",
+      "verso": "Ni stable ni métastable : évolue spontanément vers une énergie plus basse."
+    },
+    {
+      "id": "f4",
+      "recto": "Deux conditions d'une transformation rapide",
+      "verso": "Simultanément : énergie motrice importante ET mécanisme de transformation efficace (mobilité atomique). Sinon vitesse très lente voire nulle."
+    },
+    {
+      "id": "f5",
+      "recto": "Diamant → graphite",
+      "verso": "20 °C : millions/milliards d'années ; 2000 °C : quelques minutes (forme métastable → forme stable du carbone)."
+    },
+    {
+      "id": "f6",
+      "recto": "Mécanismes de diffusion dans les solides",
+      "verso": "1 lacunaire ; 2 interstitiel (petits solutés C,H,O,N,B) ; 3 superficielle (rapide) ; 4 joints de grains (rapide)."
+    },
+    {
+      "id": "f7",
+      "recto": "Seuils de température pour la diffusion",
+      "verso": "Autodiffusion : $T>0{,}4$–$0{,}5\\,T_f$ ; hétérodiffusion : $T>0{,}5$–$0{,}7\\,T_f$ ; transport à grande distance significatif entre $0{,}5\\,T_f$ et $T_f$."
+    },
+    {
+      "id": "f8",
+      "recto": "1ère loi de Fick",
+      "verso": "$$J(x)=-D\\,\\frac{\\partial C(x)}{\\partial x}$$ $J$ en mol·m⁻²·s⁻¹, $C$ en mol·m⁻³, $D$ en m²·s⁻¹ ; régime permanent."
+    },
+    {
+      "id": "f9",
+      "recto": "2ème loi de Fick",
+      "verso": "$$\\frac{\\partial C}{\\partial t}=D\\,\\frac{\\partial^2 C}{\\partial x^2}$$ régime transitoire ; vitesse ∝ courbure ; homogénéisation très lente."
+    },
+    {
+      "id": "f10",
+      "recto": "Solution erf (semi-infini)",
+      "verso": "$$\\frac{C(x,t)-C_0}{C_s-C_0}=1-\\operatorname{erf}\\left(\\frac{x}{2\\sqrt{Dt}}\\right)$$ longueur de diffusion $\\sim\\sqrt{Dt}$."
+    },
+    {
+      "id": "f11",
+      "recto": "Loi d'Arrhenius pour D",
+      "verso": "$$D=D_0\\,e^{-\\Delta H_D/(RT)}$$ $D_0$ liée à la fréquence de saut ; $\\Delta H_D$ enthalpie molaire d'activation (J/mol)."
+    },
+    {
+      "id": "f12",
+      "recto": "Linéarisation d'Arrhenius",
+      "verso": "$$\\ln D=\\ln D_0-\\frac{\\Delta H_D}{R}\\cdot\\frac{1}{T}$$ pente $-\\Delta H_D/R$ dans le plan $(1/T,\\ln D)$."
+    },
+    {
+      "id": "f13",
+      "recto": "Courbe de refroidissement d'un corps pur",
+      "verso": "1 refroidissement du liquide ; 2 surfusion puis germes rapides, chaleur latente fait remonter $T$ ; 3 plateau isotherme à $T_m$ (croissance) ; puis refroidissement du solide."
+    },
+    {
+      "id": "f14",
+      "recto": "Enthalpie libre d'un germe sphérique",
+      "verso": "$$\\Delta G=\\frac{4}{3}\\pi r^3\\,\\Delta g_V+4\\pi r^2\\,\\gamma_{LS}$$ avec $\\Delta g_V<0$ (volume) et $\\gamma_{LS}>0$ (surface)."
+    },
+    {
+      "id": "f15",
+      "recto": "Rayon critique",
+      "verso": "$$r_c=-\\frac{2\\gamma_{LS}}{\\Delta g_V}=\\frac{2\\gamma_{LS}T_F}{L\\,(T-T_F)}$$ $r<r_c$ : redissolution ; $r>r_c$ : croissance. $r_c\\propto1/\\Delta T$."
+    },
+    {
+      "id": "f16",
+      "recto": "Barrière de germination homogène",
+      "verso": "$$\\Delta G^*=\\frac{16\\pi\\gamma_{LS}^3}{3\\,\\Delta g_V^2}$$ avec $\\Delta g_V=-L\\,\\Delta T/T_F$ ; $\\propto 1/\\Delta T^2$."
+    },
+    {
+      "id": "f17",
+      "recto": "Ordre de grandeur homogène",
+      "verso": "$r_c=1$ nm ≈ 100 atomes ↔ surfusion ≈ 180 °C ; en pratique quelques degrés suffisent → germination homogène improbable."
+    },
+    {
+      "id": "f18",
+      "recto": "Germination hétérogène",
+      "verso": "Sur un support solide (catalyseur) ; même $r_c$, calotte sphérique, $$\\Delta G^*_{het}=f(\\theta)\\,\\Delta G^*_{hom}$$ avec $f=\\frac{(2+\\cos\\theta)(1-\\cos\\theta)^2}{4}<1$."
+    },
+    {
+      "id": "f19",
+      "recto": "Supports de germination hétérogène",
+      "verso": "Lingotière, impuretés, surface libre ; si phase mère solide : joint de grains, dislocation, surface d'autres phases."
+    },
+    {
+      "id": "f20",
+      "recto": "Dendrite / croissance",
+      "verso": "Grain arborescent : directions de croissance liées au système cristallin ; branches primaires, secondaires, tertiaires ; en fin de solidification, joints de grains."
+    },
+    {
+      "id": "f21",
+      "recto": "Thermodynamique vs cinétique",
+      "verso": "Thermo : équilibre global, temps ∞, composition constante, pas d'interfaces → diagramme de phase. Cinétique : équilibre local, temps/composition variables, interfaces → microstructure."
+    }
+  ],
+  "exercices": [
+    {
+      "titre": "Diffusion du carbone dans le fer γ : Arrhenius et 1ère loi de Fick",
+      "difficulte": 1,
+      "enonce": "Pour la diffusion du carbone dans le fer γ : $D_0=2{,}3\\times10^{-5}$ m²·s⁻¹, $\\Delta H_D=148$ kJ·mol⁻¹, $R=8{,}314$ J·mol⁻¹·K⁻¹.\na) Calculer $D$ à 927 °C.\nb) Calculer $D$ à 1000 °C et le rapport $D(1000\\,°C)/D(927\\,°C)$.\nc) Estimer la longueur de diffusion $\\sqrt{Dt}$ à 927 °C pour $t=1$ h.\nd) Une feuille d'épaisseur $e=1$ mm sépare deux zones de concentrations en C différant de $\\Delta C=500$ mol·m⁻³ (profil linéaire, régime permanent) : calculer le flux $J$ à 927 °C.",
+      "corrige": "a) $T=1200$ K. Exposant : $$-\\frac{\\Delta H_D}{RT}=-\\frac{148000}{8{,}314\\times1200}=-14{,}83$$ donc $e^{-14{,}83}=3{,}61\\times10^{-7}$ et $$D=2{,}3\\times10^{-5}\\times3{,}61\\times10^{-7}\\approx8{,}3\\times10^{-12}\\ \\text{m}^2\\cdot\\text{s}^{-1}$$\nb) $T=1273$ K. Exposant $=-13{,}98$, $e^{-13{,}98}=8{,}45\\times10^{-7}$ donc $D\\approx1{,}94\\times10^{-11}$ m²·s⁻¹. Rapport $\\approx2{,}3$ : +73 K multiplie $D$ par plus de 2 (dépendance exponentielle en $T$).\nc) $$\\sqrt{Dt}=\\sqrt{8{,}3\\times10^{-12}\\times3600}\\approx1{,}7\\times10^{-4}\\ \\text{m}\\approx0{,}17\\ \\text{mm}$$\nd) 1ère loi, profil linéaire : $$J=D\\,\\frac{\\Delta C}{e}=8{,}3\\times10^{-12}\\times\\frac{500}{10^{-3}}\\approx4{,}2\\times10^{-6}\\ \\text{mol}\\cdot\\text{m}^{-2}\\cdot\\text{s}^{-1}$$ dirigé vers les concentrations décroissantes. Hypothèses : $D$ constant, régime permanent, 1D."
+    },
+    {
+      "titre": "Cémentation d'un acier : 2ème loi de Fick, solution erf",
+      "difficulte": 2,
+      "enonce": "Un acier à $C_0=0{,}20$ %m C est cémenté à 1000 °C, surface maintenue à $C_s=1{,}00$ %m (milieu semi-infini, $D$ constante, $D=1{,}94\\times10^{-11}$ m²·s⁻¹ d'après l'exercice 1). On donne $\\operatorname{erf}(0{,}45)=0{,}4755$ et $\\operatorname{erf}(0{,}50)=0{,}5205$.\na) Écrire la solution de la 2ème loi de Fick dans ce cas.\nb) Quel temps faut-il pour atteindre 0,60 %m à $x=1$ mm de la surface ?\nc) Pour doubler cette profondeur à même concentration, quel temps faut-il ?",
+      "corrige": "a) $$\\frac{C(x,t)-C_0}{C_s-C_0}=1-\\operatorname{erf}\\left(\\frac{x}{2\\sqrt{Dt}}\\right)$$\nb) Rapport : $$\\frac{0{,}60-0{,}20}{1{,}00-0{,}20}=0{,}5$$ donc $\\operatorname{erf}(z)=0{,}5$ avec $z=x/(2\\sqrt{Dt})$. Interpolation : $$z=0{,}45+0{,}05\\times\\frac{0{,}5-0{,}4755}{0{,}5205-0{,}4755}\\approx0{,}477$$ Alors $$\\sqrt{Dt}=\\frac{x}{2z}=\\frac{10^{-3}}{0{,}954}=1{,}05\\times10^{-3}\\ \\text{m}$$ soit $Dt=1{,}10\\times10^{-6}$ m² et $$t=\\frac{1{,}10\\times10^{-6}}{1{,}94\\times10^{-11}}\\approx5{,}7\\times10^{4}\\ \\text{s}\\approx15{,}7\\ \\text{h}$$\nc) Même $z$ donc $x\\propto\\sqrt{Dt}$ : $x$ ×2 implique $t$ ×4, soit $\\approx63$ h. On retrouve que l'homogénéisation/diffusion est lente. Hypothèses : $D$ indépendant de $C$ et de $x$, $C_s$ constant."
+    },
+    {
+      "titre": "Germination homogène de l'or",
+      "difficulte": 3,
+      "enonce": "Or pur : $T_F=1337$ K, $\\gamma_{LS}=0{,}132$ J·m⁻², chaleur latente volumique $L=1{,}16\\times10^{9}$ J·m⁻³, volume atomique $1{,}70\\times10^{-29}$ m³. Surfusion $\\Delta T=230$ K.\na) Calculer $\\Delta g_V$.\nb) Calculer $r_c$.\nc) Estimer le nombre d'atomes du germe critique.\nd) Calculer la barrière $\\Delta G^*$ et la comparer à $k_BT$ à 1107 K ($k_B=1{,}38\\times10^{-23}$ J·K⁻¹).\ne) Que deviennent $r_c$, $\\Delta G^*$ et le nombre d'atomes si $\\Delta T$ est divisée par 2 ?",
+      "corrige": "a) $$\\Delta g_V=-\\frac{L\\,\\Delta T}{T_F}=-\\frac{1{,}16\\times10^9\\times230}{1337}\\approx-2{,}0\\times10^{8}\\ \\text{J}\\cdot\\text{m}^{-3}$$\nb) $$r_c=-\\frac{2\\gamma_{LS}}{\\Delta g_V}=\\frac{0{,}264}{2{,}0\\times10^{8}}\\approx1{,}32\\ \\text{nm}$$\nc) $$V=\\frac{4}{3}\\pi r_c^3\\approx9{,}7\\times10^{-27}\\ \\text{m}^3$$ donc $N=V/1{,}70\\times10^{-29}\\approx570$ atomes.\nd) $$\\Delta G^*=\\frac{16\\pi\\gamma_{LS}^3}{3\\Delta g_V^2}\\approx\\frac{16\\pi\\times2{,}3\\times10^{-3}}{3\\times3{,}98\\times10^{16}}\\approx9{,}7\\times10^{-19}\\ \\text{J}$$ (vérification : $\\frac13\\,4\\pi r_c^2\\gamma_{LS}$ donne la même valeur). $k_BT=1{,}53\\times10^{-20}$ J donc $\\Delta G^*\\approx63\\,k_BT$ : barrière énorme, fluctuation quasi impossible.\ne) $r_c\\propto1/\\Delta T$ : $r_c\\approx2{,}65$ nm (×2) ; $\\Delta G^*\\propto1/\\Delta T^2$ : ×4 ; $N\\propto r_c^3$ : ×8 ($\\approx4600$ atomes). Germination homogène encore plus improbable, conforme au « improbable » du cours."
+    },
+    {
+      "titre": "Germination hétérogène sur une paroi : niveau partiel",
+      "difficulte": 4,
+      "enonce": "On reprend l'or de l'exercice 3 ($\\Delta G^*_{hom}=9{,}7\\times10^{-19}$ J, $N_{hom}\\approx570$ atomes à $\\Delta T=230$ K, $k_BT=1{,}53\\times10^{-20}$ J). La germination a lieu sur une paroi, en calotte sphérique d'angle de contact $\\theta$ ; on admet $$\\Delta G^*_{het}=f(\\theta)\\,\\Delta G^*_{hom}\\quad\\text{avec}\\quad f(\\theta)=\\frac{(2+\\cos\\theta)(1-\\cos\\theta)^2}{4}$$ et que le volume de la calotte est $f(\\theta)$ fois celui de la sphère de même $r_c$.\na) Calculer $f$ pour $\\theta=30^\\circ$ et $\\theta=90^\\circ$.\nb) Pour $\\Delta T=230$ K, calculer $\\Delta G^*_{het}$ (en unités de $k_BT$) et le nombre d'atomes pour chaque angle.\nc) Quelle surfusion suffit pour obtenir sur la paroi la même barrière que celle de la germination homogène à 230 K ?\nd) Conclure sur la pertinence de la germination hétérogène en pratique (quelques degrés de surfusion).",
+      "corrige": "a) $\\theta=30^\\circ$ : $\\cos\\theta=0{,}866$ donc $$f=\\frac{2{,}866\\times(0{,}134)^2}{4}=0{,}0129$$ $\\theta=90^\\circ$ : $$f=\\frac{2\\times1}{4}=0{,}5$$\nb) $\\theta=30^\\circ$ : $\\Delta G^*_{het}=0{,}0129\\times9{,}7\\times10^{-19}=1{,}2\\times10^{-20}$ J $\\approx0{,}8\\,k_BT$ et $N\\approx570\\times0{,}0129\\approx7$ atomes : germination quasi spontanée. $\\theta=90^\\circ$ : $\\Delta G^*_{het}=4{,}8\\times10^{-19}$ J $\\approx32\\,k_BT$ et $N\\approx285$ atomes.\nc) Comme $\\Delta G^*\\propto1/\\Delta T^2$ : on veut $f/\\Delta T'^2=1/230^2$ donc $$\\Delta T'=230\\sqrt{f}$$ soit $\\approx163$ K pour $90^\\circ$ et $\\approx26$ K pour $30^\\circ$.\nd) $r_c$ est inchangé mais le germe est bien plus petit (calotte) : la barrière chute avec le mouillage. Avec un très bon substrat ($\\theta$ faible), quelques degrés à quelques dizaines de degrés suffisent, d'où la surfusion de quelques degrés observée et le rôle de l'inoculation (affinage de grain). La germination homogène reste improbable."
+    }
+  ],
+  "suivi": "Aucune réponse au quiz ni aux exercices enregistrée pour l'instant. Points à surveiller : (1) distinction stable / métastable / instable et critère $G$ vs $U$ ; (2) conditions simultanées de la cinétique ; (3) 1ère loi (permanent) vs 2ème loi (transitoire, courbure) ; (4) Arrhenius, $T$ en kelvin, pente $-\\Delta H_D/R$ ; (5) dérivation de $r_c$, signe de $\\Delta g_V$, dépendance en $\\Delta T$ ; (6) hétérogène : même $r_c$ mais $\\Delta G^*$ réduit ; (7) thermodynamique (diagramme de phase) vs cinétique (microstructure). À compléter avec tes résultats."
+}

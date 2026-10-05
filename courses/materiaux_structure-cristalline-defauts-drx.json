@@ -1,0 +1,490 @@
+{
+  "matiere": "Matériaux (UEF MATI – GIM1)",
+  "type": "CM",
+  "sujet": "Cours 1 : composition chimique, structures cristallines, défauts, diffraction des rayons X",
+  "fiche_synthese": "# MATI – CM 1 : composition chimique, structures cristallines, défauts, diffraction RX\n\n> **[+]** = complément hors diapos (références classiques : Callister, Ashby, Philibert…, tirés de mes connaissances et non recopiés d'une source en ligne : à recouper avec ton cours). La diapo 15 (2-a Classification) est absente du PDF fourni.\n\n## 1. Composition chimique des matériaux\n\n### 1.a L'atome\n\n**Constituants.** Noyau = protons (+) + neutrons (0) ; électrons (−) autour du noyau.\n\n| Particule | Charge (C) | Masse (g) |\n|---|---|---|\n| Proton | +1,6·10⁻¹⁹ | 1,67·10⁻²⁴ |\n| Neutron | 0 | 1,67·10⁻²⁴ |\n| Électron | −1,6·10⁻¹⁹ | 9,10·10⁻²⁸ |\n\n- Notation ${}^{A}_{Z}X$ : $Z$ = numéro atomique = nb de protons (= nb d'électrons d'un atome neutre) ; $A=Z+N$ = nb de nucléons ; $N=A-Z$ neutrons.\n- **Isotopes** (« sosies ») : même $Z$, $N$ différent (¹⁶O, ¹⁷O, ¹⁸O ; ¹²C, ¹³C, ¹⁴C ; ¹³N, ¹⁴N, ¹⁵N).\n- $m_p/m_e\\approx1835$ : la masse est concentrée dans le noyau.\n- L'atome est **essentiellement du vide** : si le noyau de H était une balle de tennis (68 g), l'électron de la couche K serait un grain de café en poudre (20 mg) à ~4 km (modèle de Bohr, 1913).\n\n**Orbitales et 4 nombres quantiques.** Les $Z$ électrons sont caractérisés par 4 nombres quantiques ; on définit la probabilité de présence de l'électron sur une orbitale (le cours la représente par une ellipse dont le noyau est un foyer).\n\n| Nombre | Caractérise | Valeurs |\n|---|---|---|\n| $n$ principal | grand axe de l'ellipse = couche | K (1), L (2), M (3), N (4), O (5), P (6), Q (7) |\n| $l$ azimutal | petit axe = sous-couche | s (0), p (1), d (2), f (3) |\n| $m$ magnétique | inclinaison du plan de l'orbitale | — |\n| $m_s$ spin | 2 sens de rotation de l'électron sur lui-même | −1/2 ou +1/2 |\n\n[+] $0\\le l\\le n-1$ ; $-l\\le m\\le+l$ ; capacité d'une sous-couche $2(2l+1)$ (s 2, p 6, d 10, f 14), d'une couche $2n^2$ ; principe de Pauli, règle de Hund, ordre de Klechkowski (1s 2s 2p 3s 3p 4s 3d 4p 5s…). Le modèle « ellipse » est historique (Bohr–Sommerfeld) ; en mécanique quantique la position exacte n'est pas connaissable : l'électron reste confiné dans une orbitale (conclusion du cours).\n\n**Configurations électroniques.**\n- Électrons de **valence** (couche externe) : conductivités électrique et thermique, propriétés magnétiques, chimie. Électrons de **cœur** : couches internes.\n- Couche de valence **saturée = stabilité** : gaz nobles (He 2, Ne 10, Ar 18, Kr 36, Xe 54, Rn 86). [+] règle de l'octet (duet pour H, He).\n- Stabilité acquise par **gain** d'électrons (définit les non-métaux) ou **perte** d'électrons (définit les métaux).\n- **Liaison chimique = redistribution d'électrons entre atomes pour compléter leur dernière couche électronique.**\n\n**Classification périodique.** Outil qui organise les éléments selon le numéro atomique, la répartition des électrons et les propriétés chimiques. 118 éléments identifiés (version de 2016 : ajout de Nh, Mc, Ts, Og, créés en laboratoire), dont **94 naturels**. **7 périodes** (lignes) × **18 groupes** (colonnes). À gauche majoritairement des métaux, à droite des non-métaux, métalloïdes à la frontière. Le classement suit le remplissage progressif des orbitales ; les propriétés chimiques dépendent des électrons de valence. (Coquilles de la diapo 7 : « Be » en Z=56 est Ba ; Z=59 est Pr, pas Nd.)\n\n### 1.b Liaisons atomiques\n\n**États de la matière : ordre et désordre.**\n- **Gaz – désordre « complet »** : particules en mouvement permanent (agitation thermique), ensemble compressible, densité fonction de T et P, environnement d'une particule arbitraire et changeant.\n- **Solides amorphes** (verres, polymères) : structure proche de celle des liquides ; seul un **ordre à courte distance**.\n- **Solides cristallins – ordre « parfait »** : chaque particule occupe une position parfaitement définie, par rapport aux premiers voisins ET à l'ensemble du système : **ordre à longue distance**.\n- Énergie totale = $E_{pot}$ (attraction/répulsion) + $E_{cin}$ ($\\sim kT$). Gaz : $E_{cin}\\gg E_{pot}$ (matière diluée) ; liquide : $E_{cin}\\approx E_{pot}$ ; solide : $E_{cin}\\ll E_{pot}$ (matière condensée). Positionnement (Colombani) : verres minéraux et polymères = amorphe/courte distance ; métaux et céramiques = cristal réel ; semi-conducteurs ≈ cristal parfait.\n\n**Liaisons fortes / faibles.** Le type de liaison fixe les propriétés mécaniques (rigidité, déformabilité), thermiques (T de fusion, dilatation) et de transport (charge, matière, chaleur).\n- Chimiques (fortes) : ionique > 500 kJ/mol ; covalente > 50 kJ/mol ; métallique > 70 kJ/mol (valeurs du cours ; [+] les liaisons covalentes réelles sont souvent de 150 à 1000 kJ/mol).\n- Physiques (faibles) : Van der Waals, hydrogène, < 50 kJ/mol.\n\n| Liaison | Entre | Principe | Caractères | Matériaux |\n|---|---|---|---|---|\n| Ionique (attraction coulombienne) | métal – non-métal | **transfert** d'électron(s) (éléments avec beaucoup / peu d'e⁻ de valence) | édifice très stable, très compact | **céramiques** : NaCl, MgO, Al₂O₃ |\n| Covalente | non-métal – non-métal | **mise en commun** d'électron(s) | **directionnelle** | **polymères**, composés organiques (C, H, O, N), H₂, Cl₂, F₂ |\n| Métallique | métal – métal | électrons arrachés et mis en commun : **gaz d'électrons** qui assure la cohésion | très stable, très compact ; e⁻ mobiles → forte conductivité thermique et électrique | **métaux** |\n\n**Influence du type de liaison sur la structure (« Important »).**\n- Liaisons **isotropes** (métallique/ionique) : solides organisés à grande distance (cristallins), structures simples, **compactes**, symétries élevées.\n- Liaison **directionnelle** (covalente) : respect des directions et angles des orbitales → structures à **longues chaînes**, **peu compactes**, matériaux légers (polymères), souvent **amorphes ou semi-cristallins** (macromolécules : possibilités de cristallisation réduites).\n- Piège [+] : covalent ≠ forcément polymère (diamant, Si, SiC sont des cristaux covalents) ; les céramiques ioniques sont rigides mais fragiles.\n\n## 2. Structures des matériaux cristallins\n\n### 2.a Classification [+] (diapo absente)\nMonocristal (une seule orientation) / polycristal (grains séparés par des joints de grains ; pièce métallique usuelle, cf. diapo 44) / amorphe (pas d'ordre à longue distance).\n\n### 2.b Périodicité cristalline\n- **Cristal** : ensemble d'atomes arrangés **périodiquement dans les 3 directions** de l'espace. Structure du cristal = **réseau** (nœuds) + **motif** (atome(s) associé(s) à chaque nœud) (schéma 2D du cours : motif + réseau → structure).\n- **Postulat de Bravais** : pour tout point P du cristal, il existe une infinité discrète de points, illimitée dans les 3 directions de l'espace, autour desquels l'arrangement de la matière est le même qu'autour de P.\n- **Maille élémentaire** : prisme formé par les vecteurs $\\vec a,\\vec b,\\vec c$ ; **paramètres de maille** : normes $a,b,c$ (+ angles $\\alpha,\\beta,\\gamma$ ; [+] $\\alpha=(\\vec b,\\vec c)$, $\\beta=(\\vec a,\\vec c)$, $\\gamma=(\\vec a,\\vec b)$).\n\n### 2.c Systèmes et réseaux cristallins\nGéométrie de la maille = **6 paramètres** $a,b,c,\\alpha,\\beta,\\gamma$ → **7 systèmes** (cubique : symétrie maximale ; triclinique : minimale).\n\n| Système | Maille | Paramètres |\n|---|---|---|\n| Cubique | cube | a=b=c ; α=β=γ=90° |\n| Quadratique (tétragonal) | prisme droit à base carrée | a=b≠c ; α=β=γ=90° |\n| Orthorhombique | prisme droit à base rectangle | a≠b≠c ; α=β=γ=90° |\n| Hexagonal | prisme droit à base hexagonale | a=b≠c ; α=β=90°, γ=120° |\n| Rhomboédrique | rhomboèdre (bases et faces losanges) | a=b=c ; α=β=γ≠90° |\n| Monoclinique | prisme à un seul angle oblique | a≠b≠c ; α=β=90°, γ≠90° |\n| Triclinique | prisme oblique sur toutes les arêtes | a≠b≠c ; α≠β≠γ |\n\n- Maille **simple (primitive)** : nœuds aux seuls sommets ; **multiple** : nœuds supplémentaires (arêtes, faces, intérieur).\n- Comptage des nœuds : sommet 1/8, arête 1/4, face 1/2, intérieur 1 :\n$$N=\\dfrac{N_{som}}{8}+\\dfrac{N_{ar}}{4}+\\dfrac{N_{face}}{2}+N_{int}$$\n(parallélépipède ; pour la maille hexagonale : sommet 1/6, base 1/2).\n- **14 réseaux de Bravais** (1848) = 7 systèmes + nœuds supplémentaires (C = centré, FC = faces centrées, BC = bases centrées) : cubique (S, C, FC), quadratique (S, C), orthorhombique (S, C, FC, BC), hexagonal (S), rhomboédrique (S), monoclinique (S, BC), triclinique (S) → 3+2+4+1+1+2+1 = 14.\n- Exemples du cours : cubique : Al, Ag, Au, Cu, Pb, Fe, Cr, Mo, W, Pt ; hexagonal : Zn, Mg, Cd, Zr, Ti ; quadratique : martensite, zircon ZrSiO₄, Sn ; rhomboédrique : saphir (Al₂O₃), Hg, Bi, As, Sb ; orthorhombique : Ga, cémentite Fe₃C ; monoclinique : Po, Pu, gypse ; triclinique : turquoise. Six métaux de l'Antiquité : Au, Ag (bijoux), Cu (outils), Pb (récipients, canalisations), Sn (casques, boucliers, ustensiles), Fe (armes, outils, agrafes).\n\n### 2.d Repérage des plans et des directions\n\n**Indices de Miller (plans)** (Traité de Cristallographie, 1839). Repère : un sommet de la maille = origine, axes portés par $\\vec a,\\vec b,\\vec c$. Plan d'équation $hx+ky+lz=u$.\n\nMéthode (« Important ») : 1) dessiner un plan ne passant pas par l'origine ; 2) intersections avec les 3 axes ; 3) **inverses** ; 4) réduction au même dénominateur (PPCD) ; 5) **numérateurs** = $(h\\,k\\,l)$, entiers premiers entre eux.\n\nExemple 1 du cours : intersections $1,\\frac12,\\frac23$ → inverses $1,2,\\frac32$ → $\\frac22,\\frac42,\\frac32$ → **(2 4 3)**. Même résultat par le système : A(1,0,0), B(0,½,0), C(0,0,⅔) ∈ plan donne $h=u$, $\\frac k2=u$, $\\frac{2l}{3}=u$, soit $h=u$, $k=2u$, $l=\\frac32u$ ; plus petite valeur de $u$ rendant $h,k,l$ entiers premiers entre eux : $u=2$ → (2 4 3).\n\nExemple 2 : A(1,0,0), B(1,1,0), C(1,0,1) : $h=u$, $h+k=u$, $h+l=u$ → $k=l=0$ → **(1 0 0)**.\n\nAutres exemples du cours : (100), (010), (111), (020) [plan en $y=\\frac12$, parallèle à (010)], (110), (1̄00) [indice négatif = barre].\n\nNotations : (hkl) plan ; **{hkl}** famille de plans équivalents à une opération de symétrie près. [+] Plan parallèle à un axe → intersection ∞ → indice 0 ; plan passant par l'origine → déplacer l'origine ; (hkl) et (h̄k̄l̄) sont parallèles.\n\n**Directions [uvw].** 1) tracer dans la maille un vecteur parallèle à la direction passant par l'origine ; 2) projections sur les axes ; 3) plus petites valeurs entières ; 4) $[u\\,v\\,w]$. Exemple du cours : projections $0,1,\\frac12$ → **[0 2 1]**.\n- Deux directions parallèles sont équivalentes (mêmes indices). **Famille de directions** : même densité de nœuds par unité de longueur, notée **⟨uvw⟩**.\n- Récapitulatif : (hkl) plan, {hkl} famille de plans, [uvw] direction, ⟨uvw⟩ famille de directions. [+] Seulement en cubique : $[hkl]\\perp(hkl)$.\n\n### 2.e Principales structures (métaux usuels)\nHypothèse du modèle : atomes = sphères dures identiques, tangentes selon la direction dense.\n\n| | Cubique centrée (CC) | Cubique à faces centrées (CFC) | Hexagonale compacte (HC) |\n|---|---|---|---|\n| Atomes / maille | 2 (1 centre + 8×⅛) ; motif : 2 | 4 (6×½ + 8×⅛) ; motif : 4 | **6** par maille hexagonale (3 int. + 2×½ + 12×⅙) ; **motif : 2** |\n| Contact | diagonale du cube ⟨111⟩ | diagonale de face ⟨110⟩ | dans le plan de base |\n| Rayon atomique | $R=\\dfrac{a\\sqrt3}{4}$ | $R=\\dfrac{a\\sqrt2}{4}$ | $R=\\dfrac a2$ |\n| Coordinence | 8 | 12 (4 même plan, 4 dessus, 4 dessous) | 12 |\n| Compacité | 0,68 | 0,74 | 0,74 |\n| Directions / plans denses | ⟨111⟩ / {110} | ⟨110⟩ / {111} | [+] ⟨11̄20⟩ / plan de base |\n| Empilement | non compact | compact ABC ABC | compact AB AB AB |\n| Exemples | Li, V, Cr, Mo, W, Fe-α, Ti-β | Ni, Al, Ag, Au, Cu, Fe-γ | Be, Cd, Mg, Zn, Ti-α |\n\n[+] Compacité (sphères dures tangentes) : $C=\\dfrac{Z\\cdot\\frac43\\pi R^3}{V_{maille}}$\n- CC : $4R=a\\sqrt3$ donc\n$$C=\\dfrac{2\\cdot\\frac43\\pi\\left(\\frac{a\\sqrt3}{4}\\right)^3}{a^3}=\\dfrac{\\pi\\sqrt3}{8}\\approx0{,}68$$\n- CFC : $4R=a\\sqrt2$ donc\n$$C=\\dfrac{\\pi\\sqrt2}{6}\\approx0{,}74$$\n- HC (valable pour le rapport idéal $c/a=\\sqrt{8/3}\\approx1{,}633$) :\n$$C=\\dfrac{\\pi}{3\\sqrt2}\\approx0{,}74$$\n- [+] Masse volumique :\n$$\\rho=\\dfrac{Z\\,M}{\\mathcal N_A\\,V_{maille}}$$\n\n**Sites interstitiels.** Espaces vides entre les sphères d'un empilement = **sites**. CC : site tétraédrique (a), octaédrique (b) ; CFC : tétraédrique (c), octaédrique (d) (diapo 29). [+] Par maille, et rayon maximal de la sphère insérable :\n\n| | Octaédrique | Tétraédrique |\n|---|---|---|\n| CFC | 4 sites ; $r/R=\\sqrt2-1\\approx0{,}414$ | 8 sites ; $r/R=\\sqrt{3/2}-1\\approx0{,}225$ |\n| CC | 6 sites ; $r/R=\\frac{2}{\\sqrt3}-1\\approx0{,}155$ | 12 sites ; $r/R=\\sqrt{5/3}-1\\approx0{,}291$ |\n\n**Allotropie** (« Important »). Un corps pur peut exister à l'état solide sous plusieurs structures cristallines : **variétés allotropiques**. Le changement de variété = **transformation allotropique (polymorphisme)**.\n- CC : α-Fe, δ-Fe, β-Hf, β-Ti, β-Zr ; CFC : γ-Fe, β-La ; HC : α-Hf, α-La, α-Ti, α-Zr.\n- [+] Fe : α (CC) → γ (CFC) vers 912 °C → δ (CC) vers 1394 °C ; fusion vers 1538 °C. Ti : α (HC) → β (CC) vers 882 °C.\n- **Étain (Sn)** : étain gris α (< 13 °C), 5,75 g·cm⁻³, volume massique 0,173 cm³/g ; étain blanc β (13 → 161 °C), 7,28 g·cm⁻³, 0,137 cm³/g ; forme γ (161 °C → fusion à 232 °C), 0,153 cm³/g. Passage blanc → gris : **gonflement ≈ 26 %** ($0{,}173/0{,}137\\approx1{,}26$) → désagrégation en poudre (« peste de l'étain »). Illustrations du cours : retraite de Russie de la Grande Armée (1812, légende des boutons), tuyaux d'orgue en étain défectueux (cathédrale d'Angers, 2021). [+] gris α = cubique type diamant ; blanc β = quadratique.\n\n## 3. Défauts dans les solides cristallins\n\n### 3.a Introduction\n- Un cristal « parfait » n'existe pas dans la nature : **tous les cristaux possèdent des défauts**, en quantité variable, selon le type de liaison, la pureté, le mode d'élaboration et les traitements thermiques/mécaniques.\n- Défaut = zone du cristal où les atomes ne sont pas placés comme dans le cristal idéal.\n- 4 familles selon la taille : **ponctuels (0D)**, **linéaires (1D)**, **surfaciques (2D)**, **volumiques (3D)**. Ils influencent fortement les propriétés optiques, électriques et mécaniques.\n\n### 3.b Défauts ponctuels (0D)\nPerturbation de l'ordre cristallin limitée à une maille ; ils créent un **champ de contraintes élastiques** autour d'eux.\n- **Lacune** (A) : atome manquant.\n- **Atome interstitiel** (B) : atome étranger inséré entre les atomes du réseau.\n- **Auto-interstitiel** (B') : atome de la matrice en position interstitielle.\n- **Substitution** (C, C') : atome étranger « à la place de » un atome du réseau.\n- [+] Lacunes à l'équilibre (augmentent avec T) :\n$$\\dfrac{n_v}{N}=\\exp\\left(-\\dfrac{Q_v}{kT}\\right)$$\nCristaux ioniques : défauts de Schottky (paire lacune cation/anion) et de Frenkel (lacune + interstitiel).\n\n### 3.c Défauts linéaires : dislocations (1D)\n- **Origine** : le modèle théorique (forces de cohésion) prévoit une déformation plastique pour une contrainte de l'ordre du **sixième du module élastique** ([+] module de cisaillement : $\\tau_{th}\\approx G/6$). En pratique, la plasticité apparaît à des contraintes **10³ à 10⁴ fois plus faibles**.\n- 1934 : Taylor, Orowan, Polanyi montrent, indépendamment, que la présence d'imperfections explique cet écart : le glissement ne se fait pas d'un seul bloc mais **progressivement**, le long d'une direction ou sur un plan défini.\n- Ces imperfections sont les **dislocations** : elles ne rompent que **quelques liaisons à la fois**, il n'est pas nécessaire de rompre simultanément toutes les liaisons du plan pour le déplacer d'une distance interatomique ; la majeure partie du cristal demeure inaltérée (séquence 1→6 du cours : le défaut se propage de proche en proche jusqu'à créer une marche en surface).\n- Observation : microscopie électronique en transmission (champ clair, ex. Si à 200 kV).\n- [+] Types : **coin** (demi-plan supplémentaire, vecteur de Burgers $\\vec b\\perp$ ligne), **vis** ($\\vec b\\parallel$ ligne), mixte. Glissement dans un plan dense selon une direction dense (CFC : {111}⟨110⟩). Densité $\\rho_d$ en m⁻² (≈10¹⁰ recuit ; 10¹⁴–10¹⁶ écroui).\n\n### 3.d Défauts bidimensionnels (2D)\n- **Surfaces libres (extérieures)** : séparent le solide du gaz ; « énergie de surface » dépendant de l'orientation cristallographique ; **gouverne la réactivité de la surface**.\n- **Surfaces internes : joints de grains** : zones de transition à structure plus ou moins perturbée, assurant l'accommodation géométrique et cristallographique des grains du polycristal (joints à faible ou grande désorientation, diapo 42).\n- [+] Macles, fautes d'empilement, interfaces entre phases.\n\n### 3.e Défauts tridimensionnels (en volume)\n- **Précipités** : incohérents (a), cohérents (b), semi-cohérents (c). [+] Continuité des plans avec la matrice : totale (cohérent, avec distorsion), partielle avec dislocations d'interface (semi-cohérent), absente (incohérent).\n- **Inclusions**, **pores**, **fissures**.\n\n### 3.f Résumé (diapo 42)\nSur un schéma de réseau : atome interstitiel, lacune, atome substitutionnel, précipité, dislocation coin, joint de grain.\n\n### 3.g Défauts et propriétés physiques\n- **Coloration** : fluorine CaF₂ « pure » incolore ; violette lorsqu'il y a des lacunes sur les sites du fluor.\n- **Conductivité électrique** : les métaux ont des porteurs libres à toutes les températures ; résistivité gouvernée par leur mobilité ; **les impuretés augmentent la résistivité** (elles perturbent le parcours des électrons). [+] Matthiessen : $\\rho=\\rho_{th}(T)+\\rho_{défauts}$.\n- **Dureté des alliages** : dépend de l'interaction dislocations / autres défauts qui limitent leur mobilité : **joints de grains et précipités** résistent à leur mouvement (non-continuité du plan de glissement). [+] Hall–Petch :\n$$\\sigma_y=\\sigma_0+k\\,d^{-1/2}$$\n\n## 4. Diffraction des rayons X\n\n### 4.a Généralités\n- Rayons X découverts par Röntgen en 1895 (1re radiographie : la main de sa femme, janvier 1896). 1912 : Laue, grâce à un réseau cristallin (sel), détermine la longueur d'onde des RX ; l'inverse devient possible : connaître l'organisation de la matière, la taille et l'orientation des cristaux. [+] L'expérience de Laue a surtout établi la nature ondulatoire des RX et la périodicité des cristaux.\n- RX : ondes EM de longueur d'onde 0,01 à 1 nm ; en radiocristallographie $\\lambda\\approx0{,}1$ nm = ordre de grandeur des distances interatomiques dans les cristaux métalliques.\n- Anticathodes (raies Kα) : Cr ≈ 2,29 Å ; Fe ≈ 1,94 ; Cu ≈ 1,54 ; Mo ≈ 0,71 ; Ag ≈ 0,56 ; W ≈ 0,21 Å.\n- Échelles (diapo 44) : pièce → grains du polycristal → familles de plans (hkl) d'espacements $d_{001}$, $d_{101}$, $d_{201}$.\n\n### 4.b Loi de Bragg\n- Un faisceau de RX de longueur d'onde $\\lambda$ est réémis en partie avec la même $\\lambda$. L'intensité réémise n'est observable que si les rayonnements diffusés par les atomes sont **en phase** : c'est la **loi de Bragg**.\n$$n\\lambda=2\\,d_{hkl}\\sin\\theta$$\n- $\\theta$ = angle entre faisceau incident et **plans** (hkl) ; $d_{hkl}$ = distance entre plans de la famille ; $n$ = ordre de diffraction. Pour un matériau et un faisceau donnés, diffraction uniquement pour des angles d'incidence bien déterminés.\n- [+] Démonstration : différence de marche entre deux plans successifs $AB+BC=2d\\sin\\theta$ ; interférences constructives si elle vaut $n\\lambda$ ; il faut $\\lambda\\le2d$. Montage $\\theta$–$2\\theta$ : le détecteur est à $2\\theta$ du faisceau incident.\n- Distance interréticulaire : la formule générale du cours dépend de $a,b,c,\\alpha,\\beta,\\gamma$ et de $(h,k,l)$ ; pour une maille **cubique** ($a=b=c$, $\\alpha=\\beta=\\gamma=90°$) :\n$$d_{hkl}=\\dfrac{a}{\\sqrt{h^2+k^2+l^2}}$$\n- L'intensité diffractée dépend de : l'angle de Bragg et $\\lambda$ ; la répartition des atomes dans la maille (**facteur de structure**) ; le volume irradié ; l'état structural (défauts).\n- **Règles d'extinction** : toutes les familles {hkl} ne diffractent pas. CS : toutes ({100},{110},{111},{200},{210},{211}…) ; **CC : h+k+l pair** ({110},{200},{211},{220},{310},{222}…) ; **CFC : h,k,l de même parité** ({111},{200},{220},{311},{222},{400}…).\n- Rapports $d_1/d_i=\\sqrt{N_i/N_1}$ avec $N=h^2+k^2+l^2$ (table du cours) :\n\n| | d1/d2 | d1/d3 | d1/d4 | d1/d5 | d1/d6 | d1/d7 |\n|---|---|---|---|---|---|---|\n| CS | 1,41 | 1,73 | 2 | 2,23 | 2,45 | 2,82 |\n| CC | 1,41 | 1,73 | 2 | 2,23 | 2,45 | 2,64 |\n| CFC | 1,15 | 1,63 | 1,91 | 2 | 2,31 | 2,51 |\n\nCS et CC ne se distinguent qu'au 7e pic (CC : N = 2,4,6,8,10,12,14 ; CS : N = 1,2,3,4,5,6,8).\n\n**Procédure (réseau cubique).** 1) expérience (tube RX, échantillon, détecteur, balayage en $2\\theta$) ; 2) diffractogramme (intensité en fonction de $2\\theta$) ; 3) calcul des $d$ par $d=\\lambda/(2\\sin\\theta)$ et rapports $d_1/d_i$ → structure ; 4) indexation puis $a=d\\sqrt{h^2+k^2+l^2}$ ($a$ unique) → matériau.\n\n**Exemple du cours** ($\\lambda=0{,}1540$ nm ; pics lus vers $2\\theta\\approx32°,37°,53°,63°,66°$, lecture graphique approximative) : $\\theta_1\\approx16°$, $\\theta_2\\approx18{,}5°$ → $d_1\\approx0{,}279$ nm, $d_2\\approx0{,}243$ nm → $d_1/d_2\\approx1{,}15$ → **CFC** (pics (111), (200)) → $a=d_1\\sqrt3\\approx0{,}484$ nm → **plomb** (diapo : Cu 0,361 nm ; Au 0,407 nm ; Pb 0,483 nm).\n\n### 4.c–d Appareillage et applications\nDiffractomètre : source RX, goniomètre, détecteur (ex. Bruker D8 Advance Eco ; Stresstech Xstress pour les contraintes).\n\n| Observable | Information obtenue |\n|---|---|\n| Position des pics | identification de phases ; analyse quantitative d'une solution solide |\n| Variation de position d'un pic | contraintes résiduelles |\n| Intensité des pics | dosage de phases |\n| Variation d'intensité d'un pic | texture des polycristaux (orientation(s) cristallographique(s) prédominante(s)) |\n| Forme d'un pic | taille des cristaux ; micro-déformation (taux d'écrouissage) |\n\n[+] Formule de Scherrer (taille de cristallites) :\n$$\\tau=\\dfrac{K\\lambda}{\\beta\\cos\\theta}$$\n($K\\approx0{,}9$ ; $\\beta$ = largeur à mi-hauteur en radians).\n\n## 5. Conclusion du cours\nAtome = particules élémentaires (mécanique quantique, électrons confinés dans des orbitales) ; propriétés chimiques ← électrons de valence ; liaisons essentiellement électrostatiques (ionique, covalente, métallique) qui déterminent en grande partie les propriétés des phases condensées. Arrangement ordonné (cristallin, longue distance) ou désordonné (amorphe, similaire aux liquides). Cristal : 7 systèmes, plans et directions en indices de Miller, étude par DRX. Cristal réel = nombreux défauts (0D à 3D) à l'origine de nombreuses propriétés.\n\n## 6. Pièges classiques\n- Miller : oublier l'**inversion** des intersections ; confondre (hkl), {hkl}, [uvw], ⟨uvw⟩ ; plan passant par l'origine (déplacer l'origine) ; plan parallèle à un axe → indice 0.\n- HC : 6 atomes par maille hexagonale mais motif de 2 ; système hexagonal ≠ structure hexagonale compacte ; $C=0{,}74$ suppose $c/a$ idéal.\n- Rayons : CC → diagonale du **cube** ($a\\sqrt3/4$) ; CFC → diagonale d'une **face** ($a\\sqrt2/4$).\n- Compacité CC = 0,68 < CFC = HC = 0,74 ; coordinences 8 / 12 / 12.\n- Bragg : $\\theta$ est l'angle avec les plans, le détecteur lit $2\\theta$ ; l'ordre $n$ est absorbé dans (hkl).\n- Extinctions : CC → somme paire ; CFC → mêmes parités (0 est pair) ; CS et CC indiscernables avant le 7e pic.\n- $d_{hkl}=a/\\sqrt{h^2+k^2+l^2}$ valable seulement en cubique ; $[hkl]\\perp(hkl)$ aussi.\n- Liaison covalente ≠ toujours amorphe (diamant, Si) ; liaisons fortes ≠ liaisons faibles (VdW, H < 50 kJ/mol).\n- Dislocations : elles **facilitent** la plasticité ; on durcit un métal en **bloquant** leur mouvement (joints de grains, précipités, autres dislocations).\n- Amorphe = ordre à courte distance ; cristal = ordre à longue distance ; allotropie = même corps pur, structures différentes (volume qui change : étain).",
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "Parmi ces paires, laquelle est constituée d'isotopes ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "¹²₆C et ¹⁴₆C"
+        },
+        {
+          "id": "b",
+          "text": "¹⁴₆C et ¹⁴₇N"
+        },
+        {
+          "id": "c",
+          "text": "¹⁶₈O et ¹⁶₇N"
+        },
+        {
+          "id": "d",
+          "text": "¹⁶₈O et ¹⁷₉F"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Isotopes = même Z (même élément), N différent. ¹²₆C (6 neutrons) et ¹⁴₆C (8 neutrons) ont Z = 6. Les autres paires ont des Z différents. Notation ᴬ_Z X avec A = Z + N."
+    },
+    {
+      "id": "q2",
+      "question": "Pour la couche M (n = 3), quelles valeurs de l sont possibles et combien d'électrons peut-elle contenir au maximum ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "l = 0, 1, 2, 3 ; 32 électrons"
+        },
+        {
+          "id": "b",
+          "text": "l = 1, 2, 3 ; 18 électrons"
+        },
+        {
+          "id": "c",
+          "text": "l = 0, 1, 2 (s, p, d) ; 18 électrons"
+        },
+        {
+          "id": "d",
+          "text": "l = 0, 1, 2 ; 9 électrons"
+        }
+      ],
+      "correct": "c",
+      "explanation": "[+] l varie de 0 à n−1 : s (2 e⁻) + p (6) + d (10) = 18 = 2n². La sous-couche f (l = 3) n'apparaît qu'à partir de n = 4. Rappel du cours : n = grand axe (couches K=1 … Q=7), l = petit axe (s=0, p=1, d=2, f=3), m = inclinaison de l'orbitale, spin = ±1/2."
+    },
+    {
+      "id": "q3",
+      "question": "Quel est, dans l'ordre, le type de liaison dominant de Al₂O₃, du polyéthylène et du cuivre ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "métallique, covalente, ionique"
+        },
+        {
+          "id": "b",
+          "text": "ionique, covalente, métallique"
+        },
+        {
+          "id": "c",
+          "text": "covalente, ionique, métallique"
+        },
+        {
+          "id": "d",
+          "text": "ionique, métallique, covalente"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Al₂O₃ : métal–non-métal, transfert d'électrons → ionique (céramiques). Polyéthylène : non-métal–non-métal (C, H), mise en commun d'électrons → covalente (polymères). Cuivre : métal–métal, gaz d'électrons → métallique."
+    },
+    {
+      "id": "q4",
+      "question": "Pourquoi les polymères sont-ils généralement légers et amorphes ou semi-cristallins ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Leurs liaisons métalliques isotropes imposent des structures très compactes"
+        },
+        {
+          "id": "b",
+          "text": "Leurs liaisons ioniques créent un édifice très stable et très compact"
+        },
+        {
+          "id": "c",
+          "text": "Les liaisons de Van der Waals y sont plus fortes que les liaisons covalentes"
+        },
+        {
+          "id": "d",
+          "text": "La liaison covalente est directionnelle : angles et directions imposés → longues chaînes peu compactes qui cristallisent mal"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Liaisons isotropes (métallique, ionique) → structures simples, compactes, symétries élevées, cristallines. Liaison directionnelle (covalente) → longues chaînes macromoléculaires, peu compactes, matériaux légers, ordre à courte distance (amorphe) ou semi-cristallin. Piège : VdW et hydrogène (< 50 kJ/mol) sont plus faibles que la covalente."
+    },
+    {
+      "id": "q5",
+      "question": "Quel système cristallin est défini par a = b ≠ c, α = β = 90° et γ = 120° ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Hexagonal"
+        },
+        {
+          "id": "b",
+          "text": "Rhomboédrique"
+        },
+        {
+          "id": "c",
+          "text": "Quadratique"
+        },
+        {
+          "id": "d",
+          "text": "Monoclinique"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Hexagonal : a=b≠c, α=β=90°, γ=120°. Rhomboédrique : a=b=c, α=β=γ≠90°. Quadratique : a=b≠c, tous angles 90°. Monoclinique : a≠b≠c, un seul angle ≠ 90°. 7 systèmes + nœuds supplémentaires (C, FC, BC) = 14 réseaux de Bravais (1848). Piège : système hexagonal ≠ structure hexagonale compacte."
+    },
+    {
+      "id": "q6",
+      "question": "Nombre d'atomes par maille pour CC, CFC et HC (maille hexagonale complète) ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "2 ; 4 ; 2"
+        },
+        {
+          "id": "b",
+          "text": "1 ; 4 ; 6"
+        },
+        {
+          "id": "c",
+          "text": "2 ; 4 ; 6"
+        },
+        {
+          "id": "d",
+          "text": "2 ; 4 ; 12"
+        }
+      ],
+      "correct": "c",
+      "explanation": "CC : 1 + 8×1/8 = 2. CFC : 6×1/2 + 8×1/8 = 4. HC (maille hexagonale) : 3 à l'intérieur + 2×1/2 (bases) + 12×1/6 (sommets) = 6 ; le motif élémentaire HC ne compte que 2 atomes. Coordinences : 8 (CC), 12 (CFC et HC)."
+    },
+    {
+      "id": "q7",
+      "question": "Dans une maille CC de paramètre a, quels sont le rayon atomique et la compacité ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "R = a√2/4 ; C = 0,74"
+        },
+        {
+          "id": "b",
+          "text": "R = a√3/4 ; C = 0,68"
+        },
+        {
+          "id": "c",
+          "text": "R = a/2 ; C = 0,52"
+        },
+        {
+          "id": "d",
+          "text": "R = a√3/4 ; C = 0,74"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Contact selon la diagonale du cube (direction dense ⟨111⟩) : 4R = a√3. C = 2·(4/3)πR³/a³ = π√3/8 ≈ 0,68. CFC : 4R = a√2 et C = π√2/6 ≈ 0,74. HC : R = a/2, C ≈ 0,74. (R = a/2 et C ≈ 0,52 correspondent au cubique simple.)"
+    },
+    {
+      "id": "q8",
+      "question": "Un objet en étain blanc (β) refroidi sous ≈ 13 °C peut se transformer en étain gris (α). Quelle en est la conséquence ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Contraction d'environ 26 % : la pièce se densifie et durcit"
+        },
+        {
+          "id": "b",
+          "text": "Aucun changement de volume : c'est le même corps pur"
+        },
+        {
+          "id": "c",
+          "text": "Fusion locale du métal"
+        },
+        {
+          "id": "d",
+          "text": "Gonflement d'environ 26 % (5,75 contre 7,28 g·cm⁻³) : la pièce se désagrège en poudre (« peste de l'étain »)"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Transformation allotropique (polymorphisme) : même corps pur, structure différente. Volume massique 0,173 cm³/g (gris) contre 0,137 (blanc) soit ×1,26. Au-dessus de 161 °C : forme γ (0,153 cm³/g) ; fusion à 232 °C. Exemples du cours : boutons de la Grande Armée (légende), tuyaux d'orgue en étain."
+    },
+    {
+      "id": "q9",
+      "question": "Quels sont les indices de Miller du plan coupant les axes en a/2, b/3 et c ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "(3 2 6)"
+        },
+        {
+          "id": "b",
+          "text": "(2 3 1)"
+        },
+        {
+          "id": "c",
+          "text": "(1 2 3)"
+        },
+        {
+          "id": "d",
+          "text": "(½ ⅓ 1)"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Intersections ½, ⅓, 1 → inverses 2, 3, 1 → entiers premiers entre eux : (2 3 1). Piège (a) : multiplier les intersections par le PPCM (6) sans les inverser donne (3 2 6), faux. Les indices doivent être entiers (d)."
+    },
+    {
+      "id": "q10",
+      "question": "Quelle est la notation correcte de la direction passant par l'origine et le point (a/2, b/2, c) ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "[1 1 2]"
+        },
+        {
+          "id": "b",
+          "text": "(1 1 2)"
+        },
+        {
+          "id": "c",
+          "text": "[½ ½ 1]"
+        },
+        {
+          "id": "d",
+          "text": "⟨2 2 1⟩"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Projections ½, ½, 1 → plus petits entiers 1, 1, 2 → [1 1 2] (crochets = direction). (hkl) = plan, {hkl} = famille de plans, ⟨uvw⟩ = famille de directions (même densité de nœuds par unité de longueur). Deux directions parallèles ont les mêmes indices."
+    },
+    {
+      "id": "q11",
+      "question": "Quelle affirmation sur les défauts cristallins est exacte ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Un joint de grain est un défaut ponctuel (0D)"
+        },
+        {
+          "id": "b",
+          "text": "Les dislocations rendent le cristal plus rigide car elles bloquent le glissement"
+        },
+        {
+          "id": "c",
+          "text": "Les dislocations (1D) expliquent que la plasticité apparaisse sous des contraintes 10³ à 10⁴ fois plus faibles que la théorie ; joints de grains et précipités, en les freinant, durcissent l'alliage"
+        },
+        {
+          "id": "d",
+          "text": "Une lacune est un défaut linéaire (1D)"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Modèle théorique : plasticité vers ≈ G/6 ; observée 10³–10⁴ fois plus bas grâce aux dislocations (glissement progressif, quelques liaisons rompues à la fois, Taylor/Orowan/Polanyi 1934). Joints de grains (2D) et précipités (3D) limitent leur mobilité → dureté. Lacune = 0D ; joint de grain = 2D."
+    },
+    {
+      "id": "q12",
+      "question": "Cubique, a = 0,300 nm, λ = 0,154 nm. Pour la famille {200}, quels sont l'angle de Bragg θ et le statut de la réflexion ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "θ ≈ 15,4° ; permise en CC seulement"
+        },
+        {
+          "id": "b",
+          "text": "θ ≈ 61,8° (angle lu sur le détecteur) ; interdite en CFC"
+        },
+        {
+          "id": "c",
+          "text": "θ ≈ 30,9° ; interdite en CFC car h, k, l ne sont pas tous impairs"
+        },
+        {
+          "id": "d",
+          "text": "θ ≈ 30,9° (2θ ≈ 61,8°) ; permise en CC (h+k+l pair) et en CFC (h, k, l de même parité)"
+        }
+      ],
+      "correct": "d",
+      "explanation": "d₂₀₀ = a/√(2²+0²+0²) = 0,150 nm ; sin θ = λ/(2d) = 0,154/0,300 = 0,513 → θ ≈ 30,9°, soit 2θ ≈ 61,8° (le détecteur est à 2θ du faisceau incident). (200) : h+k+l = 2 pair → CC ; 2, 0, 0 de même parité (pair) → CFC. Seules (100), (110), (210)… sont interdites en CFC."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "recto": "Notation d'un nucléide ; relations entre A, Z, N ?",
+      "verso": "${}^{A}_{Z}X$ ; $Z$ = nb de protons = numéro atomique ; $A=Z+N$ ; atome neutre : $Z$ électrons."
+    },
+    {
+      "id": "f2",
+      "recto": "Isotopes ?",
+      "verso": "Même $Z$, $N$ différent (ex. ¹²C, ¹³C, ¹⁴C)."
+    },
+    {
+      "id": "f3",
+      "recto": "Les 4 nombres quantiques ?",
+      "verso": "$n$ : couche K…Q = 1…7 ; $l$ : s,p,d,f = 0…3 ; $m$ : orientation/inclinaison de l'orbitale ; $m_s=\\pm\\frac12$. [+] $0\\le l\\le n-1$, $-l\\le m\\le l$ ; capacité couche $2n^2$, sous-couche $2(2l+1)$."
+    },
+    {
+      "id": "f4",
+      "recto": "Électrons de valence / de cœur ; stabilité ?",
+      "verso": "Valence = couche externe (conductivité, magnétisme, chimie) ; cœur = couches internes. Couche de valence saturée (gaz nobles He, Ne, Ar, Kr, Xe, Rn) = stable."
+    },
+    {
+      "id": "f5",
+      "recto": "Métaux / non-métaux et liaison chimique ?",
+      "verso": "Perte d'e⁻ → métaux ; gain d'e⁻ → non-métaux. Liaison chimique = redistribution d'électrons pour compléter la dernière couche."
+    },
+    {
+      "id": "f6",
+      "recto": "Tableau périodique : chiffres clés ?",
+      "verso": "118 éléments (2016 : Nh, Mc, Ts, Og ajoutés), 94 naturels ; 7 périodes (lignes) ; 18 groupes (colonnes)."
+    },
+    {
+      "id": "f7",
+      "recto": "Ordre à courte vs longue distance ?",
+      "verso": "Courte : amorphes (verres, polymères), structure type liquide. Longue : cristaux, position définie par rapport aux voisins ET à tout le système. Gaz : désordre complet."
+    },
+    {
+      "id": "f8",
+      "recto": "Énergies $E_{cin}$ / $E_{pot}$ selon l'état ?",
+      "verso": "Gaz $E_{cin}\\gg E_{pot}$ ; liquide $E_{cin}\\approx E_{pot}$ ; solide $E_{cin}\\ll E_{pot}$ (avec $E_{cin}\\sim kT$)."
+    },
+    {
+      "id": "f9",
+      "recto": "Liaison ionique ?",
+      "verso": "Métal–non-métal, transfert d'e⁻, attraction coulombienne, très stable/compact, > 500 kJ/mol ; céramiques (NaCl, MgO, Al₂O₃)."
+    },
+    {
+      "id": "f10",
+      "recto": "Liaison covalente ?",
+      "verso": "Non-métal–non-métal, mise en commun d'e⁻, directionnelle, > 50 kJ/mol (cours) ; polymères, organiques, H₂, Cl₂, F₂."
+    },
+    {
+      "id": "f11",
+      "recto": "Liaison métallique ?",
+      "verso": "Métal–métal, gaz d'électrons délocalisés, très compact, forte conduction thermique/électrique, > 70 kJ/mol ; métaux."
+    },
+    {
+      "id": "f12",
+      "recto": "Liaisons faibles ; influence du type de liaison sur la structure ?",
+      "verso": "VdW, hydrogène < 50 kJ/mol. Isotrope (métallique/ionique) → cristallin, compact, symétrique. Directionnelle (covalente) → longues chaînes, peu compact, léger, amorphe/semi-cristallin."
+    },
+    {
+      "id": "f13",
+      "recto": "Postulat de Bravais ?",
+      "verso": "Pour tout point P du cristal, il existe une infinité discrète de points, illimitée dans les 3 directions, autour desquels la matière est arrangée comme autour de P."
+    },
+    {
+      "id": "f14",
+      "recto": "Cristal, réseau, motif, maille ?",
+      "verso": "Structure = réseau + motif. Maille élémentaire = prisme sur $\\vec a,\\vec b,\\vec c$ ; paramètres $a,b,c,\\alpha,\\beta,\\gamma$ (6 paramètres, 7 systèmes, 14 réseaux de Bravais)."
+    },
+    {
+      "id": "f15",
+      "recto": "Cubique, quadratique, orthorhombique ?",
+      "verso": "Cubique : a=b=c, 90°. Quadratique : a=b≠c, 90°. Orthorhombique : a≠b≠c, 90°."
+    },
+    {
+      "id": "f16",
+      "recto": "Hexagonal, rhomboédrique, monoclinique, triclinique ?",
+      "verso": "Hexagonal : a=b≠c, α=β=90°, γ=120°. Rhomboédrique : a=b=c, α=β=γ≠90°. Monoclinique : a≠b≠c, α=β=90°, γ≠90°. Triclinique : a≠b≠c, α≠β≠γ."
+    },
+    {
+      "id": "f17",
+      "recto": "Comptage des nœuds d'une maille ; maille simple/multiple ?",
+      "verso": "Sommet 1/8, arête 1/4, face 1/2, intérieur 1. Simple (primitive) : nœuds aux sommets seulement ; multiple : nœuds supplémentaires (C, FC, BC)."
+    },
+    {
+      "id": "f18",
+      "recto": "Méthode des indices de Miller (plan) ?",
+      "verso": "1) plan ne passant pas par l'origine ; 2) intersections avec les axes ; 3) inverses ; 4) PPCD ; 5) numérateurs = $(h\\,k\\,l)$. Ex. $1,\\frac12,\\frac23$ → $(2\\,4\\,3)$. Équation $hx+ky+lz=u$."
+    },
+    {
+      "id": "f19",
+      "recto": "Méthode des directions ; notations ?",
+      "verso": "Vecteur parallèle par l'origine, projections, plus petits entiers → $[u\\,v\\,w]$ (ex. $0,1,\\frac12$ → [0 2 1]). (hkl) plan, {hkl} famille de plans, [uvw] direction, ⟨uvw⟩ famille de directions."
+    },
+    {
+      "id": "f20",
+      "recto": "Structure CC : Z, R, C, coordinence, denses ?",
+      "verso": "$Z=2$ ; $R=\\dfrac{a\\sqrt3}{4}$ ; $C=0{,}68$ ; coordinence 8 ; direction dense ⟨111⟩ ; plan dense {110} ; Li, V, Cr, Mo, W, Fe-α, Ti-β."
+    },
+    {
+      "id": "f21",
+      "recto": "Structure CFC : Z, R, C, coordinence, empilement ?",
+      "verso": "$Z=4$ ; $R=\\dfrac{a\\sqrt2}{4}$ ; $C=0{,}74$ ; coordinence 12 ; ⟨110⟩ et {111} denses ; empilement ABC ABC ; Ni, Al, Ag, Au, Cu, Fe-γ."
+    },
+    {
+      "id": "f22",
+      "recto": "Structure HC : atomes, R, C, empilement ?",
+      "verso": "6 atomes/maille hexagonale (motif : 2) ; $R=\\dfrac a2$ ; $C=0{,}74$ ; coordinence 12 ; empilement AB AB AB ; Be, Cd, Mg, Zn, Ti-α."
+    },
+    {
+      "id": "f23",
+      "recto": "Compacité et masse volumique ?",
+      "verso": "$C=\\dfrac{Z\\frac43\\pi R^3}{V_{maille}}$ ; $\\rho=\\dfrac{ZM}{\\mathcal N_A V_{maille}}$. CC : $\\pi\\sqrt3/8$ ; CFC : $\\pi\\sqrt2/6$ ; HC : $\\pi/(3\\sqrt2)$."
+    },
+    {
+      "id": "f24",
+      "recto": "Sites interstitiels CFC et CC [+] ?",
+      "verso": "CFC : 4 octa ($0{,}414R$) et 8 tétra ($0{,}225R$). CC : 6 octa ($0{,}155R$) et 12 tétra ($0{,}291R$)."
+    },
+    {
+      "id": "f25",
+      "recto": "Allotropie ; exemples ?",
+      "verso": "Un corps pur existe sous plusieurs structures (polymorphisme). Fe : α CC → γ CFC → δ CC. Ti : α HC → β CC. Sn : gris α (<13 °C, 5,75 g/cm³) / blanc β (7,28) / γ (>161 °C) ; blanc→gris : +26 % de volume."
+    },
+    {
+      "id": "f26",
+      "recto": "Les 4 familles de défauts et exemples ?",
+      "verso": "0D : lacune, interstitiel, auto-interstitiel, substitution. 1D : dislocations. 2D : surfaces libres, joints de grains. 3D : précipités, inclusions, pores, fissures."
+    },
+    {
+      "id": "f27",
+      "recto": "Pourquoi des dislocations ?",
+      "verso": "Théorie : plasticité vers $\\approx G/6$ ; réel : 10³ à 10⁴ fois moins. Glissement progressif, quelques liaisons rompues à la fois (Taylor, Orowan, Polanyi, 1934)."
+    },
+    {
+      "id": "f28",
+      "recto": "Défauts et propriétés ?",
+      "verso": "Coloration (CaF₂ violette : lacunes de F) ; impuretés ↑ résistivité ; dureté ↑ si joints de grains/précipités freinent les dislocations."
+    },
+    {
+      "id": "f29",
+      "recto": "Loi de Bragg ?",
+      "verso": "$n\\lambda=2\\,d_{hkl}\\sin\\theta$ ($\\theta$ avec les plans, détecteur à $2\\theta$)."
+    },
+    {
+      "id": "f30",
+      "recto": "$d_{hkl}$ en cubique ?",
+      "verso": "$d_{hkl}=\\dfrac{a}{\\sqrt{h^2+k^2+l^2}}$."
+    },
+    {
+      "id": "f31",
+      "recto": "Règles d'extinction (cubique) ?",
+      "verso": "CS : tous. CC : $h+k+l$ pair (110, 200, 211, 220, 310, 222). CFC : $h,k,l$ de même parité (111, 200, 220, 311, 222, 400)."
+    },
+    {
+      "id": "f32",
+      "recto": "Procédure d'analyse DRX (cubique) ?",
+      "verso": "Diffractogramme → $d=\\lambda/(2\\sin\\theta)$ → rapports $d_1/d_i$ → structure (CS/CC/CFC) → indexation → $a=d\\sqrt{h^2+k^2+l^2}$ → matériau."
+    },
+    {
+      "id": "f33",
+      "recto": "Applications de la DRX ?",
+      "verso": "Position des pics : phases ; décalage : contraintes résiduelles ; intensité : dosage ; variation d'intensité : texture ; forme : taille des cristaux et micro-déformation. [+] Scherrer $\\tau=K\\lambda/(\\beta\\cos\\theta)$."
+    }
+  ],
+  "exercices": [
+    {
+      "titre": "Exercice 1 – Indices de Miller et directions (application directe)",
+      "difficulte": 1,
+      "enonce": "Maille cubique de paramètre $a$ (origine O sur un sommet, axes $x,y,z$ portés par $\\vec a,\\vec b,\\vec c$).\n\n1. Donner les indices de Miller du plan qui coupe les axes en $x=\\frac a2$, $y=a$ et qui est parallèle à $\\vec c$.\n2. Même question pour le plan qui coupe les axes en $x=a$, $y=-a$, $z=\\frac a2$.\n3. Donner les indices du plan contenant $A(1,1,0)$, $B(1,0,1)$, $C(0,1,1)$ (coordonnées en unités de $a$), à l'aide de l'équation $hx+ky+lz=u$.\n4. Donner les indices de la direction de $\\overrightarrow{OM}$ avec $M(1,\\frac12,0)$, puis de la grande diagonale du cube.\n5. Pour $a=0{,}400$ nm, calculer $d_{111}$ et $d_{200}$.",
+      "corrige": "1. Intersections $\\frac12,\\,1,\\,\\infty$ → inverses $2,\\,1,\\,0$ (plan parallèle à un axe : indice 0) → entiers premiers entre eux : **(2 1 0)**.\n2. Intersections $1,\\,-1,\\,\\frac12$ → inverses $1,\\,-1,\\,2$ → **(1 1̄ 2)** (l'indice négatif se note avec une barre).\n3. $h+k=u$, $h+l=u$, $k+l=u$ → $h=k=l=\\frac u2$. Plus petite valeur de $u$ donnant des entiers premiers entre eux : $u=2$, donc $h=k=l=1$ : **(1 1 1)**.\n4. Projections $1,\\frac12,0$ → multiplier par 2 : **[2 1 0]**. Grande diagonale : projections $1,1,1$ → **[1 1 1]** (famille ⟨111⟩).\n5. Cubique : $d_{hkl}=a/\\sqrt{h^2+k^2+l^2}$.\n$$d_{111}=\\dfrac{0{,}400}{\\sqrt3}\\approx0{,}231\\ \\text{nm}$$\n$$d_{200}=\\dfrac{0{,}400}{\\sqrt4}=0{,}200\\ \\text{nm}$$"
+    },
+    {
+      "titre": "Exercice 2 – Cuivre CFC : compacité, masse volumique, plans denses (intermédiaire)",
+      "difficulte": 2,
+      "enonce": "Le cuivre cristallise en CFC, $a=0{,}3615$ nm, $M=63{,}55$ g/mol, $\\mathcal N_A=6{,}022\\cdot10^{23}$ mol⁻¹.\n\n1. Combien d'atomes par maille ?\n2. Selon quelle direction les atomes sont-ils tangents ? En déduire le rayon atomique $R$.\n3. Calculer la compacité.\n4. Calculer la masse volumique.\n5. Calculer la densité surfacique d'atomes (atomes/nm²) des plans (111), (100) et (110). Quels sont les plans denses ?",
+      "corrige": "1. $Z=6\\times\\frac12+8\\times\\frac18=4$.\n2. Contact selon la diagonale d'une face, direction ⟨110⟩ : $4R=a\\sqrt2$.\n$$R=\\dfrac{a\\sqrt2}{4}=\\dfrac{0{,}3615\\times1{,}414}{4}\\approx0{,}1278\\ \\text{nm}$$\n3. $C=\\dfrac{4\\times\\frac43\\pi R^3}{a^3}=\\dfrac{\\pi\\sqrt2}{6}\\approx0{,}74$ (indépendant de $a$).\n4. $a^3=(3{,}615\\cdot10^{-8})^3\\approx4{,}724\\cdot10^{-23}$ cm³.\n$$\\rho=\\dfrac{ZM}{\\mathcal N_A a^3}=\\dfrac{4\\times63{,}55}{6{,}022\\cdot10^{23}\\times4{,}724\\cdot10^{-23}}\\approx8{,}94\\ \\text{g/cm}^3$$\n(valeur expérimentale : 8,96 g/cm³).\n5. (111) : triangle de côté $a\\sqrt2$, d'aire $\\frac{\\sqrt3}{2}a^2$ ; atomes : 3 sommets × 1/6 + 3 milieux de côtés × 1/2 = 2 → $\\frac{2}{(\\sqrt3/2)a^2}=\\frac{4}{\\sqrt3\\,a^2}\\approx\\frac{2{,}31}{a^2}\\approx17{,}7$ at/nm².\n(100) : face carrée de côté $a$ : 4×1/4 + 1 = 2 atomes → $\\frac{2}{a^2}\\approx15{,}3$ at/nm².\n(110) : rectangle $a\\times a\\sqrt2$ : 4×1/4 + 2×1/2 = 2 atomes → $\\frac{\\sqrt2}{a^2}\\approx10{,}8$ at/nm².\nLes plans (111) sont les plus denses, d'où la famille {111} des plans denses en CFC (empilement ABC)."
+    },
+    {
+      "titre": "Exercice 3 – Sites interstitiels et solubilité du carbone dans le fer (intermédiaire +)",
+      "difficulte": 3,
+      "enonce": "[+] Exercice de complément (sites interstitiels, diapo 29).\n\n1. Dénombrer les sites octaédriques et tétraédriques par maille CFC, puis par atome. Même question en CC.\n2. Pour un empilement de sphères dures de rayon $R$, établir le rayon maximal $r$ d'une sphère insérable : (a) site octaédrique CFC (centre de la maille), (b) site tétraédrique CFC (en $(\\frac a4,\\frac a4,\\frac a4)$), (c) site octaédrique CC (en $(\\frac a2,\\frac a2,0)$), (d) site tétraédrique CC (en $(\\frac a2,\\frac a4,0)$).\n3. Rayons du fer : $R_\\alpha=0{,}124$ nm (CC) et $R_\\gamma=0{,}129$ nm (CFC) ; rayon de l'atome de carbone $r_C\\approx0{,}077$ nm. Comparer aux sites et expliquer pourquoi le carbone est bien plus soluble dans Fe-γ que dans Fe-α.",
+      "corrige": "1. CFC : octa = 1 (centre) + 12×¼ (arêtes) = **4** ; tétra = **8** (un par sommet-octant). Par atome (Z=4) : 1 octa et 2 tétra. CC : octa = 6×½ (faces) + 12×¼ (arêtes) = **6** ; tétra = 4×6×½ = **12**. Par atome (Z=2) : 3 octa et 6 tétra.\n2. (a) Centre de la maille CFC : les plus proches atomes sont à $a/2$ (centres des faces). Contact $4R=a\\sqrt2$ :\n$$r=\\dfrac a2-R=R\\sqrt2-R\\;\\Rightarrow\\;\\dfrac rR=\\sqrt2-1\\approx0{,}414$$\n(b) Distance du site $(\\frac a4,\\frac a4,\\frac a4)$ au sommet : $\\frac{a\\sqrt3}{4}$ :\n$$\\dfrac rR=\\dfrac{a\\sqrt3/4}{a\\sqrt2/4}-1=\\sqrt{\\tfrac32}-1\\approx0{,}225$$\n(c) Site $(\\frac a2,\\frac a2,0)$ : plus proches voisins à $\\frac a2$ (centres de maille voisins), $R=\\frac{a\\sqrt3}{4}$ :\n$$\\dfrac rR=\\dfrac{a/2}{a\\sqrt3/4}-1=\\dfrac2{\\sqrt3}-1\\approx0{,}155$$\n(d) Site $(\\frac a2,\\frac a4,0)$ : distance au centre $(\\frac a2,\\frac a2,\\frac a2)$ égale à $\\frac{a\\sqrt5}{4}$ :\n$$\\dfrac rR=\\dfrac{a\\sqrt5/4}{a\\sqrt3/4}-1=\\sqrt{\\tfrac53}-1\\approx0{,}291$$\n3. Fe-γ : $r_{oct}=0{,}414\\times0{,}129\\approx0{,}053$ nm ; $r_{tétra}=0{,}225\\times0{,}129\\approx0{,}029$ nm. Fe-α : $r_{oct}=0{,}155\\times0{,}124\\approx0{,}019$ nm ; $r_{tétra}=0{,}291\\times0{,}124\\approx0{,}036$ nm. Aucun site n'accueille C ($0{,}077$ nm) sans distorsion ; le plus favorable est l'octaèdre de Fe-γ (≈ 69 % du rayon de C) contre ≈ 47 % pour le tétraèdre de Fe-α. D'où une solubilité de C beaucoup plus grande dans γ (≈ 2,1 %m à 1147 °C) que dans α (≈ 0,02 %m à 727 °C). [+] Nuance : dans Fe-α, C occupe en réalité l'octaèdre (déformé, 2 voisins proches seulement), à l'origine de la distorsion quadratique de la martensite."
+    },
+    {
+      "titre": "Exercice 4 – Analyse d'un diffractogramme (niveau partiel / concours)",
+      "difficulte": 4,
+      "enonce": "Un échantillon métallique cubique est analysé avec la raie Cu Kα, $\\lambda=0{,}1540$ nm. Positions des pics (en $2\\theta$) : 40,3° ; 58,3° ; 73,2° ; 87,0° ; 100,6° ; 114,9° ; 131,1°.\n\n1. Calculer $\\theta_i$, $\\sin\\theta_i$ et les rapports $\\sin^2\\theta_i/\\sin^2\\theta_1$.\n2. En déduire le réseau de Bravais (CS, CC ou CFC) en justifiant le rejet des autres. Pourquoi les 4 premiers pics ne suffisent-ils pas ?\n3. Indexer les pics (hkl).\n4. Calculer le paramètre $a$ ; pourquoi privilégier les pics à grand angle ?\n5. Identifier le métal parmi : W ($a=0{,}3165$ nm), Mo ($0{,}3147$), Cr ($0{,}2885$), Fe-α ($0{,}2866$), Ta ($0{,}3303$).\n6. Où apparaîtrait le premier pic ($2\\theta$) pour Fe-α ?",
+      "corrige": "1. $\\theta_i=\\frac{2\\theta_i}{2}$ : 20,15° ; 29,15° ; 36,6° ; 43,5° ; 50,3° ; 57,45° ; 65,55°.\n$\\sin\\theta_i\\approx0{,}3445 ;\\ 0{,}4871 ;\\ 0{,}5962 ;\\ 0{,}6884 ;\\ 0{,}7694 ;\\ 0{,}8429 ;\\ 0{,}9103$.\n$\\sin^2\\theta_i/\\sin^2\\theta_1\\approx1{,}00 ;\\ 2{,}00 ;\\ 3{,}00 ;\\ 4{,}00 ;\\ 4{,}99 ;\\ 5{,}99 ;\\ 6{,}98$, soit **1 : 2 : 3 : 4 : 5 : 6 : 7**.\n2. Bragg + cubique : $\\sin^2\\theta=\\frac{\\lambda^2}{4a^2}(h^2+k^2+l^2)$, donc $\\sin^2\\theta_i/\\sin^2\\theta_1=N_i/N_1$. CFC : $N=3,4,8,11,12,16,19$ → 1 ; 1,33 ; 2,67… : rejeté. CS : $N=1,2,3,4,5,6,8$ → 1:2:3:4:5:6:**8** : rejeté car le 7e rapport vaut 7. CC : $N=2,4,6,8,10,12,14$ → 1:2:…:7 : **CC**. Les 4 premiers pics (1:2:3:4) sont communs à CS et CC : seul le 7e pic (ou la règle $h+k+l$ pair) les distingue (cf. table du cours, $d_1/d_7=2{,}82$ en CS contre $2{,}64$ en CC).\n3. $N=2,4,6,8,10,12,14$ → **(110), (200), (211), (220), (310), (222), (321)** (h+k+l pair).\n4. $d_i=\\frac{\\lambda}{2\\sin\\theta_i}$ puis $a=d_i\\sqrt{N_i}$ :\n$$a_1=0{,}2235\\times\\sqrt2\\approx0{,}3161\\ \\text{nm}$$\n$$a_7=0{,}0846\\times\\sqrt{14}\\approx0{,}3165\\ \\text{nm}$$\n$a\\approx0{,}3165$ nm. Les pics à grand angle sont plus précis car $\\dfrac{\\Delta d}{d}=-\\cot\\theta\\,\\Delta\\theta$ tend vers 0 quand $\\theta\\to90°$.\n5. $a\\approx0{,}3165$ nm → **tungstène (W)** ; Mo (0,3147) est écarté par l'écart de 0,0018 nm, supérieur à la précision obtenue sur les derniers pics.\n6. Fe-α, (110) : $d=\\frac{0{,}2866}{\\sqrt2}=0{,}2027$ nm ; $\\sin\\theta=\\frac{0{,}1540}{2\\times0{,}2027}=0{,}3799$ → $\\theta\\approx22{,}3°$ → premier pic vers $2\\theta\\approx44{,}7°$."
+    }
+  ],
+  "suivi": "Aucune difficulté enregistrée pour l'instant (quiz et exercices pas encore traités).\nPoints à surveiller (erreurs fréquentes sur ce chapitre) :\n- Indices de Miller : inversion des intersections, plans parallèles à un axe (indice 0), indices négatifs.\n- Notations (hkl) / {hkl} / [uvw] / ⟨uvw⟩.\n- Maille HC : 6 atomes par maille hexagonale mais motif de 2 ; compacité 0,74 si c/a idéal.\n- Rayons atomiques CC (a√3/4) vs CFC (a√2/4) ; compacités 0,68 / 0,74.\n- Sites interstitiels : nombres et rayons relatifs (CC vs CFC).\n- Bragg : θ vs 2θ ; règles d'extinction ; CS et CC indiscernables avant le 7e pic.\nÀ mettre à jour dès que l'utilisateur communique ses résultats au quiz ou aux exercices."
+}

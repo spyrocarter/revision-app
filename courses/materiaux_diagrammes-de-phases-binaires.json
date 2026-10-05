@@ -1,0 +1,505 @@
+{
+  "matiere": "Matériaux (UEF MATI)",
+  "type": "CM",
+  "sujet": "Transformations de phases à l'équilibre – Diagrammes de phases binaires (Cours 2)",
+  "fiche_synthese": "# Matériaux (UEF MATI) — Cours 2 : Transformations de phases à l'équilibre (diagrammes binaires)\n\n**Légende** : [Support] = présent dans le cours ; [Complément] = ajouté (références classiques de métallurgie + recherches web).\n\n## Plan du cours\n1. Introduction · 2. Solutions solides (substitution, règles de Hume-Rothery, insertion) · 3. Composés définis · 4. Diagrammes binaires : définition, construction, lecture · 5. Miscibilité totale à l'état solide · 6. Miscibilité partielle : point eutectique, exemples, diagrammes complexes · 7. Calculs : règle de l'horizontale, segments inverses, formules de composés · 8. Relation avec les microstructures · 9. Conclusion\n\n## 1. Introduction [Support]\n- Les métaux sont rarement utilisés purs : on utilise des **alliages** = mélanges de métaux purs en proportions données (binaires = 2 éléments, ternaires = 3…).\n- **Phase** = partie homogène du matériau ayant une composition chimique et une structure propres. Alliage **monophasé** (1 phase) ou **polyphasé** (plusieurs).\n- À l'état solide, **deux types de phases** : les **solutions solides** et les **composés définis**.\n- [Complément] Un *eutectique* n'est PAS une phase : c'est un mélange de deux phases (un « constituant » microstructural).\n\n## 2. Solutions solides\n**Définition [Support]** : agrégat chimiquement homogène résultant de l'addition d'un ou plusieurs éléments étrangers dans un métal pur (le métal de base = solvant).\n- **Substitution** : les atomes étrangers prennent la place d'atomes du réseau. La structure d'origine n'est pas modifiée. On parle de « solution solide de B dans A » (B soluté, A solvant) ou de A dans B.\n- **Insertion** : les atomes étrangers se placent aux **interstices** du réseau. Ce sont de petits atomes : C, H, O, N, B.\n\n### 2.1 Selon la miscibilité\n| Cas | Nom | Exemple |\n|---|---|---|\n| Miscibilité en toute proportion | **Solution solide continue** | Au–Ag |\n| Existence d'une limite de solubilité | **Solution solide primaire** (α, β : en bout de diagramme, adossée à un corps pur) et/ou **intermédiaire** (γ : au milieu, détachée des corps purs) | Pb–Sn |\n\n- Primaire : α = B dissous dans A jusqu'à la limite de solubilité de B dans A ; β = A dans B. Entre les deux : domaine biphasé α+β.\n- Intermédiaire : γ existe sur un domaine de composition intermédiaire ; on a alors α, α+γ, γ, γ+β, β.\n- Limite de solubilité = composition maximale du soluté que le réseau accepte à une température donnée (courbe appelée **solvus** [Complément]).\n\n### 2.2 Conditions de solubilité continue : règles de Hume-Rothery [Support]\nA et B doivent avoir : (1) taille peu différente (règle des 15 %), (2) électronégativités peu différentes, (3) même structure cristallographique, (4) même valence.\n\n**Règle 1 – Effet de taille (« règle des 15 % »)** :\n$$\\frac{|r_{solvant}-r_{soluté}|}{r_{solvant}}\\le 0{,}15$$\n- Deux raisons : (i) si l'atome de soluté est assez petit pour se loger dans un site interstitiel, il sera presque toujours interstitiel plutôt qu'en substitution (raison géométrique) ; (ii) un atome plus grand ou plus petit déforme le réseau ; chaque atome ajouté augmente la déformation, ce qui limite la solubilité, jusqu'à ce qu'il soit plus favorable de réorganiser les atomes en une autre disposition qui minimise les contraintes.\n- « 15 % » = règle **empirique** pour savoir quand les contraintes deviennent trop fortes.\n- Exemple 1 : Sb (0,160 nm) / Bi (0,145 nm) : $\\frac{0{,}160-0{,}145}{0{,}160}\\approx 9{,}4\\,\\%$ (le support écrit 9,3 %) → solubilité continue.\n- Exemple 2 : Pb (0,175 nm) / Cu (0,128 nm) : $\\frac{0{,}175-0{,}128}{0{,}175}=26{,}8\\,\\%$ → limite de solubilité.\n- Piège : la valeur dépend du choix du solvant (dénominateur). Avec Cu comme solvant : $0{,}047/0{,}128=36{,}7\\,\\%$ ; la conclusion reste la même.\n\n**Règle 2 – Électronégativité** (2e caractéristique la plus importante) :\n$$\\frac{|\\chi_{solvant}-\\chi_{soluté}|}{\\chi_{solvant}}\\le 0{,}3$$\n- Raisonnement : un atome très électronégatif « prend » des électrons aux voisins. Grande différence d'électronégativité → attraction mutuelle → liaison ionique ou covalente (matériau « lié » chimiquement) plutôt que métallique → formation d'un **composé ordonné**.\n- Mais l'**entropie** favorise un mélange au hasard. Tant que la différence est assez faible pour que l'entropie « gagne », on a une solution solide ; sinon un composé ordonné.\n\n**Règle 3 – Structure** : même structure cristalline pour une solubilité appréciable. Un atome de substitution qui voudrait se « tasser » autrement que ses voisins déforme le réseau.\n\n**Règle 4 – Valence** (dernière règle, « avec la plupart des exceptions ») : valences similaires. Valence = nombre d'électrons sur la dernière couche partiellement ou totalement remplie. Les éléments mutuellement solubles sont en général dans la même colonne du tableau périodique (ou décalés d'une ou deux colonnes) ; solubilité maximale à valence identique. Illustration du support : Cu/Ag/Au (même colonne) et As/Sb/Bi (même colonne).\n\n[Complément] Autres éléments recoupés par le web : la solubilité d'un métal de valence plus élevée dans un solvant de valence plus faible est plus grande que l'inverse ; les règles sont empiriques et non suffisantes (ex. Cu–Ag : même structure CFC, Δr ≈ 12,5 %, valences égales, pourtant solubilité limitée → diagramme eutectique).\n\n### 2.3 Solutions solides d'insertion [Support]\nDans les structures compactes classiques (CC, CFC, HC), les petits atomes (C, H, O, N, B) se placent dans les interstices. Deux types de sites :\n- **Octaédrique** : site entouré de 6 atomes (octaèdre).\n- **Tétraédrique** : site entouré de 4 atomes (tétraèdre).\n\n| Structure | Site | Nombre / maille | Position | Rayon max du site |\n|---|---|---|---|---|\n| **CFC** | octaédrique | 4 | 1 au centre de la maille + 1 au milieu de chaque arête | $r_{site}=0{,}147\\,a$ |\n| **CFC** | tétraédrique | 8 | au ¼ des grandes diagonales | $r_{site}=0{,}079\\,a$ |\n| **CC** | octaédrique | 6 | centre de chaque face + milieu de chaque arête | $r_{site}=0{,}067\\,a$ |\n| **CC** | tétraédrique | 12 | au ¼ des arêtes, à mi-distance des côtés (position $(\\tfrac12,\\tfrac14,0)$) | $r_{site}=0{,}126\\,a$ |\n\n**[Complément] Démonstration des rayons (atomes durs en contact, $R$ = rayon atomique du solvant)** :\n- CFC : contact le long de la diagonale de face $4R=a\\sqrt2$, donc $R=0{,}354\\,a$. Site octaédrique au centre : distance aux atomes des centres de face $=a/2$, donc $r=a/2-R=0{,}146\\,a\\approx0{,}414\\,R$. Site tétraédrique en $(\\tfrac a4,\\tfrac a4,\\tfrac a4)$ : distance au sommet $=a\\sqrt3/4=0{,}433\\,a$, donc $r=0{,}433\\,a-R=0{,}079\\,a\\approx0{,}225\\,R$.\n- CC : contact le long de la grande diagonale $4R=a\\sqrt3$, donc $R=0{,}433\\,a$. Site octaédrique (centre de face) : distance au centre des mailles voisines $=a/2$, donc $r=a/2-R=0{,}067\\,a\\approx0{,}155\\,R$. Site tétraédrique $(\\tfrac a2,\\tfrac a4,0)$ : distance au centre de maille $=a\\sqrt{5}/4=0{,}559\\,a$, donc $r=0{,}559\\,a-R=0{,}126\\,a\\approx0{,}291\\,R$.\n- Comptage CFC : octa = 1 + 12×¼ = 4 ; tétra = 8 (dans le cube). Comptage CC : octa = 6 faces×½ + 12 arêtes×¼ = 6 ; tétra = 24 faces×½ = 12.\n- Piège : en CC le site **tétraédrique** (0,126 a) est plus grand que l'octaédrique (0,067 a), à l'inverse du CFC. Par ailleurs, ces sites sont plus petits que l'atome de C : l'insertion déforme toujours le réseau, d'où la faible solubilité du C dans le fer α (CC) vs le fer γ (CFC).\n- [Complément] HC : 2 sites octa + 4 sites tétra par maille (2 atomes), mêmes rayons relatifs que CFC (compacte). Règle de Hägg : insertion « simple » (carbures, nitrures, hydrures) si $r_X/r_M<0{,}59$.\n\n## 3. Composés définis [Support]\n- Deux espèces A et B co-cristallisent en cristaux de formule $A_xB_y$ ($x$, $y$ entiers) **uniquement à l'état solide** : ce mode particulier de cristallisation ne subsiste pas en phase liquide (qui reste un mélange de A et B). Cette forme du solide = **composé défini**.\n- **Intermétalliques** : AuCu, AuCu₃, CuZn, Al₂Cu, MgZn₂… **Métal–non métal** : TiC, ZrC, VC, TiN, Fe₃C…\n- Structures ordonnées illustrées : **L1₀** (type AuCu), **L1₂** (type AuCu₃), **« L2 »** (type CuZn, cubique centré ordonné ; dans la nomenclature courante B2/CsCl).\n- Sur un diagramme : une **ligne verticale** (composition fixe) ; solidification à **température constante** (palier).\n- [Complément] Fusion **congruente** : le composé fond sans changer de composition (maximum du liquidus : Cu₂Mg à 800 °C, CuMg₂ à 568 °C). Fusion **incongruente** : décomposition péritectique.\n\n## 4. Diagrammes de phases (ou d'équilibre) binaires\n### 4.1 Définition [Support]\n- Représentation, dans le plan **isobare** (température – composition), de la constitution physico-chimique d'un alliage dans son **état thermodynamique d'équilibre**.\n- Donne en fonction de T : la **nature**, la **composition chimique**, les **fractions massiques** des phases en présence pour un alliage de concentration donnée.\n- Décrit les équilibres liquide ⇔ solide et solide ⇔ solide qui régissent la solidification.\n- Axes : T en ordonnée ; composition en abscisse (% masse ou % atomes de B, de 100 % A à 100 % B). Composition globale X = **verticale** ; un état = point C(T, X). À X donné, le nombre de phases varie avec T.\n\n### 4.2 Construction expérimentale [Support]\n- **Courbes de refroidissement** (analyse thermique simple ATS ou différentielle ATD) : un thermocouple (soudure de référence à 0 °C) mesure T(t) du système, enregistrée. On repère les **« accidents »** (ruptures de pente, paliers). Complété par observations et diffraction de RX.\n- On reporte sur le diagramme les points d'accident en fonction de la composition, puis on les relie.\n- **Solidification à T constante (palier)** : (1) métal pur, (2) composé défini (alliage homogène, combinaison chimiquement définie), (3) eutectique (alliage hétérogène, mélange particulier).\n- **Solidification à T variable** : solution solide. Début en $T_L$ (liquidus), fin en $T_S$ (solidus) ; entre les deux, L + S (pente plus faible car dégagement de chaleur latente).\n- Exemple de diagramme eutectique simple construit à partir de 5 courbes : 1 = A pur (palier à $T_{fA}$), 2 = alliage hypo-eutectique (rupture en TL puis palier à $T_E$), 3 = composition eutectique (palier unique à $T_E$), 4 = hyper-eutectique (rupture puis palier à $T_E$), 5 = B pur (palier).\n- Variance indiquée sur les courbes : V=1 puis V=0 (palier) pour un corps pur ; V=2 (liquide) → V=1 (biphasé, rupture) → V=0 (palier eutectique) → V=1 pour un alliage.\n\n### 4.3 [Complément] Règle des phases de Gibbs\n- Variance (P fixée) : $$v=c+1-\\varphi$$ avec $c$ = nombre de constituants (2 pour un binaire) et $\\varphi$ = nombre de phases. Corps pur : $v=2-\\varphi$.\n- Binaire isobare : $\\varphi=1\\Rightarrow v=2$ (T et X libres) ; $\\varphi=2\\Rightarrow v=1$ (T fixée ⇒ compositions des phases fixées : règle de l'horizontale) ; $\\varphi=3\\Rightarrow v=0$ (transformation **invariante**, palier, T et compositions fixes).\n- Invariants usuels : eutectique $L\\rightleftharpoons\\alpha+\\beta$ ; eutectoïde $\\gamma\\rightleftharpoons\\alpha+\\beta$ (solide → 2 solides) ; péritectique $L+\\alpha\\rightleftharpoons\\beta$ ; péritectoïde $\\alpha+\\beta\\rightleftharpoons\\gamma$.\n\n## 5. Miscibilité totale à l'état solide [Support]\n- Éléments proches (Cu–Ni, Bi–Sb, Co–Ni, Au–Ag) ou partie d'un diagramme plus complexe. Diagramme en **fuseau** : liquidus au-dessus, solidus en-dessous, domaines L / L+S / solution solide continue.\n- **Exemple Bi–Sb** (T de fusion : Bi 271,4 °C ; Sb 630,7 °C) : structures identiques (rhomboédriques) ; rayons Bi 145 pm, Sb 160 pm (Δ < 15 %) ; valence identique (couche externe à 5 électrons : Bi 2-8-18-32-18-**5**, Sb 2-8-18-18-**5**) ; électronégativité très proche (Bi 1,90 ; Sb 2,05). Les 4 règles de Hume-Rothery sont respectées → solution solide (Bi,Sb) en toute proportion.\n- Solidification à T variable : début en TL, fin en TS ; pas de palier.\n\n## 6. Miscibilité partielle à l'état solide : diagramme à point eutectique\n### 6.1 Point eutectique [Support]\n- **Point eutectique** = point à l'intersection des deux courbes du liquidus ; composition à laquelle le mélange a sa **température minimale en phase liquide**.\n- Propriétés : (i) $T_E$ = T la plus basse à laquelle on observe une phase liquide ; (ii) $T_E$ < T de fusion de chacun des corps purs ; (iii) un mélange solide de composition eutectique chauffé se liquéfie **intégralement à $T_E$**.\n- Réaction : $$L_E\\rightleftharpoons\\alpha_{S_1}+\\beta_{S_3}\\ (+Q)$$ à $T_E$ constante (palier, v=0). S₁ et S₃ = extrémités du palier (compositions limites de α et β à $T_E$).\n\n### 6.2 Exemples du support\n- **Eau/sel** : eutectique à −23 °C pour 23,6 % de sel selon le support ; domaines : solution salée, glace + solution salée, sel + solution salée, glace + eutectique ou sel + eutectique. Application : salage des routes. [Complément] Les références indiquent plutôt −21,1 °C et 23,3 % massique de NaCl (hydrohalite NaCl·2H₂O) ; en dessous de cette température le salage ne fait plus fondre la glace.\n- **Ga–In** : Ga fond à 29,77 °C ; In à 156,63 °C ; eutectique à 15,3 °C pour 21,4 % massique In ; limite de (In) 98,7 % → alliage liquide à température ambiante.\n- **Pb–Sn** (diagramme de référence du cours) : Pb fond à 327 °C, Sn à 232 °C. **Eutectique : 61,9 % massique Sn (38,1 % Pb), 183 °C.** α = solution solide d'étain dans le plomb (limite 18,3 % Sn à 183 °C) ; β = solution solide de plomb dans l'étain (limite 97,8 % Sn à 183 °C). Domaines : L, α+L, β+L, α, β, α+β. Application : soudure Sn60Pb40 (fusion ~180 °C, proche de l'eutectique). [Complément] Pb et Sn ont Δr ≈ 13,7 % (<15 %) mais des structures différentes (CFC / quadratique) → solubilité limitée.\n- **Fe–U** : plusieurs eutectiques ; le mélange [90 % U + 10 % Fe] fond à ≈ 750 °C (annoncé dans le support) → utilisation d'uranium appauvri (sous-produit de l'enrichissement) pour des munitions anti-char. Transformations allotropiques visibles (δFe/γFe/αFe ; γU/βU/αU) ; composé UFe₂ à 1230 °C (maximum).\n\n### 6.3 Diagrammes complexes (exemple Cu–Mg) [Support]\nLecture : (1) solution solide primaire (Cu) ou α ; (2) solution solide intermédiaire Cu₂Mg (domaine étroit) ; (3) composé défini CuMg₂ (ligne verticale) ; (4), (5), (6) points eutectiques (487 °C, 552 °C, 726 °C) ; (7) limite de solubilité (de Mg dans Cu). T de fusion : Cu 1084,87 °C ; Mg 650 °C ; maximum 800 °C (Cu₂Mg) et 568 °C (CuMg₂).\n- Méthode « **remplissage** » : on nomme chaque domaine : (Cu) ; α+L ; Cu₂Mg+α ; Cu₂Mg+L (deux domaines) ; Cu₂Mg+CuMg₂ ; CuMg₂+L (deux domaines) ; CuMg₂+(Mg) ; L+(Mg) ; L.\n- Méthode « **découpage** » : on divise le diagramme complexe en plusieurs diagrammes simples (entre Cu et Cu₂Mg ; entre Cu₂Mg et CuMg₂ ; entre CuMg₂ et Mg), chacun étudié comme un diagramme eutectique simple.\n- Eutectiques : (6) $L\\rightleftharpoons(Cu)+Cu_2Mg$ à 726 °C ; (5) $L\\rightleftharpoons Cu_2Mg+CuMg_2$ à 552 °C ; (4) $L\\rightleftharpoons CuMg_2+(Mg)$ à 487 °C.\n\n## 7. Calculs sur les diagrammes\n### 7.1 Formule d'un composé défini (exemple Cu–Mg, $M_{Cu}=63{,}5$ et $M_{Mg}=24{,}3$ g/mol)\nPrincipe : pour 100 g, nombre de moles de chaque élément = % massique / M ; le rapport donne la stœchiométrie.\n- $Cu_xMg_y$ à 16 % Mg (84 % Cu) : $$x=\\frac{84}{63{,}5}=1{,}32\\quad y=\\frac{16}{24{,}3}\\approx0{,}66\\quad\\frac{x}{y}\\approx2\\Rightarrow Cu_2Mg$$\n- $Cu_vMg_w$ à 43 % Mg (57 % Cu) : $$v=\\frac{57}{63{,}5}\\approx0{,}90\\quad w=\\frac{43}{24{,}3}\\approx1{,}77\\quad\\frac{w}{v}\\approx2\\Rightarrow CuMg_2$$\n- Remarque : le support écrit « v = 57/63,5 = 0, » (tronqué : 0,9) et y = 0,65.\n- Vérification : $w_{Mg}(Cu_2Mg)=\\frac{24{,}3}{2\\times63{,}5+24{,}3}=16{,}1\\,\\%$ ; $w_{Mg}(CuMg_2)=\\frac{2\\times24{,}3}{63{,}5+2\\times24{,}3}=43{,}4\\,\\%$.\n\n### 7.2 Règle de l'horizontale (nature et composition des phases) [Support]\nEn domaine **biphasé**, à T donnée, la nature et la composition des 2 phases sont parfaitement déterminées : on trace l'horizontale à T ; elle coupe les frontières du domaine en X₁ et X₂.\n- À T donnée, pour X₁ < X < X₂ : 2 phases ; phase 1 : teneur X₁ en B et (100 − X₁) en A ; phase 2 : teneur X₂ en B et (100 − X₂) en A.\n- **Exemple Pb–Sn à 225 °C, 25 % Sn** : α (X₁ = 16 % Sn, 84 % Pb) + L (X₂ = 47 % Sn, 53 % Pb).\n\n### 7.3 Règle des segments inverses (proportion des phases) [Support]\nDomaines biphasés : à T donnée, les **proportions** des deux phases sont déterminées. Soit M(X₁), N(X), P(X₂) sur l'horizontale, m₁ = masse de phase 1 (côté X₁), m₂ = masse de phase 2, m = masse totale.\n- Bilans : $$m_1+m_2=m$$ $$m_1\\frac{X_1}{100}+m_2\\frac{X_2}{100}=m\\frac{X}{100}$$\n- Étape clé : on remplace $m_2=m-m_1$ ; $m_1X_1+(m-m_1)X_2=mX$ ; $m_1(X_1-X_2)=m(X-X_2)$, d'où : $$\\frac{m_1}{m}=\\frac{X_2-X}{X_2-X_1}=\\frac{PN}{PM}$$ $$\\frac{m_2}{m}=\\frac{X-X_1}{X_2-X_1}=\\frac{NM}{PM}$$\n- Mnémotechnique : la fraction d'une phase = **bras opposé** (segment entre l'alliage et la frontière de l'**autre** phase) / longueur totale de l'horizontale.\n- **Exemple Pb–Sn, 225 °C, 25 % Sn** : $$W_\\alpha=\\frac{47-25}{47-16}=71\\,\\%\\quad W_L=\\frac{25-16}{47-16}=29\\,\\%$$\n- Conditions : équilibre thermodynamique, domaine biphasé, composition en % massique → fractions massiques (si l'axe est en % atomique → fractions molaires ; conversion $w_B=\\frac{x_BM_B}{x_AM_A+x_BM_B}$). Sur un palier invariant (3 phases) on applique la règle juste au-dessus et juste en dessous de $T_E$.\n\n## 8. Relation avec les microstructures [Support]\n**Alliage 1** (X inférieur à la limite de solubilité à toute T, solution solide primaire α) : liquide → germination et croissance de α au sein du liquide → solidification totale, création des **joints de grains** → microstructure finale : **grains de phase α**.\n**Alliage 2** (X compris entre la limite de solubilité à T ambiante et celle à $T_E$) : même début (liquide → germes de α → grains de α) puis, en refroidissant, **dépassement de la limite de solubilité (LS)** → **précipitation de β aux joints de grains** → microstructure finale : grains α + β.\n**Alliage eutectique** (X = X_E) : $L_E\\rightleftharpoons\\alpha_{S_1}+\\beta_{S_3}(+Q)$. Un germe de α (riche en A) se forme et rejette B dans le liquide ; cela favorise la germination de β (riche en B) de part et d'autre, qui rejette A, ce qui favorise de nouveau α : croissance coopérative simultanée → **eutectique lamellaire** (alternance de lamelles α et β).\n**Alliage hypo-eutectique** (X(S₁) < X < X_E) : liquide → germination/croissance de **α proeutectique** (grains) entre TL et $T_E$ → à $T_E$ le liquide restant (composition E) se transforme en eutectique lamellaire → microstructure finale : grains de α (en noir sur la micrographie) entourés d'eutectique en lamelles.\n[Complément] Hyper-eutectique (X_E < X < X(S₃)) : symétrique, **β proeutectique** + eutectique.\n**Résumé (alliages 1 à 4)** : 1 = grains α ; 2 = α + β précipité aux joints ; 3 = eutectique 100 % lamellaire α+β ; 4 = α primaire + eutectique lamellaire.\n\n## 9. Conclusion [Support]\nLe diagramme d'équilibre est l'**outil de base du métallurgiste**. Il donne : le type de transformation (liquide/solide, solide/solide) ; les températures significatives (eutectique, eutectoïde…) ; la nature des phases (liquide, solution solide, composé défini) ; la composition des phases (**règle de l'horizontale**) ; la proportion des phases (**règle des segments inverses**).\n\n## Pièges classiques\n- Eutectique ≠ phase ni composé défini : c'est un **mélange hétérogène de deux phases**.\n- Règle des 15 % et règle des segments inverses : bien choisir solvant (dénominateur) et bras opposé.\n- Les règles de Hume-Rothery sont **empiriques**, pas des lois : toutes respectées ne garantit pas la miscibilité totale (Cu–Ag).\n- Le diagramme est à l'**équilibre** (refroidissement infiniment lent) : en pratique, ségrégation dendritique (« coring ») et sous-refroidissement existent [Complément].\n- Rayons des sites : en CC le site tétraédrique est plus grand que l'octaédrique.\n- Composition en % masse vs % atomes : vérifier l'axe avant d'appliquer la règle des segments inverses.\n- Solution solide : T variable (2 ruptures de pente) ; palier = corps pur, composé défini ou eutectique.\n\n## [Complément] Compléments utiles\n- **Durcissement par solution solide** : les atomes de soluté créent des champs de contraintes qui gênent les dislocations → résistance mécanique plus élevée que le métal pur.\n- **Fe–C (annonce)** : ferrite α (CC) dissout ≈ 0,022 % C max (727 °C) ; austénite γ (CFC) dissout ≈ 2,14 % C max (1147 °C), dans les sites octaédriques ; cémentite Fe₃C (6,67 % C) = composé défini ; eutectoïde à ≈ 0,77 % C (727 °C), eutectique à ≈ 4,3 % C (1147 °C).\n- **Notes sur le support** : « rayons ioniques » (diapo 6) = rayons **atomiques** ; la diapo 23 donne −23 °C / 23,6 % pour eau/sel (littérature : −21,1 °C / 23,3 %) ; diapo 31 : lire v ≈ 0,9 ; diapo 15 : « L2 » = type CsCl/B2.\n",
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "Un « eutectique » lamellaire α+β (observé en micrographie) est :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Une phase unique de composition fixe"
+        },
+        {
+          "id": "b",
+          "text": "Un mélange hétérogène de deux phases (α et β)"
+        },
+        {
+          "id": "c",
+          "text": "Un composé défini de formule AxBy"
+        },
+        {
+          "id": "d",
+          "text": "Une solution solide intermédiaire"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Une phase est homogène (composition et structure propres). L'eutectique est un mélange de deux phases α et β formées simultanément à T_E ; c'est un constituant microstructural, pas une phase, et pas un composé défini."
+    },
+    {
+      "id": "q2",
+      "question": "Pb (r = 0,175 nm) et Cu (r = 0,128 nm) : que donne la règle des 15 % (Pb solvant) et que conclut-on ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "9,3 % : solubilité continue"
+        },
+        {
+          "id": "b",
+          "text": "26,8 % : limite de solubilité"
+        },
+        {
+          "id": "c",
+          "text": "26,8 % : solubilité continue"
+        },
+        {
+          "id": "d",
+          "text": "0,047 nm : solubilité continue"
+        }
+      ],
+      "correct": "b",
+      "explanation": "|0,175 − 0,128| / 0,175 = 26,8 % > 15 % : les contraintes de réseau sont trop fortes, donc solubilité limitée (9,3 % est le résultat de Sb/Bi)."
+    },
+    {
+      "id": "q3",
+      "question": "Pourquoi Bi et Sb sont-ils totalement miscibles à l'état solide ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Ils ont des structures différentes mais des rayons identiques"
+        },
+        {
+          "id": "b",
+          "text": "Ils respectent les 4 règles de Hume-Rothery : même structure (rhomboédrique), Δr ≈ 9 %, même valence (5), électronégativités 1,90 et 2,05"
+        },
+        {
+          "id": "c",
+          "text": "Parce que leur écart de températures de fusion est faible"
+        },
+        {
+          "id": "d",
+          "text": "Parce qu'ils forment un composé défini BiSb"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Structure identique, Δr < 15 %, valence identique (5 électrons externes), électronégativités proches : toutes les conditions de la solubilité continue sont remplies. Les T de fusion (271,4 et 630,7 °C) sont très différentes et ne sont pas un critère."
+    },
+    {
+      "id": "q4",
+      "question": "Structure CFC de paramètre a : nombre de sites octaédriques par maille et rayon maximal d'un atome inséré ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "4 sites, r = 0,147 a"
+        },
+        {
+          "id": "b",
+          "text": "8 sites, r = 0,079 a"
+        },
+        {
+          "id": "c",
+          "text": "6 sites, r = 0,067 a"
+        },
+        {
+          "id": "d",
+          "text": "12 sites, r = 0,126 a"
+        }
+      ],
+      "correct": "a",
+      "explanation": "CFC : 4 octaédriques (1 au centre + 12 arêtes × ¼), r = a/2 − R = 0,147 a. Les autres propositions sont : tétraédrique CFC (8 ; 0,079 a), octaédrique CC (6 ; 0,067 a), tétraédrique CC (12 ; 0,126 a)."
+    },
+    {
+      "id": "q5",
+      "question": "Dans une structure CC, quel site interstitiel est le plus grand ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "L'octaédrique (0,067 a)"
+        },
+        {
+          "id": "b",
+          "text": "Le tétraédrique (0,126 a)"
+        },
+        {
+          "id": "c",
+          "text": "Ils ont la même taille"
+        },
+        {
+          "id": "d",
+          "text": "Aucun site interstitiel n'existe en CC"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Piège : à l'inverse du CFC, en CC le site tétraédrique (0,126 a, 12 sites/maille) est plus grand que l'octaédrique (0,067 a, 6 sites/maille). Dans les deux cas le C (≈ 0,071 nm) est plus gros que le site, d'où la faible solubilité du C dans le fer α."
+    },
+    {
+      "id": "q6",
+      "question": "On refroidit un alliage de composition exactement eutectique. Sa courbe de refroidissement présente :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Deux ruptures de pente (TL puis TS), sans palier"
+        },
+        {
+          "id": "b",
+          "text": "Un seul palier à T_E (variance nulle), sans rupture de pente préalable dans le liquide"
+        },
+        {
+          "id": "c",
+          "text": "Une rupture de pente en TL puis un palier à T_E"
+        },
+        {
+          "id": "d",
+          "text": "Aucun accident : T décroît régulièrement"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Liquide (v = 2) jusqu'à T_E, puis 3 phases (L, α, β) donc v = 3 − 3 = 0 : palier. (a) = solution solide ; (c) = alliage hypo ou hyper-eutectique."
+    },
+    {
+      "id": "q7",
+      "question": "Pour un binaire à pression fixée, la variance au palier eutectique (3 phases en équilibre) vaut :",
+      "options": [
+        {
+          "id": "a",
+          "text": "2"
+        },
+        {
+          "id": "b",
+          "text": "1"
+        },
+        {
+          "id": "c",
+          "text": "0"
+        },
+        {
+          "id": "d",
+          "text": "3"
+        }
+      ],
+      "correct": "c",
+      "explanation": "v = c + 1 − φ = 2 + 1 − 3 = 0 : T et compositions des 3 phases sont fixées, d'où le palier."
+    },
+    {
+      "id": "q8",
+      "question": "Laquelle de ces affirmations sur l'eutectique est FAUSSE ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "T_E est la plus basse température où l'on observe du liquide"
+        },
+        {
+          "id": "b",
+          "text": "T_E est inférieure aux T de fusion des deux corps purs"
+        },
+        {
+          "id": "c",
+          "text": "Un solide de composition eutectique chauffé se liquéfie entièrement à T_E"
+        },
+        {
+          "id": "d",
+          "text": "T_E est comprise entre les T de fusion des deux corps purs"
+        }
+      ],
+      "correct": "d",
+      "explanation": "T_E est inférieure aux deux T de fusion (ex. Pb–Sn : 183 °C contre 327 °C et 232 °C). Les trois autres propositions sont les propriétés du support."
+    },
+    {
+      "id": "q9",
+      "question": "Pb–Sn à 225 °C, alliage à 25 % Sn : α (16 % Sn) + L (47 % Sn). Fractions massiques ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "α = 29 %, L = 71 %"
+        },
+        {
+          "id": "b",
+          "text": "α = 71 %, L = 29 %"
+        },
+        {
+          "id": "c",
+          "text": "α = 16 %, L = 47 %"
+        },
+        {
+          "id": "d",
+          "text": "α = 25 %, L = 75 %"
+        }
+      ],
+      "correct": "b",
+      "explanation": "W_α = (47 − 25)/(47 − 16) = 22/31 = 71 % ; W_L = (25 − 16)/31 = 29 %. Piège : prendre le bras adjacent au lieu du bras opposé (c'est l'alliage proche de α qui contient beaucoup de α)."
+    },
+    {
+      "id": "q10",
+      "question": "Composé défini Cu–Mg à 43 % massique de Mg (M_Cu = 63,5 ; M_Mg = 24,3 g/mol) : formule ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Cu₂Mg"
+        },
+        {
+          "id": "b",
+          "text": "CuMg₂"
+        },
+        {
+          "id": "c",
+          "text": "CuMg"
+        },
+        {
+          "id": "d",
+          "text": "Cu₃Mg₂"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Cu : 57/63,5 ≈ 0,90 mol ; Mg : 43/24,3 ≈ 1,77 mol ; rapport Mg/Cu ≈ 2 donc CuMg₂ (Cu₂Mg correspond à 16 % Mg)."
+    },
+    {
+      "id": "q11",
+      "question": "Alliage à solution solide primaire α qui, en refroidissant, franchit la limite de solubilité (LS) : microstructure finale ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Grains α uniquement"
+        },
+        {
+          "id": "b",
+          "text": "Grains α avec phase β précipitée aux joints de grains"
+        },
+        {
+          "id": "c",
+          "text": "Eutectique lamellaire α+β"
+        },
+        {
+          "id": "d",
+          "text": "Grains de liquide résiduel"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Au-delà de la LS la phase α ne peut plus dissoudre tout le soluté : précipitation de β, en particulier aux joints de grains (alliage 2 du support). Grains α seuls = alliage sous la limite à toute T."
+    },
+    {
+      "id": "q12",
+      "question": "Alliage hypo-eutectique X(S₁) < X < X_E, microstructure finale à l'équilibre ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "100 % eutectique lamellaire"
+        },
+        {
+          "id": "b",
+          "text": "Grains de α proeutectique + eutectique lamellaire (α+β)"
+        },
+        {
+          "id": "c",
+          "text": "Grains de β proeutectique + eutectique"
+        },
+        {
+          "id": "d",
+          "text": "Grains de α uniquement"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Entre TL et T_E se forment des grains de α primaire ; à T_E le liquide restant de composition E se transforme en eutectique lamellaire. Le cas (c) correspond à un alliage hyper-eutectique."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "recto": "Phase : définition ?",
+      "verso": "Partie homogène du matériau ayant une composition chimique et une structure propres (alliage monophasé ou polyphasé)."
+    },
+    {
+      "id": "f2",
+      "recto": "Deux types de phases à l'état solide ?",
+      "verso": "Solutions solides et composés définis."
+    },
+    {
+      "id": "f3",
+      "recto": "Solution solide de substitution vs d'insertion ?",
+      "verso": "Substitution : atomes étrangers remplacent des atomes du réseau (structure inchangée). Insertion : petits atomes (C, H, O, N, B) dans les interstices."
+    },
+    {
+      "id": "f4",
+      "recto": "Solution solide continue / primaire / intermédiaire ?",
+      "verso": "Continue : miscibilité en toute proportion (Au–Ag). Primaire (α, β) : en bout de diagramme, limite de solubilité (Pb–Sn). Intermédiaire (γ) : au milieu du diagramme, détachée des corps purs."
+    },
+    {
+      "id": "f5",
+      "recto": "Les 4 conditions de solubilité continue (Hume-Rothery) ?",
+      "verso": "Tailles proches (15 %), électronégativités proches, même structure cristalline, même valence."
+    },
+    {
+      "id": "f6",
+      "recto": "Règle des 15 % (formule) ?",
+      "verso": "$$\\frac{|r_{solvant}-r_{soluté}|}{r_{solvant}}\\le 0{,}15$$ Règle empirique ; dépend du choix du solvant."
+    },
+    {
+      "id": "f7",
+      "recto": "Règle d'électronégativité (formule du cours) ?",
+      "verso": "$$\\frac{|\\chi_{solvant}-\\chi_{soluté}|}{\\chi_{solvant}}\\le 0{,}3$$ Sinon liaison ionique/covalente et composé ordonné (l'entropie favorise le mélange au hasard)."
+    },
+    {
+      "id": "f8",
+      "recto": "Pb/Cu et Sb/Bi : résultat de la règle des 15 % ?",
+      "verso": "Sb/Bi : ≈ 9,3–9,4 % → solubilité continue. Pb/Cu : 26,8 % → limite de solubilité."
+    },
+    {
+      "id": "f9",
+      "recto": "Effet de valence ?",
+      "verso": "Valences similaires ; éléments solubles dans la même colonne du tableau (ou décalés de 1–2 colonnes) ; solubilité maximale à valence identique (avec beaucoup d'exceptions)."
+    },
+    {
+      "id": "f10",
+      "recto": "CFC : sites octaédriques ?",
+      "verso": "4 sites/maille (1 au centre + 1 au milieu de chaque arête) ; $r_{site}=0{,}147\\,a$ ($\\approx0{,}414R$)."
+    },
+    {
+      "id": "f11",
+      "recto": "CFC : sites tétraédriques ?",
+      "verso": "8 sites/maille (au ¼ des grandes diagonales) ; $r_{site}=0{,}079\\,a$ ($\\approx0{,}225R$)."
+    },
+    {
+      "id": "f12",
+      "recto": "CC : sites octaédriques ?",
+      "verso": "6 sites/maille (centre de chaque face + milieu de chaque arête) ; $r_{site}=0{,}067\\,a$ ($\\approx0{,}155R$)."
+    },
+    {
+      "id": "f13",
+      "recto": "CC : sites tétraédriques ?",
+      "verso": "12 sites/maille (au ¼ des arêtes, à mi-distance des côtés) ; $r_{site}=0{,}126\\,a$ ($\\approx0{,}291R$) : plus grands que les octaédriques en CC."
+    },
+    {
+      "id": "f14",
+      "recto": "Octaédrique vs tétraédrique : coordinence ?",
+      "verso": "Octaédrique : 6 atomes voisins (octaèdre). Tétraédrique : 4 atomes voisins (tétraèdre)."
+    },
+    {
+      "id": "f15",
+      "recto": "Composé défini : définition et exemples ?",
+      "verso": "Cristaux $A_xB_y$ (x, y entiers) n'existant qu'à l'état solide. Intermétalliques : AuCu, AuCu₃, CuZn, Al₂Cu, MgZn₂. Métal–non métal : TiC, ZrC, VC, TiN, Fe₃C."
+    },
+    {
+      "id": "f16",
+      "recto": "Structures L1₀, L1₂, L2 : types ?",
+      "verso": "L1₀ = type AuCu ; L1₂ = type AuCu₃ ; « L2 » = type CuZn (cubique centré ordonné, B2)."
+    },
+    {
+      "id": "f17",
+      "recto": "Diagramme de phases binaire : définition ?",
+      "verso": "Représentation dans le plan isobare (T, composition) de la constitution physico-chimique d'un alliage à l'équilibre thermodynamique : nature, composition, fractions massiques des phases."
+    },
+    {
+      "id": "f18",
+      "recto": "Construction expérimentale d'un diagramme ?",
+      "verso": "Courbes de refroidissement (ATS / ATD) avec thermocouple ; on repère les accidents (ruptures de pente, paliers), on les reporte selon la composition et on relie ; complément par RX."
+    },
+    {
+      "id": "f19",
+      "recto": "Quelles solidifications donnent un palier ?",
+      "verso": "Métal pur, composé défini, eutectique (T constante). Solution solide : T variable entre TL (début) et TS (fin)."
+    },
+    {
+      "id": "f20",
+      "recto": "Variance (Gibbs) pour un binaire isobare ?",
+      "verso": "$$v=c+1-\\varphi=3-\\varphi$$ φ=1 → v=2 ; φ=2 → v=1 ; φ=3 → v=0 (palier invariant)."
+    },
+    {
+      "id": "f21",
+      "recto": "Point eutectique : définition ?",
+      "verso": "Intersection des deux liquidus ; composition pour laquelle le mélange a sa température minimale en phase liquide."
+    },
+    {
+      "id": "f22",
+      "recto": "Propriétés de l'eutectique ?",
+      "verso": "T_E = T la plus basse où existe du liquide ; T_E < T de fusion des corps purs ; un mélange solide de composition eutectique fond intégralement à T_E."
+    },
+    {
+      "id": "f23",
+      "recto": "Réaction eutectique ?",
+      "verso": "$$L_E\\rightleftharpoons\\alpha_{S_1}+\\beta_{S_3}\\ (+Q)$$ à T_E constante."
+    },
+    {
+      "id": "f24",
+      "recto": "Coordonnées de l'eutectique Pb–Sn ?",
+      "verso": "61,9 % massique Sn (38,1 % Pb) ; 183 °C. α : Sn dans Pb (limite 18,3 %) ; β : Pb dans Sn (limite 97,8 %)."
+    },
+    {
+      "id": "f25",
+      "recto": "Eutectique eau/sel (support) ?",
+      "verso": "−23 °C à 23,6 % sel selon le support (littérature NaCl–H₂O : ≈ −21,1 °C, 23,3 % massique) ; application : salage des routes."
+    },
+    {
+      "id": "f26",
+      "recto": "Règle de l'horizontale ?",
+      "verso": "En domaine biphasé à T donnée, l'horizontale coupe les frontières en X₁ et X₂ : ce sont les compositions des 2 phases (teneur X₁ en B pour la phase 1, X₂ pour la phase 2)."
+    },
+    {
+      "id": "f27",
+      "recto": "Règle des segments inverses ?",
+      "verso": "$$\\frac{m_1}{m}=\\frac{X_2-X}{X_2-X_1}=\\frac{PN}{PM}$$ $$\\frac{m_2}{m}=\\frac{X-X_1}{X_2-X_1}=\\frac{NM}{PM}$$ Fraction = bras opposé / longueur totale."
+    },
+    {
+      "id": "f28",
+      "recto": "Bilans qui donnent les segments inverses ?",
+      "verso": "$$m_1+m_2=m$$ $$m_1\\frac{X_1}{100}+m_2\\frac{X_2}{100}=m\\frac{X}{100}$$"
+    },
+    {
+      "id": "f29",
+      "recto": "Pb–Sn, 225 °C, 25 % Sn : phases et fractions ?",
+      "verso": "α (16 % Sn) 71 % ; L (47 % Sn) 29 %."
+    },
+    {
+      "id": "f30",
+      "recto": "Formule d'un composé défini à partir du % massique ?",
+      "verso": "x = %A / M_A et y = %B / M_B, puis rapport x/y entier. Cu–Mg : 16 % Mg → Cu₂Mg ; 43 % Mg → CuMg₂."
+    },
+    {
+      "id": "f31",
+      "recto": "Diagramme complexe : deux méthodes ?",
+      "verso": "« Remplissage » : nommer chaque domaine. « Découpage » : diviser en plusieurs diagrammes simples."
+    },
+    {
+      "id": "f32",
+      "recto": "Microstructure alliage eutectique ?",
+      "verso": "Eutectique lamellaire : alternance de lamelles α et β (germination simultanée, rejet de B par α et de A par β)."
+    },
+    {
+      "id": "f33",
+      "recto": "Microstructure alliage hypo-eutectique ?",
+      "verso": "Grains de α proeutectique + eutectique lamellaire (α+β)."
+    },
+    {
+      "id": "f34",
+      "recto": "Microstructure alliage dépassant la limite de solubilité ?",
+      "verso": "Grains α + précipités β aux joints de grains."
+    },
+    {
+      "id": "f35",
+      "recto": "Données Bi–Sb (miscibilité totale) ?",
+      "verso": "Structures rhomboédriques ; Bi 145 pm, Sb 160 pm ; valence 5 ; χ = 1,90 / 2,05 ; Tf = 271,4 °C / 630,7 °C."
+    },
+    {
+      "id": "f36",
+      "recto": "Ce que fournit un diagramme d'équilibre ?",
+      "verso": "Type de transformation, températures significatives, nature des phases, composition (horizontale), proportion (segments inverses)."
+    }
+  ],
+  "exercices": [
+    {
+      "titre": "Exercice 1 – Solutions solides : règles de Hume-Rothery et sites interstitiels",
+      "difficulte": 1,
+      "enonce": "Données : Cu : $r=0{,}128$ nm, CFC, $\\chi=1{,}9$, valence 1 ; Ni : $r=0{,}125$ nm, CFC, $\\chi=1{,}8$ ; Zn : $r=0{,}133$ nm, HC, $\\chi=1{,}6$, valence 2 ; Pb : $r=0{,}175$ nm, CFC, $\\chi=1{,}8$, valence 2. Le carbone a un rayon $r_C\\approx0{,}071$ nm.\n\n1) Pour chacun des éléments Ni, Zn, Pb en solution dans Cu, appliquer les règles de Hume-Rothery (taille, électronégativité, structure, valence) et prévoir le type de solubilité.\n2) Le fer γ (CFC, $a\\approx0{,}365$ nm) et le fer α (CC, $a\\approx0{,}2866$ nm) dissolvent du carbone en insertion. Calculer le rayon des sites octaédriques du fer γ et des sites octaédrique et tétraédrique du fer α, et comparer à $r_C$.\n3) Sachant que le fer γ dissout au maximum 2,14 % massique de C ($M_{Fe}=55{,}85$, $M_C=12{,}01$ g/mol), calculer le taux d'occupation des sites octaédriques.",
+      "corrige": "**1) Hume-Rothery (solvant = Cu)**\n- Ni : $\\frac{|0{,}128-0{,}125|}{0{,}128}=2{,}3\\,\\%\\le15\\,\\%$ ; $\\frac{|1{,}9-1{,}8|}{1{,}9}=5{,}3\\,\\%\\le30\\,\\%$ ; même structure CFC ; valences proches. Toutes les règles sont respectées → **solubilité totale** (diagramme en fuseau, Cu–Ni).\n- Zn : $\\frac{0{,}133-0{,}128}{0{,}128}=3{,}9\\,\\%$ ; $\\frac{1{,}9-1{,}6}{1{,}9}=15{,}8\\,\\%\\le30\\,\\%$ ; mais structure HC ≠ CFC et valence 2 ≠ 1 → **solubilité limitée** (solution solide primaire + phases intermédiaires).\n- Pb : $\\frac{0{,}175-0{,}128}{0{,}128}=36{,}7\\,\\%>15\\,\\%$ (avec Pb solvant : 26,8 %) → déformation du réseau trop forte → **solubilité très limitée**.\n\n**2) Sites interstitiels**\n- Fer γ (CFC) : $r_{octa}=0{,}147\\,a=0{,}147\\times0{,}365=0{,}0537$ nm ; rapport $r_C/r_{site}=0{,}071/0{,}0537\\approx1{,}32$ : l'atome de C est plus gros que le site, il déforme le réseau mais l'insertion reste possible.\n- Fer α (CC) : $r_{octa}=0{,}067\\,a=0{,}0192$ nm (rapport ≈ 3,7) ; $r_{tetra}=0{,}126\\,a=0{,}0361$ nm (rapport ≈ 2,0). Le site tétraédrique est plus grand que l'octaédrique en CC, mais les deux sont beaucoup plus petits que C : distorsion bien plus importante → solubilité très faible du C dans le fer α (≈ 0,022 %) contre 2,14 % dans le fer γ.\n\n**3) Taux d'occupation**\n- Pour 100 g : $n_C=\\frac{2{,}14}{12{,}01}=0{,}178$ mol ; $n_{Fe}=\\frac{97{,}86}{55{,}85}=1{,}752$ mol ; $\\frac{n_C}{n_{Fe}}=0{,}102$ (≈ 9,2 % atomique).\n- En CFC il y a 4 sites octaédriques pour 4 atomes de Fe, donc 1 site octaédrique par atome de Fe : taux d'occupation ≈ **10 %** des sites octaédriques occupés au maximum de solubilité."
+    },
+    {
+      "titre": "Exercice 2 – Règle de l'horizontale et des segments inverses (Pb–Sn à 225 °C)",
+      "difficulte": 2,
+      "enonce": "On utilise le diagramme Pb–Sn du cours. À 225 °C, la frontière de α est à 16 % massique Sn et le liquidus à 47 % massique Sn. Eutectique : 61,9 % Sn, 183 °C ; limite de α à 183 °C : 18,3 % Sn.\n\n1) Un alliage Pb–40 % Sn est maintenu à 225 °C. Donner les phases en présence, leur composition (% Sn et % Pb) et leurs fractions massiques.\n2) Pour 2 kg de cet alliage, calculer la masse de liquide et de α. Vérifier le bilan de masse en étain.\n3) Même question qualitative pour un alliage Pb–10 % Sn à 225 °C.\n4) À quelle température l'alliage Pb–40 % Sn est-il complètement solide à l'équilibre ? Pourquoi ?",
+      "corrige": "**1)** 40 % est compris entre X₁ = 16 % et X₂ = 47 % : domaine biphasé α + L.\n- Règle de l'horizontale : α contient 16 % Sn et 84 % Pb ; L contient 47 % Sn et 53 % Pb.\n- Segments inverses : $$W_L=\\frac{40-16}{47-16}=\\frac{24}{31}=77{,}4\\,\\%$$ $$W_\\alpha=\\frac{47-40}{47-16}=\\frac{7}{31}=22{,}6\\,\\%$$\n\n**2)** Masse de liquide : $0{,}774\\times2=1{,}548$ kg ; masse de α : $0{,}226\\times2=0{,}452$ kg. Bilan en Sn : $0{,}452\\times0{,}16+1{,}548\\times0{,}47=0{,}0723+0{,}7276=0{,}800$ kg = 40 % de 2 kg ✓.\n\n**3)** 10 % < 16 % : à 225 °C l'alliage est dans le domaine monophasé α (solution solide de Sn dans Pb) ; une seule phase de composition 10 % Sn, fraction massique 100 %. Pas d'application des segments inverses.\n\n**4)** L'alliage 40 % Sn est hypo-eutectique (18,3 < 40 < 61,9) : la solidification de la dernière fraction de liquide (composition eutectique) se termine au palier eutectique. Il est donc complètement solide à $T_E=183$ °C (solidus = horizontale eutectique)."
+    },
+    {
+      "titre": "Exercice 3 – Refroidissement et microstructure d'un alliage hypo-eutectique Pb–40 % Sn",
+      "difficulte": 3,
+      "enonce": "Un alliage Pb–40 % massique Sn est refroidi très lentement depuis le liquide à 300 °C jusqu'à 20 °C. Données : eutectique 61,9 % Sn à 183 °C ; α : 18,3 % Sn et β : 97,8 % Sn à 183 °C. Liquidus pour 40 % Sn : ≈ 235 °C (lecture graphique).\n\n1) Décrire les étapes du refroidissement (phases, réactions, courbe de refroidissement avec variance).\n2) Calculer juste au-dessus de 183 °C les fractions de α proeutectique et de liquide.\n3) Calculer juste en dessous de 183 °C les fractions massiques de α et de β totales.\n4) En déduire la fraction massique d'eutectique, et la part de α et de β appartenant à l'eutectique.\n5) Décrire la microstructure finale et la comparer avec celle d'un alliage 61,9 % Sn.",
+      "corrige": "**1)** Liquide (φ=1, v=2) jusqu'à ≈ 235 °C : rupture de pente (début de solidification) → germination/croissance de α au sein du liquide (φ=2, v=1) ; le liquide s'enrichit en Sn le long du liquidus jusqu'à 61,9 % Sn à 183 °C. Palier à 183 °C (φ=3, v=0) : $L_E\\rightleftharpoons\\alpha(18{,}3)+\\beta(97{,}8)+Q$. Puis α + β (φ=2, v=1) : au refroidissement la solubilité décroît (solvus), β précipite en petite quantité.\n\n**2)** Juste au-dessus de 183 °C : α (18,3 %) + L (61,9 %). $$W_\\alpha=\\frac{61{,}9-40}{61{,}9-18{,}3}=\\frac{21{,}9}{43{,}6}=50{,}2\\,\\%\\qquad W_L=\\frac{40-18{,}3}{43{,}6}=49{,}8\\,\\%$$\n\n**3)** Juste en dessous : α (18,3 %) + β (97,8 %). $$W_\\alpha=\\frac{97{,}8-40}{97{,}8-18{,}3}=\\frac{57{,}8}{79{,}5}=72{,}7\\,\\%\\qquad W_\\beta=\\frac{40-18{,}3}{79{,}5}=27{,}3\\,\\%$$\n\n**4)** Le liquide restant (49,8 %) donne l'eutectique : 49,8 % de la masse. α total (72,7 %) − α proeutectique (50,2 %) = 22,5 % de α dans l'eutectique ; β = 27,3 %. Contrôle : dans l'eutectique $W_\\alpha=\\frac{97{,}8-61{,}9}{79{,}5}=45{,}2\\,\\%$ ; $0{,}498\\times0{,}452=22{,}5\\,\\%$ ✓ et $0{,}498\\times0{,}548=27{,}3\\,\\%$ ✓.\n\n**5)** Microstructure : grains de α proeutectique (≈ 50 %) entourés d'eutectique lamellaire α+β (≈ 50 %). L'alliage 61,9 % Sn est entièrement eutectique lamellaire (palier unique, pas de rupture préalable)."
+    },
+    {
+      "titre": "Exercice 4 – Diagramme complexe Cu–Mg : composés définis, domaines et refroidissement",
+      "difficulte": 4,
+      "enonce": "Cu–Mg ($M_{Cu}=63{,}5$ ; $M_{Mg}=24{,}3$ g/mol). Du diagramme on lit : Cu₂Mg à 16 % massique Mg (fusion 800 °C), CuMg₂ à 43 % Mg (fusion 568 °C), eutectiques à 726 °C, 552 °C (liquide à ≈ 36 % Mg, soit ≈ 60 % at. Mg) et 487 °C.\n\n1) Retrouver par calcul que 16 % et 43 % massiques correspondent à Cu₂Mg et CuMg₂, et donner leurs compositions en % atomique de Mg.\n2) Convertir l'alliage à 30 % massique de Mg en % atomique.\n3) Pour cet alliage, décrire le refroidissement depuis le liquide jusqu'à 400 °C (phases, réaction à 552 °C).\n4) Juste au-dessus de 552 °C : fractions massiques de liquide et de Cu₂Mg. Juste en dessous : fractions de Cu₂Mg et CuMg₂.\n5) En déduire la microstructure finale (proeutectique/eutectique) et vérifier la cohérence des fractions.",
+      "corrige": "**1)** $$w_{Mg}(Cu_2Mg)=\\frac{24{,}3}{2\\times63{,}5+24{,}3}=\\frac{24{,}3}{151{,}3}=16{,}1\\,\\%\\quad\\Rightarrow\\quad x_{Mg}=\\frac13=33{,}3\\,\\%\\ at.$$ $$w_{Mg}(CuMg_2)=\\frac{2\\times24{,}3}{63{,}5+48{,}6}=\\frac{48{,}6}{112{,}1}=43{,}4\\,\\%\\quad\\Rightarrow\\quad x_{Mg}=\\frac23=66{,}7\\,\\%\\ at.$$ Méthode inverse (support) : 16 % Mg → $x=84/63{,}5=1{,}32$, $y=16/24{,}3=0{,}66$, $x/y\\approx2$ → Cu₂Mg ; 43 % Mg → $v=57/63{,}5=0{,}90$, $w=43/24{,}3=1{,}77$, $w/v\\approx2$ → CuMg₂.\n\n**2)** $$x_{Mg}=\\frac{30/24{,}3}{30/24{,}3+70/63{,}5}=\\frac{1{,}235}{1{,}235+1{,}102}=52{,}8\\,\\%\\ at.$$ On pourrait aussi vérifier que le point eutectique (5) à ≈ 36 % massique vaut $\\frac{36/24{,}3}{36/24{,}3+64/63{,}5}=59{,}5\\approx60\\,\\%$ at. ✓.\n\n**3)** 30 % Mg est entre Cu₂Mg (16 %) et le point eutectique (5) (36 %) : on est sur la branche de liquidus descendant de Cu₂Mg vers l'eutectique. Liquide → apparition de cristaux de Cu₂Mg (domaine Cu₂Mg + L), le liquide s'enrichit en Mg jusqu'à ≈ 36 % Mg à 552 °C ; palier (v=0) : $L(36\\,\\%)\\rightleftharpoons Cu_2Mg(16\\,\\%)+CuMg_2(43\\,\\%)$ ; puis domaine Cu₂Mg + CuMg₂ jusqu'à 400 °C.\n\n**4)** Juste au-dessus de 552 °C (Cu₂Mg à 16 %, L à 36 %) : $$W_L=\\frac{30-16}{36-16}=70\\,\\%\\qquad W_{Cu_2Mg}=\\frac{36-30}{36-16}=30\\,\\%$$ Juste en dessous (Cu₂Mg à 16 %, CuMg₂ à 43 %) : $$W_{Cu_2Mg}=\\frac{43-30}{43-16}=48{,}1\\,\\%\\qquad W_{CuMg_2}=\\frac{30-16}{43-16}=51{,}9\\,\\%$$\n\n**5)** Microstructure : Cu₂Mg proeutectique (30 %) + eutectique lamellaire Cu₂Mg + CuMg₂ (70 %). Dans l'eutectique, $W_{CuMg_2}=\\frac{36-16}{43-16}=74{,}1\\,\\%$ ; part de CuMg₂ dans l'alliage : $0{,}70\\times0{,}741=51{,}9\\,\\%$ ✓ (identique à 4). Part de Cu₂Mg eutectique : $0{,}70\\times0{,}259=18{,}1\\,\\%$ ; total Cu₂Mg $=30+18{,}1=48{,}1\\,\\%$ ✓."
+    }
+  ],
+  "suivi": "Aucune difficulté enregistrée pour l'instant (quiz et exercices pas encore faits). Points à surveiller lors de la révision : (1) eutectique = mélange de 2 phases, pas une phase ; (2) choix du bras opposé dans les segments inverses ; (3) tailles des sites interstitiels en CC (tétraédrique > octaédrique) vs CFC ; (4) règles de Hume-Rothery empiriques et dépendantes du solvant choisi ; (5) palier (v=0) vs rupture de pente sur les courbes de refroidissement ; (6) % masse vs % atomes ; (7) écarts du support : −23 °C/23,6 % pour eau/sel (littérature −21,1 °C/23,3 %), 'rayons ioniques' (= atomiques), v = 0,9 pour CuMg2, 'L2' = B2. À mettre à jour après le quiz et les exercices."
+}
