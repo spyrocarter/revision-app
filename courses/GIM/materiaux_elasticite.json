@@ -1,0 +1,410 @@
+{
+  "matiere": "Matériaux",
+  "type": "CM",
+  "sujet": "Élasticité",
+  "fiche_synthese": "# Élasticité — Matériaux (CM, ENSAM Aix, L. Barrallier)\n\n*Les passages marqués 🔎 sont des compléments extérieurs au support. Les passages marqués ⚠ corrigent des coquilles du support.*\n\n## Plan\nA. Rappels de mécanique · B. Origine atomique de $E$ (cristaux) · C. Polymères · D. Élastomères · E. Température · F. Dilatation · G. Valeurs numériques · H. Loi généralisée et symétries · I. Isotropie · J. Matériaux spéciaux · K. Mesure · L. Compléments · M. Pièges\n\n## A. Rappels de mécanique\n\n**Contraintes** (force par unité de surface de la section $A$) :\n\n$$\n\\sigma = \\frac{F_t}{A}\n$$\n\nContrainte normale, $F_t$ normale à la section.\n\n$$\n\\tau = \\frac{F_s}{A}\n$$\n\nContrainte de cisaillement (*shear stress*), notée aussi $\\sigma_{ij}$ ($i\\neq j$), $F_s$ tangentielle.\n\n**États usuels** : traction simple $\\sigma=F/A$ ; compression ($\\sigma<0$) ; pression hydrostatique ($p$ identique sur toutes les faces) ; traction biaxiale (enveloppe sphérique mince) $\\sigma = pr/2e$ ($p$ pression, $r$ rayon, $e$ épaisseur) ; cisaillement pur (torsion d'un tube).\n\n**État triaxial.** Hypothèses : pas de gradient de contrainte dans le volume élémentaire, pas de force à distance.\n- Normales : $\\sigma_{11}=F_1/A_1$, $\\sigma_{22}=F_2/A_2$, $\\sigma_{33}=F_3/A_3$ (et faces opposées $\\sigma_{-1-1}$…).\n- Cisaillement : $\\sigma_{12}=F_2/A_1$, $\\sigma_{13}=F_3/A_1$…\n- 6 faces × 3 = **18 composantes**.\n- Équilibre des efforts normaux $\\sigma_{-i-i}=\\sigma_{ii}$ → 9 composantes. Équilibre des moments $\\sigma_{ij}=\\sigma_{ji}$ → **6 composantes indépendantes**.\n\n$$\n[\\underline{\\sigma}]=\\begin{pmatrix}\\sigma_{11}&\\sigma_{12}&\\sigma_{13}\\\\ \\sigma_{12}&\\sigma_{22}&\\sigma_{23}\\\\ \\sigma_{13}&\\sigma_{23}&\\sigma_{33}\\end{pmatrix}\n$$\n\nMatrice symétrique.\n\n**Déformations (*strain*).**\n- Normale $\\epsilon_n=u/l$ ; transversale $\\epsilon_t=v/l$.\n\n$$\n\\nu=-\\frac{\\epsilon_t}{\\epsilon_n}\n$$\n\nCoefficient de Poisson.\n\n$$\n\\gamma=\\frac{w}{l}=\\tan\\theta\\approx\\theta\n$$\n\nCisaillement, valable en petites déformations (HPP).\n\n$$\n\\epsilon_v=\\frac{\\Delta V}{V}=\\epsilon_{11}+\\epsilon_{22}+\\epsilon_{33}\n$$\n\nDilatation (déformation volumique), petites déformations. $[\\underline\\epsilon]$ est aussi symétrique.\n\n**Loi de Hooke uniaxiale** (observation expérimentale macroscopique, élasticité linéaire, HPP) :\n\n$$\n\\sigma=E\\epsilon\n$$\n\n$E$ : module d'Young.\n\n$$\n\\tau=G\\gamma\n$$\n\n$G$ : module de cisaillement (essai de torsion).\n\n## B. Origine atomique de l'élasticité (cristaux)\n\nAttraction coulombienne (liaison ionique) : $f_{attr}=Ce^2/r^2$, donc $U_{attr}=\\int f_{attr}\\,dr=-Ce^2/r$. Répulsion : $U_{rep}=B/r^n$ avec $5<n<12$.\n\n$$\nU=-\\frac{ACe^2}{r}+\\frac{B}{r^n}\n$$\n\n$A$ : facteur géométrique (🔎 constante de Madelung).\n\nÀ l'équilibre la force est nulle :\n\n$$\nf(r_0)=\\left(\\frac{dU}{dr}\\right)_{r_0}=\\frac{ACe^2}{r_0^2}-\\frac{nB}{r_0^{n+1}}=0\n$$\n\n$$\nr_0=\\left(\\frac{nB}{ACe^2}\\right)^{\\frac{1}{n-1}}\n$$\n\n**Construction de $E$** :\n1. Aire $A=1$ donc $\\sigma=F$ ; il y a $1/r_0^2$ ions par unité de surface donc $\\sigma=f/r_0^2$.\n2. $d\\epsilon=dr/r_0$.\n3. $E=\\left.\\dfrac{d\\sigma}{d\\epsilon}\\right|_{\\epsilon\\to0}=\\dfrac{1}{r_0}\\dfrac{d}{dr}\\left(\\dfrac{ACe^2}{r^2}-\\dfrac{nB}{r^{n+1}}\\right)_{r\\to r_0}$.\n4. $\\dfrac{df}{dr}=-\\dfrac{2ACe^2}{r^3}+\\dfrac{n(n+1)B}{r^{n+2}}$, et avec $nB=ACe^2r_0^{n-1}$ on obtient\n\n$$\nE=\\frac{(n-1)\\,ACe^2}{r_0^4}\n$$\n\n**Lecture** : $E$ est la courbure du puits de potentiel au minimum (raideur de la liaison). Puits profond et étroit (W) donne $E$ élevé ; puits large (Al) donne $E$ plus faible. 🔎 Autre forme : $E=n|U_0|/r_0^3$.\n\n**Corrélation $E$–$T_f$** : liaison forte donne $E$ et $T_f$ élevés (diamant ≈ 1000 GPa, $T_f>3500$ °C ; Ga en bas du graphe).\n\n## C. Polymères\n\n- Chaîne moléculaire de monomères (–CH₂–CH₂–). Structure **amorphe** ou **semi-cristalline** (arrangement régulier des chaînes).\n- **Énergie cohésive molaire $E_c$** : énergie interne par mole correspondant à l'élimination de toute force moléculaire ; elle caractérise les forces qui s'opposent au déplacement des chaînes.\n- Module de compressibilité $B$ (Gruneisen & Tobolsky, 1960), avec $V=M/\\rho$ (volume molaire du monomère) :\n\n$$\nB=8{,}04\\,\\frac{E_c}{V}\n$$\n\nPolymères amorphes.\n\n$$\nB=8{,}04\\,\\frac{E_c+x_c\\Delta H_m}{V}\n$$\n\nSemi-cristallins ($x_c$ taux de cristallinité, $\\Delta H_m$ enthalpie de fusion du polymère 100 % cristallin). Cristaux moléculaires (ex. NaCl) : $B=8{,}04\\,E_s/V$.\n\n$$\nE=3B(1-2\\nu)\n$$\n\n## D. Élastomères\n\n- Repère empirique du cours : $T=\\tfrac{2}{3}T_f$ (températures en kelvin, transition vitreuse vs fusion).\n- Origine **entropique** : changement d'ordre des chaînes donc évolution de l'entropie. Chaîne enroulée : entropie élevée ; chaîne étirée : entropie basse.\n- Thermodynamique : $A=U-TS$ ; travail $dW=F\\,dL$ (⚠ le support écrit $F\\,dF$).\n\n$$\nF\\,dL=dW=dU-T\\,dS\n$$\n\n$$\nF=\\frac{dW}{dL}=\\left(\\frac{\\partial U}{\\partial L}\\right)_{T,V}-T\\left(\\frac{\\partial S}{\\partial L}\\right)_{T,V}\n$$\n\n- Caoutchouc : $dU\\approx0$, la force est purement entropique :\n\n$$\nE=3NkT\n$$\n\n$N$ : nombre de segments de chaîne par unité de volume. **$E$ augmente avec $T$.**\n- Vulcanisation (C. Goodyear, 1839) : ponts de soufre entre chaînes, donc $N$ et $E$ augmentent.\n- 🔎 Sous charge constante, un caoutchouc se contracte quand on le chauffe (Gough-Joule). Loi en grande déformation : $\\sigma=NkT(\\lambda-\\lambda^{-2})$.\n\n## E. Influence de la température\n\n- **Métaux** : faible baisse de $E$ avec $T$ ; passage brutal solide ($E\\neq0$) → liquide ($E=0$).\n- **Polymères** : transition vitreuse (état vitreux → état caoutchoutique), chute de $E$ à $T_g$. Courbes à 0, 25, 40, 65 et 100 % de cristallinité : plus $x_c$ est grand, plus la chute est faible ; à 100 %, quasi aucune chute avant $T_f$.\n- $T_v$ ($=T_g$) dépend de la structure moléculaire (squelette, imbrication, $x_c$), du taux de réticulation et de la masse moléculaire :\n\n$$\nT_v=T_{v\\infty}-\\frac{A}{\\overline{M}_n}\n$$\n\n## F. Dilatation thermique\n\n$$\n\\frac{\\Delta L}{L}=\\epsilon_T=\\alpha_L\\Delta T\n$$\n\n**Origine** : asymétrie du puits $U(r)$ (branche répulsive plus raide) ; quand l'énergie thermique augmente, la position moyenne passe de $r_0$ à $r_0'>r_0$. Un puits symétrique ne dilaterait pas. Relation d'Ashby : $E$ élevé associé à $\\alpha$ faible (céramiques, métaux) ; polymères : $E$ faible et $\\alpha$ élevé.\n\n## G. Valeurs numériques de $E$ (GPa)\n\nDiamant 1000 · WC 460–650 · Osmium 551 · SiC 450 · W 406 · Al₂O₃ 390 · Mo+alliages 320–365 · Cr 289 · Ni 214 · Fe 196 · acier bas C 193–214 · acier austénitique 190–200 · fonte grise 170–190 · platine 172 · Cu 124 · V 130 · Ti 116 · Si 107 · Or 82 · Al+alliages 69–79 · Ag 76 · béton 45–50 · graphite 27 · bois ∥ fibre 6–16 · Pb 14 · glace 9 · polyesters 1–5 · nylon 2–4 · PMMA 3.\n\n## H. Triaxialité : loi généralisée et symétries\n\n$$\n\\underline{\\sigma}=\\underline{\\underline{C}}:\\underline{\\epsilon}\n$$\n\n$\\underline{\\underline C}$ : tenseur d'élasticité (rigidité). En Voigt : $\\sigma_{11}=C_{11}\\epsilon_{11}+C_{12}\\epsilon_{22}+C_{13}\\epsilon_{33}+C_{14}\\gamma_{23}+C_{15}\\gamma_{31}+C_{16}\\gamma_{12}$, etc. avec $\\sigma_{ij}=\\sigma_{ji}$, $\\epsilon_{ij}=\\epsilon_{ji}$ : matrice 6×6 symétrique, **21 composantes indépendantes** (sans symétrie matérielle).\n\n$$\n\\underline{\\epsilon}=\\underline{\\underline{S}}:\\underline{\\sigma}+\\underline{\\alpha}\\,\\Delta T\n$$\n\n$\\underline{\\underline S}=\\underline{\\underline C}^{-1}$ : tenseur de souplesse ; $\\underline\\alpha$ : tenseur des dilatations. ⚠ Dernière ligne du support : « $C_{66}$ » à lire $S_{66}$.\n\n| Symétrie | Constantes | Exemples |\n|---|---|---|\n| Triclinique (aucune) | 21 | |\n| Orthotrope (3 plans de symétrie) | 9 | bois, monocristal orthorhombique, acier laminé, composite |\n| Hexagonale | 5 | |\n| Cubique (rotation 90°) | 3 | Al, Cu, Fe, W |\n| Isotrope | 2 | |\n\nMatrice de souplesse cubique : $S_{11}$ sur la diagonale des 3 premières lignes, $S_{12}$ hors diagonale du bloc 3×3, $S_{44}$ sur les 3 dernières diagonales, 0 ailleurs.\n\n$$\na=\\frac{S_{11}-S_{12}}{2S_{44}}\n$$\n\n$a=1$ isotrope, $a\\neq1$ anisotrope. Valeurs : Al 1,23 ; Cu 3,17 ; Fe 2,41 ; Pb 2,80 ; W 1,00 ; 95 %Al-5 %Cu 1,19 ; laiton 72 %Cu-28 %Zn 4. 🔎 Facteur de Zener (cohérent avec ces valeurs) :\n\n$$\nA=\\frac{2C_{44}}{C_{11}-C_{12}}\n$$\n\n**Anisotropie de $E$ des monocristaux cubiques** : fer ($E_{min}=131{,}7$, $E_{max}=281{,}9$ GPa) ; cuivre ($E_{max}=185{,}7$, $E_{min}=71{,}8$ GPa, écart 61,7 %) ; Al faiblement anisotrope. 🔎 $E_{min}$ selon $\\langle100\\rangle$, $E_{max}$ selon $\\langle111\\rangle$ :\n\n$$\n\\frac{1}{E_{hkl}}=S_{11}-2\\left(S_{11}-S_{12}-\\frac{S_{44}}{2}\\right)(l^2m^2+m^2n^2+n^2l^2)\n$$\n\n**Polycristal de ferrite** : $E_{moyen}=E_{médian}=201{,}5$ GPa. Estimations : Reuss 193,6 GPa (borne basse, contrainte uniforme) < Kröner 211,4 GPa (autocohérent) < Voigt 226,1 GPa (borne haute, déformation uniforme). 🔎 Hill = moyenne Voigt-Reuss.\n\n## I. Isotropie\n\nCaractéristique identique ∀ orientation : **2 composantes** ($E$, $\\nu$).\n\n$$\n\\epsilon_{11}=\\frac{\\sigma_{11}}{E}-\\nu\\frac{\\sigma_{22}}{E}-\\nu\\frac{\\sigma_{33}}{E}\n$$\n\n(et circulairement pour 22, 33).\n\n$$\n\\gamma_{23}=\\frac{2(1+\\nu)}{E}\\sigma_{23}=\\frac{\\sigma_{23}}{G}\n$$\n\n(idem 31, 12). ⚠ Le support écrit $\\epsilon_{23}$ : c'est en fait la déformation d'ingénieur $\\gamma=2\\epsilon$.\n\n$$\nG=\\frac{E}{2(1+\\nu)}\n$$\n\n$$\n\\epsilon_{ij}=\\frac{1+\\nu}{E}\\sigma_{ij}-\\frac{\\nu}{E}\\,\\mathrm{tr}(\\underline\\sigma)\\,\\delta_{ij}\n$$\n\n$\\mathrm{tr}(\\underline\\sigma)=\\sigma_{11}+\\sigma_{22}+\\sigma_{33}$ ; $\\delta_{ij}=1$ si $i=j$, $0$ sinon (Kronecker).\n\n$$\nB=\\frac{-dp}{dV/V}=\\frac{-p}{\\epsilon_v}=\\frac{E}{3(1-2\\nu)}\n$$\n\nModule de compressibilité (*bulk modulus*). Incompressible : $\\nu=0{,}5\\Rightarrow B\\to\\infty$. 🔎 $\\lambda=\\dfrac{E\\nu}{(1+\\nu)(1-2\\nu)}$, $B=\\lambda+\\tfrac23G$, $-1<\\nu<0{,}5$.\n\n## J. Matériaux spéciaux\n- **Auxétiques** : $\\nu<0$ ; matériaux à réseau (effet de structure, $\\nu\\approx-1$), milieux poreux périodiques (Dagdelen *et al.*, Nat. Commun. 2017).\n- **Dilatants / rhéoépaississants** (*shear thickening*) : la viscosité augmente avec le cisaillement (fluide non newtonien) ; maïzena + eau (oobleck), mélange 1:1,25.\n\n## K. Mesure des constantes d'élasticité\n- **Fréquence propre** (barre longueur $l$, diamètre $d$, masse $M$) :\n\n$$\nf=\\frac{1}{2\\pi}\\left(\\frac{3\\pi E d^4}{4 l^2 M}\\right)^{1/2}\\quad\\Rightarrow\\quad E=Kf^2\n$$\n\n- **Ultrasons** : mesure de la vitesse $v$ de l'onde longitudinale, $\\rho$ connue (⚠ noté $v_t$ dans le support) :\n\n$$\nv=\\left(\\frac{E}{\\rho}\\right)^{1/2}\n$$\n\n🔎 Onde transversale $v_T=\\sqrt{G/\\rho}$ ; le rapport $v_T/v_L$ donne $\\nu$.\n- **Essais mécaniques** $(\\sigma,\\epsilon)$ : traction (éprouvette de section $S$), flexion (jauge de déformation), torsion (moment $M$, donne $G$).\n\n## L. Compléments 🔎\n- Dilatation bloquée (isotrope) : barre $\\sigma=-E\\alpha\\Delta T$ ; plaque bloquée dans son plan $\\sigma=-E\\alpha\\Delta T/(1-\\nu)$. Solide isotrope libre : $\\Delta V/V=3\\alpha\\Delta T$.\n- Cylindre mince sous pression : $\\sigma_\\theta=pr/e$, $\\sigma_z=pr/2e$ (sphère : $pr/2e$).\n\n## M. Pièges classiques\n1. $\\gamma=2\\epsilon_{ij}$ : $G=E/2(1+\\nu)$ s'applique à $\\gamma$ ; la forme tensorielle porte $\\epsilon_{ij}=\\sigma_{ij}/2G$.\n2. $\\nu=0{,}5$ incompressible ; $\\nu>0{,}5$ impossible pour un isotrope.\n3. $\\Delta V/V=\\sum\\epsilon_{ii}$ seulement en petites déformations.\n4. 21 → 9 → 5 → 3 → 2 : nombre de constantes indépendantes, pas de composantes non nulles.\n5. Élastomère : $E=3NkT$ augmente avec $T$ (origine entropique) ; métaux : $E$ diminue légèrement.\n6. $E$ élevé associé à $\\alpha$ faible.\n7. Polycristal « isotrope » fait de grains anisotropes : Voigt (haut) ≠ Reuss (bas).\n8. Auxétique ≠ rhéoépaississant. $a=1$ pour W : monocristal quasi isotrope.\n",
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "Combien de composantes indépendantes compte le tenseur des contraintes d'un état triaxial, et pourquoi ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "9, car il y a 3 faces orthogonales de 3 composantes"
+        },
+        {
+          "id": "b",
+          "text": "6, grâce à l'équilibre des efforts normaux puis à l'équilibre des moments ($\\sigma_{ij}=\\sigma_{ji}$)"
+        },
+        {
+          "id": "c",
+          "text": "18, car il y a 6 faces de 3 composantes chacune"
+        },
+        {
+          "id": "d",
+          "text": "3, grâce à l'hypothèse d'isotropie"
+        }
+      ],
+      "correct": "b",
+      "explanation": "On part de 18 composantes (6 faces × 3). L'équilibre des efforts normaux ($\\sigma_{-i-i}=\\sigma_{ii}$) ramène à 9, l'équilibre des moments ($\\sigma_{ij}=\\sigma_{ji}$) ramène à 6."
+    },
+    {
+      "id": "q2",
+      "question": "Un matériau isotrope est incompressible. Quelle est la conséquence ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "$\\nu=0$ et $B\\to0$"
+        },
+        {
+          "id": "b",
+          "text": "$\\nu=0{,}5$ et $B\\to\\infty$"
+        },
+        {
+          "id": "c",
+          "text": "$\\nu=1$ et $E\\to\\infty$"
+        },
+        {
+          "id": "d",
+          "text": "$\\nu=0{,}5$ et $G\\to\\infty$"
+        }
+      ],
+      "correct": "b",
+      "explanation": "$B=E/[3(1-2\\nu)]$ : quand $\\nu\\to0{,}5$ le dénominateur tend vers 0 donc $B\\to\\infty$ ($\\Delta V/V=0$). $G=E/2(1+\\nu)$ reste fini ($E/3$)."
+    },
+    {
+      "id": "q3",
+      "question": "Dans le modèle $U=-ACe^2/r+B/r^n$, quelle condition donne la distance d'équilibre $r_0$ ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "$U(r_0)=0$"
+        },
+        {
+          "id": "b",
+          "text": "$d^2U/dr^2=0$ en $r_0$"
+        },
+        {
+          "id": "c",
+          "text": "$dU/dr=0$ en $r_0$ (force nulle)"
+        },
+        {
+          "id": "d",
+          "text": "$U_{attr}=U_{rep}$ en $r_0$"
+        }
+      ],
+      "correct": "c",
+      "explanation": "La force est $f=dU/dr$ ; elle est nulle à l'équilibre, d'où $r_0=(nB/ACe^2)^{1/(n-1)}$. La dérivée seconde (courbure du puits) donne la raideur, donc $E$."
+    },
+    {
+      "id": "q4",
+      "question": "Que représente physiquement $E=(n-1)ACe^2/r_0^4$ dans le modèle cristallin ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "La profondeur du puits de potentiel"
+        },
+        {
+          "id": "b",
+          "text": "La courbure du puits de potentiel au minimum, c'est-à-dire la raideur de la liaison"
+        },
+        {
+          "id": "c",
+          "text": "La force maximale de la liaison avant rupture"
+        },
+        {
+          "id": "d",
+          "text": "La température de fusion"
+        }
+      ],
+      "correct": "b",
+      "explanation": "$E=(1/r_0)\\,df/dr$ en $r_0$, lié à $d^2U/dr^2$. Puits étroit et profond (W) : $E$ grand ; puits large (Al) : $E$ plus faible."
+    },
+    {
+      "id": "q5",
+      "question": "Pour un caoutchouc ($dU\\approx0$), comment évolue $E$ quand la température augmente ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Il diminue, comme pour les métaux"
+        },
+        {
+          "id": "b",
+          "text": "Il est indépendant de $T$"
+        },
+        {
+          "id": "c",
+          "text": "Il augmente proportionnellement à $T$ ($E=3NkT$)"
+        },
+        {
+          "id": "d",
+          "text": "Il s'annule à $T_g$"
+        }
+      ],
+      "correct": "c",
+      "explanation": "L'élasticité est entropique : $F=-T(\\partial S/\\partial L)$. $E=3NkT$ croît avec $T$ et avec $N$ (vulcanisation)."
+    },
+    {
+      "id": "q6",
+      "question": "Comment un polymère semi-cristallin se comporte-t-il à la transition vitreuse par rapport à un amorphe ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "La chute de $E$ à $T_g$ est plus faible quand le taux de cristallinité augmente"
+        },
+        {
+          "id": "b",
+          "text": "La chute de $E$ à $T_g$ est plus forte quand le taux de cristallinité augmente"
+        },
+        {
+          "id": "c",
+          "text": "$T_g$ disparaît pour un amorphe"
+        },
+        {
+          "id": "d",
+          "text": "$E$ augmente à $T_g$"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Courbes du cours : à 0 % de cristallin, $E$ chute fortement à $T_g$ ; à 100 %, aucune chute notable avant $T_f$. Les cristallites rigidifient le matériau."
+    },
+    {
+      "id": "q7",
+      "question": "Quel est le nombre de constantes élastiques indépendantes pour une symétrie cubique ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "2"
+        },
+        {
+          "id": "b",
+          "text": "3"
+        },
+        {
+          "id": "c",
+          "text": "5"
+        },
+        {
+          "id": "d",
+          "text": "9"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Triclinique 21, orthotrope 9, hexagonal 5, cubique 3 ($S_{11},S_{12},S_{44}$), isotrope 2 ($E,\\nu$)."
+    },
+    {
+      "id": "q8",
+      "question": "Acier isotrope : $E=200$ GPa, $\\nu=0{,}3$. Quel est $G$ ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "≈ 77 GPa"
+        },
+        {
+          "id": "b",
+          "text": "≈ 100 GPa"
+        },
+        {
+          "id": "c",
+          "text": "≈ 67 GPa"
+        },
+        {
+          "id": "d",
+          "text": "≈ 154 GPa"
+        }
+      ],
+      "correct": "a",
+      "explanation": "$G=E/[2(1+\\nu)]=200/2{,}6\\approx76{,}9$ GPa. Pièges : 100 GPa = $E/2$ (oubli de $\\nu$), 67 GPa = $E/3$."
+    },
+    {
+      "id": "q9",
+      "question": "Piège : dans la loi isotrope, quelle formule est correcte pour un cisaillement ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "$\\epsilon_{23}$ (tensorielle) $=2(1+\\nu)\\sigma_{23}/E$"
+        },
+        {
+          "id": "b",
+          "text": "$\\gamma_{23}=2(1+\\nu)\\sigma_{23}/E=\\sigma_{23}/G$"
+        },
+        {
+          "id": "c",
+          "text": "$\\gamma_{23}=(1+\\nu)\\sigma_{23}/E$"
+        },
+        {
+          "id": "d",
+          "text": "$\\epsilon_{23}=\\sigma_{23}/G$"
+        }
+      ],
+      "correct": "b",
+      "explanation": "$\\gamma=2\\epsilon$ (déformation d'ingénieur). Donc $\\gamma_{23}=\\sigma_{23}/G=2(1+\\nu)\\sigma_{23}/E$ et $\\epsilon_{23}=(1+\\nu)\\sigma_{23}/E=\\sigma_{23}/2G$."
+    },
+    {
+      "id": "q10",
+      "question": "Le facteur d'anisotropie de W vaut 1,00 et celui de Cu 3,17. Que conclure ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "W est très anisotrope, Cu quasi isotrope"
+        },
+        {
+          "id": "b",
+          "text": "W monocristallin est quasi isotrope, Cu monocristallin est fortement anisotrope"
+        },
+        {
+          "id": "c",
+          "text": "Les deux sont isotropes"
+        },
+        {
+          "id": "d",
+          "text": "Le facteur ne dépend pas de la structure cristalline"
+        }
+      ],
+      "correct": "b",
+      "explanation": "$a=1$ signifie isotrope. Cu ($a=3{,}17$) a un $E$ variant de 71,8 à 185,7 GPa selon la direction."
+    },
+    {
+      "id": "q11",
+      "question": "Pour le polycristal de ferrite, quel est le bon classement des estimations de $E$ ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Voigt < Kröner < Reuss"
+        },
+        {
+          "id": "b",
+          "text": "Reuss < Kröner < Voigt"
+        },
+        {
+          "id": "c",
+          "text": "Kröner < Reuss < Voigt"
+        },
+        {
+          "id": "d",
+          "text": "Reuss = Voigt = Kröner"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Reuss (contrainte uniforme) 193,6 GPa = borne basse ; Kröner (autocohérent) 211,4 GPa ; Voigt (déformation uniforme) 226,1 GPa = borne haute."
+    },
+    {
+      "id": "q12",
+      "question": "On mesure $v=5000$ m/s (onde longitudinale, barre mince) dans un acier de $\\rho=7800$ kg/m³. Quel est $E$ ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "≈ 195 GPa"
+        },
+        {
+          "id": "b",
+          "text": "≈ 39 GPa"
+        },
+        {
+          "id": "c",
+          "text": "≈ 390 GPa"
+        },
+        {
+          "id": "d",
+          "text": "≈ 1,6 GPa"
+        }
+      ],
+      "correct": "a",
+      "explanation": "$E=\\rho v^2=7800\\times25\\times10^6=1{,}95\\times10^{11}$ Pa ≈ 195 GPa. Piège : oublier le carré."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "recto": "Contrainte normale et contrainte de cisaillement ?",
+      "verso": "$\\sigma=F_t/A$ (normale) ; $\\tau=F_s/A$ (tangentielle), notée aussi $\\sigma_{ij}$ ($i\\neq j$)."
+    },
+    {
+      "id": "f2",
+      "recto": "Équilibre du volume élémentaire : 18 composantes → ?",
+      "verso": "Efforts normaux $\\sigma_{-i-i}=\\sigma_{ii}$ → 9 ; moments $\\sigma_{ij}=\\sigma_{ji}$ → 6 (matrice symétrique). Hypothèses : pas de gradient, pas de force à distance."
+    },
+    {
+      "id": "f3",
+      "recto": "Coefficient de Poisson ? Cisaillement ? Dilatation volumique ?",
+      "verso": "$\\nu=-\\epsilon_t/\\epsilon_n$ ; $\\gamma=w/l=\\tan\\theta\\approx\\theta$ ; $\\Delta V/V=\\epsilon_{11}+\\epsilon_{22}+\\epsilon_{33}$ (petites déformations)."
+    },
+    {
+      "id": "f4",
+      "recto": "Loi de Hooke uniaxiale et en cisaillement ?",
+      "verso": "$\\sigma=E\\epsilon$ ($E$ : module d'Young) ; $\\tau=G\\gamma$ ($G$ : module de cisaillement)."
+    },
+    {
+      "id": "f5",
+      "recto": "Énergie potentielle de liaison et distance d'équilibre ?",
+      "verso": "$U=-ACe^2/r+B/r^n$ ($5<n<12$) ; $dU/dr=0\\Rightarrow r_0=(nB/ACe^2)^{1/(n-1)}$."
+    },
+    {
+      "id": "f6",
+      "recto": "Module d'Young d'un cristal (modèle de liaison) ?",
+      "verso": "$E=(n-1)ACe^2/r_0^4$, obtenu avec $\\sigma=f/r_0^2$, $d\\epsilon=dr/r_0$ ; courbure du puits."
+    },
+    {
+      "id": "f7",
+      "recto": "Lien $B$ – énergie cohésive (polymère amorphe) et passage à $E$ ?",
+      "verso": "$B=8{,}04\\,E_c/V$ avec $V=M/\\rho$ ; $E=3B(1-2\\nu)$. Semi-cristallin : $E_c+x_c\\Delta H_m$."
+    },
+    {
+      "id": "f8",
+      "recto": "Élastomère : force thermodynamique et module ?",
+      "verso": "$F=(\\partial U/\\partial L)_{T,V}-T(\\partial S/\\partial L)_{T,V}$ ; $dU\\approx0\\Rightarrow E=3NkT$ ($E$ croît avec $T$)."
+    },
+    {
+      "id": "f9",
+      "recto": "Transition vitreuse et masse molaire ?",
+      "verso": "$T_v=T_{v\\infty}-A/\\overline{M}_n$ ; dépend aussi de $x_c$, de la structure et du taux de réticulation."
+    },
+    {
+      "id": "f10",
+      "recto": "Dilatation thermique linéaire et son origine ?",
+      "verso": "$\\Delta L/L=\\epsilon_T=\\alpha_L\\Delta T$ ; origine : asymétrie du puits $U(r)$. $E$ élevé associé à $\\alpha$ faible."
+    },
+    {
+      "id": "f11",
+      "recto": "Loi de Hooke généralisée avec dilatation ?",
+      "verso": "$\\sigma=C:\\epsilon$ ; $\\epsilon=S:\\sigma+\\alpha\\Delta T$ ; $S=C^{-1}$."
+    },
+    {
+      "id": "f12",
+      "recto": "Nombre de constantes selon la symétrie ?",
+      "verso": "Triclinique 21 ; orthotrope 9 ; hexagonale 5 ; cubique 3 ; isotrope 2."
+    },
+    {
+      "id": "f13",
+      "recto": "Facteur d'anisotropie ?",
+      "verso": "$a=(S_{11}-S_{12})/(2S_{44})$ ($a=1$ isotrope). Zener : $A=2C_{44}/(C_{11}-C_{12})$. Al 1,23 ; Cu 3,17 ; Fe 2,41 ; Pb 2,80 ; W 1,00."
+    },
+    {
+      "id": "f14",
+      "recto": "Isotropie : loi tensorielle, $G$, $B$ ?",
+      "verso": "$\\epsilon_{ij}=\\frac{1+\\nu}{E}\\sigma_{ij}-\\frac{\\nu}{E}\\mathrm{tr}(\\sigma)\\delta_{ij}$ ; $G=E/2(1+\\nu)$ ; $B=E/3(1-2\\nu)$ ; incompressible : $\\nu=0{,}5$, $B\\to\\infty$."
+    },
+    {
+      "id": "f15",
+      "recto": "Mesure de $E$ par vibration et ultrasons ?",
+      "verso": "$f=\\frac{1}{2\\pi}\\left(\\frac{3\\pi Ed^4}{4l^2M}\\right)^{1/2}\\Rightarrow E=Kf^2$ ; $v=(E/\\rho)^{1/2}$ (onde longitudinale)."
+    },
+    {
+      "id": "f16",
+      "recto": "Matériau auxétique ? Rhéoépaississant ?",
+      "verso": "Auxétique : $\\nu<0$ (réseaux, $\\nu\\approx-1$). Rhéoépaississant : viscosité qui croît avec le cisaillement (oobleck, maïzena + eau 1:1,25)."
+    },
+    {
+      "id": "f17",
+      "recto": "Estimations de $E$ du polycristal de ferrite ?",
+      "verso": "Reuss 193,6 < Kröner 211,4 < Voigt 226,1 GPa ; monocristal : $E_{min}=131{,}7$, $E_{max}=281{,}9$ GPa."
+    }
+  ],
+  "exercices": [
+    {
+      "titre": "Hooke isotrope et déformations",
+      "difficulte": 1,
+      "enonce": "Un acier ($E=200$ GPa, $\\nu=0{,}3$) subit une traction uniaxiale $\\sigma_{11}=200$ MPa. Calculer $\\epsilon_{11}$, $\\epsilon_{22}$, $\\epsilon_{33}$, $\\Delta V/V$, puis $G$ et $B$.",
+      "corrige": "1. $\\epsilon_{11}=\\sigma_{11}/E=1{,}0\\times10^{-3}$.\n\n2. $\\epsilon_{22}=\\epsilon_{33}=-\\nu\\epsilon_{11}=-3\\times10^{-4}$.\n\n3. $\\Delta V/V=\\epsilon_{11}+\\epsilon_{22}+\\epsilon_{33}=4\\times10^{-4}$. Vérification : $(1-2\\nu)\\sigma/E=0{,}4\\times10^{-3}$.\n\n4. $G=\\dfrac{E}{2(1+\\nu)}\\approx76{,}9$ GPa.\n\n5. $B=\\dfrac{E}{3(1-2\\nu)}\\approx166{,}7$ GPa.\n\nHypothèses : élasticité linéaire, HPP, isotropie."
+    },
+    {
+      "titre": "Origine atomique de E (modèle de liaison)",
+      "difficulte": 2,
+      "enonce": "Soit $U(r)=-A'/r+B/r^n$ avec $A'=ACe^2$. (a) Trouver $r_0$. (b) Montrer que $E=(n-1)A'/r_0^4=n|U_0|/r_0^3$ avec $U_0=U(r_0)$. (c) Application : $n=9$, $|U_0|=7{,}9$ eV, $r_0=0{,}282$ nm. (d) Comparer W et Al sur $E$ et $\\alpha$.",
+      "corrige": "(a) $dU/dr=0\\Rightarrow A'/r_0^2=nB/r_0^{n+1}\\Rightarrow B=A'r_0^{n-1}/n$.\n\n(b) $E=\\dfrac{1}{r_0}\\dfrac{df}{dr}$ avec $f=A'/r^2-nB/r^{n+1}$. En $r_0$ : $\\dfrac{df}{dr}=-\\dfrac{2A'}{r_0^3}+\\dfrac{(n+1)A'}{r_0^3}=\\dfrac{(n-1)A'}{r_0^3}$, donc $E=\\dfrac{(n-1)A'}{r_0^4}$.\n\nPuis $U_0=-\\dfrac{A'}{r_0}\\dfrac{n-1}{n}$, d'où $A'=\\dfrac{n|U_0|r_0}{n-1}$ et $E=\\dfrac{n|U_0|}{r_0^3}$.\n\n(c) $|U_0|=1{,}266\\times10^{-18}$ J ; $r_0^3=2{,}24\\times10^{-29}$ m³ ; $E\\approx5{,}1\\times10^{11}$ Pa ≈ 500 GPa. Ce résultat surestime fortement le $E$ réel de NaCl (≈ 40 GPa) : modèle simplifié (un plan, un ion par $r_0^2$), il ne donne qu'un ordre de grandeur.\n\n(d) W : puits profond et étroit donc $E$ grand (406 GPa). Al : puits moins profond et plus large donc $E$ plus faible (≈ 70 GPa) ; l'asymétrie plus marquée donne un $\\alpha$ plus grand (corrélation inverse $E$–$\\alpha$)."
+    },
+    {
+      "titre": "Polymères amorphes et élastomères",
+      "difficulte": 3,
+      "enonce": "(a) Polystyrène amorphe : $M=104$ g/mol, $\\rho=1050$ kg/m³, $E_c=34$ kJ/mol, $\\nu=0{,}35$. Calculer $B$ et $E$. (b) Caoutchouc : $\\rho=950$ kg/m³, masse moyenne entre jonctions $M_c=5$ kg/mol. Calculer $N$ et $E$ à 300 K puis 350 K.",
+      "corrige": "(a) $V=M/\\rho=9{,}9\\times10^{-5}$ m³/mol. $B=8{,}04\\,E_c/V=8{,}04\\times34000/9{,}9\\times10^{-5}\\approx2{,}76$ GPa. $E=3B(1-2\\nu)=3\\times2{,}76\\times0{,}3\\approx2{,}5$ GPa (cohérent avec les polymères vitreux, 1 à 5 GPa).\n\n(b) $N=\\dfrac{\\rho}{M_c}N_A=\\dfrac{950}{5}\\times6{,}022\\times10^{23}=1{,}14\\times10^{26}$ m⁻³. $E=3NkT=3\\times1{,}14\\times10^{26}\\times1{,}381\\times10^{-23}\\times300\\approx1{,}4$ MPa. À 350 K : $E\\approx1{,}66$ MPa. $E$ augmente avec $T$ (origine entropique) et vaut environ 1000 fois moins que celui du polystyrène."
+    },
+    {
+      "titre": "Anisotropie cubique et contrainte thermique",
+      "difficulte": 4,
+      "enonce": "Monocristal de cuivre cubique : $C_{11}=168{,}4$, $C_{12}=121{,}4$, $C_{44}=75{,}4$ GPa. (a) Calculer $S_{11}$, $S_{12}$, $S_{44}$. (b) Calculer $E_{[100]}$ et $E_{[111]}$ et comparer au cours (71,8 et 185,7 GPa). (c) Calculer le facteur de Zener. (d) Un aluminium isotrope ($E=70$ GPa, $\\nu=0{,}33$, $\\alpha=23\\times10^{-6}$ K⁻¹) est bloqué entre deux parois rigides puis chauffé de 50 K : calculer $\\sigma$. Que devient $\\sigma$ pour une plaque bloquée dans son plan (biaxial) ?",
+      "corrige": "(a) $C_{11}-C_{12}=47$ et $C_{11}+2C_{12}=411{,}2$ GPa. $S_{11}=\\dfrac{C_{11}+C_{12}}{(C_{11}-C_{12})(C_{11}+2C_{12})}=\\dfrac{289{,}8}{47\\times411{,}2}=1{,}50\\times10^{-2}$ GPa⁻¹ ; $S_{12}=\\dfrac{-C_{12}}{47\\times411{,}2}=-6{,}28\\times10^{-3}$ GPa⁻¹ ; $S_{44}=1/C_{44}=1{,}326\\times10^{-2}$ GPa⁻¹.\n\n(b) $E_{[100]}=1/S_{11}\\approx66{,}7$ GPa. Pour [111], $l^2m^2+m^2n^2+n^2l^2=1/3$ : $\\dfrac{1}{E_{[111]}}=S_{11}-\\dfrac23\\left(S_{11}-S_{12}-\\dfrac{S_{44}}{2}\\right)$. Avec $S_{11}-S_{12}-S_{44}/2=1{,}465\\times10^{-2}$ on trouve $1/E_{[111]}=5{,}23\\times10^{-3}$ GPa⁻¹ donc $E_{[111]}\\approx191$ GPa. Cohérent avec le cours aux écarts de données près.\n\n(c) $A=\\dfrac{2C_{44}}{C_{11}-C_{12}}=\\dfrac{150{,}8}{47}\\approx3{,}2$ (cours : 3,17). Anisotropie forte.\n\n(d) Barre bloquée : $0=\\sigma/E+\\alpha\\Delta T\\Rightarrow\\sigma=-E\\alpha\\Delta T=-70000\\times23\\times10^{-6}\\times50=-80{,}5$ MPa (compression). Plaque bloquée dans son plan : $\\sigma=-\\dfrac{E\\alpha\\Delta T}{1-\\nu}=-\\dfrac{80{,}5}{0{,}67}\\approx-120$ MPa."
+    }
+  ],
+  "suivi": "Aucune difficulté signalée pour l'instant (quiz et exercices pas encore faits). Points à surveiller : $\\gamma=2\\epsilon_{ij}$ (cisaillement d'ingénieur vs tensoriel) ; chaîne 21 → 9 → 5 → 3 → 2 ; Voigt (borne haute) vs Reuss (borne basse) ; $E=3NkT$ des élastomères qui augmente avec $T$ ; convention du facteur d'anisotropie (Zener)."
+}
