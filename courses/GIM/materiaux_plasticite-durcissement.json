@@ -1,0 +1,460 @@
+{
+  "matiere": "Matériaux",
+  "type": "CM",
+  "sujet": "Plasticité et durcissement",
+  "fiche_synthese": "# Plasticité : glissement, dislocations, durcissement\n\n*Légende : **[Compl.]** = complément hors support ; **[Corr.]** = correction d'une coquille ou erreur du support.*\n\n## Plan\n1. Plasticité du monocristal : glissement, modèle de Frenkel\n2. Théorie des dislocations : types, observation, densité\n3. Systèmes de glissement, loi de Schmid, du monocristal au polycristal\n4. Cission critique : Peierls-Nabarro\n5. Maclage\n6. Défauts cristallins et durcissement : Franck-Read, forêt, dislocations, solutions solides, joints de grain (Hall-Petch), précipités\n7. Bilan : additivité du durcissement\n\n## 1. Monocristal et modèle de Frenkel (1926)\n\n**Observation** : un monocristal tiré présente des **marches** à sa surface (bandes de glissement). Le glissement se fait sur des plans et dans des directions liés à la structure :\n- **direction** : l'une des directions les plus denses du réseau de Bravais ;\n- **plan** : le plus souvent un plan assez dense.\n\n**Frenkel** : on calcule la contrainte nécessaire pour cisailler en bloc deux plans l'un sur l'autre. L'énergie de faute d'empilement est périodique en $u$ (déplacement relatif, période $b$) :\n\n$$\n\\gamma = \\sum_n \\gamma_n\\left(1-\\cos\\frac{2\\pi n u}{b}\\right)\n$$\n\nLa contrainte s'obtient par dérivation :\n\n$$\n\\tau = \\frac{d\\gamma}{du} = \\frac{2\\pi}{b}\\sum_n n\\gamma_n \\sin\\frac{2\\pi n u}{b}\n$$\n\n**[Corr.]** La diapo écrit $2\\pi/u$, mais c'est bien $2\\pi/b$.\n\nLa contrainte critique d'écoulement est le maximum de $\\tau$ :\n\n$$\n\\tau_c = \\frac{2\\pi}{b}\\sum_n \\gamma_n\n$$\n\n**Fourier au premier terme** ($n=1$). **[Compl.]** Aux petits $u$, $\\tau \\approx \\frac{4\\pi^2\\gamma_1}{b^2}u$. On identifie avec la loi de Hooke $\\tau=\\mu u/a$, d'où $\\gamma_1=\\frac{\\mu b^2}{4\\pi^2 a}$. On obtient :\n\n$$\n\\tau_c=\\frac{\\mu b}{2\\pi a}\n$$\n\n- $\\mu$ : module de cisaillement du cristal ; $b$ : période dans la direction de glissement ; $a$ : distance entre plans.\n- $\\tau_c$ est minimal si $b$ est minimal (directions denses) et $a$ grand (plans denses).\n- **A.N.** : $b\\approx a$ et $\\mu=10^5$ MPa donnent $\\tau_c \\ge 10^4$ MPa : c'est la limite d'élasticité théorique.\n- **En réalité**, $\\tau_c$ est $10^2$ à $10^4$ fois plus petit. Le glissement ne se fait donc pas en bloc, d'où les dislocations.\n- **Hypothèse** : cristal parfait, cisaillement simultané de toutes les liaisons du plan.\n\n## 2. Théorie des dislocations\n\n- La déformation passe par la **rupture successive des liaisons** : la dislocation se propage, ce qui équivaut à un glissement en bloc. Le réseau est tridimensionnel.\n- **Densité de dislocations** $\\rho_d$ (longueur de ligne par volume, en cm·cm⁻³ = cm⁻²) :\n  - métal recuit : $10^6$ à $10^8$ cm⁻² ;\n  - laminé à froid : $10^{10}$ à $10^{12}$ cm⁻².\n- **Types** (la dislocation est un défaut linéaire de ligne $\\vec L$) :\n  - **coin** : $\\vec b \\perp \\vec L$ (demi-plan atomique supplémentaire) ;\n  - **vis** : $\\vec b \\parallel \\vec L$ ;\n  - $\\vec b$ est le **vecteur de Burgers** : amplitude et direction du glissement. Il se détermine par un circuit de Burgers (fermé dans le cristal parfait, non fermé autour de la dislocation) ;\n  - en réalité les dislocations sont **mixtes**.\n- **Observation** : microscopie électronique en transmission (MET) sur lame mince. Exemple du cours : acier inoxydable, lame de 100 nm d'épaisseur, dislocations de longueur ≈ 1000 atomes.\n- **[Compl.]** Énergie de ligne $\\approx \\tfrac12 G b^2$ par unité de longueur. Les dislocations de signes opposés s'annihilent, celles de même signe se repoussent.\n\n## 3. Systèmes de glissement et loi de Schmid\n\n| Structure | Plans | Directions | Burgers | Nb systèmes (support) |\n|---|---|---|---|---|\n| CFC | {111} | ⟨110⟩ | a/2⟨110⟩ | 24 |\n| CC | {110}, {112}, {123} | ⟨111⟩ | a/2⟨111⟩ | 24 |\n| HC | {001}, {101} | ⟨110⟩ | a⟨110⟩ | 6 |\n\n**[Corr.]** Comptes usuels : CFC 4 plans × 3 directions = **12** (24 si on compte les deux sens) ; CC 12 ({110}) + 12 ({112}) + 24 ({123}) = **48** ; HC **3** pour le plan de base (jusqu'à 6 avec les plans prismatiques). Les indices HC du support sont à vérifier sur ton cours papier (notation usuelle {0001} et {10-10}).\n\n**Relation de Schmid et Boas** : pour une traction $F$ sur une section $S$, $\\chi$ est l'angle entre la direction de glissement (DG) et l'axe de traction, $\\lambda$ l'angle entre la normale au plan de glissement (PG) et l'axe. La section du plan de glissement est $S/\\cos\\lambda$ :\n\n$$\n\\tau_c=\\frac{F\\cos\\chi}{S/\\cos\\lambda}=\\sigma\\cos\\chi\\cos\\lambda\n$$\n\n- Le glissement démarre sur le système qui atteint $\\tau_c$ le premier, c'est-à-dire de facteur de Schmid $\\cos\\chi\\cos\\lambda$ maximal. **[Compl.]** Ce facteur vaut au plus 0,5.\n- $\\tau_c = f(\\text{structure}, T, \\text{pureté})$.\n- **Effet de la température** : $\\tau_c$ diminue quand $T$ augmente. Dépendance **forte pour CC**, plus faible pour CFC (la courbe CC est au-dessus de la courbe CFC).\n\n### Du monocristal au polycristal\n\nLoi de comportement du monocristal $\\tau(\\gamma)$ :\n- **Élasticité** : $\\tau<\\tau_c$.\n- **Stade I** (glissement facile) : un seul système activé, celui de $\\cos\\chi\\cos\\lambda$ maximal. $\\frac{\\partial\\tau}{\\partial\\gamma}\\approx 10^{-3}$ à $10^{-4}\\,G$.\n- **Stade II** (glissement double, écrouissage linéaire) : un second système s'active ; interactions entre systèmes, multiplication des dislocations. $\\frac{\\partial\\tau}{\\partial\\gamma}\\approx G/300$.\n- **Stade III** (écrouissage parabolique) : deux phénomènes antagonistes, la densité de dislocations augmente mais la probabilité d'annihilation aussi. $\\frac{\\partial\\tau}{\\partial\\gamma}$ diminue.\n- Les systèmes ne s'activent **pas simultanément**.\n\nPolycristal :\n- Chaque grain a son propre $\\max(\\cos\\chi\\cos\\lambda)$ : la plasticité est **localisée** dans certains grains.\n- Déformation **hétérogène**, même si la contrainte macroscopique est inférieure à la limite d'élasticité macroscopique.\n- Cette **microplasticité** contribue à la fatigue des polycristaux.\n- **[Compl.]** Un polycristal exige 5 systèmes indépendants (critère de Von Mises) ; $\\sigma = M\\tau$ avec $M\\approx 3{,}06$ (facteur de Taylor, CFC). L'HC, avec peu de systèmes, est peu ductile.\n\n## 4. Cission critique\n\n- **Peierls-Nabarro $\\tau_{PN}$** : contrainte permettant le mouvement d'une dislocation, c'est-à-dire résistance du réseau. Elle dépend du type de liaison et de la structure du cœur de la dislocation. C'est la **valeur minimale** de la limite d'élasticité (contribution du monocristal).\n\n| Structure | $(\\tau_{PN})_{0K}/\\mu$ |\n|---|---|\n| CFC et plan de base HC | $<10^{-5}$ |\n| CC et HC (hors plan de base) | $\\approx 10^{-5}$ |\n| Cristaux ioniques | $10^{-2}$ à $3\\cdot10^{-2}$ |\n| Cristaux covalents | $2\\cdot10^{-2}$ à $5\\cdot10^{-2}$ |\n\nLes métaux CFC sont très mous ; les céramiques ioniques et covalentes ont des dislocations quasi immobiles, d'où leur fragilité.\n- **Cission critique par cisaillement pur $\\tau_{crit}$** : rupture simultanée de toutes les liaisons du plan, de l'ordre de $\\mu/10$. C'est la **valeur maximale** de la limite d'élasticité.\n\n## 5. Maclage\n\n- **Principe** : translation de plusieurs plans cristallins par rapport à un plan de macle, suivant une direction de maclage. Le cristal maclé est l'image miroir du cristal initial.\n- **Taux de maclage** $s=h/d$.\n\n| Structure | Plan de macle | Direction | Taux |\n|---|---|---|---|\n| CFC | {111} | ⟨112⟩ | 0,707 |\n| CC | {112} | ⟨111⟩ | 0,707 |\n| HC | {102} | ⟨101⟩ | < 0,150 |\n\n- Exemple du cours : grains d'austénite maclés.\n- **Comparaison glissement / maclage (CC)** : $\\tau_c$ de glissement augmente fortement quand $T$ baisse, celle de maclage varie peu. Sous une température $T_c$, c'est le **maclage** qui prend le relais (contrainte plus faible).\n- **[Compl.]** Le maclage est favorisé à basse température et à grande vitesse de déformation.\n\n## 6. Défauts cristallins et durcissement\n\n**Objectif** : augmenter les caractéristiques mécaniques, donc freiner les dislocations.\n- Soit en créant des défauts qui interagissent avec elles ;\n- soit en supprimant les dislocations (**whiskers** monocristallins : nanofils de Cu, contrainte vraie de plusieurs GPa).\n- Les céramiques ioniques ou covalentes ont des dislocations intrinsèquement peu mobiles.\n- Quatre familles de défauts : linéaires (dislocations), ponctuels, plans, volumiques. La conception des alliages joue sur eux.\n\n### 6.1 Mécanisme de Franck-Read (multiplication)\n\nRelation de Taylor-Orowan, avec $\\bar x$ le déplacement moyen des dislocations :\n\n$$\n\\epsilon_p=\\rho_d\\, b\\,\\bar x\n$$\n\n- **A.N.** : $\\bar x\\approx$ taille de grain $=10^{-2}$ cm, $\\rho_d\\approx10^{8}$ cm⁻², $b\\approx2\\cdot10^{-8}$ cm donnent $\\epsilon_p\\approx2\\cdot10^{-2}$, soit 2 %. C'est trop faible par rapport aux déformations observées : des dislocations se forment pendant la déformation.\n- **Source de Franck-Read** : segment de longueur $l$ ancré en deux points. Sous $\\tau$, force $F=\\tau b l$. Tension de ligne $T=\\beta G b^2$ ($\\beta \\approx 0{,}5$). À l'équilibre $F=2T\\sin\\theta$. Le segment est stable tant que $\\theta<90°$ (rayon minimal $r_{min}=l/2$). **[Compl.]** Contrainte critique :\n\n$$\n\\tau_{FR}=\\frac{2\\beta G b}{l}\\approx\\frac{Gb}{l}\n$$\n\nAu-delà, le segment s'arque, se replie sur lui-même, s'auto-annihile et laisse une **boucle de dislocation** plus la source régénérée. Le processus se répète.\n\n### 6.2 Réseau et forêt de dislocations\n- Familles de plans, plans de glissement multiples qui se coupent. Les dislocations qui traversent un plan de glissement forment la **forêt** (dislocations « arbres »).\n- Cela provoque l'**encrage** des dislocations, d'autant plus fort que $\\rho_d$ est élevée.\n\n### 6.3 Durcissement par les dislocations (écrouissage)\n- Trois effets : interactions à courte distance (attractives ou répulsives, donc freinage), **crans** sur les dislocations, champ de contraintes internes à longue distance.\n- **Loi de Taylor**, avec $0{,}5<\\alpha<1{,}5$ et $\\sigma_f$ la friction du réseau :\n\n$$\n\\sigma_d=\\sigma_f+\\alpha\\mu b\\sqrt{\\rho_d}\n$$\n\n- **Exemples** : acier recuit, $\\alpha\\mu b\\sqrt{\\rho_d}\\approx10^{-4}$ à $10^{-3}\\mu$ ; acier écroui, $10^{-3}$ à $10^{-2}\\mu$.\n- La courbe de l'Hastelloy montre $\\sigma_{0,2}$ linéaire en $\\sqrt\\rho$ : $\\sigma=\\sigma_0+s\\sqrt\\rho$.\n\n### 6.4 Défauts ponctuels et solutions solides\n- Types : atome de la matrice en position interstitielle (auto-interstitiel), atome étranger interstitiel de petite taille (C, H, O, N, B), atome étranger substitutionnel (Mn, Cr, Ni, Ti, Mo, S…), lacune.\n- Ces défauts créent des distorsions élastiques qui freinent les dislocations.\n- La limite d'élasticité augmente avec la teneur en soluté, d'autant plus que la différence de taille atomique est grande (Cu-Sn > Cu-Si). Cu-Ni et Au-Ag donnent une courbe en cloche avec un maximum vers 50 %. Le magnésium suit une loi quasi linéaire.\n- **[Compl.]** Loi de Fleischer : $\\Delta\\tau\\propto G\\,\\varepsilon^{3/2}\\,c^{1/2}$.\n- **Atomes peu mobiles** : simple durcissement.\n- **Atomes mobiles** (C, N) : compétition entre le mouvement des dislocations et celui des atomes, d'où des **instabilités plastiques** :\n  - **Piobert-Lüders** : les impuretés (C, N) bloquent les dislocations (atmosphères de Cottrell **[Compl.]**), puis avalanche de dislocations quand $\\sigma>R_{eh}$ (limite haute). Une bande de déformation se propage sur un palier (limite basse) jusqu'à envahir toute l'éprouvette, puis l'écrouissage reprend. Typique des aciers bas carbone.\n  - **Portevin-Le Chatelier** : pas assez d'impuretés pour bloquer durablement les dislocations. La courbe de traction présente des **crochets successifs**. Dépend de la température et de la vitesse de déformation ; observé dans l'aluminium et l'acier doux entre 200 et 300 °C.\n  - **Vieillissement** des aciers bas carbone.\n\n### 6.5 Défauts plans : joints de grain (JG)\n- La surface libre (interface solide/gaz) est associée à une énergie de surface.\n- Un **joint de grain** est une zone de faible épaisseur entre deux orientations cristallines. Il est infranchissable par les dislocations, qui s'**empilent** à son voisinage. Plus il y a de JG (grains fins), plus le mouvement des dislocations est gêné.\n- **Hall-Petch** (relation expérimentale), avec $\\sigma_i$ les autres contributions et $0<k_y<2$ MPa·m$^{1/2}$ :\n\n$$\n\\sigma_y=\\sigma_i+k_y d^{-1/2}\n$$\n\n- Pente plus forte pour les CC (Mo, Fe-3%Si, acier doux) que pour les CFC (Cu, Al).\n- La limite d'élasticité augmente aussi quand $T$ diminue (courbes à +18, −23, −79 °C), avec la même loi linéaire en $d^{-1/2}$.\n- **[Compl.]** Hall-Petch cesse d'être valable pour les grains nanométriques (< 10-20 nm, effet inverse).\n\n### 6.6 Précipités (interface entre 2 phases)\n- **Précipités cohérents** : cohérence entre plans atomiques, avec ou sans désaccord paramétrique. Les dislocations les **cisaillent**. Avec $0<A<\\tfrac12$, $\\tfrac13<B<\\tfrac12$, $1<C<\\tfrac32$ :\n\n$$\n\\tau_{ci}=K\\,\\bar D_s^{A} f^{B}\\gamma^{C}\n$$\n\n  - $\\bar D_s$ : diamètre moyen surfacique ; $f$ : fraction volumique ; $\\gamma$ : énergie d'interface précipité/matrice.\n  - Précipités en général petits, mais pas toujours (ex. γ/γ′ dans les alliages base nickel). Exemple : zones de Guinier-Preston dans Al-4Cu-0,05Sn.\n- **Précipités incohérents** : réseau de la matrice différent de celui du précipité. Les dislocations les **contournent** (boucles de dislocations autour des précipités, mécanisme d'Orowan **[Compl.]**). $L$ est la distance entre précipités, $D$ et $E$ des constantes :\n\n$$\n\\tau_{co}=\\frac{D\\mu b}{2\\pi L}\\ln\\!\\left(\\frac{\\bar D_s}{2b}+E\\right)\n$$\n\n  **[Compl.]** Forme simplifiée : $\\tau\\approx\\mu b/L$.\n- **Précipités semi-cohérents** : cohérence seulement suivant certains plans cristallographiques.\n- **Cisaillement ou contournement** : $\\tau_{ci}$ augmente avec $\\bar D_s$, alors que $\\tau_{co}$ diminue. Le mécanisme actif est le plus facile, donc le durcissement réel suit l'enveloppe inférieure : **maximum à $\\bar D_{s,critique}$**.\n- La taille est contrôlée par traitement thermique (maturation des alliages d'aluminium). **[Compl.]** Séquence de précipitation : solution solide, zones GP, β″, β′, β (pic de dureté pour β″), puis survieillissement.\n\n## 7. Bilan : additivité du durcissement\n\n$$\n\\sigma_y=\\sigma_{PN}+\\sigma_{SS}+\\sigma_{PP}+\\frac{k_y}{\\sqrt d}+\\alpha\\mu b\\sqrt\\rho\n$$\n\n- $\\sigma_{PN}$ : résistance du réseau ; $\\sigma_{SS}$ : atomes en substitution et en insertion ; $\\sigma_{PP}$ : précipités ; $k_y/\\sqrt d$ : taille de grain ; $\\alpha\\mu b\\sqrt\\rho$ : densité de dislocations.\n- Passage du monocristal au polycristal : difficulté, interaction entre grains, prise en compte des différentes échelles.\n- **[Compl.]** L'additivité linéaire est une approximation ; pour des contributions d'ordre de grandeur comparable, on emploie parfois une somme quadratique.\n\n## Pièges classiques\n- Mélanger $\\chi$ (direction de glissement/axe) et $\\lambda$ (normale au plan/axe) dans Schmid.\n- Confondre $\\tau_{PN}$ (minimale) et $\\tau_{crit}\\approx\\mu/10$ (maximale). Frenkel donne une borne théorique, pas la valeur réelle.\n- Dislocation coin : $b\\perp L$ ; vis : $b\\parallel L$.\n- Hall-Petch : c'est $d^{-1/2}$, pas $d$ ; réduire $d$ **durcit**.\n- Précipités : petits = cisaillés, gros = contournés ; le maximum est à la taille critique.\n- Lüders (palier, bande) ≠ Portevin-Le Chatelier (crochets, 200-300 °C).\n- Les densités sont en cm⁻² (cm·cm⁻³) ; attention aux conversions en m⁻² (×10⁴).",
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "Au premier terme de Fourier, le modèle de Frenkel donne la contrainte théorique de cisaillement :",
+      "options": [
+        {
+          "id": "a",
+          "text": "$\\tau_c=\\mu b/(2\\pi a)$"
+        },
+        {
+          "id": "b",
+          "text": "$\\tau_c=\\mu a/(2\\pi b)$"
+        },
+        {
+          "id": "c",
+          "text": "$\\tau_c=\\alpha\\mu b\\sqrt{\\rho}$"
+        },
+        {
+          "id": "d",
+          "text": "$\\tau_c=\\mu b/L$"
+        }
+      ],
+      "correct": "a",
+      "explanation": "On identifie $\\tau\\approx(4\\pi^2\\gamma_1/b^2)u$ à la loi de Hooke $\\tau=\\mu u/a$ pour obtenir $\\gamma_1$, puis $\\tau_{max}=2\\pi\\gamma_1/b=\\mu b/(2\\pi a)$. Avec $b\\approx a$, $\\tau_c\\approx\\mu/2\\pi\\approx10^4$ MPa, soit $10^2$ à $10^4$ fois plus que les valeurs réelles : le glissement ne se fait pas en bloc mais par dislocations."
+    },
+    {
+      "id": "q2",
+      "question": "Dans le modèle de Frenkel, τc est minimale lorsque :",
+      "options": [
+        {
+          "id": "a",
+          "text": "b est grand et a petit"
+        },
+        {
+          "id": "b",
+          "text": "b est petit (directions denses) et a grand (plans denses)"
+        },
+        {
+          "id": "c",
+          "text": "b et a sont grands"
+        },
+        {
+          "id": "d",
+          "text": "b et a sont petits"
+        }
+      ],
+      "correct": "b",
+      "explanation": "$\\tau_c=\\mu b/(2\\pi a)$ diminue quand $b$ diminue et $a$ augmente. Le glissement a donc lieu sur les plans les plus denses et dans les directions les plus denses."
+    },
+    {
+      "id": "q3",
+      "question": "Quelle est la relation entre vecteur de Burgers b et ligne L pour une dislocation vis ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "b ⊥ L"
+        },
+        {
+          "id": "b",
+          "text": "b ∥ L"
+        },
+        {
+          "id": "c",
+          "text": "b est à 45° de L"
+        },
+        {
+          "id": "d",
+          "text": "b n'est défini que pour les dislocations coin"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Vis : b ∥ L. Coin : b ⊥ L. En réalité les dislocations sont mixtes (angle quelconque entre b et L)."
+    },
+    {
+      "id": "q4",
+      "question": "Un monocristal est tiré sous $\\sigma=100$ MPa. Pour un système, $\\chi=45°$ et $\\lambda=60°$. Quelle est la cission résolue ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "≈ 35 MPa"
+        },
+        {
+          "id": "b",
+          "text": "≈ 50 MPa"
+        },
+        {
+          "id": "c",
+          "text": "≈ 71 MPa"
+        },
+        {
+          "id": "d",
+          "text": "≈ 86 MPa"
+        }
+      ],
+      "correct": "a",
+      "explanation": "$\\tau=\\sigma\\cos\\chi\\cos\\lambda=100\\times0{,}707\\times0{,}5\\approx35{,}4$ MPa. Le facteur de Schmid maximal est 0,5 ($\\chi=\\lambda=45°$)."
+    },
+    {
+      "id": "q5",
+      "question": "Comment la cission critique de glissement dépend-elle de la température dans un métal CC par rapport à un CFC ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Elle est indépendante de T dans les deux cas"
+        },
+        {
+          "id": "b",
+          "text": "Elle augmente fortement quand T baisse pour CC, beaucoup moins pour CFC"
+        },
+        {
+          "id": "c",
+          "text": "Elle augmente avec T pour CC"
+        },
+        {
+          "id": "d",
+          "text": "Elle est plus sensible à T pour CFC que pour CC"
+        }
+      ],
+      "correct": "b",
+      "explanation": "La courbe τc(T) est plus pentue et plus haute pour CC que pour CFC. En CC, sous une température Tc, le maclage (peu sensible à T) devient le mécanisme actif."
+    },
+    {
+      "id": "q6",
+      "question": "Quel stade de la courbe $\\tau(\\gamma)$ d'un monocristal correspond à un écrouissage linéaire avec $\\partial\\tau/\\partial\\gamma\\approx G/300$ ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Stade I"
+        },
+        {
+          "id": "b",
+          "text": "Stade II"
+        },
+        {
+          "id": "c",
+          "text": "Stade III"
+        },
+        {
+          "id": "d",
+          "text": "Domaine élastique"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Stade I : glissement facile ($10^{-3}$ à $10^{-4}G$). Stade II : glissement double, interactions entre systèmes, multiplication des dislocations, durcissement linéaire $G/300$. Stade III : parabolique, le durcissement décroît car l'annihilation augmente."
+    },
+    {
+      "id": "q7",
+      "question": "Que représentent $\\tau_{PN}$ (Peierls-Nabarro) et $\\tau_{crit}$ (cisaillement pur) ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "$\\tau_{PN}$ = valeur maximale, $\\tau_{crit}$ = valeur minimale de la limite d'élasticité"
+        },
+        {
+          "id": "b",
+          "text": "$\\tau_{PN}$ = valeur minimale (déplacement d'une dislocation), $\\tau_{crit}\\approx\\mu/10$ = valeur maximale (rupture simultanée des liaisons)"
+        },
+        {
+          "id": "c",
+          "text": "Les deux valent $\\mu/10$"
+        },
+        {
+          "id": "d",
+          "text": "$\\tau_{PN}$ ne dépend pas du type de liaison"
+        }
+      ],
+      "correct": "b",
+      "explanation": "$\\tau_{PN}$ est la résistance du réseau au mouvement d'une dislocation ($<10^{-5}\\mu$ pour CFC, $10^{-2}$ à $5\\cdot10^{-2}\\mu$ pour cristaux ioniques/covalents). $\\tau_{crit}$ correspond à la rupture simultanée de toutes les liaisons du plan, de l'ordre de $\\mu/10$."
+    },
+    {
+      "id": "q8",
+      "question": "Dans un métal recuit ($\\rho=10^8$ cm⁻², $b=2\\cdot10^{-8}$ cm, $\\bar x=10^{-2}$ cm), $\\epsilon_p=\\rho b\\bar x$ vaut environ 2 %. Quelle conclusion en tire-t-on ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Les dislocations initiales suffisent à expliquer les déformations plastiques"
+        },
+        {
+          "id": "b",
+          "text": "Il faut des mécanismes de multiplication (Franck-Read) car les dislocations initiales ne suffisent pas"
+        },
+        {
+          "id": "c",
+          "text": "Les dislocations ne participent pas à la plasticité"
+        },
+        {
+          "id": "d",
+          "text": "Le métal ne peut pas se déformer au-delà de 2 %"
+        }
+      ],
+      "correct": "b",
+      "explanation": "$\\rho b\\bar x=10^8\\times2\\cdot10^{-8}\\times10^{-2}=2\\cdot10^{-2}$ : bien inférieur aux déformations observées. Des dislocations se forment donc durant la déformation, par exemple par la source de Franck-Read."
+    },
+    {
+      "id": "q9",
+      "question": "On divise la taille de grain $d$ par 4 (même matériau). Comment varie le terme $k_y d^{-1/2}$ de Hall-Petch ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Il est multiplié par 4"
+        },
+        {
+          "id": "b",
+          "text": "Il est multiplié par 2"
+        },
+        {
+          "id": "c",
+          "text": "Il est divisé par 2"
+        },
+        {
+          "id": "d",
+          "text": "Il ne change pas"
+        }
+      ],
+      "correct": "b",
+      "explanation": "$d\\to d/4$ donne $d^{-1/2}\\to 2d^{-1/2}$. Le terme double : un grain plus fin augmente la densité de joints de grain, qui bloquent les dislocations (empilements)."
+    },
+    {
+      "id": "q10",
+      "question": "Pour les précipités, quelle affirmation est correcte ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Le durcissement est maximal pour les très gros précipités incohérents"
+        },
+        {
+          "id": "b",
+          "text": "Les petits précipités cohérents sont cisaillés ; au-delà d'une taille critique ils sont contournés, et le durcissement est maximal à cette taille critique"
+        },
+        {
+          "id": "c",
+          "text": "Le cisaillement domine toujours"
+        },
+        {
+          "id": "d",
+          "text": "Le contournement augmente avec la distance entre précipités"
+        }
+      ],
+      "correct": "b",
+      "explanation": "$\\tau_{ci}$ croît avec la taille $\\bar D_s$ alors que $\\tau_{co}\\propto1/L$ diminue avec elle. Le mécanisme actif est le plus facile : la courbe réelle est l'enveloppe inférieure, avec un pic à $\\bar D_{s,critique}$ (maturation à l'optimum puis survieillissement)."
+    },
+    {
+      "id": "q11",
+      "question": "Quelle différence y a-t-il entre bandes de Piobert-Lüders et effet Portevin-Le Chatelier ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Lüders : palier de contrainte et bande qui se propage (impuretés bloquant les dislocations) ; PLC : crochets successifs sur la courbe, dépendant de T et de la vitesse (Al et acier doux vers 200-300 °C)"
+        },
+        {
+          "id": "b",
+          "text": "Les deux sont identiques"
+        },
+        {
+          "id": "c",
+          "text": "Lüders se produit au-dessus de 300 °C et PLC à température ambiante"
+        },
+        {
+          "id": "d",
+          "text": "PLC existe seulement dans les céramiques"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Lüders : pic de limite haute $R_{eh}$, avalanche de dislocations puis palier, des bandes envahissent l'éprouvette, puis l'écrouissage reprend. PLC : les atomes mobiles bloquent et libèrent les dislocations de façon répétée, d'où des crochets."
+    },
+    {
+      "id": "q12",
+      "question": "Par écrouissage, la densité de dislocations est multipliée par 4. Que devient la contribution $\\alpha\\mu b\\sqrt\\rho$ ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Multipliée par 4"
+        },
+        {
+          "id": "b",
+          "text": "Multipliée par 2"
+        },
+        {
+          "id": "c",
+          "text": "Inchangée"
+        },
+        {
+          "id": "d",
+          "text": "Divisée par 2"
+        }
+      ],
+      "correct": "b",
+      "explanation": "$\\sigma_d=\\sigma_f+\\alpha\\mu b\\sqrt{\\rho}$ : la contribution est proportionnelle à $\\sqrt\\rho$, donc $\\times\\sqrt4=\\times2$. C'est la loi de Taylor, observée sur la courbe $\\sigma_{0,2}=f(\\sqrt\\rho)$ de l'Hastelloy."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "recto": "Contrainte théorique de Frenkel",
+      "verso": "$\\tau_c=\\frac{\\mu b}{2\\pi a}\\approx\\mu/6$ si $b\\approx a$ (≈ $10^4$ MPa) ; réel $10^2$ à $10^4$ fois plus petit"
+    },
+    {
+      "id": "f2",
+      "recto": "Énergie de faute d'empilement (Frenkel)",
+      "verso": "$\\gamma=\\sum_n\\gamma_n\\left(1-\\cos\\frac{2\\pi nu}{b}\\right)$ et $\\tau=d\\gamma/du$"
+    },
+    {
+      "id": "f3",
+      "recto": "Dislocation coin / vis",
+      "verso": "Coin : $\\vec b\\perp\\vec L$ ; vis : $\\vec b\\parallel\\vec L$ ; en pratique mixte"
+    },
+    {
+      "id": "f4",
+      "recto": "Vecteur de Burgers",
+      "verso": "Amplitude et direction du glissement (fermeture de circuit)"
+    },
+    {
+      "id": "f5",
+      "recto": "Densité de dislocations (ordres de grandeur)",
+      "verso": "Recuit $10^6$-$10^8$ cm⁻² ; laminé à froid $10^{10}$-$10^{12}$ cm⁻²"
+    },
+    {
+      "id": "f6",
+      "recto": "Loi de Schmid-Boas",
+      "verso": "$\\tau_c=\\sigma\\cos\\chi\\cos\\lambda$ ($\\chi$ : DG/axe ; $\\lambda$ : normale au PG/axe)"
+    },
+    {
+      "id": "f7",
+      "recto": "Système de glissement CFC",
+      "verso": "{111}⟨110⟩, $\\vec b=\\frac a2\\langle110\\rangle$"
+    },
+    {
+      "id": "f8",
+      "recto": "Système de glissement CC",
+      "verso": "{110}, {112}, {123} ⟨111⟩, $\\vec b=\\frac a2\\langle111\\rangle$"
+    },
+    {
+      "id": "f9",
+      "recto": "Système de glissement HC (support)",
+      "verso": "{001}, {101} ⟨110⟩, $\\vec b=a\\langle110\\rangle$"
+    },
+    {
+      "id": "f10",
+      "recto": "Stade I du monocristal",
+      "verso": "Un système actif, $\\partial\\tau/\\partial\\gamma\\approx10^{-3}$-$10^{-4}G$"
+    },
+    {
+      "id": "f11",
+      "recto": "Stade II du monocristal",
+      "verso": "Glissement double, durcissement linéaire, $\\partial\\tau/\\partial\\gamma\\approx G/300$"
+    },
+    {
+      "id": "f12",
+      "recto": "Stade III du monocristal",
+      "verso": "Parabolique : densité et annihilation augmentent, durcissement en baisse"
+    },
+    {
+      "id": "f13",
+      "recto": "$\\tau_{PN}$",
+      "verso": "Résistance du réseau, valeur minimale de la limite d'élasticité ; $<10^{-5}\\mu$ (CFC)"
+    },
+    {
+      "id": "f14",
+      "recto": "$\\tau_{crit}$",
+      "verso": "Cisaillement pur (rupture simultanée des liaisons), ≈ $\\mu/10$, valeur maximale"
+    },
+    {
+      "id": "f15",
+      "recto": "Taux de maclage",
+      "verso": "$s=h/d$ ; CFC et CC 0,707 ; HC $<0{,}150$"
+    },
+    {
+      "id": "f16",
+      "recto": "Plans et directions de macle",
+      "verso": "CFC {111}⟨112⟩ ; CC {112}⟨111⟩ ; HC {102}⟨101⟩"
+    },
+    {
+      "id": "f17",
+      "recto": "Relation densité de dislocations - déformation plastique",
+      "verso": "$\\epsilon_p=\\rho_d\\,b\\,\\bar x$"
+    },
+    {
+      "id": "f18",
+      "recto": "Source de Franck-Read",
+      "verso": "$F=\\tau bl$, $T=\\beta Gb^2$, $\\tau_{FR}\\approx Gb/l$ (arc à $\\theta=90°$, $r_{min}=l/2$)"
+    },
+    {
+      "id": "f19",
+      "recto": "Durcissement par les dislocations (Taylor)",
+      "verso": "$\\sigma_d=\\sigma_f+\\alpha\\mu b\\sqrt{\\rho_d}$, $0{,}5<\\alpha<1{,}5$"
+    },
+    {
+      "id": "f20",
+      "recto": "Relation de Hall-Petch",
+      "verso": "$\\sigma_y=\\sigma_i+k_yd^{-1/2}$, $0<k_y<2$ MPa·m$^{1/2}$"
+    },
+    {
+      "id": "f21",
+      "recto": "Précipités cohérents (cisaillement)",
+      "verso": "$\\tau_{ci}=K\\bar D_s^Af^B\\gamma^C$, $0<A<\\frac12$, $\\frac13<B<\\frac12$, $1<C<\\frac32$"
+    },
+    {
+      "id": "f22",
+      "recto": "Précipités incohérents (contournement)",
+      "verso": "$\\tau_{co}=\\frac{D\\mu b}{2\\pi L}\\ln\\left(\\frac{\\bar D_s}{2b}+E\\right)$ ; simplifié $\\approx\\mu b/L$"
+    },
+    {
+      "id": "f23",
+      "recto": "Taille critique de précipité",
+      "verso": "Intersection cisaillement / contournement : durcissement maximal"
+    },
+    {
+      "id": "f24",
+      "recto": "Bande de Piobert-Lüders",
+      "verso": "Blocage par C/N, avalanche de dislocations, palier à $R_{eh}$, bandes qui envahissent l'éprouvette"
+    },
+    {
+      "id": "f25",
+      "recto": "Effet Portevin-Le Chatelier",
+      "verso": "Crochets successifs sur la courbe de traction, 200-300 °C (Al, acier doux), dépend de $T$ et $\\dot\\epsilon$"
+    },
+    {
+      "id": "f26",
+      "recto": "Joint de grain et dislocations",
+      "verso": "Infranchissable : empilement des dislocations, durcissement par réduction de la taille de grain"
+    },
+    {
+      "id": "f27",
+      "recto": "Loi d'additivité du durcissement",
+      "verso": "$\\sigma_y=\\sigma_{PN}+\\sigma_{SS}+\\sigma_{PP}+\\frac{k_y}{\\sqrt d}+\\alpha\\mu b\\sqrt\\rho$"
+    }
+  ],
+  "exercices": [
+    {
+      "titre": "Contrainte de Frenkel pour le cuivre",
+      "difficulte": 1,
+      "enonce": "Cu (CFC) : $\\mu=48$ GPa, $b=0{,}255$ nm, $a=d_{111}=0{,}208$ nm. Calculer $\\tau_c$ théorique de Frenkel et le comparer à $\\tau_c$ réel d'un monocristal de Cu pur ($\\approx1$ MPa).",
+      "corrige": "1. Formule de Frenkel :\n\n$$\n\\tau_c=\\frac{\\mu b}{2\\pi a}\n$$\n\n2. Application numérique :\n\n$$\n\\tau_c=\\frac{48000\\times0{,}255}{2\\pi\\times0{,}208}=\\frac{12240}{1{,}307}\\approx 9{,}4\\cdot10^{3}\\ \\text{MPa}\n$$\n\n3. Avec l'approximation $b\\approx a$ : $\\mu/2\\pi\\approx7{,}6$ GPa, même ordre de grandeur.\n4. Rapport au réel : $9400/1\\approx10^4$, cohérent avec l'écart de $10^2$ à $10^4$ du cours.\n5. Conclusion : le glissement en bloc est impossible ; la plasticité vient du mouvement de dislocations."
+    },
+    {
+      "titre": "Loi de Schmid sur un monocristal",
+      "difficulte": 2,
+      "enonce": "Un monocristal de Cu ($\\tau_c=1$ MPa, section $S=20$ mm²) est tiré. Pour le système le mieux orienté : $\\chi=45°$, $\\lambda=60°$. Calculer $\\sigma_y$ et la force de plastification $F$. Quelle est la valeur minimale de $\\sigma_y$ possible ?",
+      "corrige": "1. Limite d'élasticité du monocristal :\n\n$$\n\\sigma_y=\\frac{\\tau_c}{\\cos\\chi\\cos\\lambda}=\\frac{1}{0{,}707\\times0{,}5}\\approx2{,}83\\ \\text{MPa}\n$$\n\n2. Force de plastification :\n\n$$\nF=\\sigma_y S=2{,}83\\times20\\approx56{,}6\\ \\text{N}\n$$\n\n3. Facteur de Schmid maximal $=0{,}5$ ($\\chi=\\lambda=45°$), donc $\\sigma_{y,min}=2\\tau_c=2$ MPa.\n4. Si l'orientation s'éloigne de 45°/45° (axe quasi parallèle au plan ou à sa normale), le facteur diminue et $\\sigma_y$ augmente."
+    },
+    {
+      "titre": "Hall-Petch et durcissement par écrouissage (Taylor)",
+      "difficulte": 3,
+      "enonce": "Un acier doux a une limite d'élasticité de 180 MPa pour $d=100$ µm et 230 MPa pour $d=25$ µm.\n\n1. Déterminer $k_y$ et $\\sigma_i$, puis prédire $\\sigma_y$ pour $d=10$ µm.\n2. Par écrouissage, $\\rho$ passe de $10^{12}$ à $10^{15}$ m⁻². Calculer le gain $\\Delta\\sigma_d$ avec $\\alpha=0{,}5$, $\\mu=80$ GPa, $b=0{,}25$ nm.",
+      "corrige": "1. Calcul de $d^{-1/2}$ : $d=0{,}1$ mm donne $3{,}162$ mm⁻¹ᐟ² ; $d=0{,}025$ mm donne $6{,}325$ mm⁻¹ᐟ². Pente :\n\n$$\nk_y=\\frac{230-180}{6{,}325-3{,}162}=15{,}8\\ \\text{MPa·mm}^{1/2}\\approx0{,}50\\ \\text{MPa·m}^{1/2}\n$$\n\n2. Ordonnée à l'origine :\n\n$$\n\\sigma_i=180-15{,}8\\times3{,}162=130\\ \\text{MPa}\n$$\n\n3. Pour $d=0{,}01$ mm, $d^{-1/2}=10$ :\n\n$$\n\\sigma_y=130+15{,}8\\times10\\approx288\\ \\text{MPa}\n$$\n\n4. Taylor : $\\alpha\\mu b=0{,}5\\times80000\\times2{,}5\\cdot10^{-10}=10^{-5}$ MPa·m, d'où :\n\n$$\n\\Delta\\sigma_d=10^{-5}\\left(\\sqrt{10^{15}}-\\sqrt{10^{12}}\\right)=10^{-5}\\left(3{,}162\\cdot10^{7}-10^{6}\\right)\\approx306\\ \\text{MPa}\n$$\n\n5. Si les contributions sont additives, grain fin plus écrouissage dépassent 500 MPa."
+    },
+    {
+      "titre": "Multiplication des dislocations et précipités dans un alliage d'aluminium",
+      "difficulte": 4,
+      "enonce": "Al : $\\mu=26$ GPa, $b=0{,}286$ nm.\n\n1. Une source de Franck-Read a une longueur $l=1$ µm. Calculer $\\tau_{FR}$.\n2. Des précipités incohérents sont espacés de $L=100$ nm. Estimer la contrainte de contournement $\\tau_{co}\\approx\\mu b/L$.\n3. Avec $\\rho=10^{12}$ m⁻² et $\\bar x=100$ µm, calculer $\\epsilon_p$. Quelle densité faut-il pour $\\epsilon_p=0{,}2$ ?",
+      "corrige": "1. Franck-Read ($\\tau_{FR}\\approx Gb/l$) :\n\n$$\n\\tau_{FR}=\\frac{26000\\times0{,}286\\cdot10^{-9}}{10^{-6}}\\approx7{,}4\\ \\text{MPa}\n$$\n\n2. Contournement :\n\n$$\n\\tau_{co}\\approx\\frac{26000\\times0{,}286\\cdot10^{-9}}{10^{-7}}\\approx74\\ \\text{MPa}\n$$\n\nPlus $L$ est petit, plus la contrainte est grande : d'où l'intérêt d'une précipitation fine. On compare à $\\tau_{ci}$ et le durcissement est celui du mécanisme le plus facile.\n\n3. Déformation plastique :\n\n$$\n\\epsilon_p=\\rho b\\bar x=10^{12}\\times0{,}286\\cdot10^{-9}\\times10^{-4}\\approx2{,}9\\cdot10^{-2}\n$$\n\n4. Pour $\\epsilon_p=0{,}2$ :\n\n$$\n\\rho=\\frac{0{,}2}{0{,}286\\cdot10^{-9}\\times10^{-4}}\\approx7\\cdot10^{12}\\ \\text{m}^{-2}\n$$\n\n5. La densité initiale est insuffisante : c'est le rôle de Franck-Read, qui permet d'atteindre $10^{14}$ à $10^{16}$ m⁻² en cours d'écrouissage."
+    }
+  ],
+  "suivi": "Aucun résultat de quiz ni d'exercice enregistré pour l'instant. À compléter avec les questions manquées et les notions à revoir. Points de vigilance a priori : angles χ/λ de Schmid, τ_PN (minimale) vs τ_crit ≈ μ/10 (maximale), Hall-Petch en d^(-1/2), cisaillement vs contournement des précipités, Lüders vs Portevin-Le Chatelier."
+}
