@@ -1,0 +1,500 @@
+{
+  "matiere": "Matériaux",
+  "type": "CM",
+  "sujet": "Fer pur, aciers et fontes — diagramme Fe-Fe3C (Cours 4, UEF MATI)",
+  "fiche_synthese": "# Fer pur, aciers et fontes — Cours 4 (CM), UEF MATI, Arts et Métiers\n\n**Plan du support** : 6-a Fer pur · 6-b Aciers et fontes (définitions, élaboration, chiffres) · 6-c Les aciers (phases, diagramme Fe–Fe₃C) · 6-d Aciers non alliés · 6-e Aciers alliés · 6-f Désignation des aciers · 7-a Fontes blanches · 7-b Fontes grises · 7-c Désignation des fontes · Conclusion.\n\n> Les passages marqués **[Complément]** ne figurent pas dans les slides (ajoutés pour rendre la fiche autonome).\n\n## 1. Le fer pur (6-a)\n\n- Fe, Z = 26, M = 55,845 g/mol. 4ᵉ élément de l'écorce terrestre. Présent sous forme **native** (météorites) et en **minerais** (oxyde, sulfure, carbonate, nitrate, silicate d'après le slide ; ex. pyrite FeS₂ sur la photo). [Complément] minerais exploités : surtout oxydes (hématite Fe₂O₃, magnétite Fe₃O₄).\n- **Allotropie** (chauffage, pression atmosphérique) :\n\n| Domaine | Forme | Structure |\n|---|---|---|\n| T < 912 °C | α | cubique centré (CC) |\n| 912 → 1394 °C | γ | cubique à faces centrées (CFC) |\n| 1394 → 1538 °C | δ | cubique centré (CC) |\n| T > 1538 °C | liquide | — |\n\n- **Points de transformation** : A₃ = 912 °C (α ⇌ γ), A₄ = 1394 °C (γ ⇌ δ), fusion 1538 °C. Au chauffage : ΔV < 0 en A₃ (contraction), ΔV > 0 en A₄ (dilatation).\n- **Volume spécifique** (cm³·g⁻¹), valeurs du slide 3 (source Constant, Henry, Charbonnier 1992) :\n\n| État | v |\n|---|---|\n| α à 0 °C | 0,1270 |\n| α juste avant A₃ | 0,1321 |\n| γ juste après A₃ | 0,1307 |\n| γ juste avant A₄ | 0,1351 |\n| δ juste après A₄ | 0,1358 |\n| δ juste avant fusion | 0,1372 |\n| liquide à la fusion | 0,1421 |\n\nVariations données : **A₃ : contraction 1,03 %** ; **A₄ : dilatation 0,54 %** ; **fusion : dilatation 3,58 %**.\n\n$$\\frac{\\Delta V}{V}=\\frac{v_{\\text{après}}-v_{\\text{avant}}}{v_{\\text{avant}}}$$\n\n$$\\rho=\\frac{1}{v}$$\n\nRecalcul : A₃ → −1,06 % ; A₄ → +0,52 % ; fusion → +3,57 % (écarts avec le slide = arrondis des valeurs lues). Vérification : 1/0,1270 = 7,87 g/cm³ ✓.\n\n- **[Complément] Pourquoi une contraction en A₃ ?** La compacité du CFC est supérieure à celle du CC :\n\n$$\\tau_{CC}=\\frac{\\pi\\sqrt{3}}{8}\\approx 0{,}68$$\n\n$$\\tau_{CFC}=\\frac{\\pi\\sqrt{2}}{6}\\approx 0{,}74$$\n\nÀ rayon atomique constant, le volume par atome diminuerait de ≈ 8 % ; la contraction réelle n'est que ≈ 1 % car le rayon atomique apparent augmente avec la coordinence (8 → 12).\n- **Propriétés (20 °C)** : CC ; ρ = 7,870 g/cm³ (tableau comparatif du slide : or 19,30 ; tungstène 19,30 ; uranium 19,10 ; mercure 13,55 ; plomb 11,35 ; argent 10,50 ; molybdène 10,20 ; cuivre 8,92 ; nickel 8,90 ; **fer 7,86** ; étain 7,29 ; zinc 7,15 ; titane 4,50 ; aluminium 2,70 ; magnésium 1,75 ; lithium 0,53). Module de Young E = 210 GPa ; limite d'élasticité Re = 100–170 MPa ; Rm = 180–290 MPa ; allongement A = 40–50 % ; coefficient de striction Z = 80–95 %. Comparaisons Re du slide : résineux courants 18–30 MPa, bois lamellé-collé 24–32 MPa, alliages d'aluminium (séries 1000 à 7000) 90–470 MPa.\n- **Peu d'utilisations industrielles** : on modifie les propriétés par addition d'éléments d'alliage et/ou traitements thermomécaniques.\n\n## 2. Aciers et fontes : généralités (6-b)\n\n- **Acier** : fer + carbone, de ≈ 0 % (traces) à ≈ 2 % C. Près de 3 000 nuances répertoriées (hors nuances sur mesure).\n- **Fonte** : %C > 2. Distinction selon la forme du carbone (**carbure de fer Fe₃C** ou **graphite**) et la composition : **fontes à graphite = grises** (lamellaire, nodulaire/sphéroïdal, vermiculaire) ; **fontes blanches** (non alliées, alliées).\n- **Élaboration** (slide 6) : quai (minerai, charbon) → agglomération du minerai + cokerie (coke) → **haut-fourneau** (≈ 2000 °C dans la zone basse ; **fonte liquide ≈ 1500 °C**) → traitement de la fonte → **convertisseur à oxygène pur** (≈ 1600 °C ; **acier liquide primaire**) → **traitement en poches** (acier liquide mis à nuance) → **coulée continue** (oxycoupage → **brames**, demi-produits) → **four de réchauffage** (≈ 1200 °C) → **train de laminage à chaud / train à bandes** → tôle. [Complément] Haut-fourneau = réduction du minerai par CO (coke) ; convertisseur = décarburation par O₂ (oxydation de C, Si, Mn, P) ; poche = désoxydation, désulfuration, ajouts d'alliage.\n- **Production mondiale 2021** (Les Echos) : acier 1 830 Mt ; fonte 980 Mt ; aluminium 46 Mt ; cuivre 17 Mt ; béton 13 500 Mt ; plastique 285 Mt ; caoutchouc 12 Mt ; tabac 7,7 Mt.\n- **Mondialisation** (slide 8, IISI) : 1930 : Europe de l'Ouest 44,9 % + Amérique du Nord 43,8 % de la production ; 1950 : 31,2 % / 46,7 % ; 1970 : 33,9 % / 21,9 % ; 1990 : Chine 9 % ; 1995 : 12,7 % ; 2010 : 46,4 % ; 2015 : 49,6 % ; **2020 : Chine 57 %**, autres pays 23 %, Europe de l'Ouest 7 %, Amérique du Nord 4 %, ex-URSS 5 %, Japon 4 %.\n- **Secteurs d'utilisation de l'acier 2021** (Worldsteel, Eurofer) : bâtiment 55 % ; machines et appareils mécaniques 13 % ; objets métalliques 11 % ; automobile 11 % ; autres transports 5 % ; appareils ménagers 5 %.\n\n## 3. Les aciers au carbone (6-c)\n\nL'ajout de C dans le fer crée de nouvelles phases. **Trois constituants de base** :\n\n| Phase | Nature | C max | Dureté |\n|---|---|---|---|\n| **Ferrite** | solution solide interstitielle de C dans Fe α (CC) | 0,02 % (0,006 % à 20 °C) | 10–15 HRC (15 sur slide 10) |\n| **Austénite** | solution solide interstitielle de C dans Fe γ (CFC) | ≈ 2,1 % à 1147 °C (« 2 % » slide 10) | ≈ 25 HRC |\n| **Cémentite** | Fe₃C, carbure (orthorhombique), 93,3 % Fe + 6,7 % C | 6,7 % (composé défini) | 60–65 HRC |\n\n- **Ferrite** (latin *ferrum*) : atomes de C insérés au hasard dans les espaces interatomiques du réseau CC ; en grains ; structure « malléable et ductile ». Les espaces libres étant très petits, la solubilité est minuscule : **0,006 % à 20 °C, 0,020 % à 730 °C** → on peut la considérer comme du **fer α**.\n- **Austénite** : les espaces interatomiques du CFC sont plus grands → dissout jusqu'à **2,1 % de C à 1147 °C**. Ductile, ≈ 25 HRC, **paramagnétique** (donc non magnétique). Nommée d'après Sir William Chandler Roberts-Austen (1843–1902).\n- **Cémentite** (de l'anglais *cement*) : **très fragile (A ≈ 0 %)**, résistante à l'usure, ≈ 65 HRC. Se présente par ex. en particules dans une matrice ferritique. Vérif. : $$\\%C=\\frac{M_C}{3M_{Fe}+M_C}=\\frac{12{,}011}{3\\times 55{,}845+12{,}011}\\approx 6{,}69\\,\\%$$\n- **[Complément] Sites interstitiels** (R_Fe ≈ 0,124 nm, R_C ≈ 0,077 nm) : CC : site octaédrique 0,155 R ≈ 0,019 nm, tétraédrique 0,291 R ≈ 0,036 nm ; CFC : site octaédrique 0,414 R ≈ 0,051 nm. Le C ne « rentre » dans aucun site sans distorsion, mais beaucoup moins mal dans le CFC → 0,02 % vs 2,1 %.\n\n### Influence des éléments d'addition sur A₃ et A₄ (slide 14)\n\n- **Éléments γ-gènes** (Ni, Mn, **C**, N…) : **favorisent la phase γ (CFC)** ; abaissent A₃ et élargissent le domaine γ (A₄ monte).\n- **Éléments α-gènes** (Si, Cr, Mo, Ti…) : **favorisent la phase α (CC)** ; relèvent A₃, abaissent A₄ → **domaine γ refermé** (« boucle γ »).\n- Entre les lignes : domaines biphasés α+γ (près de A₃) et δ+γ (près de A₄).\n\n### Diagramme Fe–Fe₃C métastable (slides 15–16)\n\n- Abscisse : %C massique de 0 (Fe) à **6,67 % (Fe₃C)**. **Aciers : 0 → ≈ 2 % ; fontes : ≈ 2 → 6,67 %.** La partie « utile » (0–≈ 1,5 %C, bas du diagramme) couvre **95 % des aciers**.\n- Points : fusion Fe 1538 °C ; **δ** stable 1394–1538 °C (péritectique ≈ 1493 °C) ; **γ** : domaine d'austénite ; **eutectique 4,3 % C à 1147 °C** (L ⇌ γ + Fe₃C) ; **eutectoïde 0,8 % C à 727 °C** (slide 17 : 727 °C ; slide 15 : 730 °C ; slide 20 : 723 °C, voir remarques) ; limite de solubilité de C dans γ **2,14 % à 1147 °C** ; dans α **0,02 % à 727 °C**. Domaines : γ ; α ; α+γ ; γ+Fe₃C ; α+Fe₃C ; γ+L ; Fe₃C+L (liquidus Fe₃C ≈ 1230 °C).\n- Diagramme **métastable** car Fe₃C n'est pas la phase la plus stable (le graphite l'est, voir fontes grises).\n\n### Réaction eutectoïde et perlite (slide 17)\n\n$$\\gamma_{0{,}8\\,\\%}\\;\\rightleftharpoons\\;\\mathrm{Fe_3C}+\\alpha_{0{,}02\\,\\%}\\quad(727\\,^\\circ\\mathrm{C})$$\n\n- **Perlite** (*pearlite*) = composé eutectoïde **lamellaire** (α + Fe₃C), à 0,8 % C. Structure **mi-dure, 30–35 HRC**.\n- Mécanisme : la cémentite (6,7 % C) germe aux joints de grains de γ ; le C diffuse de l'austénite voisine vers les lamelles de Fe₃C, laissant du fer pauvre en C qui devient α (0,02 % C) → alternance de lamelles α / Fe₃C.\n- La perlite est un **mélange de deux phases, pas une phase**.\n\n### Températures d'équilibre (slide 18)\n\n- **Ac₁** : limite inférieure d'existence de γ (≈ 727 °C, horizontale).\n- **Ac₃** : limite supérieure d'existence de α (ligne de 912 °C à 0 %C jusqu'au point eutectoïde 0,8 %C / 727 °C).\n- **A_cm** : limite supérieure d'existence de Fe₃C (de 727 °C à 0,8 %C jusqu'à ≈ 1147 °C à ≈ 2 %C).\n- Repères du slide : zones **austénite** (au-dessus), **austénite + ferrite** (hypo), **austénite + cémentite** (hyper), **ferrite + perlite**, **perlite + cémentite**, perlite pure à 0,8 %C.\n\n## 4. Aciers non alliés (6-d)\n\n- Alliages de teneur en C < 2 % (**limite pratique 1,4–1,5 %C**).\n- **Éléments d'élaboration** (Mn, Si, S, P, Cu, Al, N, O…) à teneurs limitées (NF EN 10020) : en solution solide (P, Si, Mn) ou en inclusions (MnS, FeS, SiO₂…). Ils influencent le comportement mécanique.\n- **Constitution à l'état recuit (quasi-équilibre)** :\n\n| %C | Constitution | Nom |\n|---|---|---|\n| 0 < %C < 0,02 | ferrite (+ cémentite) | — |\n| 0,02 < %C < 0,8 | ferrite + perlite | **hypoeutectoïde** |\n| %C = 0,8 | perlite | **eutectoïde** |\n| 0,8 < %C < 2 (2,1) | cémentite + perlite | **hypereutectoïde** |\n\n- **Microstructures d'équilibre** (slides 20–21) :\n  - *Hypoeutectoïde* : refroidissement depuis γ ; en dessous de Ac₃, **ferrite pro-eutectoïde** (polygones blancs) germe aux joints de grains γ ; γ s'enrichit en C jusqu'à 0,8 % à 727 °C, puis se transforme en perlite (lamelles). Ex. 0,4 %C : points a (γ), b (γ + α), c (juste au-dessus de 727 °C), d (α + perlite).\n  - *Eutectoïde* : γ → perlite à 727 °C.\n  - *Hypereutectoïde* : au-dessous de A_cm, **cémentite pro-eutectoïde** en **liseré blanc** aux joints de grains γ, puis perlite (lamelles). Ex. 1,2 %C.\n- **Règle des leviers [Complément, indispensable pour les calculs]** :\n\n$$w_{\\text{phase 1}}=\\frac{C_2-C_0}{C_2-C_1}$$\n\n*Hypoeutectoïde (juste sous 727 °C)* :\n\n$$f_{\\text{ferrite pro-eutectoïde}}=\\frac{0{,}8-C_0}{0{,}8-0{,}02}$$\n\n$$f_{\\text{perlite}}=\\frac{C_0-0{,}02}{0{,}8-0{,}02}$$\n\n*Hypereutectoïde (juste sous 727 °C)* :\n\n$$f_{\\text{cémentite pro-eutectoïde}}=\\frac{C_0-0{,}8}{6{,}67-0{,}8}$$\n\n$$f_{\\text{perlite}}=\\frac{6{,}67-C_0}{6{,}67-0{,}8}$$\n\n*Proportion totale de cémentite (toute phase, T ambiante)* :\n\n$$f_{\\mathrm{Fe_3C}}=\\frac{C_0-0{,}02}{6{,}67-0{,}02}$$\n\nLa perlite contient (0,8 − 0,02)/(6,67 − 0,02) ≈ 11,7 % de Fe₃C.\n- **Relations microstructure–propriétés** (slide 22, aciers au carbone normalisés, Ashby & Jones) : quand %C ↗ (0 → 1 %), **Re et Rm augmentent** (ordre de grandeur lu : Re ≈ 175 → 670 MPa ; Rm ≈ 350 → 1030 MPa) et la **ductilité A % diminue** (≈ 35 % → ≈ 7–10 %). Plus de perlite/cémentite = plus résistant, plus dur, moins ductile.\n\n## 5. Aciers alliés (6-e)\n\n- Besoin d'améliorer certaines propriétés ; alliages **au moins ternaires (Fe–C–X)**.\n- Principaux éléments d'alliage : Al, Co, Cr, Cu, Mo, Nb, Ni, Pb, Ti, V, W (+ Si, Mn, S, P : éléments normaux d'élaboration). Norme NF EN 10020 « Définition et classification des nuances d'acier ».\n- Effets : modification des transformations **eutectiques et eutectoïdes** (temps, température, teneur) ; modification des domaines d'existence des solutions solides α–δ (CC) et γ (CFC) :\n  - **effet α-gène** : Si, Cr, Mo, V, W, Ti, Nb, S…\n  - **effet γ-gène** : Ni, Mn, C, N…\n- Modification de la **nature des carbures** : éléments **carburigènes** X = Mn, Cr, Mo, W, V, Ti, Nb ; **cémentites alliées (Fe, X)₃C** ; **carbures spéciaux** M₂₃C₆, M₆C, M₂C, M₇C₃, MC (M = Fe, X₁, X₂…).\n- Forte influence des éléments d'alliage sur les propriétés (renvoi au cours 2A).\n\n## 6. Désignation des aciers (6-f, NF EN 10027-1)\n\n- **Selon l'emploi et les caractéristiques mécaniques/physiques** : lettre = domaine d'application (**S** construction, **P** appareils à pression, **L** tubes, **E** construction mécanique…) + valeur numérique = limite d'élasticité (ou propriété physique garantie) + symboles éventuels. Ex. **S355** : acier de construction, Re ≥ 355 MPa, état normalisé.\n- **Selon la composition** :\n  - *Non alliés* : **C** + teneur en C × 100. **C48** = 0,48 % C.\n  - *Faiblement alliés* (aucun élément > 5 %) : teneur en C × **100**, symboles chimiques par **teneur décroissante**, puis coefficients : Cr, Co, Mn, Ni, Si, W… × **4** ; autres × **10**. **42CrMo4** = 0,42 % C, 1 % Cr (4/4), Mo. **10CrMo9-10** = 0,10 % C, 2,25 % Cr (9/4), 1 % Mo (10/10).\n  - *Fortement alliés* (au moins un élément > 5 %) : lettre **X**, C × 100, teneurs décroissantes, **pas de coefficient** (teneurs en %). **X9CrNi18-9** = 0,09 % C, 18 % Cr, 9 % Ni.\n  - [Complément] Coefficients complets NF EN 10027-1 : ×4 (Cr, Co, Mn, Ni, Si, W) ; ×10 (Al, Be, Cu, Mo, Nb, Pb, Ta, Ti, V, Zr) ; ×100 (C, N, P, S, Ce) ; ×1000 (B).\n\n## 7. Fontes blanches (7-a)\n\n- Fontes où le **carbone est sous forme de carbures** (Fe₃C). **Diagramme métastable** ; le carbone est à l'état **combiné** (carbures) ou **dissous**. Compositions **hypoeutectique** (≈ 3 → 4,3 %C), **eutectique (4,3 %C, point E, 1147–1148 °C)**, **hypereutectique** (4,3 → ≈ 5 %C).\n- **Conditions d'obtention** : refroidissement **rapide** ; éléments **anti-graphitisants** (Mn) et stabilisateurs de cémentite ; (conclusion) température de coulée basse, forte teneur en éléments perlitisants (Mn, Cu…) ou faible teneur en éléments graphitisants (Si).\n- **Propriétés** : peu déformables à froid ; **grande résistance à l'usure et à l'abrasion**, bonne coulabilité, bel aspect ; **difficilement usinables**.\n- **Usages** : pièces d'usure (broyeurs à boulets, mâchoires de concasseur), pièces d'aspect, fonderie d'art (ex. statue *L'Amérique du Sud*, Aimé Millet).\n- **[Complément] Évolution au refroidissement (3 %C)** : primaire γ → à 1147 °C le liquide restant (4,3 %C) donne **lédéburite** (γ + Fe₃C) par réaction eutectique → de 1147 à 727 °C, γ rejette du C en cémentite secondaire (de 2,14 à 0,8 %C) → à 727 °C, γ (0,8 %) → perlite. Structure finale : perlite + cémentite + lédéburite transformée. Fonte hypereutectique : cémentite primaire (aiguilles) + lédéburite.\n\n## 8. Fontes grises (7-b)\n\n- Fontes où le **carbone est sous forme de graphite**. **Solidification suivant le diagramme stable** ; transition possible vers le métastable selon la teneur en C de l'austénite (conditions de refroidissement). Non alliées : **3–4 % C, Si < 3 %, Mn < 1,2 %, P < 1,2 %**.\n- **Conditions d'obtention** : température de coulée élevée ; refroidissement **lent** ; éléments **graphitisants (Si)** ; **pas de stabilisateurs de cémentite**.\n- **Diagramme stable (slide 28)** : eutectique ≈ **1153 °C** (E' puis C'), eutectoïde ≈ **738 °C** (S') ; domaines Austénite + Graphite, Liq. + C_gr, perlite ; zone des fontes grises ≈ **3 → 4,5 % C** (diagramme métastable en noir : 1148 °C / 727 °C). [Complément] valeurs usuelles : E' ≈ 2,08 %C, C' ≈ 4,26 %C, S' ≈ 0,69 %C.\n- Les **formes compactes du graphite** (sphéroïdes, nodules) donnent une **ténacité proche de celle des aciers** (effet d'entaille minimal).\n\n| | **Graphite lamellaire** | **Graphite sphéroïdal** |\n|---|---|---|\n| Forme | lamelles (NF EN ISO 945) | sphéroïdes (NF EN ISO 945) |\n| Élaboration | — | addition de **Mg** au métal liquide + **inoculation au ferro-silicium** (évite la structure blanche) |\n| Rm | 150–400 MPa | 400 (ferritique) → 800 MPa (perlitique) |\n| A % | 0,5–1 | 1–5 (perlitique) → 15–20 (ferritique) |\n| Qualités | usinage facile, corrosion, stabilité dimensionnelle, coulabilité, prix | résistance, ductilité, coulabilité, soudabilité |\n| Défaut | **fragile** (section efficace réduite, effet d'entaille) | — |\n| Usages | contrepoids, éléments de chauffage, inserts de cheminée, conduites/tuyaux (sauf gaz), bâtis de machines-outils | automobile (blocs moteur, tambours de freins, suspension, arbre à cames, vilebrequin), voirie, mobilier urbain |\n\n- Qualités générales des fontes grises (conclusion) : facilité d'usinage ; très bonne résistance à la corrosion et à la déformation à chaud ; **très bonne absorption des vibrations** ; stabilité dimensionnelle ; excellente coulabilité ; prix peu élevé.\n- [Complément] Autres fontes à graphite : **vermiculaire (GJV)**, compromis entre lamellaire et sphéroïdal ; **malléable (GJM)** : obtenue par traitement thermique d'une fonte blanche (graphite en amas).\n\n## 9. Désignation des fontes (7-c, NF EN 1560)\n\nDésignation symbolique en **6 indications** :\n\n1. (obligatoire) lettres **EN**\n2. (obligatoire) **G** (*Gusswerkstoff*, matière moulée) + **J** (fonte)\n3. (optionnel) structure du graphite : **L** lamellaire, **S** sphéroïdal, **M** (malléable), **V** vermiculaire, **Y** spéciale, **N** absence de graphite (fonte blanche)\n4. (optionnel) structure micrographique : A, F, P, M, L, Q, T, B, W (austénitique, ferritique, perlitique, martensitique, lédéburitique, trempé, trempé revenu, cassure noire, cassure blanche)\n5. (obligatoire) classement par **(a) propriétés mécaniques** (Rm min – allongement min – dureté nominale précédée de HB + type d'échantillonnage S, U, C) ou **(b) composition** (lettre **X** + éléments d'alliage et teneurs)\n6. (optionnel) exigences complémentaires (LT basse température, RT haute température)\n\n- **EN-GJS-400-18-S** : fonte à graphite sphéroïdal, Rm > 400 MPa, A > 18 % sur éprouvette coulée séparément (S).\n- **EN-GJN-X300Ni-Cr-4-2** (lecture du slide) : fonte blanche, 3 % C, 4 % Ni, 2 % Cr.\n- [Complément] Échantillonnage : S = éprouvette coulée séparément ; U = attenante ; C = prélevée sur la pièce.\n\n## 10. Conclusion du cours\n\n- **Acier** : alliage Fe–C, fer = élément principal, carbone = autre élément essentiel ; autres éléments = impuretés d'élaboration ou ajouts volontaires pour ajuster la composition et donc les propriétés. Teneur en C de 0,005 à 1,5 % (exceptionnellement 2 %).\n- **Fonte** : Fe–C avec %C > 2 ; C en **sursaturation**, précipite sous forme de **graphite ou de Fe₃C** ; excellente **coulabilité**.\n- **Classification courante des fontes** : par faciès de rupture → **blanches** (cassure blanche, Fe + cémentite) et **grises** (cassure grise, Fe + graphite). Blanche : coulée basse température, refroidissement rapide, éléments perlitisants (Mn, Cu) ou peu de Si ; pièces d'aspect, d'usure, fonderie d'art ; résiste à l'usure/abrasion mais très difficilement usinable. Grise : refroidissement très lent + Si ; graphite lamellaire plus fragile que sphéroïdal (effet d'entaille).\n\n## 11. [Complément] Pour aller plus loin (hors slides)\n\n- **Métastable vs stable** : Fe₃C se décompose en Fe + graphite après maintien prolongé à haute température (surtout en présence de Si) → d'où le diagramme « stable » Fe–C(graphite) pour les fontes grises.\n- **Tout ce qui précède = équilibre / refroidissement lent (recuit).** Un refroidissement rapide (**trempe**) depuis le domaine γ bloque la diffusion : γ → **martensite** (solution solide sursaturée de C dans Fe, très dure, fragile) ; vitesses intermédiaires : **bainite**. Un **revenu** restaure la ductilité. Les diagrammes TTT/TRC décrivent ces cas (cours suivants).\n- **Ferromagnétisme** : la ferrite est ferromagnétique sous le point de Curie ≈ 768 °C ; l'austénite est paramagnétique (inox austénitiques amagnétiques).\n- **Soudabilité** : le carbone équivalent (IIW) estime le risque de fissuration à froid.\n\n$$CE=C+\\frac{Mn}{6}+\\frac{Cr+Mo+V}{5}+\\frac{Ni+Cu}{15}$$\n\n## 12. Pièges classiques et points à clarifier\n\n- **Température eutectoïde** : le support donne 727 °C (slides 16–18), 730 °C (slides 11, 15) et 723 °C (slide 20, Callister). Retenir **727 °C** (≈ 723–727 selon sources) ; en calcul, 727 °C.\n- **Limite acier/fonte** : « 2 % » (slides) vs **2,14 %** (point E du diagramme, solubilité max de C dans γ) vs **2,1 %** (texte). Aciers courants < 1,4–1,5 %.\n- **Dureté** : cémentite 60 HRC (slide 10) vs 65 HRC (slide 13) ; ferrite 15 (slide 10) vs 10–15 (slide 11) → ordres de grandeur.\n- **Perlite et lédéburite = mélanges**, pas des phases. **Eutectoïde** = solide → solide ; **eutectique** = liquide → solide.\n- **Ferrite ≠ « fer δ »** : la ferrite α et le fer δ ont la même structure CC mais pas le même domaine.\n- **Hypo / hyper** : hypo = %C < 0,8 (ferrite pro-eutectoïde) ; hyper = %C > 0,8 (cémentite pro-eutectoïde en liseré aux joints, fragilisante). Ne pas confondre avec hypo/hypereutectique des fontes (seuil 4,3 %).\n- **Blanche vs grise** : blanche = rapide + Mn + peu de Si + coulée plus basse ; grise = lent + Si + coulée plus haute.\n- **Lamellaire vs sphéroïdal** : lamelles = entailles internes → fragile ; sphéroïdes → ténacité proche des aciers.\n- **Désignations** : ne pas oublier de **diviser par 4 ou 10** les nombres des aciers faiblement alliés, et de ne **pas diviser** pour les fortement alliés (X).\n- **Ac₁, Ac₃, A_cm** = températures d'équilibre au chauffage ; [Complément] Ar au refroidissement (hystérésis thermique) ; Ae = équilibre strict.\n",
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "Lors du chauffage du fer pur à pression atmosphérique, que se passe-t-il au point A₃ = 912 °C ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "α (CC) → γ (CFC), avec une contraction en volume d'environ 1 %"
+        },
+        {
+          "id": "b",
+          "text": "γ (CFC) → δ (CC), avec une dilatation de 0,54 %"
+        },
+        {
+          "id": "c",
+          "text": "α (CFC) → γ (CC), avec une dilatation d'environ 1 %"
+        },
+        {
+          "id": "d",
+          "text": "Fusion, avec une dilatation de 3,58 %"
+        }
+      ],
+      "correct": "a",
+      "explanation": "En A₃ (912 °C) le fer passe de α (cubique centré) à γ (cubique à faces centrées), structure plus compacte (0,74 contre 0,68) : le volume spécifique chute de 0,1321 à 0,1307 cm³/g, soit ≈ −1 % (1,03 % dans le support). La dilatation de 0,54 % correspond à A₄ (1394 °C, γ → δ) et celle de 3,58 % à la fusion (1538 °C). L'option c inverse les structures : α est CC et γ est CFC."
+    },
+    {
+      "id": "q2",
+      "question": "Quelle affirmation sur la solubilité du carbone est correcte ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Ferrite : 2,1 % max ; austénite : 0,02 % max"
+        },
+        {
+          "id": "b",
+          "text": "Ferrite et austénite dissolvent environ autant de carbone (≈ 0,02 %)"
+        },
+        {
+          "id": "c",
+          "text": "Ferrite : ≈ 0,02 % max (à 727–730 °C) ; austénite : ≈ 2,1 % max (à 1147 °C)"
+        },
+        {
+          "id": "d",
+          "text": "Ferrite : 0,8 % ; austénite : 6,7 %"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Le C est en insertion. Les espaces libres du réseau CC de la ferrite sont très petits (0,006 % à 20 °C, 0,020 % à 730 °C), alors que ceux du CFC de l'austénite sont plus grands : jusqu'à 2,1 % à 1147 °C. 0,8 % est la composition eutectoïde et 6,7 % celle de la cémentite : ce ne sont pas des limites de solubilité."
+    },
+    {
+      "id": "q3",
+      "question": "Quelle description de la cémentite est exacte ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Solution solide de C dans Fe γ, ductile, ≈ 25 HRC"
+        },
+        {
+          "id": "b",
+          "text": "Fe₃C orthorhombique à 6,7 % de C, très dure (60–65 HRC) mais très fragile (allongement ≈ 0 %)"
+        },
+        {
+          "id": "c",
+          "text": "Fe₃C cubique contenant 93,3 % de carbone"
+        },
+        {
+          "id": "d",
+          "text": "Mélange lamellaire ferrite + austénite, 30–35 HRC"
+        }
+      ],
+      "correct": "b",
+      "explanation": "La cémentite est un composé défini Fe₃C : 93,3 % Fe et 6,7 % C en masse (12,011 / 179,5 ≈ 6,69 %), de structure orthorhombique, très dure, résistante à l'usure et très fragile. L'option a décrit l'austénite, la d est une invention (la perlite est α + Fe₃C, de dureté 30–35 HRC)."
+    },
+    {
+      "id": "q4",
+      "question": "Que représente la réaction γ(0,8 %C) ⇌ α(0,02 %C) + Fe₃C et quel constituant forme-t-elle ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Réaction eutectique à 1147 °C, qui forme la lédéburite"
+        },
+        {
+          "id": "b",
+          "text": "Réaction péritectique à 1493 °C, qui forme la ferrite δ"
+        },
+        {
+          "id": "c",
+          "text": "Réaction eutectoïde à 727 °C, qui forme la perlite (mélange lamellaire α + Fe₃C)"
+        },
+        {
+          "id": "d",
+          "text": "Fusion de la cémentite à 1230 °C"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Un solide (γ à 0,8 %C) se transforme en deux solides à 727 °C : c'est une réaction eutectoïde. Le mélange lamellaire α + Fe₃C est la perlite (30–35 HRC), mélange de deux phases et non une phase. Une réaction eutectique part du liquide (4,3 %C, 1147 °C) et donne la lédéburite. Piège hypereutectoïde : au-dessus de 0,8 %C, la cémentite pro-eutectoïde en liseré aux joints de grains fragilise l'acier."
+    },
+    {
+      "id": "q5",
+      "question": "Un acier non allié à 0,40 % C refroidi lentement est juste sous 727 °C. Quelle est la fraction de perlite ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "51,3 %"
+        },
+        {
+          "id": "b",
+          "text": "48,7 %"
+        },
+        {
+          "id": "c",
+          "text": "94,3 %"
+        },
+        {
+          "id": "d",
+          "text": "5,7 %"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Règle des leviers : f_perlite = (C₀ − 0,02)/(0,8 − 0,02) = 0,38/0,78 = 48,7 %. Les 51,3 % sont la ferrite pro-eutectoïde (0,8 − 0,4)/0,78. 94,3 % est la fraction totale de phase α, (6,67 − 0,4)/(6,67 − 0,02), et 5,7 % la fraction totale de Fe₃C. Cet acier est hypoeutectoïde : ferrite + perlite."
+    },
+    {
+      "id": "q6",
+      "question": "Quelle liste ne contient que des éléments γ-gènes (qui favorisent l'austénite CFC) ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Si, Cr, Mo, Ti"
+        },
+        {
+          "id": "b",
+          "text": "Ni, Mn, C, N"
+        },
+        {
+          "id": "c",
+          "text": "Cr, Mn, Si, N"
+        },
+        {
+          "id": "d",
+          "text": "Mo, Ti, S, Ni"
+        }
+      ],
+      "correct": "b",
+      "explanation": "γ-gènes : Ni, Mn, C, N… (ils abaissent A₃ et élargissent le domaine γ). α-gènes : Si, Cr, Mo, V, W, Ti, Nb, S… (ils relèvent A₃ et referment le domaine γ). Le carbone est le γ-gène principal des aciers, ce qui explique l'existence de l'austénite à haute température dans Fe–C."
+    },
+    {
+      "id": "q7",
+      "question": "Que signifie la désignation 42CrMo4 (NF EN 10027-1) ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Acier fortement allié avec 42 % de Cr"
+        },
+        {
+          "id": "b",
+          "text": "Acier faiblement allié : 0,42 % C, ≈ 1 % Cr (4/4) et du Mo"
+        },
+        {
+          "id": "c",
+          "text": "Acier de construction de limite d'élasticité 42 MPa"
+        },
+        {
+          "id": "d",
+          "text": "Acier non allié à 0,42 % C"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Aucun élément ne dépasse 5 % : acier faiblement allié. Le nombre initial est %C × 100 (0,42 %). Les nombres suivants sont des coefficients : Cr × 4, donc 4/4 = 1 %. Un acier fortement allié commencerait par X (ex. X9CrNi18-9 : 0,09 % C, 18 % Cr, 9 % Ni, sans coefficient), un non allié par C (ex. C48 : 0,48 % C), un acier de construction par S (ex. S355 : Re ≥ 355 MPa)."
+    },
+    {
+      "id": "q8",
+      "question": "Quel couple de conditions d'obtention est correct ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Fonte blanche : refroidissement rapide, Mn, peu de Si ; fonte grise : refroidissement lent, Si"
+        },
+        {
+          "id": "b",
+          "text": "Fonte blanche : refroidissement lent, Si ; fonte grise : refroidissement rapide, Mn"
+        },
+        {
+          "id": "c",
+          "text": "Les deux : refroidissement rapide"
+        },
+        {
+          "id": "d",
+          "text": "Fonte blanche : graphite lamellaire ; fonte grise : carbure Fe₃C"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Fonte blanche : le C reste sous forme de carbure Fe₃C (diagramme métastable), grâce à un refroidissement rapide, des stabilisateurs de cémentite/anti-graphitisants (Mn) et peu de Si. Fonte grise : solidification selon le diagramme stable, le C précipite en graphite grâce à un refroidissement lent, un élément graphitisant (Si) et l'absence de stabilisateurs de cémentite."
+    },
+    {
+      "id": "q9",
+      "question": "Que signifie EN-GJS-400-18-S ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Fonte blanche à 4 % C et 18 % Si"
+        },
+        {
+          "id": "b",
+          "text": "Fonte à graphite sphéroïdal, Rm > 400 MPa, A > 18 %, sur éprouvette coulée séparément"
+        },
+        {
+          "id": "c",
+          "text": "Fonte à graphite lamellaire avec Re = 400 MPa"
+        },
+        {
+          "id": "d",
+          "text": "Acier de construction avec Re ≥ 400 MPa"
+        }
+      ],
+      "correct": "b",
+      "explanation": "EN = norme européenne ; G = moulé (Gusswerkstoff) ; J = fonte ; S = graphite sphéroïdal (L lamellaire, V vermiculaire, N absence de graphite = fonte blanche) ; 400 = Rm minimale (MPa) ; 18 = allongement minimal (%) ; S final = éprouvette coulée séparément (U attenante, C prélevée sur la pièce)."
+    },
+    {
+      "id": "q10",
+      "question": "Quel est l'ordre correct des grandes étapes d'élaboration d'un acier ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Convertisseur → haut-fourneau → coulée continue → laminage"
+        },
+        {
+          "id": "b",
+          "text": "Haut-fourneau (fonte liquide ≈ 1500 °C) → convertisseur à O₂ pur → traitement en poches → coulée continue (brames) → laminage à chaud"
+        },
+        {
+          "id": "c",
+          "text": "Coulée continue → traitement en poches → haut-fourneau → convertisseur"
+        },
+        {
+          "id": "d",
+          "text": "Cokerie → laminage → haut-fourneau → coulée continue"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Le minerai aggloméré et le coke (cokerie) alimentent le haut-fourneau, qui produit de la fonte liquide (≈ 1500 °C). Le convertisseur soufflé à l'oxygène pur la décarbure (acier liquide primaire, ≈ 1600 °C), la poche met à nuance, la coulée continue donne des brames, réchauffées (≈ 1200 °C) puis laminées à chaud en tôles/bandes."
+    },
+    {
+      "id": "q11",
+      "question": "Une fonte à 4,3 % C refroidie lentement depuis le liquide traverse 1147 °C (diagramme métastable). Que se passe-t-il ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "L → γ (2,14 % C) + Fe₃C : réaction eutectique, formation de lédéburite"
+        },
+        {
+          "id": "b",
+          "text": "γ → α + Fe₃C : réaction eutectoïde, formation de perlite"
+        },
+        {
+          "id": "c",
+          "text": "L → γ + graphite à 1153 °C"
+        },
+        {
+          "id": "d",
+          "text": "δ + L → γ : réaction péritectique"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Le point E (4,3 %C, 1147 °C) est l'eutectique du diagramme métastable : le liquide donne simultanément γ (2,14 % C) et Fe₃C, mélange appelé lédéburite. L'option c est la réaction eutectique du diagramme stable (≈ 1153 °C, fonte grise). L'eutectoïde (b) est à 727 °C et la péritectique (d) à ≈ 1493 °C, du côté du fer."
+    },
+    {
+      "id": "q12",
+      "question": "Pourquoi une fonte à graphite sphéroïdal est-elle nettement plus tenace qu'une fonte à graphite lamellaire ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Elle contient moins de carbone"
+        },
+        {
+          "id": "b",
+          "text": "Elle ne contient pas de graphite mais de la cémentite"
+        },
+        {
+          "id": "c",
+          "text": "Les lamelles réduisent la section efficace et jouent le rôle d'entailles ; les sphéroïdes (Mg + inoculation FeSi) minimisent l'effet d'entaille"
+        },
+        {
+          "id": "d",
+          "text": "Elle est refroidie plus rapidement, d'où une structure blanche"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Dans la fonte lamellaire (Rm 150–400 MPa, A 0,5–1 %), les pointes de lamelles concentrent les contraintes : effet d'entaille et section efficace réduite → fragile. Dans la fonte GS, l'addition de Mg au liquide et l'inoculation au ferro-silicium donnent des nodules (effet d'entaille minimal), d'où Rm 400–800 MPa et A jusqu'à 15–20 % (ferritique). L'inoculation évite aussi la structure blanche."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "recto": "Points de transformation du fer pur et formes allotropiques ?",
+      "verso": "Liquide > 1538 °C ; δ (CC) 1394–1538 °C ; γ (CFC) 912–1394 °C ; α (CC) < 912 °C. A₃ = 912 °C (α⇌γ), A₄ = 1394 °C (γ⇌δ)."
+    },
+    {
+      "id": "f2",
+      "recto": "Variations de volume du fer pur en A₃, A₄ et à la fusion (au chauffage) ?",
+      "verso": "A₃ : contraction 1,03 % (ΔV<0) ; A₄ : dilatation 0,54 % ; fusion : dilatation 3,58 %."
+    },
+    {
+      "id": "f3",
+      "recto": "Variation relative de volume lors d'une transformation ?",
+      "verso": "$$\\frac{\\Delta V}{V}=\\frac{v_{\\text{après}}-v_{\\text{avant}}}{v_{\\text{avant}}}$$ avec v en cm³/g, et ρ = 1/v (fer : 0,1270 cm³/g ⇔ 7,87 g/cm³)."
+    },
+    {
+      "id": "f4",
+      "recto": "Propriétés mécaniques du fer pur à 20 °C ?",
+      "verso": "E = 210 GPa ; Re = 100–170 MPa ; Rm = 180–290 MPa ; A = 40–50 % ; Z = 80–95 % ; ρ = 7,87 g/cm³ ; peu utilisé industriellement."
+    },
+    {
+      "id": "f5",
+      "recto": "Définitions acier / fonte ?",
+      "verso": "Acier : Fe + C de ≈ 0 à ≈ 2 % (pratique < 1,4–1,5 %). Fonte : %C > 2, C sous forme de Fe₃C (blanche) ou de graphite (grise)."
+    },
+    {
+      "id": "f6",
+      "recto": "Ferrite : définition, C max, dureté ?",
+      "verso": "Solution solide interstitielle de C dans Fe α (CC) ; 0,006 % à 20 °C, 0,02 % à 727–730 °C ; ductile et malléable, 10–15 HRC ; ≈ fer α."
+    },
+    {
+      "id": "f7",
+      "recto": "Austénite : définition, C max, dureté, magnétisme ?",
+      "verso": "Solution solide de C dans Fe γ (CFC) ; jusqu'à ≈ 2,1 % (2,14) à 1147 °C ; ductile, ≈ 25 HRC ; paramagnétique."
+    },
+    {
+      "id": "f8",
+      "recto": "Cémentite : formule, composition, propriétés ?",
+      "verso": "Fe₃C, orthorhombique, 93,3 % Fe + 6,7 % C ; très fragile (A ≈ 0), résistante à l'usure, 60–65 HRC."
+    },
+    {
+      "id": "f9",
+      "recto": "Réaction eutectoïde des aciers ?",
+      "verso": "$$\\gamma_{0{,}8\\,\\%}\\;\\rightleftharpoons\\;\\mathrm{Fe_3C}+\\alpha_{0{,}02\\,\\%}\\quad(727\\,^\\circ\\mathrm{C})$$ Elle forme la perlite."
+    },
+    {
+      "id": "f10",
+      "recto": "Perlite : définition et dureté ?",
+      "verso": "Composé eutectoïde lamellaire (α + Fe₃C) à 0,8 % C ; structure mi-dure, 30–35 HRC ; mélange de deux phases."
+    },
+    {
+      "id": "f11",
+      "recto": "Réaction eutectique du diagramme métastable ?",
+      "verso": "L (4,3 %C) → γ (2,14 %C) + Fe₃C à 1147 °C (point E) ; le mélange est la lédéburite."
+    },
+    {
+      "id": "f12",
+      "recto": "Ac₁, Ac₃, A_cm ?",
+      "verso": "Ac₁ : limite inférieure d'existence de γ ; Ac₃ : limite supérieure d'existence de α ; A_cm : limite supérieure d'existence de Fe₃C."
+    },
+    {
+      "id": "f13",
+      "recto": "Classification des aciers non alliés selon %C (recuit) ?",
+      "verso": "< 0,02 : ferrite (+ Fe₃C) ; 0,02–0,8 : hypoeutectoïde, ferrite + perlite ; 0,8 : eutectoïde, perlite ; 0,8–2 : hypereutectoïde, cémentite + perlite."
+    },
+    {
+      "id": "f14",
+      "recto": "Fractions d'un acier hypoeutectoïde juste sous 727 °C ?",
+      "verso": "$$f_{\\text{ferrite pro-eutectoïde}}=\\frac{0{,}8-C_0}{0{,}8-0{,}02}$$ et $$f_{\\text{perlite}}=\\frac{C_0-0{,}02}{0{,}8-0{,}02}$$"
+    },
+    {
+      "id": "f15",
+      "recto": "Fractions d'un acier hypereutectoïde juste sous 727 °C ?",
+      "verso": "$$f_{\\text{cémentite pro-eutectoïde}}=\\frac{C_0-0{,}8}{6{,}67-0{,}8}$$ et $$f_{\\text{perlite}}=\\frac{6{,}67-C_0}{6{,}67-0{,}8}$$"
+    },
+    {
+      "id": "f16",
+      "recto": "Fraction totale de cémentite d'un acier de teneur C₀ (T ambiante) ?",
+      "verso": "$$f_{\\mathrm{Fe_3C}}=\\frac{C_0-0{,}02}{6{,}67-0{,}02}$$ La perlite contient ≈ 11,7 % de Fe₃C."
+    },
+    {
+      "id": "f17",
+      "recto": "Pourcentage de carbone dans Fe₃C ?",
+      "verso": "$$\\%C=\\frac{M_C}{3M_{Fe}+M_C}=\\frac{12{,}011}{3\\times 55{,}845+12{,}011}\\approx 6{,}69\\,\\%$$"
+    },
+    {
+      "id": "f18",
+      "recto": "Compacités CC et CFC ?",
+      "verso": "$$\\tau_{CC}=\\frac{\\pi\\sqrt{3}}{8}\\approx 0{,}68$$ et $$\\tau_{CFC}=\\frac{\\pi\\sqrt{2}}{6}\\approx 0{,}74$$ → contraction α→γ."
+    },
+    {
+      "id": "f19",
+      "recto": "Éléments γ-gènes et effet ?",
+      "verso": "Ni, Mn, C, N… : favorisent la phase γ (CFC) ; élargissent son domaine."
+    },
+    {
+      "id": "f20",
+      "recto": "Éléments α-gènes et effet ?",
+      "verso": "Si, Cr, Mo, V, W, Ti, Nb, S… : favorisent la phase α (CC) ; referment le domaine γ."
+    },
+    {
+      "id": "f21",
+      "recto": "Éléments carburigènes et carbures formés ?",
+      "verso": "Mn, Cr, Mo, W, V, Ti, Nb ; cémentites alliées (Fe, X)₃C ; carbures spéciaux M₂₃C₆, M₆C, M₂C, M₇C₃, MC."
+    },
+    {
+      "id": "f22",
+      "recto": "Effet de %C (0 → 1 %) sur les propriétés des aciers au carbone normalisés ?",
+      "verso": "Re et Rm augmentent ; la ductilité A % diminue (plus de perlite/cémentite : plus dur, plus résistant, moins ductile)."
+    },
+    {
+      "id": "f23",
+      "recto": "Désignation d'un acier non allié ?",
+      "verso": "C + %C × 100. Ex. C48 = 0,48 % C."
+    },
+    {
+      "id": "f24",
+      "recto": "Désignation d'un acier faiblement allié (aucun élément > 5 %) ?",
+      "verso": "%C × 100, éléments par teneur décroissante, puis coefficients : Cr, Co, Mn, Ni, Si, W × 4 ; autres × 10. Ex. 42CrMo4 : 0,42 % C, 1 % Cr ; 10CrMo9-10 : 0,10 % C, 2,25 % Cr, 1 % Mo."
+    },
+    {
+      "id": "f25",
+      "recto": "Désignation d'un acier fortement allié (au moins un élément > 5 %) ?",
+      "verso": "Lettre X, %C × 100, teneurs décroissantes, pas de coefficient. Ex. X9CrNi18-9 : 0,09 % C, 18 % Cr, 9 % Ni."
+    },
+    {
+      "id": "f26",
+      "recto": "Désignation selon l'emploi ? Ex. S355 ?",
+      "verso": "Lettre d'emploi (S construction, P appareils à pression, L tubes, E construction mécanique) + Re. S355 : construction, Re ≥ 355 MPa, état normalisé."
+    },
+    {
+      "id": "f27",
+      "recto": "Conditions d'obtention et propriétés d'une fonte blanche ?",
+      "verso": "Refroidissement rapide, Mn (anti-graphitisant), peu de Si, coulée plus basse ; C en Fe₃C ; très résistante à l'usure/abrasion, peu déformable, difficilement usinable ; broyeurs, concasseurs, fonderie d'art."
+    },
+    {
+      "id": "f28",
+      "recto": "Conditions d'obtention et qualités d'une fonte grise ?",
+      "verso": "Coulée élevée, refroidissement lent, Si graphitisant, diagramme stable ; C en graphite ; usinage facile, corrosion, absorption des vibrations, stabilité dimensionnelle, coulabilité, prix."
+    },
+    {
+      "id": "f29",
+      "recto": "Composition d'une fonte grise non alliée et points du diagramme stable ?",
+      "verso": "3–4 % C ; Si < 3 % ; Mn < 1,2 % ; P < 1,2 %. Eutectique ≈ 1153 °C, eutectoïde ≈ 738 °C (stable) contre 1148 / 727 °C (métastable)."
+    },
+    {
+      "id": "f30",
+      "recto": "Fonte à graphite lamellaire ?",
+      "verso": "Rm 150–400 MPa ; A 0,5–1 % ; fragile (effet d'entaille) ; usinage facile ; bâtis, inserts de cheminée, contrepoids, tuyaux."
+    },
+    {
+      "id": "f31",
+      "recto": "Fonte à graphite sphéroïdal ?",
+      "verso": "Mg + inoculation FeSi ; Rm 400 (ferritique) → 800 MPa (perlitique) ; A 15–20 % (ferritique) → 1–5 % (perlitique) ; automobile, voirie."
+    },
+    {
+      "id": "f32",
+      "recto": "Désignation NF EN 1560 : 6 indications ?",
+      "verso": "EN ; GJ ; structure du graphite (L, S, M, V, Y, N) ; structure micrographique ; propriétés (Rm-A-HB + S/U/C) ou composition (X…) ; exigences complémentaires (LT, RT)."
+    },
+    {
+      "id": "f33",
+      "recto": "Lire EN-GJS-400-18-S et EN-GJN-X300Ni-Cr-4-2 ?",
+      "verso": "GJS : sphéroïdal, Rm > 400 MPa, A > 18 %, éprouvette coulée séparément. GJN-X300Ni-Cr-4-2 : fonte blanche, 3 % C, 4 % Ni, 2 % Cr."
+    },
+    {
+      "id": "f34",
+      "recto": "Carbone équivalent (IIW) ?",
+      "verso": "$$CE=C+\\frac{Mn}{6}+\\frac{Cr+Mo+V}{5}+\\frac{Ni+Cu}{15}$$"
+    },
+    {
+      "id": "f35",
+      "recto": "Production mondiale 2021 et part de la Chine en 2020 ?",
+      "verso": "Acier 1 830 Mt, fonte 980 Mt (béton 13 500 Mt, plastique 285 Mt, Al 46 Mt, Cu 17 Mt) ; Chine 57 % de la production d'acier en 2020. Bâtiment : 55 % de l'usage."
+    }
+  ],
+  "exercices": [
+    {
+      "titre": "Exercice 1 — Lire et écrire des désignations",
+      "difficulte": 1,
+      "enonce": "1) Décoder : **C45**, **S355**, **42CrMo4**, **10CrMo9-10**, **X5CrNi18-10**, **EN-GJL-250**, **EN-GJS-500-7**, **EN-GJN-X300Ni-Cr-4-2**.\n\n2) Écrire la désignation d'un acier non allié à 0,60 % C et d'un acier faiblement allié à 0,25 % C et 1 % Cr (avec Mo).",
+      "corrige": "**1) Décodage**\n\n- **C45** : acier non allié, 0,45 % C (hypoeutectoïde : ferrite + perlite à l'état recuit).\n- **S355** : acier de construction, Re ≥ 355 MPa.\n- **42CrMo4** : faiblement allié ; 0,42 % C ; Cr : 4/4 = 1 % ; Mo présent.\n- **10CrMo9-10** : faiblement allié ; 0,10 % C ; Cr : 9/4 = 2,25 % ; Mo : 10/10 = 1 %.\n- **X5CrNi18-10** : fortement allié (X) ; 0,05 % C ; 18 % Cr ; 10 % Ni, sans coefficient.\n- **EN-GJL-250** : fonte à graphite lamellaire (L), Rm min 250 MPa.\n- **EN-GJS-500-7** : fonte à graphite sphéroïdal, Rm min 500 MPa, A min 7 %.\n- **EN-GJN-X300Ni-Cr-4-2** : fonte blanche (N, sans graphite), alliée (X), 3 % C, 4 % Ni, 2 % Cr.\n\n**2) Écriture**\n\n- 0,60 % C non allié : $$0{,}60\\times 100=60 \\Rightarrow \\text{C60}$$\n- 0,25 % C ; Cr 1 % → nombre à écrire = 1 × 4 = 4 : **25CrMo4**."
+    },
+    {
+      "titre": "Exercice 2 — Fer pur : transformations allotropiques et volume spécifique",
+      "difficulte": 2,
+      "enonce": "On donne pour le fer pur (cm³/g) : α à 0 °C : 0,1270 ; α juste avant A₃ : 0,1321 ; γ juste après A₃ : 0,1307 ; γ juste avant A₄ : 0,1351 ; δ juste après A₄ : 0,1358 ; δ juste avant fusion : 0,1372 ; liquide : 0,1421.\n\n1) Calculer la masse volumique du fer à 0 °C et la comparer à 7,86–7,87 g/cm³.\n\n2) Calculer les variations relatives de volume en A₃, A₄ et à la fusion. Comparer au cours (1,03 % ; 0,54 % ; 3,58 %).\n\n3) Calculer la masse volumique de α et de γ en A₃ (912 °C).\n\n4) Justifier le signe de ΔV en A₃ par les compacités du CC et du CFC. Quelle variation de volume prévoit-on à rayon constant ? Pourquoi la valeur réelle est-elle bien plus faible ?\n\n5) Calculer la teneur massique en carbone de la cémentite Fe₃C (M_Fe = 55,845 ; M_C = 12,011 g/mol).",
+      "corrige": "**1)** $$\\rho=\\frac{1}{v}=\\frac{1}{0{,}1270}\\approx 7{,}87\\ \\text{g/cm}^3$$ conforme au cours (7,870 ; 7,86 dans le tableau).\n\n**2)** A₃ (α→γ) : $$\\frac{\\Delta V}{V}=\\frac{0{,}1307-0{,}1321}{0{,}1321}\\approx -1{,}06\\,\\%$$ contraction (cours : 1,03 %).\n\nA₄ (γ→δ) : $$\\frac{\\Delta V}{V}=\\frac{0{,}1358-0{,}1351}{0{,}1351}\\approx +0{,}52\\,\\%$$ dilatation (cours : 0,54 %).\n\nFusion : $$\\frac{\\Delta V}{V}=\\frac{0{,}1421-0{,}1372}{0{,}1372}\\approx +3{,}57\\,\\%$$ dilatation (cours : 3,58 %). Les petits écarts viennent de l'arrondi des valeurs lues.\n\n**3)** $$\\rho_\\alpha=\\frac{1}{0{,}1321}\\approx 7{,}57\\ \\text{g/cm}^3$$ $$\\rho_\\gamma=\\frac{1}{0{,}1307}\\approx 7{,}65\\ \\text{g/cm}^3$$ L'austénite est plus dense que la ferrite.\n\n**4)** Compacités : $$\\tau_{CC}=\\frac{\\pi\\sqrt{3}}{8}\\approx 0{,}68$$ $$\\tau_{CFC}=\\frac{\\pi\\sqrt{2}}{6}\\approx 0{,}74$$ Le CFC est plus compact → ΔV < 0 en α→γ.\n\nÀ rayon R constant : CC, a = 4R/√3, 2 atomes/maille, volume/atome = 32R³/(3√3) ≈ 6,16 R³. CFC, a = 2√2 R, 4 atomes/maille, volume/atome = 16√2 R³/4 ≈ 5,66 R³. D'où $$\\frac{5{,}66-6{,}16}{6{,}16}\\approx -8\\,\\%$$ La contraction réelle (≈ −1 %) est bien plus faible car le rayon atomique apparent augmente avec la coordinence (8 → 12, environ +3 %), ce qui compense presque la différence de compacité.\n\n**5)** $$\\%C=\\frac{12{,}011}{3\\times 55{,}845+12{,}011}=\\frac{12{,}011}{179{,}546}\\approx 6{,}69\\,\\%$$ cohérent avec 6,7 % (et 93,3 % de Fe)."
+    },
+    {
+      "titre": "Exercice 3 — Acier à 0,40 % C : refroidissement lent et microstructure",
+      "difficulte": 3,
+      "enonce": "Un acier non allié C40 (0,40 % C) est refroidi lentement (recuit) depuis 900 °C.\n\n1) Quelle est sa constitution à l'ambiante ? Comment le classe-t-on ?\n\n2) Estimer Ac₃ par interpolation linéaire (912 °C à 0 %C ; 727 °C à 0,8 %C). Quel domaine de phase à 900 °C ?\n\n3) Décrire les transformations entre 900 °C et l'ambiante.\n\n4) Calculer, juste sous 727 °C, les fractions de ferrite pro-eutectoïde et de perlite, puis les fractions totales de ferrite et de cémentite. Vérifier la cohérence.\n\n5) Estimer qualitativement la dureté par loi des mélanges (ferrite 10–15 HRC, perlite 30–35 HRC) et dire comment Re, Rm et A évoluent si on passe à 0,8 %C.",
+      "corrige": "**1)** 0,02 < 0,40 < 0,8 : acier **hypoeutectoïde**, constitution ferrite + perlite.\n\n**2)** $$Ac_3\\approx 912-185\\times\\frac{0{,}40}{0{,}80}=819{,}5\\ ^\\circ\\mathrm{C}\\approx 820\\ ^\\circ\\mathrm{C}$$ À 900 °C > Ac₃ : domaine **γ** entièrement austénitique à 0,40 % C.\n\n**3)** Au-dessus de Ac₃ : γ homogène. Entre Ac₃ (≈ 820 °C) et Ac₁ (727 °C) : domaine γ + α ; la ferrite pro-eutectoïde (≈ 0,02 % C) germe aux joints de grains γ, ce qui enrichit γ en C le long de la ligne Ac₃ jusqu'à 0,8 % C à 727 °C. À 727 °C : γ(0,8 %) → α(0,02 %) + Fe₃C, soit la perlite lamellaire. Sous 727 °C : α + perlite, structure inchangée jusqu'à l'ambiante.\n\n**4)** Juste sous 727 °C : $$f_{\\text{ferrite pro-eutectoïde}}=\\frac{0{,}8-0{,}4}{0{,}8-0{,}02}=\\frac{0{,}4}{0{,}78}\\approx 51{,}3\\,\\%$$ $$f_{\\text{perlite}}=\\frac{0{,}4-0{,}02}{0{,}78}\\approx 48{,}7\\,\\%$$ Fractions totales des phases : $$f_{\\mathrm{Fe_3C}}=\\frac{0{,}4-0{,}02}{6{,}67-0{,}02}\\approx 5{,}7\\,\\%$$ $$f_{\\alpha}\\approx 94{,}3\\,\\%$$ Cohérence : la perlite contient 11,7 % de Fe₃C, 0,487 × 0,117 ≈ 5,7 % ✓.\n\n**5)** Loi des mélanges (ordre de grandeur) : $$HRC\\approx 0{,}513\\times 12{,}5+0{,}487\\times 32{,}5\\approx 22$$ À 0,8 %C (100 % perlite) : Re et Rm augmentent, A % diminue (cf. slide 22) ; dureté 30–35 HRC."
+    },
+    {
+      "titre": "Exercice 4 — Acier à 1,2 % C et fonte blanche à 3 % C : microstructures et choix matériau",
+      "difficulte": 4,
+      "enonce": "On considère le diagramme métastable (eutectoïde 0,8 %C à 727 °C ; eutectique 4,3 %C à 1147 °C ; limite de γ : 2,14 %C ; Fe₃C : 6,67 %C ; ferrite 0,02 %C).\n\n**A) Acier à 1,2 % C**\n1) Classer cet acier, donner sa microstructure à l'ambiante et estimer A_cm (interpolation linéaire de 727 °C à 0,8 %C à 1147 °C à 2,14 %C).\n2) Calculer, juste sous 727 °C, les fractions de cémentite pro-eutectoïde et de perlite, puis la fraction totale de Fe₃C. Conséquence mécanique du liseré de cémentite ?\n\n**B) Fonte blanche à 3 % C**\n3) Décrire la solidification et le refroidissement jusqu'à l'ambiante.\n4) Calculer juste au-dessus de 1147 °C les fractions de γ primaire et de liquide, puis la fraction totale de Fe₃C à l'ambiante.\n\n**C)** Pourquoi une fonte blanche pour des mâchoires de concasseur ? Quels inconvénients, et quel matériau choisir pour un bâti de machine-outil ?",
+      "corrige": "**A) 1)** 0,8 < 1,2 < 2 : acier **hypereutectoïde**. Microstructure : cémentite pro-eutectoïde en liseré aux joints de grains + perlite lamellaire. A_cm : pente $$\\frac{1147-727}{2{,}14-0{,}8}\\approx 313\\ ^\\circ\\mathrm{C}/\\%$$ donc $$A_{cm}\\approx 727+0{,}4\\times 313\\approx 852\\ ^\\circ\\mathrm{C}$$ Au-dessus de ≈ 850 °C : austénite homogène.\n\n**2)** Juste sous 727 °C : $$f_{\\text{cémentite pro-eutectoïde}}=\\frac{1{,}2-0{,}8}{6{,}67-0{,}8}=\\frac{0{,}4}{5{,}87}\\approx 6{,}8\\,\\%$$ $$f_{\\text{perlite}}=\\frac{6{,}67-1{,}2}{5{,}87}\\approx 93{,}2\\,\\%$$ Total : $$f_{\\mathrm{Fe_3C}}=\\frac{1{,}2-0{,}02}{6{,}65}\\approx 17{,}7\\,\\%$$ Vérif. : 0,932 × 0,117 + 0,068 ≈ 17,7 % ✓. Le liseré de cémentite, continu aux joints de grains, fragile (A ≈ 0), fragilise l'acier : d'où la limite pratique de 1,4–1,5 %C.\n\n**B) 3)** Fonte hypoeutectique (3 < 4,3). Liquidus ≈ 1270 °C (interpolation de 1493 °C à 0,5 %C jusqu'à 1147 °C à 4,3 %C, estimation hors slide) : cristallisation de γ primaire (dendrites). Le liquide restant s'enrichit jusqu'à 4,3 %C. À 1147 °C : L → γ(2,14 %) + Fe₃C = lédéburite. De 1147 à 727 °C : γ rejette du C (Fe₃C secondaire, de 2,14 à 0,8 %C). À 727 °C : γ(0,8 %) → perlite. Structure finale : perlite + cémentite (secondaire et eutectique) + lédéburite transformée.\n\n**4)** Juste au-dessus de 1147 °C : $$f_{\\gamma\\ \\text{primaire}}=\\frac{4{,}3-3}{4{,}3-2{,}14}=\\frac{1{,}3}{2{,}16}\\approx 60{,}2\\,\\%$$ $$f_{\\text{liquide}}\\approx 39{,}8\\,\\%$$ À l'ambiante : $$f_{\\mathrm{Fe_3C}}=\\frac{3-0{,}02}{6{,}67-0{,}02}\\approx 44{,}8\\,\\%$$ soit près de la moitié de carbure, d'où la dureté et la fragilité.\n\n**C)** Mâchoires de concasseur : usure et abrasion forte → fonte blanche (beaucoup de Fe₃C dur, bonne coulabilité pour pièces moulées). Inconvénients : fragile, peu déformable à froid, très difficilement usinable (finition par meulage). Bâti de machine-outil : **fonte grise à graphite lamellaire** (usinage facile, très bonne absorption des vibrations, stabilité dimensionnelle, coulabilité, prix)."
+    }
+  ],
+  "suivi": "Aucune réponse de quiz ni d'exercice encore enregistrée pour ce cours.\n\nPoints à surveiller / à retravailler en priorité (pièges les plus fréquents) :\n- Calcul des fractions par la règle des leviers (hypo vs hyper, fraction de perlite vs fraction totale de cémentite).\n- Désignations des aciers : coefficients ×4 / ×10 pour les faiblement alliés, aucun coefficient pour les fortement alliés (X).\n- Distinction eutectoïde (727 °C, solide → solide, perlite) / eutectique (1147 °C, liquide → solide, lédéburite).\n- Conditions d'obtention fonte blanche vs grise (vitesse de refroidissement, Mn vs Si, diagramme métastable vs stable).\n- Valeurs charnières : 0,02 % / 0,8 % / 2,14 % / 4,3 % / 6,67 % de C ; 727, 912, 1147, 1394, 1538 °C.\n- Variations de volume du fer pur (A₃ contraction, A₄ et fusion dilatations).\n\nÀ mettre à jour après le quiz et les exercices."
+}
