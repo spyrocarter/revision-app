@@ -135,3 +135,36 @@ export function saveStabiloMarks(courseId: string, marksByScope: Record<string, 
   all[courseId] = marksByScope
   write('stabilo', all)
 }
+
+// --- Filière choisie (GIM, GIE…) ---
+
+export function getFilierePreference(): string | undefined {
+  return read<string | undefined>('filiere', undefined)
+}
+
+export function setFilierePreference(filiere: string): void {
+  write('filiere', filiere)
+}
+
+// --- Migration des identifiants de cours ---
+
+const COURSE_KEYED_STORES = ['quizResults', 'missedQuestions', 'flashcardStatus', 'stabilo']
+
+export function getCourseIdsWithProgress(): string[] {
+  return COURSE_KEYED_STORES.flatMap((key) => Object.keys(read<Record<string, unknown>>(key, {})))
+}
+
+export function migrateCourseIds(renames: Record<string, string>): void {
+  for (const key of COURSE_KEYED_STORES) {
+    const store = read<Record<string, unknown>>(key, {})
+    let changed = false
+    for (const [from, to] of Object.entries(renames)) {
+      if (from in store && !(to in store)) {
+        store[to] = store[from]
+        delete store[from]
+        changed = true
+      }
+    }
+    if (changed) write(key, store)
+  }
+}

@@ -1,6 +1,9 @@
 import type { MatiereGroup } from '../lib/courses'
 
 interface SidebarProps {
+  filieres: string[]
+  filiere: string | null
+  onFiliereChange: (filiere: string) => void
   matiereGroups: MatiereGroup[]
   selectedId: string | undefined
   onSelect: (id: string) => void
@@ -14,7 +17,16 @@ const typeStyles: Record<string, string> = {
   TP: 'bg-amber-100 text-amber-700 dark:bg-amber-500/10 dark:text-amber-300',
 }
 
-export function Sidebar({ matiereGroups, selectedId, onSelect, theme, onToggleTheme }: SidebarProps) {
+export function Sidebar({
+  filieres,
+  filiere,
+  onFiliereChange,
+  matiereGroups,
+  selectedId,
+  onSelect,
+  theme,
+  onToggleTheme,
+}: SidebarProps) {
   return (
     <aside className="flex h-screen w-72 shrink-0 flex-col border-r border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900">
       <div className="flex items-center justify-between border-b border-slate-200 px-4 py-4 dark:border-slate-800">
@@ -29,8 +41,30 @@ export function Sidebar({ matiereGroups, selectedId, onSelect, theme, onToggleTh
         </button>
       </div>
 
+      {filieres.length > 1 && (
+        <div className="border-b border-slate-200 px-4 py-3 dark:border-slate-800">
+          <div role="radiogroup" aria-label="Filière" className="flex rounded-lg bg-slate-100 p-1 dark:bg-slate-800">
+            {filieres.map((f) => (
+              <button
+                key={f}
+                role="radio"
+                aria-checked={filiere === f}
+                onClick={() => onFiliereChange(f)}
+                className={`flex-1 rounded-md px-3 py-1.5 text-sm font-semibold transition-colors ${
+                  filiere === f
+                    ? 'bg-white text-indigo-600 shadow-sm dark:bg-slate-950 dark:text-indigo-400'
+                    : 'text-slate-500 hover:text-slate-800 dark:text-slate-400 dark:hover:text-slate-200'
+                }`}
+              >
+                {f}
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
+
       <nav className="flex-1 overflow-y-auto px-2 py-3">
-        {matiereGroups.length === 0 && (
+        {matiereGroups.length === 0 && (filiere !== null || filieres.length <= 1) && (
           <p className="px-2 py-4 text-sm text-slate-500 dark:text-slate-400">
             Aucun cours trouvé dans <code className="font-mono">courses/</code>.
           </p>

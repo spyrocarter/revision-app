@@ -37,6 +37,7 @@ export interface Course {
 
 export interface CourseWithId extends Course {
   id: string
+  filiere: string | null
 }
 
 export type FlashcardStatus = 'a_revoir' | 'acquise'

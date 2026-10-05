@@ -15,11 +15,11 @@ Puis ouvre l'URL affichée dans le terminal (par défaut [http://localhost:5173]
 
 ## Mise en ligne
 
-Chaque envoi (push) sur la branche `main` de GitHub reconstruit et publie automatiquement le site sur GitHub Pages (voir `.github/workflows/deploy.yml`). Pour ajouter un cours en ligne : dépose le `.json` dans `courses/`, fais un commit, puis un push.
+Chaque envoi (push) sur la branche `main` de GitHub reconstruit et publie automatiquement le site sur GitHub Pages (voir `.github/workflows/deploy.yml`). Pour ajouter un cours en ligne : dépose le `.json` dans `courses/GIM/` ou `courses/GIE/`, fais un commit, puis un push.
 
 ## Où déposer tes cours
 
-Chaque cours est un fichier `.json` placé dans le dossier [`courses/`](courses/) à la racine du projet. Le nom du fichier sert d'identifiant interne (utilisé pour stocker tes scores et progrès) — évite de le renommer une fois que tu as commencé à réviser dessus.
+Chaque cours est un fichier `.json` placé dans le dossier de sa filière : [`courses/GIM/`](courses/GIM/) ou [`courses/GIE/`](courses/GIE/). Chaque sous-dossier de `courses/` devient une filière dans le sélecteur en haut de la barre latérale (il apparaît dès que deux filières contiennent des cours) ; un fichier posé directement dans `courses/` est visible dans toutes les filières. Le nom du fichier sert d'identifiant interne (utilisé pour stocker tes scores et progrès) — évite de le renommer une fois que tu as commencé à réviser dessus.
 
 L'application scanne automatiquement ce dossier au démarrage : ajoute ou modifie un fichier `.json`, le serveur de dev recharge la page tout seul.
 
