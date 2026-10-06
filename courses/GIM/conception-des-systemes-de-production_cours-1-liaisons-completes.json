@@ -1,0 +1,530 @@
+{
+  "matiere": "Conception des systèmes de production",
+  "type": "CM",
+  "sujet": "Cours 1 — Les liaisons complètes",
+  "fiche_synthese": "## 0. Cadre et fil rouge\n\n**Liaison complète** : aucun degré de liberté entre les deux pièces. Le torseur transmissible comporte 6 composantes :\n\n$$\n\\{T_{liaison}\\}_{P,\\vec x\\vec y\\vec z}=\\left\\{\\begin{matrix}X & L\\\\ Y & M\\\\ Z & N\\end{matrix}\\right\\}_P\n$$\n\n($X,Y,Z$ : forces ; $L,M,N$ : moments). Dans le cours, on ne transmet que le **couple $C$** autour de l'axe de l'arbre et éventuellement un **effort axial $F_a$**.\n\n**Cas fil rouge (diapos 2-3)** : arbre de couche $d=100$ mm, longueur 3 m, réalisé en plusieurs tronçons (deux jonctions à concevoir), qui doit transmettre $P=500$ CV à $N=1000$ tr/min vers une hélice de $D_h=37''$ ($1''=25{,}4$ mm, soit environ 940 mm), en ambiance marine « fond de cale » (humide, corrosive).\n\n$$\nC=\\frac{P}{\\omega}\\qquad\\text{avec}\\qquad \\omega=\\frac{2\\pi N}{60}\n$$\n\n- $P=500\\times735{,}499=367\\,749{,}5$ W ; $\\omega=104{,}7$ rad/s ; donc $C\\approx 3512$ N·m (1 CV = 735,499 W).\n- $F_a=0$ N. Coefficient de sécurité $k=2$ en diapo 3, puis $k=1{,}5$ pour le frettage et les vis (la norme donne $1{,}5<k<3$).\n\n## 1. Les familles de solutions (diapos 4-5)\n\n| Famille | Solutions | Niveau dans le cours |\n|---|---|---|\n| Par **obstacle** | clavettes, cannelures (goupilles, dentelures, segments) | Rappels |\n| Par **soudure** | métal : soudage / brasage ; chimique : collage | Notions |\n| Par **adhérence** | frettage (géométrique ou par pièce rapportée = mécanique), assemblage vissé | En détail |\n\nTableau comparatif du cours :\n\n| | Démontable | Usinage | Effort axial | Mat. non métal | Métaux légers | Température élevée |\n|---|---|---|---|---|---|---|\n| Clavette | OK | Simple | **NON** | O/N | O/N | OK |\n| Goupille | OK | Simple | OK | O/N | O/N | OK |\n| Cannelures | OK | Difficile | **NON** | O/N | OK | OK |\n| Soudage / brasage | **NON** | Rien à simple | OK | **NON** | OK | OK |\n| Collage | **NON** | Rien | OK | OK | OK | **NON** |\n| Frettage | O/N | Rien | OK | **NON** | O/N | OK |\n| Assemblage vissé | OK | Simple | OK | O/N | O/N | OK |\n\n(O/N : dépend du cas.) Pour le fil rouge (arbre en tronçons, ambiance humide), le caractère démontable et la tenue à la corrosion comptent : le collage cité plus loin résiste bien à l'humidité mais n'est pas démontable.\n\n## 2. Liaison par obstacle\n\n### 2.1 Clavetage (diapos 6-10)\n\n**Principe.** Une clavette parallèle (forme à bouts carrés ou arrondis) est logée dans une rainure d'arbre et une rainure de moyeu. Le couple $C$ crée un effort tangentiel $F_t$ sur le flanc de la clavette. Sur la figure, la hauteur de la clavette est répartie environ 2/3 dans l'arbre et 1/3 dans le moyeu. Les dimensions de la section de la clavette sont **normalisées en fonction de $d$** ; la **longueur $l$** est l'inconnue, calculée au matage.\n\nNotations du cours : $a$ = largeur de la clavette, $b$ = hauteur de la clavette, $l$ = longueur d'assemblage.\n\n$$\nF_t=\\frac{C}{d/2}=\\frac{2C}{d}\n$$\n\n**Matage** (pression sur le flanc, surface prise égale à $l\\cdot b/2$) :\n\n$$\np_{matage}=\\frac{F_t}{l\\cdot b/2}=\\frac{4C}{d\\,l\\,b}\\le p_{adm}\n$$\n\n**Cisaillement** (section $l\\cdot a$) :\n\n$$\n\\tau=\\frac{F_t}{l\\cdot a}=\\frac{2C}{d\\,l\\,a}\\le\\tau_{adm}\n$$\n\nLe support note $\\sigma$ cette contrainte de cisaillement ; c'est bien une contrainte tangentielle $\\tau$, à comparer à la résistance au cisaillement du matériau (le cours dit « limite élastique » ; en pratique $R_{pg}\\approx R_e/2$ avec Tresca).\n\n**Hypothèses** : pression uniforme sur le flanc, effort réparti sur toute la longueur $l$, pas de jeu, une seule clavette.\n\n**Pressions admissibles (diapo 8)** : a = conditions plutôt mauvaises (à-coups dans les deux sens, vibrations, oscillations, mauvais graissage, tolérances larges) ; b = moyennes ; c = très bonnes.\n\n| Fonctionnement | a | b | c |\n|---|---|---|---|\n| Glissant sous charge | 3 à 30 | 5 à 15 | 10 à 20 |\n| Glissant sans charge | 15 à 30 | 20 à 40 | 30 à 50 |\n| Fixe | 40 à 70 | 60 à 100 | 80 à 150 |\n\n(en MPa)\n\n**Application du cours** ($d=100$, $l=50$, $b=12$, $a=20$ mm, $R_e=240$ MPa, $C=3512$ N·m) :\n\n- $F_t=70\\,235$ N\n- $p_{matage}=234$ MPa : très au-dessus de la plage « fixe » (40 à 150 MPa) : le matage est **le critère dimensionnant** et il n'est pas satisfait (le cours le signale par « /!\\ »).\n- $\\tau=70$ MPa : acceptable.\n- Ordre de grandeur : pour $p_{adm}=100$ MPa il faudrait $l\\ge\\dfrac{4C}{d\\,b\\,p_{adm}}\\approx117$ mm : clavette trop longue, deux clavettes ou une autre solution (cannelures).\n\n### 2.2 Cannelures (diapos 11-15)\n\n**Principe.** Plusieurs « dents » sur l'arbre et dans le moyeu (profil normalisé ISO 14 pour les cannelures à flancs parallèles) : $n$ flancs transmettent le couple, ce qui réduit la pression par rapport à une clavette. Usinage plus difficile, mais bonne tenue (démontable, glissement axial possible).\n\nNotations : $n$ = nombre de cannelures, $h$ = hauteur d'une cannelure, $B$ = largeur, $L$ = longueur, $D$ = diamètre extérieur, $d$ = diamètre intérieur, $D_m=(D+d)/2$.\n\n**Hypothèses** : pression uniforme sur les flancs ; **surface portante réelle = 75 % de la surface théorique** (défauts de répartition entre cannelures), soit par unité de longueur :\n\n$$\nA=0{,}75\\,n\\,h\\qquad(\\text{en mm}^2/\\text{mm})\n$$\n\n**Couple transmis** (effort $p\\,A\\,L$ appliqué au rayon moyen $D_m/2$) :\n\n$$\nC=\\frac{p\\,A\\,L\\,D_m}{2}\n$$\n\n**Pression de contact** :\n\n$$\np=\\frac{2C}{A\\,L\\,D_m}\\le p_{adm}\n$$\n\n**Longueur minimale** :\n\n$$\nL\\ge\\frac{8C}{3\\,n\\,h\\,D_m\\,p_{adm}}\n$$\n\n**Pressions admissibles (diapo 12, MPa)** :\n\n| Montage | à coups, vibrations | cas général | très doux |\n|---|---|---|---|\n| Glissant en charge | 5 à 10 | 10 à 20 | 20 à 30 |\n| Glissant sans charge | 20 à 40 | 40 à 60 | 60 à 90 |\n| Fixe | 30 à 60 | 60 à 120 | 120 à 180 |\n\nLa simulation éléments finis de la diapo 12 montre un **pic de pression en extrémité de cannelure** : l'hypothèse de pression uniforme est une simplification.\n\n**Application du cours** ($d=102$, $D=112$, $n=10$, $h=5$, $l=50$ mm, $p_{adm}=60$ MPa) : $A=37{,}5$ mm²/mm ; le cours donne $C_{max}=6300$ N·m, $p=33$ MPa, $L_{min}=28$ mm.\n\n> **Point à vérifier** : ces valeurs correspondent à $D_m=112$ mm. Avec $D_m=(D+d)/2=107$ mm, on obtient $p\\approx35{,}0$ MPa, $C_{max}\\approx6019$ N·m et $L_{min}\\approx29{,}2$ mm. La conclusion ne change pas (la solution convient), mais l'écart est à confirmer avec l'enseignant.\n\n### 2.3 Autres solutions par obstacle\n\nGoupilles, dentelures, segments : simplement citées dans le cours. Les goupilles transmettent aussi un effort axial (tableau comparatif).\n\n## 3. Liaison par soudure\n\n**Soudage / brasage** (métal) : non démontable, usinage nul à simple, supporte l'effort axial et les températures élevées, impossible avec un non-métal.\n\n**Collage** (chimique, diapos 16-18). Exemple du cours : colle époxy 2 composants Loctite Hysol 3421 A&B (mélange 1:1 en volume, 100:90 en poids, temps d'utilisation 180 min, prise 240 min, viscosité 40 Pa·s, plage d'utilisation −55 °C à +120 °C, très bonne tenue à l'humidité).\n\n- Résistance au **cisaillement** (acier doux sablé) : **23 N/mm²** ; résistance au **pelage** : seulement 2,5 N/mm. Il faut donc faire travailler le joint en cisaillement et jamais au pelage.\n\n**Dimensionnement** : le couple $C$ crée un effort tangentiel global $T=\\tau\\,S$ sur la surface collée cylindrique $S=\\pi d L$.\n\n$$\nC_{max}=T\\cdot\\frac d2=\\tau\\,S\\,\\frac d2=\\frac{\\tau\\,\\pi\\,d^2\\,L}{2}\n$$\n\nApplication ($d=100$, $L=75$ mm) : $S=23\\,562$ mm² ; $F_t=70\\,235$ N ; $\\tau=F_t/S\\approx3{,}0$ MPa, très inférieur aux 23 MPa ; $C_{max}=27\\,096$ N·m. Le support ne fixe pas de coefficient de sécurité : il faut en prendre un (vieillissement, humidité, température, préparation de surface).\n\n## 4. Liaison par adhérence : le frettage géométrique (diapos 19-52)\n\n### 4.1 Généralités\n\nLiaison complète par **serrage interne** (interférence entre l'arbre et l'alésage) et **adhérence** : le couple est transmis par frottement. Technique très ancienne. Deux familles : frettage **géométrique** (ajustement serré) et frettage **mécanique** (pièce rapportée, voir 5).\n\n- Avantages : peu d'usinage, pas de concentration de contraintes, transmission d'efforts importants.\n- Inconvénients : liaison souvent difficile à démonter, voire indémontable.\n\n### 4.2 Rappels sur les ajustements ISO\n\nTrois cas : **jeu**, **jeu incertain**, **serrage** (interférence). Pour le frettage, on est dans la zone serrage : le serrage varie entre un mini et un maxi selon les intervalles de tolérance $IT$ de l'arbre et de l'alésage.\n\n- Lettre majuscule = alésage (moyeu), minuscule = arbre. Le cours utilise le système de l'**alésage normal H** ($EI=0$).\n- Pour un diamètre nominal : écart supérieur $es$ / inférieur $ei$ de l'arbre ; $ES$ / $EI$ de l'alésage.\n- Le tableau simplifié ISO 286-2 du cours (écarts en µm par plage de diamètres, qualités IT5 à IT8 pour les alésages H5 à H8 et nombreuses lettres pour l'arbre) permet de lire $ES$, $ei$, $es$. Les cases grisées sont à éviter.\n- $IT$ croît avec le diamètre et avec le numéro de qualité (courbe de la diapo 22 : par exemple $IT7\\approx35$ µm autour de 100 mm).\n- Attention : **tous les écarts sont donnés au diamètre**, alors que le schéma de calcul est au rayon.\n\n### 4.3 Modèle mécanique simplifié\n\n**Couple transmis (Coulomb, pression $P$ uniforme sur la surface $\\pi d h$)**. L'effort tangentiel de frottement vaut $f\\,P\\,\\pi d h$ et agit au rayon $d/2$ :\n\n$$\nC=\\pi f h P\\frac{d^2}{2}\\quad\\Rightarrow\\quad P_{mini}=\\frac{2kC}{\\pi f h d^2}\n$$\n\n$f$ : coefficient d'adhérence ; $k$ : coefficient de sécurité ($1{,}5<k<3$) ; $h$ : longueur frettée ; $d$ : diamètre de frettage.\n\n**Effort axial** (équilibre de la résultante) :\n\n$$\nF_a=\\pi f P h d\\quad\\Rightarrow\\quad P_{mini}=\\frac{kF_a}{\\pi f h d}\n$$\n\n**Couple et effort axial simultanés** (composition des efforts tangentiel et axial) :\n\n$$\nP_{mini\\text{-}final}=\\sqrt{P_{mini\\text{-}C}^{\\,2}+P_{mini\\text{-}F_a}^{\\,2}}\n$$\n\n**Lien pression / serrage (cylindres épais, théorie de Lamé, élasticité linéaire)**. Le moyeu est un cylindre épais (rayons $d/2$ et $D/2$) sous pression interne $P$ ; l'arbre est plein (ou creux, diamètre intérieur $d_i$) sous pression externe $P$. Le serrage diamétral $\\Delta$ est la somme de la contraction de l'arbre et de la dilatation du moyeu. Pour un moyeu : $\\Delta_M=\\dfrac{P d}{E_M}\\left[\\dfrac{D^2+d^2}{D^2-d^2}+\\nu_M\\right]$ ; pour un arbre plein : $\\Delta_A=\\dfrac{P d}{E_A}(1-\\nu_A)$.\n\nOn pose :\n\n$$\na_M=\\frac{1-\\nu_M}{E_M},\\quad a_A=\\frac{1-\\nu_A}{E_A},\\quad b_M=\\frac{1+\\nu_M}{E_M},\\quad b_A=\\frac{1+\\nu_A}{E_A}\n$$\n\n**Arbre plein, matériaux identiques** :\n\n$$\n\\Delta=\\frac{2Pd}{E}\\left(\\frac{D^2}{D^2-d^2}\\right)\n$$\n\n**Arbre plein, matériaux différents** :\n\n$$\n\\Delta=Pd\\,\\frac{d^2(a_M-a_A)+D^2(a_A+b_M)}{D^2-d^2}\n$$\n\n**Arbre creux, matériaux identiques** :\n\n$$\n\\Delta=\\frac{2Pd^3(D^2-d_i^2)}{E(D^2-d^2)(d^2-d_i^2)}\n$$\n\n**Arbre creux, matériaux différents** :\n\n$$\n\\Delta=Pd\\,\\frac{d^4(a_M-a_A)+D^2d^2(a_A+b_M)+D^2d_i^2(b_A-b_M)-d^2d_i^2(b_A+a_M)}{(D^2-d^2)(d^2-d_i^2)}\n$$\n\n**Contraintes équivalentes maximales** (pression $P_{MAXI}$) :\n\n| Cas | Arbre | Moyeu (à l'alésage) |\n|---|---|---|\n| Arbre plein | $\\sigma_{eq}^{arbre}=P_{MAXI}$ | $\\sigma_{eq}^{moyeu}=\\dfrac{P_{MAXI}\\,d^2}{D^2-d^2}\\sqrt{1+3\\left(\\dfrac Dd\\right)^4}$ |\n| Arbre creux | $\\sigma_{eq}^{arbre}=\\dfrac{2P_{MAXI}\\,d^2}{d^2-d_i^2}$ | même expression que ci-dessus |\n\nPour l'arbre plein, la compression est hydrostatique dans le plan : $\\sigma_{eq}=P$. Pour le moyeu, le maximum est sur l'alésage ($\\sigma_\\theta=P\\frac{D^2+d^2}{D^2-d^2}$, $\\sigma_r=-P$). Pour l'arbre creux, il est sur le diamètre intérieur ($\\sigma_\\theta=-\\frac{2Pd^2}{d^2-d_i^2}$).\n\n**Matériaux** : le cours prend en général acier ($E=210$ GPa, $\\nu=0{,}3$) ; coefficient de frottement $f=0{,}15$ dans l'exemple.\n\n### 4.4 Méthodologie de détermination (diapos 30, 33-52)\n\n1. Déterminer par calcul ou cahier des charges le couple $C$ et/ou l'effort axial $F_a$.\n2. Choisir le coefficient de sécurité $k$ ($1{,}5<k<3$).\n3. Choisir les dimensions : diamètre intérieur d'arbre $d_i$, diamètre extérieur du moyeu $D$, diamètre de frettage $d$, longueur frettée $h$.\n4. Choisir les matériaux : $E_A,\\nu_A,R_{eA}$ ; $E_M,\\nu_M,R_{eM}$ ; coefficient d'adhérence $f$.\n5. Calculer $P_{mini}$ en fonction de $k$, $C$, $F_a$ (Coulomb).\n6. Calculer $\\Delta_{mini}$ (noté $\\Delta_{th}$ dans l'application) en fonction de $P_{mini}$ (élasticité).\n7. Choisir l'ajustement $H\\_\\_\\_$ tel que :\n\n$$\nES+\\Delta_{th}\\le ei\n$$\n\n8. Calculer $\\Delta_{maxi\\,ISO}=es-EI$ puis la pression maximale réelle, proportionnelle au serrage (élasticité linéaire) :\n\n$$\nP_{MAXI}=P_{mini}\\cdot\\frac{\\Delta_{maxi\\,ISO}}{\\Delta_{th}}\n$$\n\n9. Vérifier la résistance : $\\sigma_{eq}^{arbre}\\le R_{eA}/1{,}25$ et $\\sigma_{eq}^{moyeu}\\le R_{eM}/1{,}25$.\n10. Tolérancer les pièces (4.5).\n11. Vérifier les conditions de **montage** (température) puis de **démontage** (effort).\n12. Si tout est satisfait : « ce frettage est acceptable » ; sinon, reboucler sur les choix 3, 7 ou sur la méthode de montage (les flèches de retour du logigramme).\n\nRappel : $\\Delta_{mini\\,ISO}=ei-ES$ est le serrage minimal garanti par l'ajustement ; il doit être $\\ge\\Delta_{th}$.\n\n### 4.5 Tolérancement, états de surface, lissage\n\n- **Cylindricité** de l'arbre et du moyeu : $IT/4$.\n- **Rugosité** : seule $Ra$ est prescrite : $Ra=0{,}8$ µm pour $d\\le180$ mm ; $Ra=1{,}6$ µm au-delà. ($Ra$ : moyenne arithmétique des écarts du profil par rapport à la ligne moyenne.)\n- **Lissage** : à l'emmanchement, les aspérités s'écrasent et le serrage efficace diminue. Il est **négligé si $Ra$ est maîtrisé**, sinon on retient 5 µm pour $d<180$ mm et 10 µm au-delà.\n\n### 4.6 Conditions de montage et de démontage\n\n**Montage thermique** (on chauffe le moyeu, de coefficient de dilatation $\\lambda$, pour avoir un jeu de montage $j$) :\n\n$$\n\\Delta\\theta=\\frac{j+\\Delta_{maxi\\,ISO}\\,(+\\text{lissage})}{\\lambda\\,d}<500^\\circ\n$$\n\n(le cours pose la limite à 500°, et la diapo 50 rappelle le diagramme fer-carbone : on évite de modifier la structure de l'acier).\n\n**Démontage** : effort de démontage\n\n$$\nF_{dem}=P_{MAXI}\\cdot\\pi\\,d\\,h\\,f\n$$\n\nÀ comparer à l'outillage disponible : extracteur hydraulique 50 à 100 kN ; presse hydraulique 50 à 2000 kN.\n\n### 4.7 Application complète au fil rouge (diapos 31-52)\n\nDonnées : $C=3512$ N·m, $k=1{,}5$, $d=100$ mm, $D=155$ mm (estimation), $h=75$ mm (estimation), acier $E=210\\,000$ MPa, $\\nu=0{,}3$, $R_{eA}=240$ MPa, $R_{eM}=300$ MPa, $\\lambda_M=12$ µm/m/K, $f=0{,}15$, $j=0{,}1$ mm, $T_{amb}=20$ °C.\n\n| Étape | Calcul | Résultat |\n|---|---|---|\n| $P_{th}$ | $\\dfrac{2kC}{\\pi f h d^2}$ | $29{,}8$ MPa |\n| $\\Delta_{th}$ | $\\dfrac{2P d}{E}\\dfrac{D^2}{D^2-d^2}$ | $48{,}6$ µm |\n| Ajustement | $ES+\\Delta_{th}\\le ei$ | **$\\varnothing100$ H7 t7** ($35+48{,}6=83{,}6\\le104$) |\n| $\\Delta_{mini\\,ISO}$ / $\\Delta_{maxi\\,ISO}$ | $104-35$ / $139-0$ | $69$ µm / $139$ µm |\n| $P_{MAXI}$ | $29{,}8\\times139/48{,}6$ | $85{,}2$ MPa |\n| $\\sigma_{arbre}$ | $=P_{MAXI}$ | $85{,}2$ MPa |\n| $\\sigma_{moyeu}$ | formule Lamé-Von Mises | $259{,}99$ MPa |\n| $\\Delta T$ | $\\dfrac{0{,}1+0{,}139}{12\\cdot10^{-6}\\times100}$ | $199$ K |\n| $F_{dem}$ | $85{,}2\\cdot10^6\\cdot\\pi\\cdot0{,}1\\cdot0{,}075\\cdot0{,}15$ | $301\\,124$ N |\n\nConclusion du cours : montage possible (199 K < 500), démontage par presse hydraulique (301 kN).\n\n> **Point à vérifier** : le tableur du cours conclut « OK » pour le moyeu en comparant 259,99 MPa à $R_{eM}=300$ MPa. Mais la méthodologie impose $R_{eM}/1{,}25=240$ MPa : avec ce critère, l'ajustement H7 t7 ne passe pas pour le moyeu (voir exercice 3 pour une solution).\n\n### 4.8 Nuances par rapport au fil rouge\n\nLa pression $P_{MAXI}$ et la contrainte du moyeu dépendent surtout du rapport $\\Delta_{maxi\\,ISO}/\\Delta_{th}$, donc de la **dispersion de l'ajustement** : un ajustement de qualité plus fine (IT6 au lieu de IT7) réduit $P_{MAXI}$ sans changer $P_{mini}$.\n\n## 5. Frettage mécanique (diapos 53-57)\n\n**Principe.** On insère entre l'arbre et le moyeu un **assembleur expansible** (frette à cônes et vis) : le serrage des vis fait glisser les pièces coniques, ce qui crée une pression radiale sur l'arbre et sur l'alésage. Avantages : pas d'ajustement serré à usiner, démontable, réglage du serrage. Les caractéristiques viennent d'un **catalogue** (couple transmissible, pressions de contact, couple de serrage des vis, dimensions minimales du moyeu).\n\nExemple du cours (catalogue, taille $d=100$ mm, $D=145$ mm) : $M=16\\,000$ N·m, $F=320$ kN, pression arbre $P_W=192$ MPa, pression moyeu $P_N=133$ MPa, 8 vis M12 serrées à $M_S=144$ N·m, masse 3,9 kg, référence 4204-100001-000000. Dimensions minimales du moyeu selon sa limite élastique ($R_e=200/320/500$ MPa) : diamètre extérieur $K_{min}=253/213/189$ mm et longueur $N_{min}=99/79/67$ mm.\n\n**Dimensionnement si le couple demandé est inférieur au couple catalogue** : les grandeurs sont **proportionnelles** (linéarité élastique). Pour $kC=5268$ N·m :\n\n$$\nr=\\frac{kC}{M}=\\frac{5268}{16\\,000}=32{,}92\\,\\%\n$$\n\n- Couple de serrage des vis : $144\\times0{,}3292=47{,}4$ N·m.\n- Pressions : arbre $192\\times r=63{,}2$ MPa ; moyeu (côté frette) $133\\times r=43{,}8$ MPa.\n- Contrainte équivalente dans le moyeu, avec $d=145$ mm (alésage du moyeu = diamètre extérieur de la frette) et $D=195$ mm : $\\sigma_{moyeu}=178{,}1$ MPa ; dans l'arbre : $63{,}2$ MPa ; les deux sont inférieures à $R_e=240$ MPa (« OK » dans le cours).\n- Remarque du cours : si l'on ne veut pas toucher à l'arbre, il faut augmenter le diamètre intérieur du moyeu.\n\n## 6. Liaison par adhérence : éléments filetés (diapos 58-109)\n\nPlan du support : généralités ; caractéristiques du filetage ISO ; sollicitations des assemblages boulonnés (statique dans le boulon, dynamique, efforts transmis dans les pièces serrées, évaluation « grossière », détermination fine) ; règles de conception ; rondelles et freins d'écrous. Le cours est fait sur le **boulon**, transposable à la **vis** et au **goujon**.\n\n### 6.1 Vocabulaire et filetages\n\n- **Vis** (filetage, tête), **goujon** (tige filetée), **écrou**, **pièce taraudée**. Assemblages : **goujonné**, **vissé**, **boulonné** (boulon = vis + écrou).\n- Morphologie d'une vis : forme de la tête, appui de tête, forme et longueur du fût, type et longueur de filetage, extrémité (bout).\n- Types de filetage :\n\n| Filetage | Désignation | Usage |\n|---|---|---|\n| Métrique ISO | M 24 | le plus courant, pas normal ou pas fin |\n| Trapézoïdal symétrique | Tr 20×4 | cher, efforts importants, risque de rupture à la base |\n| Trapézoïdal asymétrique | Tr artillerie 50×4 | efforts élevés de sens unique, chocs, tubes minces |\n| Rond | Rd 36×4 | grands efforts de traction (matériel ferroviaire), très bonne résistance au cisaillement |\n\n### 6.2 Filetage ISO (NF E 03-001)\n\nAngle de flanc 60°. À chaque diamètre nominal correspondent un **pas normal (gros)** et un **pas fin**.\n\n$$\nH=0{,}866\\,p\\qquad d_2=d-0{,}6495\\,p\\qquad d_3=d-1{,}2268\\,p\n$$\n\n($d$ : diamètre nominal = extérieur de la vis ; $d_2$ : diamètre sur flanc ; $d_3$ : diamètre de fond de filet.) Section nominale $A_0=\\pi d^2/4$ ; **section résistante** (équivalente) :\n\n$$\nA_s=\\frac\\pi4\\left(\\frac{d_2+d_3}{2}\\right)^2\n$$\n\nValeurs normalisées (pas gros) : M5 : 0,8 mm, 14,2 mm² ; M6 : 1,0, 20,1 ; M8 : 1,25, 36,6 ; M10 : 1,5, 58,0 ; M12 : 1,75, 84,3 ; M14 : 2,0, 115,4 ; **M16 : 2,0, 156,7** ; M18 : 2,5, 192,5 ; M20 : 2,5, 245 ; M24 : 3,0, 353 ; M30 : 3,5, 561 ; M36 : 4,0, 817 ; M42 : 4,5, 1121.\n\n### 6.3 Classes de qualité (ISO 898-1)\n\nMarquage « x.y » :\n\n$$\nR_m=x\\times100\\ \\text{MPa},\\qquad R_e=x\\times y\\times10\\ \\text{MPa}\n$$\n\nExemple 6.8 : $R_m=600$ MPa, $R_e=480$ MPa. Classe 8.8 : $R_m=800$, $R_e=640$ MPa. Le « .y » est le rapport $R_e/R_m$ (0,6 ; 0,8 ; 0,9). Essai de traction sur vis entières (ISO 6892) : zone élastique, plastique homogène, plastique localisée (striction) ; $R_e=F_e/A_s$, $R_m=F_m/A_s$.\n\n### 6.4 Fil rouge : bride à vis (diapo 67)\n\nLes deux tronçons sont reliés par **deux brides boulonnées** ; le couple est transmis par **frottement entre les brides** (adhérence). Données : $C=3512$ N·m, $k=1{,}5$ donc $kC=5268$ N·m, $f_{acier/acier}=0{,}15$, $n=16$ vis sur un diamètre d'implantation $d_i=128$ mm.\n\nPour une vis : effort normal $F_{vis}$ (serrage), effort tangentiel de frottement $F_{vis}\\,f$ au rayon $d_i/2$ ; on écrit $C_{total}=n\\,F_{vis}\\,f\\,\\dfrac{d_i}{2}$ :\n\n$$\nF_{vis}=\\frac{2\\,C_{total}}{n\\,f\\,d_i}\n$$\n\nRésultat : $F_{th}=n\\,F_{vis}=548\\,711$ N au total, soit $F_{vis}=34\\,294$ N par vis. Il faut ensuite **choisir vis et serrage** (tableau 6.7).\n\n### 6.5 Serrage au couple et relation de Kellerman et Klein (diapos 68-75)\n\nLe couple appliqué $C_s$ se répartit en trois :\n\n$$\nC_s=C_t+C_h+C_u\n$$\n\n- $C_t$ : couple de torsion de la vis (frottement filet vis / filet écrou), 40 à 45 %.\n- $C_h$ : couple de frottement sous la tête (ou sous la rondelle), 40 à 45 %.\n- $C_u$ : couple utile qui met en tension la vis, **10 à 15 %**.\n\nDonc le lien couple / effort de serrage est **très peu précis**. Pour une précharge $F_0$ :\n\n$$\nC_h=F_0\\,\\mu_h\\,r_m\\qquad C_t=F_0\\cdot0{,}583\\,\\mu_t\\,d_2\\qquad C_u=F_0\\cdot0{,}159\\,P\n$$\n\n($0{,}159=1/2\\pi$ : travail $C_u\\cdot2\\pi=F_0\\,P$ ; $P$ : pas ; $\\mu_h$ : frottement sous tête ; $r_m$ : rayon moyen d'appui sous tête ; $\\mu_t$ : frottement dans le filetage ; $d_2$ : diamètre moyen du filetage.) D'où la **relation de Kellerman et Klein** :\n\n$$\nF_0=\\frac{C}{0{,}159\\,P+0{,}583\\,\\mu_t\\,d_2+\\mu_h\\,r_m}\n$$\n\nVersion « mécanique » du support : $C_f=Q\\,r_m\\tan(\\alpha+\\varphi_1)$ avec $\\tan\\varphi_1=f/\\cos\\beta$ (frottement fictif de filet) et $C_h=Q\\,f_2\\,\\rho$, où $\\rho=\\frac23\\frac{\\rho_2^3-\\rho_1^3}{\\rho_2^2-\\rho_1^2}\\approx\\frac12(\\rho_1+\\rho_2)$ est le rayon équivalent d'appui.\n\n**Influence du frottement** (diapo 70) : vis phosphatée sans huile $0{,}14$ à $0{,}21$ ; électrozinguée $0{,}13$ à $0{,}18$ ; cadmiée $0{,}08$ à $0{,}12$ ; l'huile ou la graisse MoS₂ modifie ces plages. **Influence de l'outillage** (diapo 71) : précision du couple de serrage par classe :\n\n| Classe | Précision | Exemples |\n|---|---|---|\n| A | $<\\pm5\\,\\%$ | moteurs asservis, clés électroniques |\n| B | $\\pm5$ à $\\pm10\\,\\%$ | clés dynamométriques à lecture directe, visseuses électriques |\n| C | $\\pm10$ à $\\pm20\\,\\%$ | clés à déclenchement simple, clés à choc à énergie emmagasinée |\n| D | $\\pm20$ à $\\pm50\\,\\%$ | clés à main, clés à choc simples |\n\n### 6.6 Sollicitation du boulon serré au couple : traction + torsion (diapo 76)\n\n$$\n\\sigma=\\frac{Q}{S_{eq}},\\qquad \\tau=\\frac{16\\,C_t}{\\pi\\,d_{eq}^3}\n$$\n\n$$\n\\sigma_{eqVM}=\\sqrt{\\sigma^2+3\\tau^2}\\le0{,}9\\,R_{e\\,mini}\n$$\n\n($S_{eq}$ et $d_{eq}$ : section et diamètre équivalents, $S_{eq}=A_s$, $d_{eq}=(d_2+d_3)/2$.) La **flexion** est à éviter, ou à limiter.\n\n### 6.7 Détermination rapide par tableau (« modèle grossier », diapo 77)\n\nLe tableau donne, pour la visserie **8.8**, selon $d$, la **classe de précision** de serrage (C10 à C50, c'est-à-dire ±10 % à ±50 %) et le frottement $\\mu$ (0,06-0,09 ; 0,08-0,14 ; 0,12-0,18 ; 0,2-0,4) : le **couple $T$ à appliquer** (N·m) et la fourchette de précharge $[F_{0\\,min};F_{0\\,max}]$ obtenue. On constate que $F_{0\\,max}$ ne dépend pas de la classe de précision, alors que $T$ et $F_{0\\,min}$ diminuent quand la précision se dégrade.\n\nUtilisation : choisir $d$, $\\mu$ et la classe d'outil tels que $F_{0\\,min}\\ge F_{vis}$ requis. Exemple du fil rouge : $F_{vis}=34\\,294$ N ; M16, 8.8, $\\mu=0{,}12$-$0{,}18$, classe C20 : $T=160$ N·m, $F_{0\\,min}=35\\,057$ N $\\ge34\\,294$ N, $F_{0\\,max}=75\\,590$ N.\n\n### 6.8 Sollicitation dynamique\n\nCharge variable, **plus de $10^6$ cycles**. Diagramme de Wöhler (acier) et diagramme de Haigh : l'influence de la contrainte moyenne $\\sigma_m$ sur l'amplitude admissible $\\sigma_a$ est faible (une variation de 200 MPa de $\\sigma_m$ ne fait varier $\\sigma_a$ que de 10 MPa) ; la classe de qualité n'est pas non plus un paramètre sensible. **Méthode rapide** : fixer $\\sigma_m\\simeq0{,}7\\,R_e$ ($R_{p0,2}$) et vérifier $\\sigma_a$ inférieur aux valeurs du tableau :\n\n| Diamètre | M4 à M8 | M10 à M16 | M18 à M30 |\n|---|---|---|---|\n| $\\sigma_a$ admissible | 60 MPa | 50 MPa | 40 MPa |\n\n### 6.9 Efforts transmis dans les pièces serrées\n\nSous la tête et l'écrou, la pression se répartit dans les pièces serrées dans un **cône d'angle compris entre 30° et 45°**. Pour une bride à 3 plaques, ce cône n'existe qu'aux extrémités.\n\n- Raideur d'un cylindre : $K=\\dfrac{EA}{L}$ ; souplesse $S=\\dfrac1K=\\dfrac{L}{EA}$.\n- **Raideur du boulon** ($L_0$ : longueur de fût de section $A_0=\\pi d^2/4$ ; $L_1$ : longueur filetée de section $A_1=A_s$) :\n\n$$\n\\frac{1}{K_V}=\\frac{1}{E_V}\\left(\\frac{L_0+0{,}4d}{A_0}+\\frac{L_1+0{,}4d}{A_1}\\right)\n$$\n\n- **Raideur des pièces serrées** ($n$ pièces de longueur $l_p$, section $A_p$) :\n\n$$\n\\frac{1}{K_B}=\\sum_{p=1}^{n}\\frac{l_p}{E_p\\,A_p}\n$$\n\n- Section d'une pièce, modèle simple : $A_p=\\frac\\pi4\\left[\\left(D_a+\\frac{e_p}{2}\\right)^2-D_i^2\\right]$ ($D_a$ : diamètre d'appui de la tête, $D_i$ : diamètre du trou, $e_p$ : épaisseur serrée). Modèle **VDI** : cylindre équivalent de diamètre $D_P=(x+y)/2$ avec $x,y<3D_a$.\n\n### 6.10 Détermination fine : précharge puis effort extérieur (jusqu'à la diapo 103)\n\n**Mise en place de la précharge $F_0$** : la vis s'allonge de $\\Delta_{V0}$, les pièces se compriment de $\\Delta_{B0}$ :\n\n$$\n\\Delta=\\Delta_{V0}+\\Delta_{B0},\\qquad F_0=K_V\\Delta_{V0}=K_B\\Delta_{B0}\n$$\n\n**Application d'un effort extérieur $F_{ext}$** (sans décollement) : équilibre du boulon $F_{ext}+F_B=F_V$. On pose $\\Phi=\\dfrac{K_V}{K_V+K_B}$ (facteur de charge) :\n\n$$\nF_V=F_0+\\Phi\\,F_{ext}\\qquad F_B=F_0-(1-\\Phi)\\,F_{ext}\n$$\n\nTraduction graphique : droite de la vis (pente $K_V$) et droite des pièces serrées (pente $-K_B$) se coupent au point de précharge $F_0$ ; l'effort extérieur déplace le point de fonctionnement : la vis ne reprend que la fraction $\\Phi$ de $F_{ext}$. Il y a **décollement** quand $F_B=0$, soit $F_{ext}=F_0/(1-\\Phi)$. Hypothèse : $F_{ext}$ introduit sous la tête et l'écrou.\n\nConséquence pratique : une vis souple devant les pièces ($K_V\\ll K_B$) ne voit qu'une faible fraction de l'effort extérieur, ce qui est favorable en fatigue.\n\n### 6.11 Règles de conception\n\nLe plan annonce ce chapitre, mais le support ne contient pas de diapositive dédiée. Voir les compléments en 7.\n\n### 6.12 Rondelles et freins d'écrous (diapos 104-108)\n\n**Rondelles d'appui** : protéger les pièces, limiter la pression par une surface d'appui plus grande, éviter le frottement des têtes et écrous sur les pièces serrées, rattraper des défauts de perpendicularité. Variantes : 3 largeurs de rondelles plates, composants pour démontage rapide, rondelle à portée sphérique, cales pour poutrelles et profilés.\n\n**Freins d'écrous** : indispensables en présence de vibrations, de chocs, ou si l'on veut une certitude de non-desserrage.\n\n| Famille | Exemples | Avantages | Inconvénients |\n|---|---|---|---|\n| Par **obstacle** | écrous à créneaux et goupille, rondelles à languette ou à ergots | sécurité absolue | usinage supplémentaire, parfois affaiblissement de l'arbre, serrage non quelconque |\n| Par **maintien du contact** (et obstacle) | écrou et contre-écrou, rondelles élastiques | usinages limités, réglage continu du serrage | sécurité relative |\n\nLe support présente aussi les **écrous ou vis à frein incorporé** (anneau nylon, filet déformé) et le **frein filet** chimique (Loctite 242) : les courbes de la diapo 108 montrent un gain de résistance à 150-200 °C mais une chute à environ 60 % de la résistance initiale à 250 °C, et une bonne tenue à la plupart des huiles et carburants.\n\n## 7. Compléments (hors support, sources externes et usage courant)\n\n- **Clavettes parallèles** : dimensions de section en fonction de $d$ selon NF E 22-175 / ISO 773. Exemples : $d=50$ à 58 mm : $b\\times h=16\\times10$ ; $d=95$ à 110 mm : $28\\times16$ (largeur × hauteur dans la norme, inverse de la notation $a,b$ du cours). La figure du cours place 1/3 de la hauteur dans le moyeu : la pression sur le flanc du moyeu est donc plus élevée que le calcul à $b/2$.\n- **Cannelures** : le profil ISO 14 à flancs parallèles existe en séries légère et moyenne, avec 6, 8, 10 ou 16 cannelures ; la longueur de glissement et le centrage (sur les flancs ou sur le diamètre intérieur) changent la répartition des pressions.\n- **Frettage** : on peut aussi **refroidir l'arbre** (azote liquide) au lieu de chauffer le moyeu, ou combiner les deux ; le démontage de gros assemblages se fait souvent par **injection d'huile sous pression**. Pour un frettage acier / acier sec et dégraissé, le coefficient $f$ varie en pratique entre 0,1 et 0,2 environ ; le cours utilise 0,15. Le lissage dépend de la rugosité.\n- **Vis** : les rondelles élastiques simples (type Grower) sont jugées peu efficaces par le **test Junker** (DIN 65151, vibrations transversales), contrairement aux systèmes à cames (Nord-Lock), aux écrous autobloquants et aux freins filets. Causes de desserrage : vibrations, cycles thermiques, sous-serrage, composants endommagés, lubrification excessive.\n- **Règles de conception usuelles** (à confirmer avec le cours oral) : charger la vis en traction axiale, éviter la flexion, appuis plans et perpendiculaires à l'axe, longueur serrée suffisante (vis souple), longueur d'engagement suffisante (au moins environ $1\\,d$ dans l'acier), répartir les vis symétriquement et serrer en étoile (séquences de serrage 4, 8, 12, 16, 20, 24 vis de la diapo 67).\n- **Norme VDI 2230** : méthode complète des assemblages vissés ; elle ajoute le tassement (perte de précharge), le facteur d'introduction de la charge et la tenue au glissement. Le cours n'en donne que le modèle simplifié.\n\n## 8. Pièges classiques et points souvent mal compris\n\n1. **Matage avant cisaillement** : pour clavettes et cannelures, c'est le matage qui dimensionne. Piège : prendre $b$ au lieu de $b/2$.\n2. **Notations $a$, $b$** : dans le cours, $a$ = largeur, $b$ = hauteur ; la norme note l'inverse.\n3. **Unités** : $C$ en N·m, dimensions en mètres (ou en mm avec $C$ en N·mm) ; 1 CV = 735,499 W ; ne pas confondre tr/min et rad/s.\n4. **Écarts ISO au diamètre**, pas au rayon.\n5. **$\\Delta_{th}$ n'est pas $\\Delta_{mini\\,ISO}$** : $\\Delta_{th}$ est le besoin, $\\Delta_{mini\\,ISO}=ei-ES$ est ce que l'ajustement garantit ; $P_{MAXI}$ se calcule avec $\\Delta_{maxi\\,ISO}/\\Delta_{th}$.\n6. **Critère $R_e/1{,}25$** pour le moyeu ET pour l'arbre.\n7. **Le moyeu est plus sollicité que l'arbre** (contrainte d'alésage bien supérieure à $P$).\n8. **Arbre creux** : le maximum est sur le diamètre intérieur.\n9. **Couple de serrage ≠ précharge** : 85 à 90 % du couple se perd en frottement. La précision de la précharge dépend du frottement et de l'outil.\n10. **Facteur de charge** : $F_V=F_0+\\Phi F_{ext}$, pas $F_0+F_{ext}$.\n11. **Fatigue** : $\\sigma_a$ dépend de $\\Phi$, de $F_{ext}$ et de $A_s$, peu de la classe de qualité.\n12. **Incohérences possibles du support** (à confirmer) : $D_m=112$ mm dans le tableur des cannelures ; $k=2$ (diapo 3) puis $k=1{,}5$ ; comparaison du moyeu à $R_e$ au lieu de $R_e/1{,}25$.",
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "Le fil rouge doit transmettre $P=500$ CV à $N=1000$ tr/min (1 CV = 735,499 W). Quel est le couple $C$ à transmettre ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "environ 351 N·m"
+        },
+        {
+          "id": "b",
+          "text": "environ 3 512 N·m"
+        },
+        {
+          "id": "c",
+          "text": "environ 36 775 N·m"
+        },
+        {
+          "id": "d",
+          "text": "environ 35 120 N·m"
+        }
+      ],
+      "correct": "b",
+      "explanation": "$P=500\\times735{,}499=367\\,749{,}5$ W et $\\omega=2\\pi N/60=104{,}7$ rad/s. Donc $C=P/\\omega\\approx3512$ N·m. Les autres valeurs viennent d'un oubli de conversion (CV en W, ou tr/min en rad/s)."
+    },
+    {
+      "id": "q2",
+      "question": "Clavette : $d=100$, $l=50$, $b=12$, $a=20$ mm, $C=3512$ N·m donnent $p_{matage}=234$ MPa et $\\tau=70$ MPa. Pour un montage fixe (plage 40 à 150 MPa), que conclure ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "La clavette convient car $\\tau=70$ MPa est inférieur à $R_e=240$ MPa"
+        },
+        {
+          "id": "b",
+          "text": "La clavette ne convient pas : le matage (234 MPa) est très supérieur à la pression admissible ; il faut allonger $l$ ou changer de solution"
+        },
+        {
+          "id": "c",
+          "text": "La clavette convient car $p_{matage}<R_e=240$ MPa"
+        },
+        {
+          "id": "d",
+          "text": "On ne peut pas conclure sans connaître le coefficient de frottement"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Le matage est le critère dimensionnant d'une clavette. La pression admissible est la plage du tableau (80 à 150 MPa dans le meilleur cas « fixe »), pas $R_e$. Avec $p_{adm}=100$ MPa, il faudrait $l\\ge4C/(d\\,b\\,p_{adm})\\approx117$ mm. Le frottement n'intervient pas dans ce modèle."
+    },
+    {
+      "id": "q3",
+      "question": "Cannelures : que traduit le facteur 0,75 dans $A=0{,}75\\,n\\,h$ ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Un coefficient de sécurité de 1/0,75"
+        },
+        {
+          "id": "b",
+          "text": "Le fait que seulement environ 75 % de la surface théorique des flancs porte réellement (défauts de répartition)"
+        },
+        {
+          "id": "c",
+          "text": "Le coefficient de frottement entre l'arbre et le moyeu"
+        },
+        {
+          "id": "d",
+          "text": "L'angle de pression des flancs"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Hypothèse du cours : pression uniforme sur les flancs et surface portante $A=75\\,\\%$ de la surface théorique $n\\,h$ (par unité de longueur). La longueur minimale découle de $C=p\\,A\\,L\\,D_m/2$ : $L\\ge 8C/(3\\,n\\,h\\,D_m\\,p_{adm})$."
+    },
+    {
+      "id": "q4",
+      "question": "Collage cylindrique d'un moyeu sur un arbre de diamètre $d$ sur une longueur $L$, avec une colle de résistance au cisaillement $\\tau$. Quel est le couple maximal transmissible ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "$\\tau\\,\\pi\\,d\\,L$"
+        },
+        {
+          "id": "b",
+          "text": "$\\tau\\,\\pi\\,d^2\\,L/2$"
+        },
+        {
+          "id": "c",
+          "text": "$\\tau\\,d\\,L/2$"
+        },
+        {
+          "id": "d",
+          "text": "$2\\tau/(\\pi\\,d^2\\,L)$"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Surface collée $S=\\pi d L$, effort tangentiel $T=\\tau S$ au rayon $d/2$ : $C_{max}=\\tau\\,\\pi\\,d\\,L\\,\\dfrac d2=\\tau\\,\\pi\\,d^2L/2$. Pour $d=100$, $L=75$ mm et $\\tau=23$ MPa, on trouve 27 096 N·m. La colle résiste mal au pelage (2,5 N/mm) : elle doit travailler en cisaillement."
+    },
+    {
+      "id": "q5",
+      "question": "En frettage, quelle est la pression de contact minimale pour transmettre un couple $C$ avec un coefficient de sécurité $k$ ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "$P_{mini}=\\dfrac{kC}{\\pi f h d}$"
+        },
+        {
+          "id": "b",
+          "text": "$P_{mini}=\\dfrac{2kC}{\\pi f h d^2}$"
+        },
+        {
+          "id": "c",
+          "text": "$P_{mini}=\\dfrac{4kC}{\\pi f h d^2}$"
+        },
+        {
+          "id": "d",
+          "text": "$P_{mini}=\\dfrac{2kC}{f h d^2}$"
+        }
+      ],
+      "correct": "b",
+      "explanation": "La pression $P$ agit sur la surface $\\pi d h$ ; l'effort tangentiel $f P \\pi d h$ est au rayon $d/2$ : $C=\\pi f h P d^2/2$ donc $P_{mini}=2kC/(\\pi f h d^2)$. Application : $k=1{,}5$, $f=0{,}15$, $h=75$ mm, $d=100$ mm, $C=3512$ N·m donnent 29,8 MPa. La forme (a) est celle de l'effort axial $F_a$."
+    },
+    {
+      "id": "q6",
+      "question": "Dans la méthode de frettage, quelle condition permet de choisir l'ajustement ($\\Delta_{th}$ : serrage théorique minimal) ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "$ES+\\Delta_{th}\\le ei$ (écart supérieur de l'alésage + serrage théorique $\\le$ écart inférieur de l'arbre)"
+        },
+        {
+          "id": "b",
+          "text": "$EI+\\Delta_{th}\\ge es$"
+        },
+        {
+          "id": "c",
+          "text": "$es-EI=\\Delta_{th}$"
+        },
+        {
+          "id": "d",
+          "text": "$ei-ES\\le\\Delta_{th}$"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Le pire cas (alésage le plus grand, arbre le plus petit) doit encore donner au moins $\\Delta_{th}$ : $ei-ES\\ge\\Delta_{th}$. Pour $\\varnothing100$ H7 t7 : $35+48{,}6=83{,}6\\le104$ µm. Le serrage maximal vaut $\\Delta_{maxi\\,ISO}=es-EI=139$ µm et sert à calculer $P_{MAXI}$."
+    },
+    {
+      "id": "q7",
+      "question": "Dans le fil rouge, $P_{th}=29{,}8$ MPa, $\\Delta_{th}=48{,}6$ µm et $\\Delta_{maxi\\,ISO}=139$ µm. Que vaut la pression maximale réelle et pourquoi ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "85,2 MPa : en élasticité linéaire $P$ est proportionnelle à $\\Delta$, donc $P_{MAXI}=P_{th}\\,\\Delta_{maxi\\,ISO}/\\Delta_{th}$"
+        },
+        {
+          "id": "b",
+          "text": "29,8 MPa : la pression ne dépend pas du serrage"
+        },
+        {
+          "id": "c",
+          "text": "139 MPa : la pression est égale au serrage en µm"
+        },
+        {
+          "id": "d",
+          "text": "10,4 MPa : on divise $P_{th}$ par le rapport des serrages"
+        }
+      ],
+      "correct": "a",
+      "explanation": "$29{,}8\\times139/48{,}6=85{,}2$ MPa. Cette pression maximale sert à vérifier arbre et moyeu (critère $R_e/1{,}25$), à calculer l'effort de démontage $F_{dem}=P_{MAXI}\\pi d h f=301$ kN, et à choisir la méthode de montage."
+    },
+    {
+      "id": "q8",
+      "question": "Moyeu du fil rouge : $\\sigma_{eq}^{moyeu}=259{,}99$ MPa, $R_{eM}=300$ MPa. La méthodologie impose $\\sigma_{eq}\\le R_e/1{,}25$. Que conclure ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Le moyeu est valide car $259{,}99<300$"
+        },
+        {
+          "id": "b",
+          "text": "Le moyeu n'est pas valide au sens de la méthodologie : la limite est $300/1{,}25=240$ MPa"
+        },
+        {
+          "id": "c",
+          "text": "On ne vérifie que l'arbre, jamais le moyeu"
+        },
+        {
+          "id": "d",
+          "text": "Le moyeu est valide car $\\sigma_{eq}^{moyeu}<2R_e$"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Il faut comparer à $R_{eM}/1{,}25=240$ MPa. Le moyeu (alésage) est la pièce la plus sollicitée. Le tableur du cours affiche « OK » en comparant à $R_{eM}$ : point à confirmer avec l'enseignant. Un ajustement moins dispersé (H6 s6 : $P_{MAXI}=61{,}9$ MPa, $\\sigma=189$ MPa) lève le problème."
+    },
+    {
+      "id": "q9",
+      "question": "Montage thermique : $j=0{,}1$ mm, $\\Delta_{maxi\\,ISO}=139$ µm, $\\lambda=12$ µm/m/K, $d=100$ mm. Quel écart de température est nécessaire (limite du cours : 500°) ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "environ 20 K"
+        },
+        {
+          "id": "b",
+          "text": "environ 199 K"
+        },
+        {
+          "id": "c",
+          "text": "environ 1 990 K"
+        },
+        {
+          "id": "d",
+          "text": "environ 19,9 K"
+        }
+      ],
+      "correct": "b",
+      "explanation": "$\\Delta T=\\dfrac{j+\\Delta_{maxi\\,ISO}}{\\lambda\\,d}=\\dfrac{0{,}1+0{,}139\\ \\text{mm}}{12\\cdot10^{-6}\\times100\\ \\text{mm/K}}=199$ K. Soit environ 219 °C pour une pièce à 20 °C : inférieur à 500°, donc réalisable. Attention aux unités (mm et µm)."
+    },
+    {
+      "id": "q10",
+      "question": "Frette mécanique de catalogue : 16 000 N·m transmissibles pour des vis serrées à 144 N·m. On doit transmettre $kC=5268$ N·m. Quel couple de serrage des vis utiliser ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "144 N·m, toujours le couple du catalogue"
+        },
+        {
+          "id": "b",
+          "text": "environ 47,4 N·m (proportionnalité, rapport 32,92 %)"
+        },
+        {
+          "id": "c",
+          "text": "environ 438 N·m"
+        },
+        {
+          "id": "d",
+          "text": "environ 5 268 N·m"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Couple, pressions et couple de serrage sont proportionnels : $144\\times5268/16\\,000=47{,}4$ N·m. Les pressions deviennent 63,2 MPa (arbre) et 43,8 MPa (moyeu). Serrer à 144 N·m donnerait 133 MPa côté moyeu et une contrainte de moyeu d'environ 540 MPa pour un moyeu de diamètre extérieur 195 mm."
+    },
+    {
+      "id": "q11",
+      "question": "Relation de Kellerman et Klein : $F_0=\\dfrac{C}{0{,}159P+0{,}583\\mu_t d_2+\\mu_h r_m}$. Quelle part du couple de serrage met réellement la vis en tension ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "40 à 45 %"
+        },
+        {
+          "id": "b",
+          "text": "85 à 90 %"
+        },
+        {
+          "id": "c",
+          "text": "10 à 15 %"
+        },
+        {
+          "id": "d",
+          "text": "100 %"
+        }
+      ],
+      "correct": "c",
+      "explanation": "$C_s=C_t+C_h+C_u$ : filets 40 à 45 %, sous tête 40 à 45 %, couple utile $C_u=0{,}159\\,P\\,F_0$ seulement 10 à 15 %. Le lien couple / précharge est donc très imprécis (frottement, outil : ±5 à ±50 %)."
+    },
+    {
+      "id": "q12",
+      "question": "Boulon de rigidité $K_V$ et pièces serrées de rigidité $K_B$, précharge $F_0$, effort extérieur $F_{ext}$ (sans décollement). Que vaut l'effort dans la vis ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "$F_V=F_0+F_{ext}$"
+        },
+        {
+          "id": "b",
+          "text": "$F_V=F_0+\\dfrac{K_V}{K_V+K_B}F_{ext}$, et le décollement apparaît pour $F_{ext}=F_0/(1-\\Phi)$ avec $\\Phi=\\dfrac{K_V}{K_V+K_B}$"
+        },
+        {
+          "id": "c",
+          "text": "$F_V=F_0-\\dfrac{K_B}{K_V+K_B}F_{ext}$"
+        },
+        {
+          "id": "d",
+          "text": "$F_V=F_0$ quelle que soit la charge"
+        }
+      ],
+      "correct": "b",
+      "explanation": "La vis ne reprend que la fraction $\\Phi$ de $F_{ext}$ ; les pièces se décompriment : $F_B=F_0-(1-\\Phi)F_{ext}$. Pour $K_V\\ll K_B$, $\\Phi$ est faible : la vis voit peu de variation d'effort, ce qui est favorable en fatigue ($\\sigma_a$ admissible : 50 MPa pour M10 à M16). Décollement quand $F_B=0$."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "recto": "Puissance, vitesse et couple",
+      "verso": "$C=P/\\omega$ ; $\\omega=2\\pi N/60$ ; 1 CV = 735,499 W. Fil rouge : $C\\approx3512$ N·m."
+    },
+    {
+      "id": "f2",
+      "recto": "Clavette : effort tangentiel",
+      "verso": "$F_t=C/(d/2)=2C/d$"
+    },
+    {
+      "id": "f3",
+      "recto": "Clavette : pression de matage",
+      "verso": "$p=\\dfrac{F_t}{l\\,b/2}=\\dfrac{4C}{d\\,l\\,b}\\le p_{adm}$ ($b$ = hauteur, $l$ = longueur). Critère dimensionnant."
+    },
+    {
+      "id": "f4",
+      "recto": "Clavette : cisaillement",
+      "verso": "$\\tau=\\dfrac{F_t}{l\\,a}=\\dfrac{2C}{d\\,l\\,a}$ ($a$ = largeur), à comparer à $R_{pg}\\approx R_e/2$."
+    },
+    {
+      "id": "f5",
+      "recto": "Clavette : pressions admissibles",
+      "verso": "Fixe : 40-70 (mauvaises conditions), 60-100 (moyennes), 80-150 MPa (très bonnes). Glissant sous charge : 3-30, 5-15, 10-20 MPa."
+    },
+    {
+      "id": "f6",
+      "recto": "Cannelures : surface portante",
+      "verso": "$A=0{,}75\\,n\\,h$ (mm²/mm) ; 75 % de la surface théorique porte réellement."
+    },
+    {
+      "id": "f7",
+      "recto": "Cannelures : couple et pression",
+      "verso": "$C=\\dfrac{p\\,A\\,L\\,D_m}{2}$ ; $p=\\dfrac{2C}{A\\,L\\,D_m}\\le p_{adm}$ ; $D_m=(D+d)/2$."
+    },
+    {
+      "id": "f8",
+      "recto": "Cannelures : longueur minimale",
+      "verso": "$L\\ge\\dfrac{8C}{3\\,n\\,h\\,D_m\\,p_{adm}}$"
+    },
+    {
+      "id": "f9",
+      "recto": "Cannelures : pressions admissibles",
+      "verso": "Fixe : 30-60 / 60-120 / 120-180 MPa ; glissant sans charge : 20-40 / 40-60 / 60-90 ; glissant en charge : 5-10 / 10-20 / 20-30."
+    },
+    {
+      "id": "f10",
+      "recto": "Collage : couple maximal",
+      "verso": "$C_{max}=\\tau\\,S\\,\\dfrac d2=\\dfrac{\\tau\\,\\pi\\,d^2\\,L}{2}$ avec $S=\\pi d L$."
+    },
+    {
+      "id": "f11",
+      "recto": "Colle Hysol 3421 A&B",
+      "verso": "Époxy 2 composants : cisaillement 23 N/mm², pelage 2,5 N/mm, −55 à +120 °C, prise 240 min, temps d'utilisation 180 min."
+    },
+    {
+      "id": "f12",
+      "recto": "Tableau comparatif : effort axial",
+      "verso": "Clavette et cannelures : NON (obstacle tangentiel). Goupille, soudure, collage, frettage, vis : OK."
+    },
+    {
+      "id": "f13",
+      "recto": "Frettage : pression minimale (couple)",
+      "verso": "$P_{mini}=\\dfrac{2kC}{\\pi f h d^2}$ (issue de $C=\\pi f h P d^2/2$) ; $1{,}5<k<3$."
+    },
+    {
+      "id": "f14",
+      "recto": "Frettage : pression minimale (effort axial)",
+      "verso": "$P_{mini}=\\dfrac{kF_a}{\\pi f h d}$ ; couple et $F_a$ : $P=\\sqrt{P_{C}^2+P_{F_a}^2}$."
+    },
+    {
+      "id": "f15",
+      "recto": "Frettage : serrage, arbre plein, matériaux identiques",
+      "verso": "$\\Delta=\\dfrac{2Pd}{E}\\dfrac{D^2}{D^2-d^2}$"
+    },
+    {
+      "id": "f16",
+      "recto": "Frettage : serrage, matériaux différents",
+      "verso": "$\\Delta=Pd\\,\\dfrac{d^2(a_M-a_A)+D^2(a_A+b_M)}{D^2-d^2}$ avec $a=\\dfrac{1-\\nu}{E}$ et $b=\\dfrac{1+\\nu}{E}$."
+    },
+    {
+      "id": "f17",
+      "recto": "Frettage : arbre creux (matériaux identiques)",
+      "verso": "$\\Delta=\\dfrac{2Pd^3(D^2-d_i^2)}{E(D^2-d^2)(d^2-d_i^2)}$ ; $\\sigma_{eq}^{arbre}=\\dfrac{2P d^2}{d^2-d_i^2}$."
+    },
+    {
+      "id": "f18",
+      "recto": "Frettage : contraintes équivalentes (arbre plein)",
+      "verso": "Arbre : $\\sigma_{eq}=P_{MAXI}$. Moyeu : $\\sigma_{eq}=\\dfrac{P_{MAXI}d^2}{D^2-d^2}\\sqrt{1+3\\left(\\dfrac Dd\\right)^4}$."
+    },
+    {
+      "id": "f19",
+      "recto": "Frettage : choix de l'ajustement",
+      "verso": "$ES+\\Delta_{th}\\le ei$ ; $\\Delta_{mini\\,ISO}=ei-ES$ ; $\\Delta_{maxi\\,ISO}=es-EI$ ; écarts au diamètre."
+    },
+    {
+      "id": "f20",
+      "recto": "Frettage : pression maximale",
+      "verso": "$P_{MAXI}=P_{mini}\\,\\dfrac{\\Delta_{maxi\\,ISO}}{\\Delta_{th}}$ (élasticité linéaire)."
+    },
+    {
+      "id": "f21",
+      "recto": "Frettage : critère de résistance",
+      "verso": "$\\sigma_{eq}^{arbre}\\le R_{eA}/1{,}25$ et $\\sigma_{eq}^{moyeu}\\le R_{eM}/1{,}25$."
+    },
+    {
+      "id": "f22",
+      "recto": "Frettage : tolérancement",
+      "verso": "Cylindricité $IT/4$ ; $Ra=0{,}8$ µm ($d\\le180$) ou $1{,}6$ µm ; lissage négligé si $Ra$ maîtrisé sinon 5 µm ($d<180$) ou 10 µm."
+    },
+    {
+      "id": "f23",
+      "recto": "Frettage : montage thermique",
+      "verso": "$\\Delta\\theta=\\dfrac{j+\\Delta_{maxi\\,ISO}(+\\text{lissage})}{\\lambda\\,d}<500^\\circ$ (fil rouge : 199 K)."
+    },
+    {
+      "id": "f24",
+      "recto": "Frettage : démontage",
+      "verso": "$F_{dem}=P_{MAXI}\\,\\pi\\,d\\,h\\,f$ (fil rouge : 301 kN) ; extracteur 50-100 kN, presse 50-2000 kN."
+    },
+    {
+      "id": "f25",
+      "recto": "Fil rouge frettage : résultats",
+      "verso": "$P_{th}=29{,}8$ MPa, $\\Delta_{th}=48{,}6$ µm, $\\varnothing100$ H7 t7, $\\Delta_{maxi}=139$ µm, $P_{MAXI}=85{,}2$ MPa, $\\sigma_{moyeu}=260$ MPa."
+    },
+    {
+      "id": "f26",
+      "recto": "Frette mécanique : dimensionnement",
+      "verso": "Tout est proportionnel au couple : $r=kC/M_{catalogue}$ ; couple de serrage, pressions $\\times r$ ; puis Lamé sur le moyeu ($d$ = alésage du moyeu)."
+    },
+    {
+      "id": "f27",
+      "recto": "Frette mécanique : exemple catalogue d=100",
+      "verso": "16 000 N·m, 320 kN, $P_W=192$ MPa, $P_N=133$ MPa, 8 vis M12 à 144 N·m. Pour 5268 N·m : 47,4 N·m, 63,2 MPa, 43,8 MPa, $\\sigma_{moyeu}=178$ MPa."
+    },
+    {
+      "id": "f28",
+      "recto": "Filetage ISO : géométrie",
+      "verso": "Angle 60° ; $H=0{,}866p$ ; $d_2=d-0{,}6495p$ ; $d_3=d-1{,}2268p$ ; $A_s=\\dfrac\\pi4\\left(\\dfrac{d_2+d_3}2\\right)^2$ ; M16 : $p=2$, $A_s=156{,}7$ mm²."
+    },
+    {
+      "id": "f29",
+      "recto": "Types de filetage",
+      "verso": "M 24 (ISO), Tr 20×4 (trapézoïdal symétrique), Tr artillerie 50×4 (asymétrique, effort unidirectionnel, chocs), Rd 36×4 (rond, grands efforts de traction)."
+    },
+    {
+      "id": "f30",
+      "recto": "Classe de qualité x.y",
+      "verso": "$R_m=100x$ MPa ; $R_e=10xy$ MPa. 6.8 : 600 / 480 ; 8.8 : 800 / 640 MPa."
+    },
+    {
+      "id": "f31",
+      "recto": "Bride : effort par vis",
+      "verso": "$F_{vis}=\\dfrac{2C_{total}}{n\\,f\\,d_i}$ ; fil rouge : $kC=5268$ N·m, $n=16$, $f=0{,}15$, $d_i=128$ mm donnent 34 294 N par vis."
+    },
+    {
+      "id": "f32",
+      "recto": "Répartition du couple de serrage",
+      "verso": "$C_s=C_t+C_h+C_u$ : filets 40-45 %, sous tête 40-45 %, utile 10-15 %."
+    },
+    {
+      "id": "f33",
+      "recto": "Kellerman et Klein",
+      "verso": "$F_0=\\dfrac{C}{0{,}159P+0{,}583\\mu_t d_2+\\mu_h r_m}$ ; $C_u=0{,}159PF_0$, $C_t=0{,}583\\mu_t d_2F_0$, $C_h=\\mu_h r_m F_0$."
+    },
+    {
+      "id": "f34",
+      "recto": "Boulon : traction + torsion",
+      "verso": "$\\sigma=Q/S_{eq}$ ; $\\tau=\\dfrac{16C_t}{\\pi d_{eq}^3}$ ; $\\sigma_{eqVM}=\\sqrt{\\sigma^2+3\\tau^2}\\le0{,}9R_{e\\,mini}$."
+    },
+    {
+      "id": "f35",
+      "recto": "Précision des outils de serrage",
+      "verso": "A $<\\pm5$ % ; B $\\pm5$ à $\\pm10$ % ; C $\\pm10$ à $\\pm20$ % ; D $\\pm20$ à $\\pm50$ % (clés à main, à choc simples)."
+    },
+    {
+      "id": "f36",
+      "recto": "Fatigue d'un boulon",
+      "verso": "$>10^6$ cycles ; $\\sigma_m\\simeq0{,}7R_e$ ; $\\sigma_a$ admissible : 60 (M4-M8), 50 (M10-M16), 40 MPa (M18-M30)."
+    },
+    {
+      "id": "f37",
+      "recto": "Raideurs",
+      "verso": "$K=EA/L$ ; $\\dfrac1{K_V}=\\dfrac1{E_V}\\left(\\dfrac{L_0+0{,}4d}{A_0}+\\dfrac{L_1+0{,}4d}{A_1}\\right)$ ; $\\dfrac1{K_B}=\\sum\\dfrac{l_p}{E_pA_p}$."
+    },
+    {
+      "id": "f38",
+      "recto": "Précharge et effort extérieur",
+      "verso": "$\\Phi=\\dfrac{K_V}{K_V+K_B}$ ; $F_V=F_0+\\Phi F_{ext}$ ; $F_B=F_0-(1-\\Phi)F_{ext}$ ; décollement : $F_{ext}=F_0/(1-\\Phi)$."
+    },
+    {
+      "id": "f39",
+      "recto": "Cône de pression dans les pièces serrées",
+      "verso": "Cône d'angle 30° à 45° sous la tête et l'écrou ; $A_p=\\frac\\pi4[(D_a+e_p/2)^2-D_i^2]$ ; modèle VDI : $D_P=(x+y)/2$."
+    },
+    {
+      "id": "f40",
+      "recto": "Rondelles d'appui",
+      "verso": "Protéger les pièces, limiter la pression (surface d'appui), éviter le frottement tête/écrou sur les pièces, rattraper un défaut de perpendicularité."
+    },
+    {
+      "id": "f41",
+      "recto": "Freins d'écrous",
+      "verso": "Obstacle (créneaux + goupille, languette) : sécurité absolue mais usinage. Maintien du contact (contre-écrou, rondelle élastique) : sécurité relative, réglage continu. Frein filet, écrou nylon : frein chimique ou incorporé."
+    }
+  ],
+  "exercices": [
+    {
+      "titre": "Exercice 1 : clavette, cannelures ou collage pour un arbre de 52 mm",
+      "difficulte": 1,
+      "enonce": "Un arbre de diamètre $d=52$ mm transmet $P=40$ kW à $N=1500$ tr/min à un moyeu (montage fixe, conditions moyennes). On compare trois solutions :\n\n- **Clavette parallèle** de largeur $a=16$ mm et de hauteur $b=10$ mm, acier de limite élastique $R_e=300$ MPa, pression admissible $p_{adm}=80$ MPa ;\n- **Cannelures** $n=8$, $D=58$ mm, $d=52$ mm, hauteur $h=3$ mm, $p_{adm}=40$ MPa ;\n- **Collage** sur une longueur $L=40$ mm avec une colle de résistance au cisaillement $\\tau=23$ MPa.\n\n1. Calculer le couple $C$ et l'effort tangentiel $F_t$ sur la clavette.\n2. Déterminer la longueur minimale de la clavette au matage, choisir $l$ (multiple de 5 mm), puis vérifier le matage et le cisaillement ($R_{pg}\\approx R_e/2$).\n3. Déterminer la longueur minimale des cannelures et vérifier la pression pour la longueur choisie (multiple de 5 mm).\n4. Calculer la contrainte dans la colle et le couple maximal collé. Quel est le coefficient de sécurité implicite ?\n5. Conclure sur le choix selon le critère « démontable ».",
+      "corrige": "**1. Couple et effort tangentiel**\n\n$\\omega=\\dfrac{2\\pi\\times1500}{60}=157{,}08$ rad/s ; $C=\\dfrac{P}{\\omega}=\\dfrac{40\\,000}{157{,}08}=254{,}6$ N·m.\n\n$$\nF_t=\\frac{2C}{d}=\\frac{2\\times254{,}6}{0{,}052}=9\\,794\\ \\text{N}\n$$\n\n**2. Clavette.** Le matage dimensionne :\n\n$$\nl\\ge\\frac{4C}{d\\,b\\,p_{adm}}=\\frac{4\\times254{,}6}{0{,}052\\times0{,}010\\times80\\cdot10^{6}}=24{,}5\\ \\text{mm}\n$$\n\nOn retient $l=25$ mm. Vérification du matage : $p=\\dfrac{4C}{d\\,l\\,b}=\\dfrac{4\\times254{,}6}{0{,}052\\times0{,}025\\times0{,}010}=78{,}4$ MPa $\\le80$ MPa ✓.\n\nCisaillement : $\\tau=\\dfrac{2C}{d\\,l\\,a}=\\dfrac{2\\times254{,}6}{0{,}052\\times0{,}025\\times0{,}016}=24{,}5$ MPa, très inférieur à $R_{pg}\\approx150$ MPa ✓.\n\n**3. Cannelures.** $A=0{,}75\\,n\\,h=0{,}75\\times8\\times3=18$ mm²/mm ; $D_m=\\dfrac{58+52}{2}=55$ mm.\n\n$$\nL\\ge\\frac{8C}{3\\,n\\,h\\,D_m\\,p_{adm}}=\\frac{8\\times254{,}6}{3\\times8\\times0{,}003\\times0{,}055\\times40\\cdot10^{6}}=12{,}9\\ \\text{mm}\n$$\n\nOn retient $L=15$ mm. Vérification : $p=\\dfrac{2C}{A\\,L\\,D_m}=\\dfrac{2\\times254{,}6}{0{,}018\\times0{,}015\\times0{,}055}=34{,}3$ MPa $\\le40$ MPa ✓.\n\n**4. Collage.** $S=\\pi d L=\\pi\\times52\\times40=6\\,535$ mm².\n\n$$\n\\tau=\\frac{F_t}{S}=\\frac{9\\,794}{6\\,535}=1{,}50\\ \\text{MPa}\n$$\n\n$C_{max}=\\tau_{adm}\\,S\\,\\dfrac d2=23\\times6\\,535\\times26=3\\,908$ N·m, soit environ 15 fois le couple à transmettre : la marge est grande, mais il faut en garder pour le vieillissement, l'humidité et la température.\n\n**5. Conclusion.** Longueurs : clavette 25 mm, cannelures 15 mm, collage 40 mm. La clavette et les cannelures sont démontables ; le collage ne l'est pas. Les cannelures coûtent plus cher à usiner mais offrent une longueur plus faible et une meilleure répartition ; la clavette est la solution la plus simple si l'encombrement le permet. Aucune des deux solutions par obstacle ne transmet d'effort axial."
+    },
+    {
+      "titre": "Exercice 2 : assembleur expansible pour un couple réduit",
+      "difficulte": 2,
+      "enonce": "On utilise l'assembleur expansible du cours (taille $d=100$ mm, $D=145$ mm) dont le catalogue donne : couple transmissible $M=16\\,000$ N·m, pression de contact sur l'arbre $P_W=192$ MPa, sur le moyeu $P_N=133$ MPa, 8 vis M12 serrées à $M_S=144$ N·m.\n\nLe couple à transmettre est $C=2500$ N·m, avec $k=1{,}5$. Le moyeu a un alésage de 145 mm et un diamètre extérieur de 195 mm, une limite élastique $R_{eM}=300$ MPa ; l'arbre a $R_{eA}=240$ MPa.\n\n1. Calculer le rapport de charge, le couple de serrage des vis et les pressions de contact.\n2. Calculer la contrainte équivalente dans le moyeu et dans l'arbre, et vérifier le critère $R_e/1{,}25$.\n3. Que se passerait-il si on serrait les vis au couple catalogue (144 N·m) ?",
+      "corrige": "**1. Proportionnalité.** Le couple utile à prendre en compte est $kC=1{,}5\\times2500=3750$ N·m.\n\n$$\nr=\\frac{kC}{M}=\\frac{3750}{16\\,000}=0{,}2344\n$$\n\n- Couple de serrage des vis : $144\\times0{,}2344=33{,}8$ N·m.\n- Pression sur l'arbre : $192\\times0{,}2344=45{,}0$ MPa.\n- Pression sur le moyeu : $133\\times0{,}2344=31{,}2$ MPa.\n\n**2. Contraintes.** Arbre plein : $\\sigma_{eq}^{arbre}=P_W=45{,}0$ MPa $\\le240/1{,}25=192$ MPa ✓.\n\nMoyeu (Lamé et Von Mises) avec $d=145$ mm (alésage du moyeu) et $D=195$ mm :\n\n$$\n\\sigma_{eq}^{moyeu}=\\frac{P_N\\,d^2}{D^2-d^2}\\sqrt{1+3\\left(\\frac Dd\\right)^4}=31{,}2\\times\\frac{145^2}{195^2-145^2}\\sqrt{1+3\\left(\\frac{195}{145}\\right)^4}\n$$\n\nLe facteur vaut $\\dfrac{21\\,025}{17\\,000}\\times\\sqrt{1+3\\times3{,}270}=1{,}2368\\times3{,}288=4{,}067$, d'où $\\sigma_{eq}^{moyeu}=31{,}2\\times4{,}067=126{,}8$ MPa $\\le300/1{,}25=240$ MPa ✓.\n\n**3. Serrage au couple catalogue.** On aurait $P_N=133$ MPa et $\\sigma_{eq}^{moyeu}=133\\times4{,}067=541$ MPa $>R_{eM}$ : le moyeu plastifierait. Le catalogue impose des dimensions minimales de moyeu ($K_{min}$, $N_{min}$) pour exploiter la pleine capacité de l'assembleur ; avec un moyeu de 195 mm de diamètre extérieur, on ne peut pas le serrer à fond. C'est pourquoi on dimensionne le serrage sur le couple réellement utile."
+    },
+    {
+      "titre": "Exercice 3 : frettage de l'arbre de couche et critère R_e/1,25",
+      "difficulte": 3,
+      "enonce": "On reprend le frettage du fil rouge : $C=3512$ N·m, $k=1{,}5$, $f=0{,}15$, $d=100$ mm, $D=155$ mm, $h=75$ mm ; acier $E=210$ GPa, $\\nu=0{,}3$ ; $R_{eA}=240$ MPa, $R_{eM}=300$ MPa ; $\\lambda_M=12$ µm/m/K ; jeu de montage $j=0{,}1$ mm ; température ambiante 20 °C ; $Ra$ maîtrisé (lissage négligé).\n\nExtrait du tableau ISO du cours pour $80<\\varnothing\\le120$ mm (en µm) : alésage H6 : $ES=+22$ ; H7 : $ES=+35$ ; arbre s6 : $ei=+79$, $es=+101$ ; t6 : $ei=+104$, $es=+126$ ; t7 : $ei=+104$, $es=+139$ ($EI=0$ pour H).\n\n1. Calculer $P_{mini}$ et le serrage théorique minimal $\\Delta_{th}$.\n2. Pour chacun des ajustements $\\varnothing100$ H7 t7, H7 s6, H6 s6, H6 t6 : vérifier la condition de serrage minimal, calculer $\\Delta_{maxi\\,ISO}$, $P_{MAXI}$ et la contrainte équivalente dans le moyeu, puis conclure avec le critère $R_e/1{,}25$.\n3. Retenir un ajustement (justifier) ; calculer l'écart de température de montage et l'effort de démontage.\n4. Le lissage de 5 µm doit-il être pris en compte (cas où $Ra$ n'est pas maîtrisé) ? Conséquence sur le choix.",
+      "corrige": "**1. Besoin.**\n\n$$\nP_{mini}=\\frac{2kC}{\\pi f h d^2}=\\frac{2\\times1{,}5\\times3512}{\\pi\\times0{,}15\\times0{,}075\\times0{,}1^2}=29{,}8\\ \\text{MPa}\n$$\n\n$$\n\\Delta_{th}=\\frac{2P d}{E}\\,\\frac{D^2}{D^2-d^2}=\\frac{2\\times29{,}8\\cdot10^{6}\\times0{,}1}{210\\cdot10^{9}}\\times\\frac{155^2}{155^2-100^2}=48{,}6\\ \\mu\\text{m}\n$$\n\n**2. Comparaison.** Condition : $\\Delta_{mini\\,ISO}=ei-ES\\ge\\Delta_{th}=48{,}6$ µm. Facteur de contrainte du moyeu : $\\dfrac{d^2}{D^2-d^2}\\sqrt{1+3\\left(\\dfrac Dd\\right)^4}=3{,}05$, donc $\\sigma_{moyeu}=3{,}05\\,P_{MAXI}$. Limite du moyeu : $R_{eM}/1{,}25=240$ MPa ; limite de l'arbre : $240/1{,}25=192$ MPa.\n\n| Ajustement | $\\Delta_{mini\\,ISO}$ (µm) | $\\Delta_{maxi\\,ISO}$ (µm) | $P_{MAXI}$ (MPa) | $\\sigma_{moyeu}$ (MPa) | Verdict |\n|---|---|---|---|---|---|\n| H7 t7 | $104-35=69$ | $139$ | $29{,}8\\times139/48{,}6=85{,}2$ | $260{,}0$ | refusé : moyeu $>240$ |\n| H7 s6 | $79-35=44$ | $101$ | / | / | refusé : $44<48{,}6$ |\n| H6 s6 | $79-22=57$ | $101$ | $61{,}9$ | $188{,}9$ | accepté |\n| H6 t6 | $104-22=82$ | $126$ | $77{,}2$ | $235{,}7$ | accepté (marge faible) |\n\nL'arbre est toujours accepté ($\\sigma_{arbre}=P_{MAXI}\\le192$ MPa).\n\n**3. Choix : $\\varnothing100$ H6 s6** (pression maximale la plus basse, bonne marge sur le moyeu).\n\n$$\n\\Delta T=\\frac{j+\\Delta_{maxi\\,ISO}}{\\lambda\\,d}=\\frac{0{,}1+0{,}101\\ \\text{mm}}{12\\cdot10^{-6}\\ \\text{K}^{-1}\\times100\\ \\text{mm}}=167{,}5\\ \\text{K}\n$$\n\nIl faut chauffer le moyeu vers $20+167{,}5\\approx188$ °C, ce qui est inférieur à 500°. Effort de démontage :\n\n$$\nF_{dem}=P_{MAXI}\\,\\pi\\,d\\,h\\,f=61{,}9\\cdot10^{6}\\times\\pi\\times0{,}1\\times0{,}075\\times0{,}15=218{,}8\\ \\text{kN}\n$$\n\nCet effort est supérieur à la capacité d'un extracteur (50 à 100 kN) : il faut une presse hydraulique (50 à 2000 kN).\n\n**4. Lissage.** Si $Ra$ n'est pas maîtrisé : le serrage efficace minimal devient $57-5=52$ µm $\\ge48{,}6$ µm, donc H6 s6 reste valable avec une marge de 3,4 µm ; H7 t7, déjà refusé, n'est pas sauvé. L'écart de montage passe à $(0{,}1+0{,}101+0{,}005)/0{,}0012=171{,}7$ K.\n\n**Remarque.** La solution est meilleure parce que la dispersion de l'ajustement (H6 s6 : $\\Delta_{maxi}/\\Delta_{th}=2{,}08$ contre $2{,}86$ pour H7 t7) est plus faible : on gagne sur $P_{MAXI}$ au prix d'un usinage plus précis (IT6)."
+    },
+    {
+      "titre": "Exercice 4 : choix et serrage des vis de bride, puis effort extérieur",
+      "difficulte": 4,
+      "enonce": "**Partie A (bride).** Les deux tronçons de l'arbre sont reliés par deux brides à $n=16$ vis (diamètre d'implantation $d_i=128$ mm), le couple étant transmis par frottement ($f=0{,}15$ entre brides). On transmet $C=3512$ N·m avec $k=1{,}5$.\n\n1. Calculer l'effort de serrage nécessaire par vis.\n2. Avec le tableau du cours pour la visserie 8.8, on retient une vis M16 (pas 2 mm), $\\mu=0{,}12$ à $0{,}18$, classe d'outil C20 : $T=160$ N·m, $F_{0\\,min}=35\\,057$ N, $F_{0\\,max}=75\\,590$ N. Cette vis convient-elle ?\n\n**Partie B (serrage).** Pour la vis M16 8.8 serrée à $T=160$ N·m, avec $\\mu_t=\\mu_h=0{,}15$ et un rayon moyen d'appui sous tête $r_m=10{,}5$ mm :\n\n3. Calculer $d_2$, $d_3$, $A_s$ puis la précharge $F_0$ (Kellerman et Klein) et la répartition du couple.\n4. Calculer la contrainte équivalente de Von Mises dans la vis (traction + torsion) et la comparer à $0{,}9R_e$.\n\n**Partie C (effort extérieur, cas d'un assemblage soumis à une traction).** On considère un boulon M16 8.8 de même précharge $F_0$ serrant deux plaques d'acier de 20 mm chacune ($E=210$ GPa). Longueur de fût non filetée dans la zone serrée $L_0=25$ mm (section $A_0=\\pi d^2/4$), longueur filetée $L_1=15$ mm (section $A_s$), diamètre d'appui de la tête $D_a=24$ mm, diamètre du trou $D_i=17{,}5$ mm. Les plaques sont modélisées avec $A_p=\\frac\\pi4[(D_a+e_p/2)^2-D_i^2]$ ($e_p$ : épaisseur de chaque plaque). L'effort extérieur par boulon est $F_{ext}=15$ kN (traction, introduit sous la tête et l'écrou).\n\n5. Calculer $K_V$, $K_B$ et le facteur de charge $\\Phi$.\n6. Calculer $F_V$ et $F_B$ ; y a-t-il décollement ? Quelle valeur de $F_{ext}$ le provoquerait ?\n7. Si $F_{ext}$ varie de 0 à 15 kN de façon cyclique ($>10^6$ cycles), la fatigue est-elle satisfaite ($\\sigma_a$ admissible 50 MPa pour M10 à M16) ?",
+      "corrige": "**1. Effort par vis.** $C_{total}=kC=5268$ N·m.\n\n$$\nF_{vis}=\\frac{2C_{total}}{n\\,f\\,d_i}=\\frac{2\\times5268}{16\\times0{,}15\\times0{,}128}=34\\,300\\ \\text{N}\n$$\n\n**2. Choix.** $F_{0\\,min}=35\\,057$ N $\\ge34\\,300$ N ✓ : la vis M16 8.8 serrée à 160 N·m avec un outil de classe C20 (±20 %) garantit le serrage même dans le pire cas de frottement et d'outil. $F_{0\\,max}=75\\,590$ N reste sous la limite de la vis (le tableau est établi pour cela).\n\n**3. Précharge.** $d_2=16-0{,}6495\\times2=14{,}70$ mm ; $d_3=16-1{,}2268\\times2=13{,}55$ mm ; $A_s=\\dfrac\\pi4\\left(\\dfrac{14{,}70+13{,}55}{2}\\right)^2=156{,}7$ mm².\n\n$$\nF_0=\\frac{C}{0{,}159P+0{,}583\\mu_t d_2+\\mu_h r_m}=\\frac{160\\,000}{0{,}318+1{,}286+1{,}575}=\\frac{160\\,000}{3{,}179}=50\\,300\\ \\text{N}\n$$\n\nRépartition : $C_u=0{,}318\\,F_0\\approx16$ N·m (10 %) ; $C_t=0{,}583\\times0{,}15\\times14{,}70\\,F_0=64{,}7$ N·m (40 %) ; $C_h=0{,}15\\times10{,}5\\,F_0=79{,}3$ N·m (50 %). Seulement 10 % du couple de serrage met la vis en tension.\n\n**4. Von Mises.** $d_{eq}=(d_2+d_3)/2=14{,}12$ mm ; $\\sigma=\\dfrac{F_0}{A_s}=\\dfrac{50\\,300}{156{,}7}=321{,}3$ MPa ; $C_t=64{,}7$ N·m $=64\\,700$ N·mm ;\n\n$$\n\\tau=\\frac{16\\,C_t}{\\pi\\,d_{eq}^3}=\\frac{16\\times64\\,700}{\\pi\\times14{,}12^3}=117{,}0\\ \\text{MPa}\n$$\n\n$$\n\\sigma_{eqVM}=\\sqrt{321{,}3^2+3\\times117{,}0^2}=379{,}8\\ \\text{MPa}\\le0{,}9R_e=0{,}9\\times640=576\\ \\text{MPa}\\ \\checkmark\n$$\n\n**5. Raideurs.** $A_0=\\dfrac{\\pi\\times16^2}{4}=201{,}1$ mm².\n\n$$\n\\frac1{K_V}=\\frac1{210\\,000}\\left(\\frac{25+0{,}4\\times16}{201{,}1}+\\frac{15+0{,}4\\times16}{156{,}7}\\right)=\\frac{0{,}1561+0{,}1366}{210\\,000}\\ \\Rightarrow\\ K_V=7{,}17\\cdot10^{5}\\ \\text{N/mm}\n$$\n\nPlaques : $A_p=\\dfrac\\pi4\\left[(24+10)^2-17{,}5^2\\right]=667{,}4$ mm² ; $\\dfrac1{K_B}=2\\times\\dfrac{20}{210\\,000\\times667{,}4}\\Rightarrow K_B=3{,}50\\cdot10^{6}$ N/mm.\n\n$$\n\\Phi=\\frac{K_V}{K_V+K_B}=\\frac{0{,}717}{0{,}717+3{,}504}=0{,}17\n$$\n\n**6. Efforts.** $F_V=F_0+\\Phi F_{ext}=50\\,300+0{,}17\\times15\\,000=52\\,900$ N ; $F_B=F_0-(1-\\Phi)F_{ext}=50\\,300-0{,}83\\times15\\,000=37\\,900$ N $>0$ : pas de décollement. Décollement pour $F_{ext}=\\dfrac{F_0}{1-\\Phi}=\\dfrac{50\\,300}{0{,}83}=60{,}6$ kN, soit 4 fois l'effort appliqué.\n\n**7. Fatigue.** La vis voit une variation $\\Phi\\,F_{ext}=2\\,550$ N, soit une amplitude $\\sigma_a=\\dfrac{\\Phi F_{ext}}{2A_s}=\\dfrac{0{,}17\\times15\\,000}{2\\times156{,}7}=8{,}1$ MPa $\\le50$ MPa ✓ (très large). La contrainte moyenne est $\\sigma_m\\approx\\dfrac{F_0+\\Phi F_{ext}/2}{A_s}=329$ MPa, inférieure à $0{,}7R_e=448$ MPa. Cette bonne tenue vient de la grande précharge et de la faible fraction $\\Phi$ de l'effort extérieur repris par la vis."
+    }
+  ],
+  "suivi": "Aucune difficulté enregistrée pour l'instant : le quiz et les exercices n'ont pas encore été faits. À noter dès tes premières réponses. Points à surveiller a priori : (1) matage avec $b/2$ (clavette) et comparaison à la pression admissible, pas à $R_e$ ; (2) distinction $\\Delta_{th}$, $\\Delta_{mini\\,ISO}$, $\\Delta_{maxi\\,ISO}$ et calcul de $P_{MAXI}$ ; (3) critère $R_e/1{,}25$ pour le moyeu ; (4) unités (mm, µm, MPa, N·m) dans $\\Delta T$ et $F_{dem}$ ; (5) répartition du couple de serrage (10 % utile) et formule de Kellerman et Klein ; (6) facteur de charge $\\Phi$ et condition de décollement."
+}
